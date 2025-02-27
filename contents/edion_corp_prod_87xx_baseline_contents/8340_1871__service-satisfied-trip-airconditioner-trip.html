@@ -1,0 +1,1016 @@
+<style type="text/css">
+	/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+	.pc {
+		display: block !important;
+	}
+
+	.sp {
+		display: none !important;
+	}
+
+	iframe {
+		width: 560px;
+		height: 315px;
+	}
+
+	.bg_title {
+		background: #6fba2c;
+		color: #fff;
+	}
+
+	.green {
+		background: #6fba2c;
+		padding: 1.2em 0.5em;
+		border-radius: 5px;
+		text-align: center;
+		color: #fff;
+	}
+
+	h4 {
+		color: #000;
+	}
+
+	table th,
+	td {
+		border-right: solid 1px #CCC !important;
+	}
+
+	.movie_area {
+		border: 0px none !important;
+		border-right: 0px none;
+	}
+
+	.border_area {
+		border: solid 1px #CCC;
+	}
+
+	.b {
+		font-weight: 900;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.inquiryWrap {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		text-align: left;
+	}
+
+	.tit05 {
+		font-size: 1.15rem;
+		padding: 6px 10px 5px;
+		color: #455C76;
+		font-weight: bold;
+		background-color: #F9F9F9;
+		margin-bottom: 15px;
+		border: 1px solid #CCCCCC;
+		border-left: 2px solid #1F529F;
+	}
+
+	.table_parts_03 td {
+		background: #f08d00;
+		color: #fff;
+		text-align: center;
+	}
+
+	.table_parts_03 th:first-of-type,
+	.table_parts_03 th {
+		background: #F8F8F8;
+		width: 50%;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.point_green {
+		width: 100%;
+		border: solid 2px #6fba2c;
+		color: #6fba2c;
+		background: #fff;
+		padding: 5px;
+		font-weight: 600;
+	}
+
+	.point_green#gray {
+		border: solid 2px #a9a9a9;
+		border-left: solid 2px #000080;
+		color: #fff;
+		background: #a9a9a9;
+	}
+
+	.text_w {
+		font-weight: 600;
+		margin: 10px 0 20px;
+		padding-left: 20px;
+	}
+
+	/* タブ切り替え */
+	.tab-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		cursor: pointer;
+		flex: 1;
+		font-weight: bold;
+		order: -1;
+		padding: 12px 24px;
+		position: relative;
+		text-align: center;
+		user-select: none;
+		white-space: nowrap;
+	}
+
+	/*.tab-label:hover {
+        opacity: 0.5;
+        color: #fff;
+    }*/
+
+	.tab-switch:checked+.tab-label {
+		color: #1B50A2;
+		background: #fff;
+	}
+
+	.tab-label::after {
+		background: #fff;
+		bottom: -3px;
+		content: '';
+		display: block;
+		height: 3px;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		transform: translateX(100%);
+		width: 100%;
+		z-index: 1;
+	}
+
+	.tab-switch:checked~.tab-label::after {
+		transform: translateX(-100%);
+	}
+
+	.tab-switch:checked+.tab-label::after {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.tab-content {
+		height: 0;
+		opacity: 0;
+		padding: 0;
+		pointer-events: none;
+		width: 100%;
+		background: #fff;
+
+	}
+
+	.tab-switch:checked~.tab-content {
+		transform: translateX(30%);
+	}
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		opacity: 1;
+		order: 1;
+		pointer-events: auto;
+		transform: translateX(0);
+	}
+
+	.tab-wrap::after {
+		content: '';
+		/*height: 20px;*/
+		order: -1;
+		width: 100%;
+
+	}
+
+	.tab-switch {
+		display: none;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		margin-bottom: -1px;
+		padding: 10px .5em;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		font-weight: 600;
+		font-size: 15px;
+		padding: 13px 5px;
+		margin: 0 0 0 8px;
+		border: 3px solid #1B50A2;
+		border-bottom: 0 #fff solid;
+		border-radius: 6px 6px 0 0;
+	}
+
+	.tab-label img {
+		height: 30px;
+		width: auto;
+	}
+
+	.tab-switch:checked+.tab-label:before {
+		transform: rotate(0);
+	}
+
+	.tab-content {
+		height: 0;
+		padding: 0 15px;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateX(8px);
+	}
+
+	/* アクティブなタブ */
+	.tab-switch:checked+ {
+		background-size: 40%;
+	}
+
+	/*.tab-switch:checked+.au img:first-child,.tab-switch:checked+.sfb img:first-child,.tab-switch:checked+.yah img:first-child{
+     opacity: 0;
+    }*/
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		overflow: auto;
+		margin-bottom: -1px;
+		padding: 15px;
+		opacity: 1;
+		border: 0;
+		border-top: 3px solid #1B50A2;
+		position: relative;
+		left: 8px;
+	}
+
+	/* ラジオボタン非表示 */
+	.tab-switch {
+		display: none;
+	}
+
+	@media screen and (max-width: 800px) {
+
+		/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+		.pc {
+			display: none !important;
+		}
+
+		.sp {
+			display: block !important;
+		}
+
+		iframe {
+			width: 300px;
+			height: 160px;
+		}
+
+		th,
+		td {
+			display: block;
+			width: 100% !important;
+		}
+
+		.innerWrapAll,
+		.innerWrap {
+			padding: 0 10px;
+			max-width: 730px;
+		}
+
+		.txt {
+			margin-top: 20px;
+		}
+
+		.b {
+			text-align: center;
+			margin-bottom: 14px;
+		}
+
+		.btn {
+			text-align: center;
+			margin: 20px auto;
+		}
+
+		table td a:not(.map_link) {
+			color: #fff;
+		}
+
+		.tab-wrap {
+			display: inline-flex;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 5px 0px;
+			font-size: 13px;
+			border-bottom: 0 solid #1B50A2 !important;
+			margin-bottom: 20px;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			border-top: 0;
+			width: 200%;
+		}
+
+		.tab-label {
+			border-radius: 6px;
+			border-bottom: 3px solid #1B50A2 !important;
+			font-size: 13px;
+
+		}
+
+		.tab-switch:checked+.tab-label {
+			color: #1B50A2;
+			background: antiquewhite;
+		}
+
+		.tab-label:hover {
+			opacity: 0.7;
+		}
+
+		.tab-label::after {
+			display: none;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			padding: 0 15px;
+		}
+	}
+</style>
+<div class="tab-wrap"><!-- 冷蔵庫 --><input class="tab-switch" id="TAB-01" name="TAB" type="radio" /> <label
+		class="tab-label dcm" for="TAB-01"><img alt="冷蔵庫" src="/sites/default/files/inline-images/icon_2-1.png"
+			style="vertical-align: middle;" /><br />
+		冷蔵庫</label>
+	<div class="tab-content">
+		<h3 class="bg_title" id="fridge_trip">冷蔵庫</h3>
+
+		<dl>
+			<dd>
+				<h4>内部まで点検し、性能劣化の原因・ホコリを除去。冷蔵庫の冷却能力を回復します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 60分</td>
+						</tr>
+						<tr>
+							<th>400リットルまで</th>
+							<td>通常価格　15,070円（1台 / 税込）</td>
+						</tr>
+						<tr>
+							<th>401リットル以上</th>
+							<td>通常価格　17,600円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="冷蔵庫" src="/sites/default/files/inline-images/img_trip-1-1.jpg" />
+				<p>&nbsp;</p>
+
+				<p class="point_green">① 本体回りの清掃</p>
+
+				<p class="text_w">本体回りや天井を、中性洗剤で拭き掃除。裏側はファン・放熱用パイプを中心に掃除機でホコリ等を吸い取ります。</p>
+
+				<p class="point_green">② アイスメーカー内の清掃</p>
+
+				<p class="text_w">アイスメーカー内のタンクおよびタンクキャップを専用ブラシを使って清掃します。</p>
+
+				<p class="point_green">③ 蒸発皿の清掃</p>
+
+				<p class="text_w">蒸発皿に水が異常に溜まっていないか確認し、水垢やホコリ等をブラシを使って丁寧に清掃します。</p>
+
+				<p class="point_green">④ コンセントの点検</p>
+
+				<p class="text_w">異常加熱・折れ曲がり・半断線・緑青の有無を確認します。</p>
+
+				<p class="point_green">⑤ ドアパッキンの清掃・点検</p>
+
+				<p class="text_w">ドアパッキンのたるみや亀裂の有無を確認し、中性洗剤で汚れを拭き取ります。</p>
+
+				<p class="point_green">⑥ 庫内の清掃</p>
+
+				<p class="text_w">棚・ドアポケットや庫内の壁面を中性洗剤で拭き掃除。最後にアルコールですみずみまで消毒します。</p>
+
+				<p class="point_green">⑦ 異常音の点検</p>
+
+				<p class="text_w">コンプレッサー本体やその周辺・送風ファンから異常音がないか確認し、機械室の清掃を行います。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">裏側の溜まったホコリを残さず除去！</div>
+
+						<p style="margin-top: 10px;"><img alt="冷蔵庫パーツ"
+								src="/sites/default/files/inline-images/img_trip-1-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">手が届きにくい天井の汚れも一層！</div>
+
+						<p style="margin-top: 10px;"><img alt="冷蔵庫パーツ"
+								src="/sites/default/files/inline-images/img_trip-1-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">動かすのが大変な冷蔵庫の下もしっかり清掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="冷蔵庫パーツ"
+								src="/sites/default/files/inline-images/img_trip-1-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-02" name="TAB" type="radio" /> <label class="tab-label" for="TAB-02"><img
+			alt="洗濯機" src="/sites/default/files/inline-images/icon_2-2.png" style="vertical-align: middle;" /><br />
+		洗濯機</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="laundrymachine_trip">洗濯機</h3>
+
+		<dl>
+			<dd>
+				<h4>給排水口に水漏れがないか確認し、溜まった汚れを除去。洗濯機の給排水がスムーズになります！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 40分</td>
+						</tr>
+						<tr>
+							<th>縦型</th>
+							<td>通常価格　7,810円（1台 / 税込）</td>
+						</tr>
+						<tr>
+							<th>ドラム式</th>
+							<td>通常価格　14,300円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="洗濯機" src="/sites/default/files/inline-images/img_trip-2-1.jpg" />
+				<p class="point_green">① 液体洗剤・漂白剤注入口の清掃</p>
+
+				<p class="text_w">こびりついた洗剤や漂白剤、固まったホコリを残さず取り除きます。</p>
+
+				<p class="point_green">② 異常音・異常振動の点検</p>
+
+				<p class="text_w">洗濯・脱水運転時に異常音や異常振動がないか、試運転の上で確認します。</p>
+
+				<p class="point_green">③ フィルター類の清掃・点検</p>
+
+				<p class="text_w">吸気フィルター・糸くずフィルターが破損していないかを確認。付着したホコリやゴミを手作業で取り除きます。</p>
+
+				<p class="point_green">④ コンセントの点検</p>
+
+				<p class="text_w">運転中の異常過熱やコードの折れ・半断線、緑青の付着、アース線の接続などをこまかく点検します。</p>
+
+				<p class="point_green">⑤ 水漏れの点検</p>
+
+				<p class="text_w">給水・排水時に水漏れが発生しないか、試運転の上で確認します。</p>
+
+				<p class="point_green">⑥ 給水ホース接続口の清掃・点検</p>
+
+				<p class="text_w">水漏れがないかを確認し、フィルターに溜まったゴミを専用ブラシで丁寧に取り除きます。</p>
+
+				<p class="point_green">⑦ 洗濯パンの清掃</p>
+
+				<p class="text_w">洗濯機を移動した後、中性洗剤を使って清掃します。排水口は分解して、内部までキレイに清掃します。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">洗濯パンが見違えるほど白く！</div>
+
+						<p style="margin-top: 10px;"><img alt="洗濯機パーツ"
+								src="/sites/default/files/inline-images/img_trip-2-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">給水ホース・接続口のホコリ・黒ずみを一掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="洗濯機パーツ"
+								src="/sites/default/files/inline-images/img_trip-2-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">液体洗剤・漂白剤投入口の細かな部分までキレイ！</div>
+
+						<p style="margin-top: 10px;"><img alt="洗濯機パーツ"
+								src="/sites/default/files/inline-images/img_trip-2-4.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">排水口は分解して内部の汚れを一掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="洗濯機パーツ"
+								src="/sites/default/files/inline-images/img_trip-2-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-03" name="TAB" type="radio" /> <label class="tab-label" for="TAB-03"><img
+			alt="テレビ" src="/sites/default/files/inline-images/icon_2-3.png" style="vertical-align: middle;" /><br />
+		テレビ</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="tv_trip">テレビ</h3>
+
+		<dl>
+			<dd>
+				<h4>番組がキレイに映るか、熱を発していないかを点検。テレビの故障を予防します！</h4>
+
+				<div class="mb30">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 50分</td>
+						</tr>
+						<tr>
+							<th>42型まで</th>
+							<td>通常価格　4,400円（1台 / 税込）</td>
+						</tr>
+						<tr>
+							<th>43型以上</th>
+							<td>通常価格　6,930円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+
+				<p><img alt="テレビ" src="/sites/default/files/inline-images/img_trip-3-1.jpg" /></p>
+
+				<div class="mb30">&nbsp;</div>
+
+				<p class="point_green">① 内部の清掃</p>
+
+				<p class="text_w">背面カバーを取り外し、故障の原因になる内部のホコリをハケとクリーナーを使って残さず取り除きます。</p>
+
+				<p class="point_green">② テレビ回りの清掃</p>
+
+				<p class="text_w">テレビ台や背面カバーに溜まったホコリを雑巾でキレイに拭き取り。液晶面は専用のクリーニングキットで拭き掃除します。</p>
+
+				<p class="point_green">③ 設置状態の点検</p>
+
+				<p class="text_w">転倒防止の処置が行われているかを確認します。</p>
+
+				<p class="point_green">④ リモコンの点検</p>
+
+				<p class="text_w">ボタンを押した際に正常に作動しているか、電池が正しく装填されているかを確認します。</p>
+
+				<p class="point_green">⑤ 受信レベルの点検</p>
+
+				<p class="text_w">リモコンを操作し、放送が正常に受信されているか確認します。</p>
+
+				<p class="point_green">⑥ コンセントの点検</p>
+
+				<p class="text_w">運転中の異常過熱やコードの折れ・半断線、緑青の付着などをこまかく点検します。</p>
+
+				<div class="mb30">&nbsp;</div>
+
+				<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">
+					おそうじ前後でその差歴然！プロの技術でこんなにキレイに！</h3>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">故障の原因になる内部のホコリを清掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="テレビパーツ"
+								src="/sites/default/files/inline-images/img_trip-3-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">背面カバーに溜まった内部のホコリを残さず除去！</div>
+
+						<p style="margin-top: 10px;"><img alt="テレビパーツ"
+								src="/sites/default/files/inline-images/img_trip-3-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">液晶画面の汚れはきれいに拭き取り！</div>
+
+						<p style="margin-top: 10px;"><img alt="テレビパーツ"
+								src="/sites/default/files/inline-images/img_trip-3-4.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">テレビの内部には知らぬ間にホコリが…</div>
+
+						<p style="margin-top: 10px;"><img alt="テレビパーツ"
+								src="/sites/default/files/inline-images/img_trip-3-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input checked="checked" class="tab-switch" id="TAB-04" name="TAB" type="radio" /> <label class="tab-label"
+		for="TAB-04"><img alt="エアコン" src="/sites/default/files/inline-images/icon_2-4.png"
+			style="vertical-align: middle;" /><br />
+		エアコン</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="airconditioner_trip">エアコン</h3>
+
+		<dl>
+			<dd>
+				<h4>吸い込み・吹き出し時の温度差をチェックし、フィルターの詰まりを解消。エアコンの効き目を改善します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 30分</td>
+						</tr>
+						<tr>
+							<th>室内機・室外機セット</th>
+							<td>通常価格　4,400円（1セット / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="エアコン" src="/sites/default/files/inline-images/img_trip-4-1.jpg" />
+				<p class="point_green">① 室内機フィルターの清掃</p>
+
+				<p class="text_w">運転能力の低下につながる目詰まりをクリーナー・水洗いでキレイに掃除します。</p>
+
+				<p class="point_green">② 室外機の清掃</p>
+
+				<p class="text_w">アルミフィンに付着した汚れ・異物を取り除きます。</p>
+
+				<p class="point_green">③ ドレンの点検</p>
+
+				<p class="text_w">実際にドレンパンに水を流し込み、排水の状態を確認。ドレン管に異物が詰まっていないかもあわせてチェックします。</p>
+
+				<p class="point_green">④ 運転能力の点検</p>
+
+				<p class="text_w">吸込み・吹き出し時の温度差を温度計でチェック。またクランプメーターを使って運転電流を測定し、異常がないか確認します。</p>
+
+				<p class="point_green">⑤ 設置状態の点検</p>
+
+				<p class="text_w">室内機が水平に設置されているか、ガタつきがないかを確認します。</p>
+
+				<p class="point_green">⑥ 電気関係の点検</p>
+
+				<p class="text_w">コンセントやコンセントプラグに変色や差込の不良がないかを確認。渡り線の差込の不良もあわせて確認します。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">フィルターにはホコリが詰まっています！</div>
+
+						<p style="margin-top: 10px;"><img alt="エアコンパーツ"
+								src="/sites/default/files/inline-images/img_trip-4-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">室外機の熱交換器の詰まりもチェック！</div>
+
+						<p style="margin-top: 10px;"><img alt="エアコンパーツ"
+								src="/sites/default/files/inline-images/img_trip-4-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">コンセントプラグも忘れずに点検！</div>
+
+						<p style="margin-top: 10px;"><img alt="エアコンパーツ"
+								src="/sites/default/files/inline-images/img_trip-4-4.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">ドレン管に異物が詰まっていないか確認！</div>
+
+						<p style="margin-top: 10px;"><img alt="エアコンパーツ"
+								src="/sites/default/files/inline-images/img_trip-4-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 電子レンジ --> <input class="tab-switch" id="TAB-05" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-05"><img alt="電子レンジ" src="/sites/default/files/inline-images/icon_2-5.png"
+			style="vertical-align: middle;" /><br />
+		電子レンジ</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="microwave_trip">電子レンジ</h3>
+
+		<dl>
+			<dd>
+				<h4>内部の基盤・送風ファンから雲母板まで清掃・点検。電子レンジの故障を予防します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 40分</td>
+						</tr>
+						<tr>
+							<th>電子レンジ</th>
+							<td>通常価格　4,400円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="電子レンジ" src="/sites/default/files/inline-images/img_trip-5-1_0.jpg" />
+				<p class="point_green">① 外装・レンジ台の清掃</p>
+
+				<p class="text_w">ホコリや油汚れはタオルに中性洗剤を付けてキレイに拭き取り。しつこい汚れは、洗浄ワックスなどを使って徹底的に洗浄します。</p>
+
+				<p class="point_green">② レンジ扉の清掃</p>
+
+				<p class="text_w">ガラス面やヒンジ回りに付着した油汚れは中性洗剤を使ってキレイに拭き取ります。</p>
+
+				<p class="point_green">③ レンジ内部の清掃・異常音の点検</p>
+
+				<p class="text_w">外装を取り外して、マグネトロンや基板・送風ファンをクリーナーを使って念入りに清掃。各部位から異常音が発生していないか確認します。</p>
+
+				<p class="point_green">④ 加熱能力の点検</p>
+
+				<p class="text_w">コーヒーカップ・湯呑などをお借りし、水を入れて 500W で 1分間加熱。水温の変化から、加熱能力を確認します。</p>
+
+				<p class="point_green">⑤ オーブン機能の点検</p>
+
+				<p class="text_w">オーブン運転時、正常に加熱しているか、ヒーター部が点灯しているかを確認します。</p>
+
+				<p class="point_green">⑥ 庫内の清掃</p>
+
+				<p class="text_w">回転皿や底面に飛び散った食べ物カスを残さず除去します。</p>
+
+				<p class="point_green">⑦ 電波発射窓の清掃・点検</p>
+
+				<p class="text_w">雲母板劣化の原因・炭化した食べ物カスはライバーを使って、こそぎ落とします。また運転時、火花が出るなどの異常がないか確認します。</p>
+
+				<p class="point_green">⑧ コンセントの点検</p>
+
+				<p class="text_w">運転中の異常過熱やコードの折れ・半断線、緑青の付着などをこまかく点検します。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">外装についた油を落として新品同様に！</div>
+
+						<p style="margin-top: 10px;"><img alt="電子レンジパーツ"
+								src="/sites/default/files/inline-images/img_trip-5-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">油汚れを落として扉のガラスもピカピカに！</div>
+
+						<p style="margin-top: 10px;"><img alt="電子レンジパーツ"
+								src="/sites/default/files/inline-images/img_trip-5-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">炭化した食べ物カスが跡形もなく消えました！</div>
+
+						<p style="margin-top: 10px;"><img alt="電子レンジパーツ"
+								src="/sites/default/files/inline-images/img_trip-5-4.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">ホコリまみれのファンがこんなにキレイに！</div>
+
+						<p style="margin-top: 10px;"><img alt="電子レンジパーツ"
+								src="/sites/default/files/inline-images/img_trip-5-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- シーリングライト --> <input class="tab-switch" id="TAB-06" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-06"><img alt="シーリングライト" src="/sites/default/files/inline-images/icon_2-6.png"
+			style="vertical-align: middle;" /><br />
+		シーリングライト</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="ceilinglight_trip">シーリングライト</h3>
+
+		<dl>
+			<dd>
+				<h4>内部の基盤から電球、防虫スペーサーまで清掃・点検。シーリングライトの故障を予防します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 20分</td>
+						</tr>
+						<tr>
+							<th>シーリングライト（照明）</th>
+							<td>通常価格　4,400円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="シーリングライト" src="/sites/default/files/inline-images/img_trip-6-1.jpg" />
+				<p class="point_green">① セードの清掃</p>
+
+				<p class="text_w">セードを取り外して分解後、ホコリや油汚れをハケとクリーナーを使って清掃します。</p>
+
+				<p class="point_green">② 管球の清掃・点検</p>
+
+				<p class="text_w">明るさなどを目視で確認した後、管球を取り外しタオルで汚れをキレイに拭き取ります。</p>
+
+				<p class="point_green">③ リモコンの点検</p>
+
+				<p class="text_w">ボタンを押した際に正常に作動するか、電池が正しく装填されているかなどを確認します。</p>
+
+				<p class="point_green">④ 照明本体の点検</p>
+
+				<p class="text_w">端子接続部や配線・ソケット・基板などに異常がないか確認します。</p>
+
+				<p class="point_green">⑤ 防虫スペーサーの点検</p>
+
+				<p class="text_w">スイッチ紐と穴の間に虫が入るすき間がないか、照明とセードの間のクッションが熱で劣化していないかを確認します。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">照明上部はホコリや油汚れがびっしり！</div>
+
+						<p style="margin-top: 10px;"><img alt="シーリングライトパーツ"
+								src="/sites/default/files/inline-images/img_trip-6-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">蛍光灯の管球もキレイにおそうじ！</div>
+
+						<p style="margin-top: 10px;"><img alt="シーリングライトパーツ"
+								src="/sites/default/files/inline-images/img_trip-6-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">セードを分解してすみずみまでキレイに！</div>
+
+						<p style="margin-top: 10px;"><img alt="シーリングライトパーツ"
+								src="/sites/default/files/inline-images/img_trip-6-4.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">ハケとクリーナーを使ってホコリを除去！</div>
+
+						<p style="margin-top: 10px;"><img alt="シーリングライトパーツ"
+								src="/sites/default/files/inline-images/img_trip-6-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- AV機器配線まとめ --> <input class="tab-switch" id="TAB-07" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-07"><img alt="AV機器配線まとめ" src="/sites/default/files/inline-images/icon_2-8.png"
+			style="vertical-align: middle;" /><br />
+		AV機器配線まとめ</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="audiovisualsystems_trip">AV 機器配線まとめ</h3>
+
+		<dl>
+			<dd>
+				<h4>入り組んだ配線を整理後、スパイラルチューブで一本化。各 AV 機器の配線回りがスッキリします！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>ご自宅までご訪問</th>
+							<td>作業時間の目安：約 20分</td>
+						</tr>
+						<tr>
+							<th>AV 機器配線まとめ</th>
+							<td>通常価格　2,640円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="AV機器配線まとめ" src="/sites/default/files/inline-images/img_trip-8-1.jpg" />
+				<p class="point_green">① 配線回りの清掃</p>
+
+				<p class="text_w">配線にからんだホコリを、クリーナーでキレイに取り除きます。</p>
+
+				<p class="point_green">② 配線のおまとめ</p>
+
+				<p class="text_w">各 AV 機器の配線をスパイラルチューブで 1つにまとめてスッキリさせます。配線が入り組んでいる場合は、差し直して整理した後にまとめます。</p>
+			</dd>
+		</dl>
+	</div>
+</div>
+
+<div class="mb30">&nbsp;</div>
+
+<div class="border_area">
+	<table class="movie_area">
+		<tbody>
+			<tr style="border:0px none!important;">
+				<td style="border:0px none!important;">
+					<p class="b">店舗でお申し込み</p>
+
+					<p class="btn"><a href="https://search.edion.com/e_store/" style="color: #fff;"
+							target="_blank">店舗検索ページが開きます</a></p>
+				</td>
+				<td style="border:0px none!important;">
+					<p class="b">必ずご確認ください</p>
+					・ 表記の金額は 1台に対する料金です。2台目以降の料金は店員にお尋ねください。<br />
+					・ 各サービスメニュー完了後の機器保証はありませんので、あらかじめご了承ください。<br />
+					・ 冷蔵庫のおそうじ・点検中は、一時的に電源を切りますので、あらかじめご了承ください。<br />
+					・ シーリングライトの吹き抜けなどの高所設置（作業床が 2ｍ 以上）やシャンデリアは除きます。<br />
+					・ AV 機器配線まとめはテレビ 1台と AV 機器 2台までの料金です。（機器追加は別途見積）<br />
+					・ 当社ご購入のテレビお届け時に AV 機器配線まとめサービスをご希望の場合は、1,320円（1台 / 税込）にて承ります。<br />
+					・ 業務用器具は対象外となります。<br />
+					・ 故障を発見した場合は修理を承ります。（修理料金は別途必要）<br />
+					・ メニューのご提供は、当社指定エリア内に限ります。
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="/service/satisfied#support">家電トータルサポートへ戻る</a></p>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="https://www.edion.co.jp/">トップへ戻る</a></p>
+</div>

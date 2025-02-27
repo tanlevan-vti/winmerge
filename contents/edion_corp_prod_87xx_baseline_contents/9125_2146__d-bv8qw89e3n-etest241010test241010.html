@@ -1,0 +1,2147 @@
+<style type="text/css">
+	body {
+		background: #F7F7F7;
+		font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+		color: #333;
+		font-size: 1rem;
+		line-height: 1.85;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-text-size-adjust: 100%;
+		word-wrap: break-word;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	a {
+		color: #333;
+		text-decoration: none;
+		outline: none;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		vertical-align: bottom;
+		backface-visibility: hidden;
+	}
+
+	/* font-family */
+
+	h1,
+	h2,
+	h3 span,
+	#g-nav,
+	#footer {
+		font-family: 'Lato', sans-serif;
+		letter-spacing: 0.1em;
+	}
+
+	h2 {
+		width: calc(100% - 6px);
+		position: relative;
+		padding: 6px 42px 6px 12px;
+		background: #275CAB;
+		font-size: 20px;
+		color: white;
+		margin-right: -37px;
+		margin-bottom: 1.3em;
+		line-height: 1.3;
+		z-index: 2;
+		box-sizing: border-box
+	}
+
+	h2:before {
+		position: absolute;
+		content: '';
+		right: -2px;
+		bottom: -2px;
+		border: none;
+		border-right: solid 40px white;
+		border-bottom: solid 79px transparent;
+		z-index: 1
+	}
+
+	h3 {
+		position: relative;
+		border-bottom: 5px solid #ddd;
+		margin-bottom: 30px;
+		padding: 0.2em 0;
+		z-index: 1;
+	}
+
+	h3:before {
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		width: 20%;
+		height: 5px;
+		content: '';
+		background: #275CAB;
+	}
+
+	h4 {
+		width: 100%;
+		background: #725889;
+		color: #FFF;
+		margin-bottom: 1em;
+		padding: 0.3em 0.6em;
+	}
+
+	h5 {
+		font-size: 1.1rem;
+	}
+
+	a.link {
+		position: relative;
+		display: inline-block;
+		font-size: 15px;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	a.link::after {
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: -15px;
+		width: 8px;
+		height: 8px;
+		border: solid #275CAB;
+		border-width: 2px 2px 0 0;
+		transform: rotate(45deg) translateY(-50%);
+		content: "";
+	}
+
+	@media screen and (max-width:768px) {
+		body {
+			font-size: 0.8rem;
+		}
+
+		h2 {
+			font-size: 1.6rem;
+		}
+	}
+
+	/* -----------------------------------
+	header
+----------------------------------- */
+
+	#header {
+		border-bottom: 4px solid #275CAB;
+		background: rgb(254, 254, 254);
+		background: linear-gradient(90deg, rgba(254, 254, 254, 1) 0%, rgba(249, 249, 249, 1) 40%, rgba(248, 247, 247, 1) 100%);
+	}
+
+	#header section {
+		width: 90%;
+		max-width: 1240px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin: 0 auto;
+	}
+
+	#header section .main {
+		max-width: 600px;
+		flex: 1;
+		padding: 2em 3em 1em 0;
+	}
+
+	#header section .side {
+		width: 400px;
+	}
+
+	#header section h1 {
+		margin-bottom: 0.8em;
+	}
+
+	#header section p {
+		font-size: 1.2rem;
+		line-height: 1;
+		letter-spacing: 0.2em;
+		margin-bottom: 0.4em;
+	}
+
+	#header section p span {
+		font-size: 1rem;
+	}
+
+	#header section p.greeting {
+		font-size: 1rem;
+		line-height: 1.4;
+		margin: 1.5em 0;
+	}
+
+	#header section p.ceo {
+		font-size: 0.9rem;
+		margin-bottom: 0.4em;
+	}
+
+	#header section p.ceo-sign {
+		width: 200px;
+	}
+
+	@media screen and (max-width:550px) {
+		#header section p {
+			font-size: 1.2rem;
+		}
+	}
+
+	/* -----------------------------------
+	nav
+----------------------------------- */
+
+	.s-navi {
+		width: 90%;
+		max-width: 1240px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 60px 0;
+	}
+
+	.s-navi::before {
+		content: "";
+		width: calc(50% - 13px);
+		height: 0;
+		order: 1;
+	}
+
+	.s-navi::after {
+		content: "";
+		width: calc(50% - 13px);
+		height: 0;
+	}
+
+	.s-navi-li {
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: calc(50% - 13px);
+		height: 35px;
+		padding: 9px 2px 8px;
+		border-top: 1px solid #DDDDDD;
+		transition: background .3s ease-in-out;
+	}
+
+	.s-navi-li:hover {
+		background-color: #F2F2F2;
+	}
+
+	.s-naviLink-arrow {
+		position: absolute;
+		right: 3px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #275CAB;
+	}
+
+	.s-naviLink-arrow::before {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		width: 6px;
+		height: 6px;
+		border-bottom: 2px solid #fff;
+		border-left: 2px solid #fff;
+		content: '';
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+
+	.s-navi-li:nth-child(6),
+	.s-navi-li:nth-child(7),
+	.s-navi-li:nth-child(8) {
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	.s-navi-li_link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-left: 2px;
+		z-index: 3;
+		font-size: 13px;
+		font-weight: bold;
+		letter-spacing: 0.05em;
+		line-height: 1.5;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.sticky-nav .s-navi {
+		width: 100%;
+		padding: 0;
+	}
+
+	.sticky-menu {
+		color: #275CAB;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 0.2em;
+	}
+
+	.sticky-nav .s-navi-li {
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+		height: 50px;
+		padding: 14px 2px 13px;
+		border-top: 1px solid #DDDDDD;
+		transition: background .3s ease-in-out;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.s-navi::after {
+			content: "";
+			display: block;
+			width: calc(33% - 30px);
+		}
+
+		.s-navi-li {
+			width: calc(33% - 30px);
+			border-top: 1px solid #DDDDDD;
+			height: 35px;
+			padding: 8px 5px;
+		}
+
+		.s-navi-li:nth-child(3n+1) {
+			margin-left: 0;
+		}
+
+		.s-navi-li_link {
+			padding-left: 5px;
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 0.05em;
+			line-height: 1.5;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.sticky-nav .s-navi-li:nth-child(6),
+		.sticky-nav .s-navi-li:nth-child(7) {
+			border-bottom: none;
+		}
+	}
+
+	/* -----------------------------------
+	area
+----------------------------------- */
+
+	#container {
+		background-image: url(../img/top_back.webp);
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: 16% auto;
+	}
+
+	#main-area {
+		width: 90%;
+		max-width: 1240px;
+		margin: 0 auto;
+		background: rgba(255, 255, 255, 0.9);
+	}
+
+	.contents {
+		display: flex;
+		margin: 0 auto;
+		padding: 6%;
+	}
+
+	.sticky-nav {
+		width: 180px;
+		height: 100%;
+		position: sticky;
+		top: 100px;
+		left: 0;
+		flex-shrink: 0;
+		margin-right: 6%;
+	}
+
+	.sticky-content {
+		flex: 1;
+	}
+
+	#report1,
+	#report2,
+	#report3,
+	#report4,
+	#report5,
+	#report6,
+	#report7,
+	#report8 {
+		margin: 0 auto 3em auto;
+	}
+
+	.report p {
+		margin-bottom: 1em;
+	}
+
+	@media screen and (max-width:1024px) {
+		.sticky-nav {
+			display: none;
+		}
+	}
+
+	/* -----------------------------------
+	report2
+----------------------------------- */
+
+	#report2 {
+		margin: 0 auto;
+	}
+
+	/* -----------------------------------
+	report3
+----------------------------------- */
+
+	#nearlyZEB {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#nearlyZEB .main {
+		flex: 1;
+	}
+
+	#nearlyZEB .main .ZEB-cution {
+		font-size: 0.9rem;
+		line-height: 1.2;
+	}
+
+	#nearlyZEB .side {
+		width: 40%;
+		max-width: 400px;
+		margin-left: 3em;
+	}
+
+	/* -----------------------------------
+	report4
+----------------------------------- */
+
+	#report4 h3 {
+		border-bottom: none;
+		color: #275CAB;
+		font-size: 1.1em;
+		line-height: 1.5;
+		margin-bottom: 1.5em;
+		padding: 0;
+		text-align: center;
+	}
+
+	#report4 h3:before {
+		display: none;
+	}
+
+	/* -----------------------------------
+	report5
+----------------------------------- */
+
+	#benefits_1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#benefits_1 .benefits1_left {
+		width: 30%;
+		max-width: 299px;
+		margin-right: 3%;
+	}
+
+	#benefits_1 .benefits1_right {
+		flex: 1;
+	}
+
+	#benefits_1 .benefits1_right p {
+		font-size: 0.9rem;
+		line-height: 1.2;
+	}
+
+	#benefits_2 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.5em;
+	}
+
+	#benefits_2 .benefits2_left {
+		width: 51.21%;
+		max-width: 594px;
+	}
+
+	#benefits_2 .benefits2_right {
+		width: 48.02%;
+		max-width: 557px;
+	}
+
+	#report5 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#report5 .report5_left {
+		/* width: 55%; */
+		width: 100%;
+	}
+
+	#report5 .report5_right {
+		/*  width: 40%; */
+		width: 100%;
+	}
+
+	table.soudan-table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		empty-cells: show;
+		margin-bottom: 3em;
+	}
+
+	.soudan-table tr:nth-child(even) {
+		background: #DAEFEC;
+		z-index: 1;
+	}
+
+	.soudan-table thead th {
+		background: #275CAB;
+		color: #FFF;
+		padding: 0.65em;
+		text-align: center;
+		border-right: 1px solid #DDD;
+	}
+
+	.soudan-table tbody th {
+		padding: 0.65em 0.5em;
+		text-align: left;
+		border-right: 1px solid #DDD;
+		white-space: nowrap;
+		z-index: 2;
+	}
+
+	.soudan-table tbody td {
+		border-right: 1px solid #DDD;
+		border-left: 1px solid #DDD;
+		padding: 0.6em 0.5em;
+		text-align: center;
+	}
+
+	#report5 .memo li {
+		border-bottom: 1px solid #ccc;
+		margin: 0 0 12px 0;
+		padding: 0 0 12px 0;
+	}
+
+	#report5 .memo dl {
+		display: flex;
+		justify-content: space-between;
+		line-height: 1.5;
+	}
+
+	#report5 .memo dt {
+		/* width: 9em; */
+		width: 15em;
+	}
+
+	#report5 .memo dd {
+		flex: 1;
+	}
+
+	#report5 .memo dd span {
+		font-size: 0.8rem;
+	}
+
+	@media screen and (max-width:559px) {
+		.table-wrap {
+			width: 100%;
+			overflow-x: auto;
+			margin-bottom: 12px;
+		}
+
+		div.table-wrap::-webkit-scrollbar {
+			height: 5px;
+		}
+
+		div.table-wrap::-webkit-scrollbar-track {
+			border-radius: 5px;
+			background: #eee;
+		}
+
+		div.table-wrap::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background: #666;
+		}
+
+		.overflow {
+			font-size: 83%;
+			margin-bottom: 6px;
+		}
+
+		table.soudan-table {
+			width: 600px;
+			font-size: 93%;
+		}
+
+		.soudan-table tbody th {
+			padding: 0.8em 0.2em;
+		}
+
+		dl.soudan-backnumber dd {
+			padding: 1em 0;
+		}
+	}
+
+	/* -----------------------------------
+	report6
+----------------------------------- */
+
+	#report6 .about-list,
+	#report6 .about-list2,
+	#report6 .about-list3 {
+		margin-bottom: 3em;
+	}
+
+	#report6 .about-list li {
+		border-bottom: 1px solid #ccc;
+		margin: 0 0 15px 0;
+		padding: 0 0 15px 0;
+	}
+
+	#report6 .about-list dl {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#report6 .about-list dt {
+		width: 8em;
+	}
+
+	#report6 .about-list dd {
+		flex: 1;
+	}
+
+	#report6 .about-list2 dl {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#report6 .about-list2 li {
+		border-bottom: 1px solid #ccc;
+		margin: 0 0 8px 0;
+		padding: 0 0 8px 0;
+	}
+
+	#report6 .about-list2 dt {
+		width: 17em;
+	}
+
+	#report6 .about-list2 dd {
+		flex: 1;
+	}
+
+	#report6 .about-list3 li {
+		border-bottom: 1px solid #ccc;
+		margin: 0 0 15px 0;
+		padding: 0 0 15px 0;
+	}
+
+	#report6 .about-list3 dl {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#report6 .about-list3 dt {
+		flex: 1;
+	}
+
+	#report6 .about-list3 dd {
+		width: 7em;
+	}
+
+	/* -----------------------------------
+	report7
+----------------------------------- */
+
+	.topics7-1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 1.5em;
+	}
+
+	.topics7-1 .side {
+		width: 40%;
+		max-width: 400px;
+		margin-right: 3em;
+	}
+
+	.topics7-1 .main {
+		flex: 1;
+	}
+
+	.topics7-2 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 1.5em;
+	}
+
+	.topics7-2-left,
+	.topics7-2-right {
+		width: 48%;
+	}
+
+	.topics7-3 .topics7-3-side {
+		width: 100%;
+		margin-bottom: 0.8em;
+	}
+
+	.topics7-3 .topics7-3-main {
+		flex: 1;
+	}
+
+	.topics7-4 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: 2em auto 4em;
+	}
+
+	.topics7-4 h3 {
+		border-bottom: none;
+		font-size: 1.4em;
+		line-height: 1.5;
+		margin: 0 auto 1em auto;
+		padding: 0;
+		text-align: center;
+	}
+
+	.topics7-4 h3:before {
+		display: none;
+	}
+
+	.topics7-4-profile {
+		border-bottom: 2px solid #275CAB;
+		color: #275CAB;
+		font-size: 1.2em;
+		font-weight: 600;
+		line-height: 1.5;
+		margin: 1em auto;
+		padding-bottom: 0.3em;
+	}
+
+	.topics7-4-profile span {
+		font-size: 1.5em;
+	}
+
+	dl.topics7-4-profile2 dt {
+		width: 7em;
+		border-bottom: 3px solid #8B5E3B;
+		background: #275CAB;
+		color: #FFF;
+		font-size: 0.9em;
+		font-weight: 600;
+		margin: 1em 0 0.3em;
+		padding: 0.15em 1em 0.1em 1em;
+		text-aligh: justify;
+	}
+
+	.topics7-4 .topics7-4-side {
+		width: 50%;
+		max-width: 400px;
+		margin-right: 4em;
+	}
+
+	.topics7-4 .topics7-4-main {
+		flex: 1;
+	}
+
+	.topics7-5 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto 4em auto;
+		z-index: 2;
+	}
+
+	.topics7-5 .topics7-5-left,
+	.topics7-5 .topics7-5-right {
+		width: 48%;
+	}
+
+	/* -----------------------------------
+	report8
+----------------------------------- */
+
+	ul.topics8-1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 4em;
+	}
+
+	ul.topics8-1 li:nth-child(1) {
+		width: 32.41%;
+		max-width: 329px;
+	}
+
+	ul.topics8-1 li:nth-child(2) {
+		width: 33.20%;
+		max-width: 337px;
+	}
+
+	ul.topics8-1 li:last-child {
+		width: 33.10%;
+		max-width: 336px;
+	}
+
+	table.soneki-table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		empty-cells: show;
+		margin-bottom: 4em;
+	}
+
+	.soneki-table tr:nth-child(even) {
+		background: #FBD3AC;
+		z-index: 1;
+	}
+
+	.soneki-table thead th {
+		background: #275CAB;
+		color: #FFF;
+		padding: 0.46em 0.6em;
+		text-align: center;
+		border-right: 1px solid #DDD;
+	}
+
+	.soneki-table tbody th {
+		padding: 0.46em 0.6em;
+		text-align: left;
+		border-right: 1px solid #DDD;
+		white-space: nowrap;
+		z-index: 2;
+	}
+
+	.soneki-table tbody td {
+		border-right: 1px solid #DDD;
+		border-left: 1px solid #DDD;
+		padding: 0.4em 0.6em;
+		text-align: right;
+	}
+
+	.topics8-3 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 1.5em;
+	}
+
+	.topics8-3-left,
+	.topics8-3-right {
+		width: 100%;
+	}
+
+	.topics8-3-left {
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 3em;
+	}
+
+	.topics8-3-left h3 {
+		text-align: left;
+	}
+
+	.topics8-3-left img {
+		display: inline-block;
+		width: 100%;
+		max-width: 780px;
+		height: auto;
+	}
+
+	.topics8-4 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.5em;
+	}
+
+	.topics8-4-left {
+		width: 35%;
+	}
+
+	.topics8-4-right {
+		width: 58%;
+	}
+
+	dl.topics8-4-title {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 10px;
+		grid-row-gap: 0;
+		align-items: flex-end;
+		width: 100%;
+		margin-bottom: 0.4em;
+	}
+
+	dl.topics8-4-title dt {
+		color: #275CAB;
+		font-size: 1.3em;
+		font-weight: 600;
+	}
+
+	dl.topics8-4-title dd {
+		text-align: right;
+	}
+
+	@media screen and (max-width:559px) {
+		.table-wrap {
+			width: 100%;
+			overflow-x: auto;
+			margin-bottom: 12px;
+		}
+
+		div.table-wrap::-webkit-scrollbar {
+			height: 5px;
+		}
+
+		div.table-wrap::-webkit-scrollbar-track {
+			border-radius: 5px;
+			background: #eee;
+		}
+
+		div.table-wrap::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background: #666;
+		}
+
+		.overflow {
+			font-size: 83%;
+			margin-bottom: 6px;
+		}
+
+		table.soneki-table {
+			width: 600px;
+			font-size: 93%;
+		}
+
+		.soneki-table tbody th {
+			padding: 0.8em 0.2em;
+		}
+	}
+
+	#footer {
+		border-top: 1px solid #333;
+		padding: 40px;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	#footer .footer-logo {
+		width: 160px;
+		margin: 0 auto 1.8em auto;
+	}
+
+	#footer small {
+		color: #444;
+	}
+
+	#page-top a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #275CAB;
+		width: 60px;
+		height: 50px;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 0.6rem;
+		transition: all 0.3s;
+	}
+
+	#page-top a:hover {
+		background: #777;
+	}
+
+	/*リンクを右下に固定*/
+	#page-top {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		/*はじめは非表示*/
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	/*　左の動き　*/
+
+	#page-top.LeftMove {
+		animation: LeftAnime 0.5s forwards;
+	}
+
+	@keyframes LeftAnime {
+		from {
+			opacity: 0;
+			transform: translateX(100px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	/*　右の動き　*/
+
+	#page-top.RightMove {
+		animation: RightAnime 0.5s forwards;
+	}
+
+	@keyframes RightAnime {
+		from {
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateX(100px);
+		}
+	}
+
+	/*-----------------------------------------------
+ __margin_padding
+-----------------------------------------------*/
+
+	.mt0 {
+		margin-top: 0 !important;
+	}
+
+	.mt05 {
+		margin-top: 5px !important;
+	}
+
+	.mt10 {
+		margin-top: 10px !important;
+	}
+
+	.mt15 {
+		margin-top: 15px !important;
+	}
+
+	.mt20 {
+		margin-top: 20px !important;
+	}
+
+	.mt30 {
+		margin-top: 30px !important;
+	}
+
+	.mt40 {
+		margin-top: 40px !important;
+	}
+
+	.mb0 {
+		margin-bottom: 0px !important;
+	}
+
+	.mb05 {
+		margin-bottom: 5px !important;
+	}
+
+	.mb08 {
+		margin-bottom: 8px !important;
+	}
+
+	.mb10 {
+		margin-bottom: 10px !important;
+	}
+
+	.mb15 {
+		margin-bottom: 15px !important;
+	}
+
+	.mb20 {
+		margin-bottom: 20px !important;
+	}
+
+	.mb30 {
+		margin-bottom: 30px !important;
+	}
+
+	.mb40 {
+		margin-bottom: 40px !important;
+	}
+
+	.pt0 {
+		padding: 0 0 0 0 !important;
+	}
+
+	.pt05 {
+		padding-top: 5px !important;
+	}
+
+	.pt10 {
+		padding-top: 10px !important;
+	}
+
+	.pt20 {
+		padding-top: 20px !important;
+	}
+
+	.pt30 {
+		padding-top: 30px !important;
+	}
+
+	.pb05 {
+		padding-bottom: 5px !important;
+	}
+
+	.pb10 {
+		padding-bottom: 10px !important;
+	}
+
+	.pb12 {
+		padding-bottom: 12px !important;
+	}
+
+	.pb20 {
+		padding-bottom: 20px !important;
+	}
+
+	.pb30 {
+		padding-bottom: 30px !important;
+	}
+
+	/*-----------------------------------------------
+ __position
+-----------------------------------------------*/
+
+	.center {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.right {
+		margin-right: 0;
+		text-align: right;
+	}
+
+	.red {
+		color: #E60013;
+	}
+
+	.white {
+		color: #FFF;
+	}
+</style>
+<div id="wrapper">
+	<article id="header">
+		<section>
+			<div class="main">
+				<h1><img alt="EDION ONLINE REPORT 23期報告書" data-entity-type="file"
+						data-entity-uuid="b42a7ec0-b2aa-4c1b-af02-38bf159240f0"
+						src="/sites/default/files/inline-images/title.png" /></h1>
+
+				<p>2023年4月1日～2024年3月31日</p>
+
+				<p>株式会社 エディオン<span>（証券コード:2730）</span></p>
+
+				<p class="greeting">平素は格別のご高配を賜り、厚く御礼申し上げます。<br />
+					さて、この度「第23期 報告書」を作成いたしましたので、<br class="pc" />
+					ご高覧くださいますようお願い申し上げます。</p>
+
+				<p class="ceo">代表取締役会長執行役員 CEO</p>
+
+				<p class="ceo-sign"><img alt="久保 允誉　署名" data-entity-type="file"
+						data-entity-uuid="9e470006-1e5f-4598-ab83-de0aebbfc7e2"
+						src="/sites/default/files/inline-images/ceo-sign.png" /></p>
+			</div>
+
+			<div class="side">
+				<figure><img alt="久保 允誉　写真" data-entity-type="file"
+						data-entity-uuid="2701efd6-b2f0-4da9-b266-bafb75b757bf"
+						src="/sites/default/files/inline-images/ceo.png" /></figure>
+			</div>
+		</section>
+	</article>
+
+	<div id="container">
+		<ul class="s-navi">
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report1">2023年度の業績</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report2">2024年度の見通し</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report3">サステナビリティ</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report4">株主優待</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report5">株式情報</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report6">会社情報</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report7">トピックス</a></li>
+			<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report8">財務状況</a></li>
+		</ul>
+
+		<main id="main-area">
+			<div class="contents">
+				<div class="sticky-nav">
+					<p class="sticky-menu">Menu</p>
+
+					<ul class="s-navi">
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report1">2023年度の業績</a>
+						</li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report2">2024年度の見通し</a>
+						</li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report3">サステナビリティ</a></li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report4">株主優待</a></li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report5">株式情報</a></li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report6">会社情報</a></li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report7">トピックス</a></li>
+						<li class="s-navi-li"><a class="s-navi-li_link s-navi-li_move" href="#report8">財務状況</a></li>
+					</ul>
+				</div>
+
+				<div class="sticky-content">
+					<section class="report">
+						<div id="report1">
+							<h2>2023年度の業績について</h2>
+
+							<p>当連結会計年度における我が国経済は、長引くウクライナや中東の情勢不安、原材料・エネルギー価格の影響による物価上昇、円安基調が強まる為替相場などにより先行き不透明な状況が続きました。しかしながら、2023年5月から新型コロナウイルス感染症の5類感染症への移行に伴い、経済活動の正常化と消費の回復はより一層進んでおります。
+							</p>
+
+							<p>エディオングループにおきましては、経営資源の適切な再配分と企業価値の向上を目指し、グループ再編を推し進めております。</p>
+
+							<p>その一環として、昨年10月に物流・配送サービスを行う株式会社ジェイトップが株式会社e-ロジを吸収合併いたしました。これにより、当社物流サービス網のさらなる効率化を図ってまいります。本年3月には株式会社麻布を連結子会社化し、同社が持つ塗装技術・職人とのネットワークや営業力の高さを活用することで、さらなるリフォーム事業の拡大に努めております。また昨年9月に株式会社サンフレッチェ広島を関連子会社から連結子会社化し、これまで以上に地域企業やファンの皆様とともに、クラブの成長を目指し、地域の発展に貢献してまいります。
+							</p>
+
+							<p>さらに、2024年3月27日開催の取締役会において、2025年4月1日付で100％子会社である株式会社サンキューを吸収合併する事を決議しております。今後も家電事業とのシナジーをより一層高める様々な事業展開に努めてまいります。
+							</p>
+
+							<p>商品別売上につきましては、エアコンなどの季節家電が、記録的な猛暑により前年を上回りました。また、法改正による駆け込み需要があった携帯電話や、商品供給が安定したゲーム・玩具などの売上も伸長いたしました。
+							</p>
+
+							<p>一方、テレビなどの映像家電は、新型コロナウイルス感染症の5類感染症への移行に伴い、外向き消費が増加した影響を受け低調に推移し、また、パソコンなどの情報家電についても、昨年1月にWindows8.1のサポート期間終了による買い替え需要があったこともあり、売上は減少いたしました。
+							</p>
+
+							<p>以上の結果、2023年度の売上高は、7,210億85百万円（前期比100.1％）となりました。営業利益は169億29百万円（前期比88.2％）、経常利益は173億39百万円（前期比90.1％）、親会社株主に帰属する当期純利益は90億21百万円（前期比79.2％）となりました。
+							</p>
+						</div>
+
+						<div id="report2">
+							<h2>2024年度の見通しについて</h2>
+
+							<p>今後の見通しとして、国内の経済を取り巻く環境は消費活動が一層活発になり、2025年の大阪・関西万博に向けて海外からの観光客の増加やそれに伴うインバウンド需要の回復も期待されております。一方、ウクライナや中東の情勢不安の長期化や世界的なエネルギー価格・原料価格の影響による物価上昇、円安基調が強まる為替相場などにより、この先しばらくは経済環境が不透明な状況が続くと予想されます。
+							</p>
+
+							<p>家電小売業界におきましても、水道光熱費の上昇や物流業界における2024年問題による物流コストの増加、商品価格の上昇や節約志向の高まりによる購買意欲の減少が起こり、売上や利益が低下するといった可能性があります。しかしながら、家電市場には買い替えを中心とした需要が潜在的にあるため、一時的な悪化があったとしても中期的には売上や利益が回復することを見込んでおります。また、2024年７月に開催予定のパリオリンピックによる映像家電の盛り上がり、リフォームや省エネ家電に対する補助金交付による需要増加も期待されます。
+							</p>
+
+							<p>2024年４月には「エディオン笹丘店（福岡県）」、「エディオンガーデンズ千早東店（福岡県）」の２店舗を新設オープンし、2024年度中には合計８店舗の新設及び移転を計画しております。また、既存店におきましては、省エネ家電の推進やオリジナル家電の開発を通じてお客様のニーズに合わせた柔軟な提案を行うとともに、全国物流網の拡大や修理受付体制・ＥＣ・リフォーム事業の強化を図ってまいります。
+							</p>
+
+							<p>以上により次期の業績予想につきましては、連結売上高7,500億円（前期比104.0％）、営業利益190億円（前期比112.2％）、経常利益195億円（前期比112.5％）、親会社株主に帰属する当期純利益は110億円（前期比121.9％）を見込んでおります。
+							</p>
+						</div>
+					</section>
+
+					<section id="report3">
+						<div class="report">
+							<h2>TOPICS「Nearly ZEB（ニアリーゼブ）」認証を取得</h2>
+
+							<p>当社ではこれまでも全国約 70
+								拠点の店舗・サービスセンター等に太陽光発電システムを設置し、再生可能エネルギーの活用に取り組んでまいりました。店舗の新設にあたり、脱炭素化への取り組みをさらに進めるために高効率空調・調光式
+								LED
+								照明などを導入した「岐阜正木店」と「交野星田店」の2店舗が、5段階で建築物の省エネルギー性能を表示するBELS（建築物省エネルギー性能表示制度）において最高評価の五つ星を取得し、さらに「Nearly
+								ZEB※1（ニアリーゼブ）」認証を取得いたしました。</p>
+
+							<p>BELSとは、建築物の省エネルギー性能について第三者評価機関が評価し認定する制度のことで、エディオングループとしては、「岐阜正木店」が初の認証取得となりました。また「交野星田店」は、PPAモデル※2を活用した太陽光発電設備とCO2フリー電力を導入しており、電力を100％再生可能エネルギーで実現できることから、CO2排出のない店舗となっております。
+							</p>
+						</div>
+
+						<section id="nearlyZEB">
+							<div class="main">
+								<p class="mb20">当社は今後も事業活動を通じて環境問題や社会課題の解決に取り組むことで持続的成長を図るとともに、持続可能な社会の実現に貢献してまいります。</p>
+
+								<p class="ZEB-cution mb08">[※1]
+									ZEB（ゼブ）とは、ネット・ゼロ・エネルギー・ビルの略で、室内の快適性を維持しながら年間のエネルギー消費量を実質ゼロにする建物のこと。<br />
+									ZEBは4種類あり、基準1次エネルギー消費量からの削減率が大きい順に「ZEB（ゼブ）」「Nearly ZEB（ニアリーゼブ）」「ZEB
+									Ready（ゼブレディ）」「ZEB Oriented（ゼブオリエンテッド）」となる。<br />
+									「Nearly ZEB」は、省エネルギーの建物と太陽光発電などによる創エネルギーを加え、建物利用に伴う直接的なエネルギー消費量を75％以上削減している建物のことをいう。
+								</p>
+
+								<p class="ZEB-cution mb20">[※2] Power Purchase Agreementの略で、第三者モデルともよばれている。<br />
+									施設の屋根などに 第三者事業者が太陽光発電設備を設置し、発電した電気を施設で使うことで、CO2排出を削減することができる。</p>
+
+								<p><a class="link" href="https://www.edion.co.jp/Sustainability/enviroment"
+										target="_blank">当社における環境の取り組みについて</a></p>
+							</div>
+
+							<div class="side"><img alt="BELS 5つ星獲得 岐阜正木店（2023年9月4日認証取得）" data-entity-type="file"
+									data-entity-uuid="82249389-8f2a-4794-8b6e-01b73fe11a5c"
+									src="/sites/default/files/inline-images/topics5_01.png" /><br />
+								<img alt="BELS 5つ星獲得 交野星田店（2023年9月20日認証取得）" data-entity-type="file"
+									data-entity-uuid="96a1a10d-9d9b-42df-8648-3467179b3bae"
+									src="/sites/default/files/inline-images/topics5_02.png" />
+							</div>
+						</section>
+					</section>
+
+					<section id="report4">
+						<h2>株主優待</h2>
+
+						<h3>エディオングループでお買い物にご利用いただける<br class="tb" />
+							株主様ご優待ギフトカードを進呈しております。<br />
+							このたび長期保有の株主様に対して、<br class="tb" />
+							長期保有期間での優待金額加算額の追加適用をしております。</h3>
+
+						<div id="benefits_2">
+							<div class="benefits2_left">
+								<figure><img alt="株主優待制度 概要" data-entity-type="file"
+										data-entity-uuid="d97ec423-1e86-4736-b0cc-e486c42a47b6" height="208"
+										src="/sites/default/files/inline-images/benefits_02.png" width="393" /></figure>
+							</div>
+
+							<div class="benefits2_right">
+								<figure><img alt="優待金額加算" data-entity-type="file"
+										data-entity-uuid="97fe44d7-6230-4db2-b01c-d281c9b7fe60" height="28"
+										src="/sites/default/files/inline-images/benefits_03.png" width="198" /></figure>
+							</div>
+						</div>
+
+						<div id="benefits_1">
+							<div class="benefits1_left">
+								<figure><img alt="株主様ご優待ギフトカード" data-entity-type="file"
+										data-entity-uuid="e9fbb8c7-7719-4b95-92af-de5edafd4970"
+										src="/sites/default/files/inline-images/benefits_01.png" /></figure>
+							</div>
+
+							<div class="benefits1_right">
+								<p>※長期保有の対象となる株主様は、同一株主番号で連続して複数回、3月末日および9月末日の株主名簿に記録された1単元（100株）以上ご所有の株主様となります。具体的には1年以上2年未満保有の場合は3回記載、2年以上3年未満保有の場合は5回記載、3年以上保有の場合は7回以上記載された株主様を対象といたします。また、長期保有加算額の変更については、2024年3月31日現在の株主名簿を基準として、保有期間を遡及して判定したうえで、2024年6月上旬に発送する株主優待から適用致しております。
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section id="report5">
+						<div class="report5_left">
+							<h3>1株当たり配当額と配当性向</h3>
+
+							<p class="right">（単位：円 銭）</p>
+
+							<table class="soudan-table">
+								<thead>
+									<tr>
+										<th>&nbsp;</th>
+										<th>2020年度</th>
+										<th>2021年度</th>
+										<th>2022年度</th>
+										<th>2023年度</th>
+										<th>2024年度</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>中間配当</th>
+										<td>20.00</td>
+										<td>22.00</td>
+										<td>22.00</td>
+										<td>22.00</td>
+										<td>22.00</td>
+									</tr>
+									<tr>
+										<th>期末配当</th>
+										<td>26.00</td>
+										<td>22.00</td>
+										<td>22.00</td>
+										<td>23.00</td>
+										<td>（予想）23.00</td>
+									</tr>
+									<tr>
+										<th>年間配当</th>
+										<td>46.00</td>
+										<td>44.00</td>
+										<td>44.00</td>
+										<td>45.00</td>
+										<td>（予想）45.00</td>
+									</tr>
+									<tr>
+										<th>配当性向（連結）</th>
+										<td>29.6%</td>
+										<td>35.1%</td>
+										<td>39.2%</td>
+										<td>50.0%</td>
+										<td>43.0%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="report5_right">
+							<h3>株主メモ</h3>
+
+							<ul class="memo fadeUpTrigger">
+								<li>
+									<dl>
+										<dt>決算日</dt>
+										<dd>毎年3月31日</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>株主名簿管理人/特別口座の<br />
+											口座管理機関</dt>
+										<dd>三菱UFJ信託銀行株式会社<br />
+											<span>東京都千代田区丸の内一丁目4番5号</span>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>株式に関するお問い合わせ先</dt>
+										<dd>三菱UFJ信託銀行株式会社 証券代行部<br />
+											<span>大阪市中央区伏見町三丁目6番3号<br />
+												電話番号：0120-094-777（通話料無料）</span>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>ホームページ</dt>
+										<dd>h<a href="ttps://www.tr.mufg.jp/daikou/"
+												target="_blank">ttps://www.tr.mufg.jp/daikou/</a></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="scroll-point" id="report6">
+						<h2>会社情報</h2>
+
+						<div id="company">
+							<div class="company_left">
+								<h3>会社概況</h3>
+
+								<ul class="about-list fadeUpTrigger">
+									<li>
+										<dl>
+											<dt>会社名</dt>
+											<dd>株式会社エディオン</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>事業内容</dt>
+											<dd>家庭電化商品等の販売</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>設立日</dt>
+											<dd>2002年3月29日</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>資本金</dt>
+											<dd>119億40百万円（2024年3月31日現在）</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>本店所在地</dt>
+											<dd>広島市中区紙屋町二丁目1番18号</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>本社事務所</dt>
+											<dd>大阪市北区中之島二丁目3番33号</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>上場取引所</dt>
+											<dd>東京証券取引所 プライム市場</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>正社員数</dt>
+											<dd>7,843名（単体）、9,170名（連結）</dd>
+										</dl>
+									</li>
+								</ul>
+
+								<h3>取締役（2024年6月27日現在）</h3>
+
+								<ul class="about-list3">
+									<li>
+										<dl>
+											<dt>代表取締役会長執行役員 CEO</dt>
+											<dd>久保 允誉</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>代表取締役副会長執行役員</dt>
+											<dd>山﨑 徳雄</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>代表取締役社長執行役員 COO</dt>
+											<dd>髙橋 浩三</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>取締役副社長執行役員<br />
+												IT戦略本部管掌</dt>
+											<dd>金子 悟士</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>取締役専務執行役員<br />
+												eコマース本部長</dt>
+											<dd>淨弘 晴義</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>取締役上席執行役員<br />
+												経営企画本部長 兼 IR広報部長</dt>
+											<dd>石田 亜紀</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>取締役上席執行役員<br />
+												営業本部長</dt>
+											<dd>井上 利郎</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役</dt>
+											<dd>石橋 省三</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役</dt>
+											<dd>髙木 施文</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役</dt>
+											<dd>眞弓 奈穂子</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役</dt>
+											<dd>福島 淑彦</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役</dt>
+											<dd>森 忠嗣</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>取締役（常勤監査等委員）</dt>
+											<dd>山根 よしえ</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役（監査等委員）</dt>
+											<dd>福田 有希</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役（監査等委員）</dt>
+											<dd>坂井 義清</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>社外取締役（監査等委員）</dt>
+											<dd>清水 英昭</dd>
+										</dl>
+									</li>
+								</ul>
+
+								<h3>子会社一覧（2024年3月31日現在）</h3>
+
+								<ul class="about-list2">
+									<li>
+										<dl>
+											<dt>株式会社サンキュー</dt>
+											<dd>家庭電化製品等の販売</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>フォーレスト株式会社</dt>
+											<dd>文具・事務用品、オフィス用品、日用品等の通信販売</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社EDION<br />
+												クロスベンチャーズ</dt>
+											<dd>情報システムの運営及び開発</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社エディオン<br />
+												ハウスシステム</dt>
+											<dd>住宅リフォーム、太陽光発電システムの販売・工事等</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社ジェイトップ</dt>
+											<dd>一般貸物運送業、家電配送・設置事業、電気工事事業等</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社イー･アール･ジャパン</dt>
+											<dd>リユース事業及びリサイクル事業</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社プライムステーション</dt>
+											<dd>企画・印刷事業</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>夢見る株式会社</dt>
+											<dd>プログラミング教室等の運営</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社EdBank</dt>
+											<dd>プログラミング教室等の運営</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社麻布</dt>
+											<dd>屋根・外壁塗装・リフォーム事業</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>株式会社サンフレッチェ広島</dt>
+											<dd>プロサッカーチーム</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="scroll-point" id="report7">
+						<h2>トピックス</h2>
+
+						<article>
+							<h3>TOPICS1 出店状況</h3>
+
+							<figure class="mb40"><img alt="出店状況" data-entity-type="file"
+									data-entity-uuid="020f5b29-7053-42c1-95d4-1b6e2e39eb1d"
+									src="/sites/default/files/inline-images/topics7_01.png" /></figure>
+						</article>
+
+						<article>
+							<h3>TOPICS2 「エディオン横浜西口本店」グランドオープン！</h3>
+
+							<section class="topics7-1">
+								<div class="side"><img alt="エディオン横浜西口本店 外観" data-entity-type="file"
+										data-entity-uuid="85a7dfdc-c8a4-45ab-bc0e-b132d2c9181d"
+										src="/sites/default/files/inline-images/topics7_01.jpg" /></div>
+
+								<div class="main">
+									<p class="mb20">2023年12月15日、横浜市西区の複合商業施設 「CeeU Yokohama（シーユーヨコハマ）」
+										内にエディオン横浜西口本店がオープンいたしました。<br />
+										欲しかったものを買いに行く喜びや、そこで出会って欲しくなる高揚感。買い物の醍醐味でもある、ワクワクが生まれるモノ・コトすべて、エンターテインメントに溢れた出会いや体験を創りだす店舗が誕生しました。
+									</p>
+								</div>
+							</section>
+
+							<section class="topics7-2">
+								<div class="topics7-2-left">
+									<h4>2F モバイルのフロア</h4>
+
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="iCracked写真" data-entity-type="file"
+													data-entity-uuid="a089de99-80c0-42ec-b32b-c37004370d11"
+													src="/sites/default/files/inline-images/topics7_02.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>携帯電話の修理ができる「iCracked」</h5>
+
+												<p>Google Pixel/AQUOSなどは純正部品を使用した修理に対応しています。<br />
+													ショップレベルのサービスが受けられます。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="topics7-2-right">
+									<h4>3F ヘルス＆ビューティのフロア</h4>
+
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="フェムテックコーナー写真" data-entity-type="file"
+													data-entity-uuid="997d6ff1-6a64-4e38-9ced-36058e26183d"
+													src="/sites/default/files/inline-images/topics7_03.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>フェムテックコーナー</h5>
+
+												<p>女性特有の健康課題を解決する商品を集めた、エディオン初のコーナー。<br />
+													女性の悩みに寄り添い、悩みなどを気軽に相談いただけます。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section class="topics7-2">
+								<div class="topics7-2-left">
+									<h4>4F ライフスタイルのフロア</h4>
+
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="ニトリ雑貨コーナー写真" data-entity-type="file"
+													data-entity-uuid="a69e450a-ea93-4f23-9863-9d5a733eefcf"
+													src="/sites/default/files/inline-images/topics7_04.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>ニトリ雑貨コーナー</h5>
+
+												<p>家電と一緒に、日用雑貨、家具などを組み合わせたトータルコーディネートをご提案しています。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="topics7-2-right">
+									<h4>5F デジタルライフのフロア</h4>
+
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="完全ワイヤレスイヤホンコーナー写真"
+													data-entity-type="file"
+													data-entity-uuid="dbee78fc-4319-4209-999c-04518bd16465"
+													src="/sites/default/files/inline-images/topics7_05.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>完全ワイヤレスイヤホンコーナー</h5>
+
+												<p>自分好みの商品を選択しやすい、完全セルフの視聴が可能です。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section class="topics7-2">
+								<h4>6F アミューズメントのフロア</h4>
+
+								<div class="topics7-2-left">
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="ゲーム対戦場「オクタゴン」写真"
+													data-entity-type="file"
+													data-entity-uuid="09867ef5-3f04-4f2a-941b-41f0ed189437"
+													src="/sites/default/files/inline-images/topics7_06.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>ゲーム対戦場「オクタゴン」</h5>
+
+												<p>8台のゲーミングベースにより、各種イベントを実施しています。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="topics7-2-right">
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="トレカ買取販売＆ディエルスペース「トレカキャピタル」"
+													data-entity-type="file"
+													data-entity-uuid="d4e61ce5-8161-4f45-a372-add73467dd12"
+													src="/sites/default/files/inline-images/topics7_07.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>トレカ買取販売＆ディエルスペース「トレカキャピタル」</h5>
+
+												<p>地域最大級の品揃えと約130席のデュエルスペースで、公式大会同様の体験・体感が可能です。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section class="topics7-2">
+								<h4>7F 玩具・プラモデル・フィギュアのフロア</h4>
+
+								<div class="topics7-2-left">
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="ミニ四駆コーナー写真" data-entity-type="file"
+													data-entity-uuid="16222f7f-6efe-4b19-b2d3-5665d21b6db5"
+													src="/sites/default/files/inline-images/topics7_08.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>ミニ四駆コーナー</h5>
+
+												<p>地域最大級の品揃え。買って、組み立てて、走らせられる家電量販店初の「5レーン樹脂製コース」と「4レーンコース」を設置しています。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="topics7-2-right">
+									<div class="topics7-3">
+										<div class="topics7-3">
+											<div class="topics7-3-side"><img alt="ビルドベース写真" data-entity-type="file"
+													data-entity-uuid="7d322089-539e-45d3-b51f-f68e396b3762"
+													src="/sites/default/files/inline-images/topics7_09.jpg" /></div>
+
+											<div class="topics7-3-main">
+												<h5>ビルドベース</h5>
+
+												<p>プラモデルファンのために、組み立て・塗装専用スペースをご用意。本格的なプラモ撮影も楽しめます。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</article>
+
+						<article>
+							<h3>TOPICS3 ピックアップニュース</h3>
+
+							<section class="topics7-4">
+								<h3 class="iina-chan">エディオン新公式キャラクター「いいなちゃん」ご紹介！</h3>
+
+								<p>お客様にとっての「いいな」を実現し、エディオンの「いいな」を発信する、等身大のエディオン社員の想いを描いた、エディオンの新イメージキャラクター「いいなちゃん」。</p>
+
+								<p class="mb30">
+									お客様の気持ちにいつも寄り添いながら、その期待を超えるために常に全力で挑戦するエディオンの姿勢を伝えるメッセンジャーとしてがんばります！応援よろしくお願いします！
+								</p>
+
+								<div class="topics7-4-side"><img alt="エディオンの新イメージキャラクター「いいなちゃん」写真"
+										data-entity-type="file" data-entity-uuid="bcf36510-ab3e-4d03-942a-a87c84941fdf"
+										src="/sites/default/files/inline-images/topics7_10.png" /></div>
+
+								<div class="topics7-4-main">
+									<p class="topics7-4-profile"><span>いいなちゃん</span> プロフィール</p>
+
+									<dl class="topics7-4-profile2">
+										<dt>名　　　前</dt>
+										<dd>いいなちゃん（年齢は謎!?）</dd>
+										<dt>性　　　格</dt>
+										<dd>いつも笑顔で天真爛漫。<br />
+											礼儀正しく、キレイ好き。<br />
+											負けず嫌いで、困った人がいたら<br />
+											全力で助けたくなる。</dd>
+										<dt>口　ぐ　せ</dt>
+										<dd>「いいな！」<br />
+											「がんばります！」<br />
+											「挑戦します！」</dd>
+										<dt>好きなこと</dt>
+										<dd>人前で歌うことと、きれいな森でマイナスインを浴びるのが好き。<br />
+											新しい美容家電には、つねに注目している。</dd>
+									</dl>
+								</div>
+							</section>
+						</article>
+
+						<article>
+							<h3>TOPICS4 女子陸上競技部の活躍</h3>
+
+							<section class="topics7-5">
+								<div class="topics7-5-left">
+									<p class="mb10">
+										2024年2月に開催された「日本陸上競技選手権大会・20km競歩」において、藤井菜々子選手が大会新記録を樹立し2年連続3度目の優勝を果たしました。</p>
+
+									<p class="mb10">
+										さらに今大会において8月にフランス・パリで開催される「第33回オリンピック競技大会（2024／パリ）」に日本代表として選出されました。オリンピックへの出場は、東京2020大会に続き、2度目の出場となります。
+									</p>
+
+									<p>このほか、「日本陸上競技選手権大会・10000m」では、矢田みくに選手が4位入賞するなど、国内外の大会において数々の優秀な成績をおさめています。</p>
+								</div>
+
+								<div class="topics7-5-right"><img alt="藤井菜々子選手/矢田みくに選手写真" data-entity-type="file"
+										data-entity-uuid="e41e8e51-2a56-4c56-8548-9d244a42c192"
+										src="/sites/default/files/inline-images/topics7_11.png" /></div>
+							</section>
+						</article>
+					</section>
+
+					<section id="report8">
+						<h2>連結財務諸表</h2>
+
+						<section>
+							<h3>財務ハイライト</h3>
+
+							<ul class="topics8-1">
+								<li><img alt="売上高画像" data-entity-type="file"
+										data-entity-uuid="9ea13bb7-8811-45b6-8627-21dd0fb0007a"
+										src="/sites/default/files/inline-images/topics8_01.png" /></li>
+								<li><img alt="経営利益画像" data-entity-type="file"
+										data-entity-uuid="443fce04-c186-4aae-b789-ba7553e6cbe7"
+										src="/sites/default/files/inline-images/topics8_02.png" /></li>
+								<li><img alt="親会社株式に帰属する当期純利益画像" data-entity-type="file"
+										data-entity-uuid="af1aaa19-fe12-4dfe-997a-9b4f0795fe74"
+										src="/sites/default/files/inline-images/topics8_03.png" /></li>
+							</ul>
+						</section>
+
+						<section>
+							<h3>連結損益計算書</h3>
+
+							<p class="right">（単位：百万円）</p>
+
+							<table class="soneki-table">
+								<thead>
+									<tr>
+										<th>&nbsp;</th>
+										<th>2022年度</th>
+										<th>売上高比</th>
+										<th>2023年度</th>
+										<th>売上高比</th>
+										<th>前年比</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>売上高</th>
+										<td>720,584</td>
+										<td>100.0%</td>
+										<td>721.085</td>
+										<td>100.0%</td>
+										<td>100.1%</td>
+									</tr>
+									<tr>
+										<th>売上総利益</th>
+										<td>210.876</td>
+										<td>29.3%</td>
+										<td>209.586</td>
+										<td>29.1%</td>
+										<td>99.4%</td>
+									</tr>
+									<tr>
+										<th>販売費及び一般管理費</th>
+										<td>191,690</td>
+										<td>26.6%</td>
+										<td>192,656</td>
+										<td>26.7%</td>
+										<td>100.5%</td>
+									</tr>
+									<tr>
+										<th>営業利益</th>
+										<td>19,186</td>
+										<td>2.7%</td>
+										<td>16.929</td>
+										<td>2.3%</td>
+										<td>88.2%</td>
+									</tr>
+									<tr>
+										<th>経常利益</th>
+										<td>19,248</td>
+										<td>2.7%</td>
+										<td>17.339</td>
+										<td>2.4%</td>
+										<td>90.1%</td>
+									</tr>
+									<tr>
+										<th>親会社株主に帰属する当期純利益</th>
+										<td>11,393</td>
+										<td>1.6%</td>
+										<td>9.021</td>
+										<td>2.4%</td>
+										<td>79.2%</td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+
+						<section class="topics8-3">
+							<div class="topics8-3-left">
+								<h3>連結貸借対照表</h3>
+								<img alt="連結貸借対照表画像" data-entity-type="file"
+									data-entity-uuid="82994ff1-b0b1-4e74-a23f-3288e9a9fdf2"
+									src="/sites/default/files/inline-images/topics8_04.png" />
+							</div>
+
+							<div class="topics8-3-right">
+								<h3>連結キャッシュ・フロー計算書</h3>
+
+								<p class="right">（単位：百万円）</p>
+
+								<table class="soneki-table">
+									<thead>
+										<tr>
+											<th>&nbsp;</th>
+											<th>2022年度</th>
+											<th>2023年度</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>営業活動によるキャッシュ・フロー</th>
+											<td>12,139</td>
+											<td>19,962</td>
+										</tr>
+										<tr>
+											<th>投資活動によるキャッシュ・フロー</th>
+											<td>△8,336</td>
+											<td>△67,717</td>
+										</tr>
+										<tr>
+											<th>財務活動によるキャッシュ・フロー</th>
+											<td>△20,452</td>
+											<td>47,531</td>
+										</tr>
+										<tr>
+											<th>現金及び現金同等物の増減額</th>
+											<td>△16,649</td>
+											<td>△1,224</td>
+										</tr>
+										<tr>
+											<th>現金及び現金同等物の期首残高</th>
+											<td>29,885</td>
+											<td>13,235</td>
+										</tr>
+										<tr>
+											<th>現金及び現金同等物の期末残高</th>
+											<td>13,235</td>
+											<td>12,011</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+
+						<h3>商品別概況 2023年4月～2024年3月</h3>
+
+						<section class="topics8-4">
+							<div class="topics8-4-left"><img alt="売上構成比内訳：家電53.3%、情報家電25.4%、住宅設備8.1%、その他13.2%円グラフ画像"
+									data-entity-type="file" data-entity-uuid="b705cce7-1101-4bac-8508-a73475dd6302"
+									src="/sites/default/files/inline-images/topics8_05.png" /></div>
+
+							<div class="topics8-4-right">
+								<dl class="topics8-4-title">
+									<dt>主要商品状況</dt>
+									<dd>（単位：百万円）</dd>
+								</dl>
+
+								<table class="soneki-table">
+									<thead>
+										<tr>
+											<th>商品名</th>
+											<th>2022年度</th>
+											<th>2023年度</th>
+											<th>前年比　</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>テレビ</th>
+											<td>52,348</td>
+											<td>49,005</td>
+											<td>93.6%</td>
+										</tr>
+										<tr>
+											<th>冷蔵庫</th>
+											<td>55,396</td>
+											<td>54,150</td>
+											<td>97.8%</td>
+										</tr>
+										<tr>
+											<th>洗濯機・クリーナー</th>
+											<td>75,127</td>
+											<td>74,903</td>
+											<td>99.7%</td>
+										</tr>
+										<tr>
+											<th>エアコン</th>
+											<td>76,135</td>
+											<td>77,823</td>
+											<td>102.2%</td>
+										</tr>
+										<tr>
+											<th>パソコン</th>
+											<td>44,038</td>
+											<td>37,032</td>
+											<td>84.1%</td>
+										</tr>
+										<tr>
+											<th>携帯電話</th>
+											<td>77,108</td>
+											<td>89,047</td>
+											<td>115.5%</td>
+										</tr>
+										<tr>
+											<th>住宅設備</th>
+											<td>60,928</td>
+											<td>58,449</td>
+											<td>95.9%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+		</main>
+		<!--/container-->
+	</div>
+	<!--/wrapper-->
+</div>
+<!--jQuery-->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/scrollgress.min.js"></script>
+<script src="js/script.js"></script>

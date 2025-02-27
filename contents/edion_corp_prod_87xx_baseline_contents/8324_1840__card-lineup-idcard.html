@@ -1,0 +1,612 @@
+<style type="text/css">
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    #edioncardlineup .innerWrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    #edioncardlineup .mainBg {
+        background: linear-gradient(rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1)), url(/sites/default/files/inline-images/bg_idCard.jpg) top center no-repeat;
+        background-size: 100%;
+        width: 100%;
+        margin: -20px auto 40px;
+        position: relative;
+    }
+
+    #edioncardlineup .mainTitle {
+        text-align: center;
+        color: #FFF;
+        text-shadow: 1px 1px 12px #227622;
+        font-size: 33px;
+        font-weight: bold;
+        padding: 35px 10px 20px;
+    }
+
+    #edioncardlineup .privilegeMain .txt {
+        overflow: hidden;
+        padding-left: 10px;
+    }
+
+    #edioncardlineup .privilegeMain dl {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    #edioncardlineup .privilegeMain dd,
+    #edioncardlineup .privilegeMain dt {
+        color: #FFF;
+    }
+
+    #edioncardlineup .privilegeMain dd {
+        font-size: 24px;
+        overflow: hidden;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    #edioncardlineup .privilegeMain .small {
+        font-size: 16px;
+        display: block;
+    }
+
+    #edioncardlineup .yellow {
+        color: #FFFF00;
+    }
+
+    #edioncardlineup .privilegeMain dd,
+    #edioncardlineup .privilegeMain dt {
+        color: #FFF;
+    }
+
+    #edioncardlineup .privilegeMain dt {
+        float: left;
+    }
+
+    #edioncardlineup.idCard .privilegeIcon {
+
+        border-radius: 50%;
+        background: #FF8000;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 8px;
+        font-weight: bold;
+
+    }
+
+    #edioncardlineup .privilegeIcon .number {
+        font-size: 30px;
+        line-height: 0.7em;
+    }
+
+    #edioncardlineup .privilegeIcon span {
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+
+    #edioncardlineup .privilegeMain {
+        overflow: hidden;
+        margin-bottom: 20px;
+        max-width: 960px;
+        margin: 0 auto 20px;
+    }
+
+    #edioncardlineup .privilegeMain .image {
+        width: 33%;
+        float: left;
+    }
+
+    .tableSt {
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+    }
+
+    .tableSt th {
+        width: 25%;
+        background-color: #F5F5F5;
+    }
+
+    .tableSt th {
+        padding: 10px 10px;
+        border: 1px solid #CCC;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    #edioncardlineup .tableSt td {
+        background: #FFF;
+    }
+
+    .tableSt td {
+        padding: 10px 10px;
+        border: 1px solid #CCC;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    #edioncardlineup .mainBg td .icoList {
+        letter-spacing: -.40em;
+    }
+
+    #edioncardlineup li .Icon {
+        letter-spacing: normal;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        vertical-align: bottom;
+    }
+
+    .icon_shuri {
+        background-color: #419BC7;
+    }
+
+    .icon_point {
+        background-color: #DE9F0C;
+    }
+
+    .Icon {
+        border-radius: 5px;
+        color: #FFF;
+        font-size: 14px;
+        min-width: 60px;
+        display: inline-block;
+        text-align: center;
+        padding: 8px 10px;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    #edioncardlineup li {
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    /* 特典 */
+
+    #edioncardlineup .privilegeBox {
+        border-top: 2px solid #CCC;
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #edioncardlineup .privilegeBox .left {
+        float: left;
+    }
+
+    #edioncardlineup .privilegeIcon {
+        border-radius: 50%;
+        background: #FF8000;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 8px;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+    #edioncardlineup .privilegeBox .title {
+        overflow: hidden;
+        color: #1F529F;
+        font-size: 35px;
+        padding-left: 10px;
+        font-weight: bold;
+        margin-bottom: 0 !important;
+    }
+
+    #edioncardlineup .privilegeBox .wrap {
+        overflow: hidden;
+    }
+
+    #edioncardlineup .privilegeBox .small {
+        font-size: 18px;
+        display: block;
+    }
+
+    #edioncardlineup .glay {
+        overflow: hidden;
+        color: #444444;
+    }
+
+    #edioncardlineup .red {
+        overflow: hidden;
+        color: #DE0A4D;
+    }
+
+    #edioncardlineup .privilegeBox h3 {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    #edioncardlineup .privilegeBox .txt {
+        width: 70%;
+        float: left;
+        padding-right: 10px;
+    }
+
+    #edioncardlineup .privilegeBox .txt p,
+    #edioncardlineup .privilegeBox .txt ul {
+        margin: 0 0 15px;
+    }
+
+    #edioncardlineup .privilegeBox .image {
+        width: 25%;
+        min-width: 250px;
+        padding: 0 3%;
+        float: right;
+    }
+
+    #edioncardlineup .privilegeBox .txt2 {
+        width: 70%;
+        border: 2px solid #CCC;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    #edioncardlineup .privilegeBox .txt2 .tit_price {
+        font-weight: bold;
+        font-size: 1.08rem;
+    }
+
+    #edioncardlineup .privilegeBox .txt2 .txtC {
+        margin: 10px 0;
+    }
+
+    .txtC {
+        text-align: center !important;
+    }
+
+    /* カードのお申し込み */
+
+    .box_sty {
+        border: 1px solid #CCC;
+        padding: 10px;
+        overflow: hidden;
+        background-color: #F7FAFD;
+    }
+
+    .box_sty ul {
+        text-align: center;
+        margin: auto;
+
+    }
+
+    .fnt22 {
+        font-size: 1.571428562rem;
+        text-align: center;
+    }
+
+    .btn {
+        margin: 20px;
+    }
+
+    .btn#c {
+        margin: 20px auto;
+    }
+
+    .p20 {
+        padding: 20px !important;
+    }
+
+    .C {
+        text-align: center;
+        margin: auto;
+
+    }
+
+    @media screen and (max-width: 800px) {
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        #edioncardlineup .mainimgArea {
+            background-size: cover;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        #edioncardlineup .mainTitle {
+            font-size: 20px;
+        }
+
+        #edioncardlineup .privilegeMain {
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+            max-width: 960px;
+            margin: 0 auto 20px;
+        }
+
+        #edioncardlineup .privilegeMain .image {
+            width: 65%;
+            float: initial;
+            margin: 0 auto;
+        }
+
+        #edioncardlineup .privilegeMain .txt {
+            display: none;
+        }
+
+        #edioncardlineup .tableWrap {
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .tableSt {
+            border: 0;
+            border-top: 1px solid #CCC;
+        }
+
+        .tableSt,
+        .tableSt tbody,
+        .tableSt tr,
+        .tableSt th,
+        .tableSt td {
+            display: block;
+            width: 100% !important;
+            max-width: inherit;
+        }
+
+        #edioncardlineup .privilegeBox .left {
+            float: inherit;
+        }
+
+        #edioncardlineup.idCard .privilegeIcon {
+            font-size: 14px;
+            width: 50px;
+            height: 50px;
+            padding-top: 5px;
+            margin: 0 auto 10px !important;
+            background: #FF8000;
+        }
+
+        #edioncardlineup .privilegeIcon .number {
+            font-size: 20px;
+            line-height: 0.7em;
+        }
+
+        #edioncardlineup .privilegeBox .title {
+            padding: 0;
+            font-size: 20px;
+        }
+
+        #edioncardlineup .privilegeBox .txt {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        #edioncardlineup .privilegeBox .btn {
+            margin: 0 auto;
+        }
+
+        #edioncardlineup .privilegeBox .image {
+            display: none;
+        }
+
+        #edioncardlineup .privilegeBox .txt2 {
+            width: 100%;
+        }
+
+        #edioncardlineup .privilegeBox .txt2 .box_sty_db {
+            display: inline;
+        }
+
+        #edioncardlineup .cardInfo .function {
+            margin: 0;
+            display: block;
+        }
+
+        #edioncardlineup .cardInfo .function li {
+            float: inherit;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #edioncardlineup .btn {
+            width: 100%;
+        }
+
+        #edioncardlineup .cardInfo .txt {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        #edioncardlineup .cardInfo .image {
+            display: none;
+        }
+
+        .area2list li {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 960px) {
+            #edioncardlineup .privilegeBox .image {
+                width: 30%;
+                min-width: inherit;
+                padding: 0 2% 0 3%;
+            }
+        }
+</style>
+<div class="innerWrap">
+    <div class="idCard" id="edioncardlineup">
+        <div class="mainBg">
+            <div class="innerWrap">
+                <div class="mainimgArea">
+                    <div class="C">
+                        <p class="mainTitle">対象商品100種類以上！<br class="sp" />
+                            業界屈指の長期修理保証に加え、<br />
+                            クレジット機能がご不要の方におすすめ。</p>
+                    </div>
+
+                    <div class="privilegeMain">
+                        <div class="image"><img alt="IDカード" src="/sites/default/files/inline-images/img_idCard.png" />
+                        </div>
+
+                        <div class="txt">
+                            <dl>
+                                <dt class="privilegeIcon"><span>特典</span><span class="number">1</span></dt>
+                                <dd><span class="small">業界屈指のワイド保証、対象商品は100品種以上！</span> 5年間・10年間の<span
+                                        class="yellow">長期修理保証</span></dd>
+                            </dl>
+
+                            <dl>
+                                <dt class="privilegeIcon"><span>特典</span><span class="number">2</span></dt>
+                                <dd><span class="small">エディオン各店舗でのお支払いで100円につき1ポイント！<br />
+                                        さらに、当社指定商品なら、</span> 100円<span class="tax">(税別)</span>ごとに最大<span
+                                        class="yellow">5ポイント</span>を進呈!</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!--  privilegeMain  -->
+                </div>
+                <!--  mainimgArea  -->
+
+                <div class="tableWrap">
+                    <table class="tableSt">
+                        <tbody>
+                            <tr>
+                                <th>年会費</th>
+                                <td>2,200円（税込）</td>
+                                <th>クレジットカード機能</th>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <th>サービス・特典</th>
+                                <td class="pb5" colspan="3">
+                                    <ul class="icoList">
+                                        <li><span class="Icon icon_shuri">長期修理保証</span></li>
+                                        <li><span class="Icon icon_point">ポイント</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--  tableWrap  -->
+            </div>
+            <!--  innerWrap  -->
+        </div>
+        <!--  mainBg  -->
+
+        <div class="innerWrap">
+            <div id="cardDetile">
+                <h2>&nbsp;</h2>
+
+                <h3 class="bt_line">特典</h3>
+                <!-- 特典1 -->
+
+                <div class="privilegeBox">
+                    <p class="privilegeIcon left"><span>特典</span><span class="number">1</span></p>
+
+                    <p class="title"><span class="small glay">業界屈指のワイド保証、対象商品は100品種以上！</span> 5年間・10年間の<span
+                            class="red">長期修理保証</span></p>
+
+                    <div class="wrap">
+                        <div class="txt">
+                            <p>エディオンカード会員様なら、5,500円（税込）以上の指定商品をご購入の際に、5年間・10年間の長期修理保証サービスをご用意しております。<br />
+                                対象商品は業界屈指の100品種以上！</p>
+
+                            <ul>
+                                <li>※家電品の保証対象商品は、5,500円（税込）以上で一年以上のメーカー保証付きの指定商品となります。</li>
+                                <li>※5年間保証の対象商品は当社指定商品となります。</li>
+                                <li>※当社指定機種のエアコン・冷蔵庫は10年間長期修理保証。（工事費、取付部材除く）</li>
+                                <li>※一部保証対象外となる商品がございます。</li>
+                                <li>※アウトレット店舗及びエディオンネットショップを除くネット通販（楽天、amazon、Yahoo!など）でお買い求めの商品には長期修理保証は適用されません。</li>
+                            </ul>
+
+                            <div class="btn"><a href="https://my.edion.jp/card/service/edion_guarantee.php">くわしくはこちら</a>
+                            </div>
+                        </div>
+
+                        <div class="image"><img alt="長期修理保証"
+                                src="/sites/default/files/inline-images/img_cardIllust01.jpg" /></div>
+                    </div>
+                </div>
+                <!-- 特典2 -->
+
+                <div class="privilegeBox">
+                    <p class="privilegeIcon left"><span>特典</span><span class="number">2</span></p>
+
+                    <p class="title"><span class="small glay">エディオン各店舗でのお支払いで100円につき１ポイント！さらに、当社指定商品なら、</span> <span
+                            class="red">100円<span class="tax">（税別）</span></span>ごとに最大<span class="red">5ポイント</span>を進呈!
+                    </p>
+
+                    <div class="wrap">
+                        <div class="txt">
+                            <p>エディオングループ各店舗はもちろん、エディオングループ以外のご利用でもエディオンカードでのお支払いでポイントがたまります。
+                                エディオン各店舗なら現金でもエディオンカードでのお支払いでもポイントがたまります。</p>
+
+                            <ul>
+                                <li>※ポイント加算は当社指定商品となります。</li>
+                                <li>※ポイントご利用の際はレジでカードをご提示ください。カードは名義人さまのみご利用いただけます。</li>
+                                <li>※アウトレット店舗及びエディオンネットショップを除くネット通販（楽天、amazon、Yahoo!など）でお買い求めの商品にはポイント特典は適用されません。</li>
+                                <li>※一部店舗でTポイント・Tカードのお取り扱いのない店舗がございます。</li>
+                            </ul>
+
+                            <div class="btn"><a href="https://my.edion.jp/card/service/edion_point.php">くわしくはこちら</a>
+                            </div>
+                        </div>
+
+                        <div class="image"><img alt="100円（税別）ごとに最大5ポイントを進呈!"
+                                src="/sites/default/files/inline-images/img_cardIllust02.jpg" /></div>
+                    </div>
+                </div>
+
+                <div class="cardEntryBox">
+                    <h3 class="bt_line">カードのお申し込み</h3>
+
+                    <div class="box_sty">
+                        <ul>
+                            <li class="p10">
+                                <dl>
+                                    <dt>
+                                        <p class="fnt22"><strong>店頭入会</strong></p>
+
+                                        <p class="p10">カードの入会、お申し込みは、エディオン各店頭で受け付けております！</p>
+                                    </dt>
+                                    <dd>
+                                        <p class="btn link" id="c"><a
+                                                href="https://search.edion.com/e_store/">お近くのお店を探す</a></p>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--  cardEntry  -->
+                </div>
+                <!--  cardEntryBox  -->
+
+                <div class="btn_wrap mt50">
+                    <p class="btn wht link"><a href="/card/lineup">カード一覧へ戻る</a></p>
+                </div>
+                <!-- ] innerWrap END -->
+            </div>
+            <!-- ] edioncardlineup END -->
+        </div>
+    </div>
+</div>

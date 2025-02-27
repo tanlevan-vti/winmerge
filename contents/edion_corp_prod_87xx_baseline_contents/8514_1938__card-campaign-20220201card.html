@@ -1,0 +1,449 @@
+<link href="https://my.edion.jp/common/css/card.css" rel="stylesheet" />
+<style type="text/css">
+	h3.tit03,
+	h2.tit02,
+	.bread_crumb,
+	.tit,
+	.title_set,
+	.title,
+	.btnArea,
+	.btnBack {
+		display: none;
+	}
+
+	#newsWrap .tit,
+	#newsWrap .entry .title_set {
+		color: #fff;
+	}
+
+	.entry {
+		border-top: none !important;
+	}
+
+	#newsWrap dl {
+		border: none;
+	}
+
+	.mb5 {
+		margin-bottom: 0px !important;
+	}
+
+	ul.itemw {
+		margin: 0;
+	}
+
+	#pagetop {
+		position: fixed !important;
+		bottom: 0px;
+	}
+
+	a:hover {
+		opacity: 0.75;
+	}
+
+	.content {
+		background: #fff;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.ttl {
+		background: #004e9f;
+		margin: 10px 5px;
+		padding: 5px;
+		text-align: center;
+		font-weight: 900;
+		font-size: 18px;
+		color: #fff;
+	}
+
+	.detailsSet li {
+		border: 1px solid #CCC;
+		padding: 10px;
+		margin-top: 20px;
+	}
+
+	.p1 {
+		font-size: 12px;
+	}
+
+	.p2 {
+		font-size: 4.0625vw;
+		font-weight: 900;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+
+	.p3 {
+		font-size: 3.4375vw;
+		margin-top: 5px;
+		text-align: left;
+	}
+
+	.exp {
+		margin: 10px;
+		font-size: 3.75vw;
+	}
+
+	.fwb {
+		font-size: 4.375vw;
+		font-weight: 900;
+	}
+
+	.bgLB {
+		background: #d3edfb;
+		margin: 5px 10px 20px;
+		padding: 5px;
+		color: #00a5e3;
+	}
+
+	.tableSt02 td {
+		background: #fff;
+		font-size: 3.75vw;
+	}
+
+	.tableSt02 th {
+		background: #00a5e3;
+		color: #fff;
+		font-size: 4.0625vw;
+	}
+
+	.bgWh dt {
+		font-size: 3.4375vw;
+	}
+
+	.bgWh dt,
+	.bgWh dd,
+	.tableSt02 th,
+	.tableSt02 td,
+	.pmb,
+	.tell_txt,
+	.tell,
+	.tel_time {
+		text-align: center;
+	}
+
+	.tell {
+		font-size: 8vw;
+		font-weight: 900;
+		text-decoration: none;
+	}
+
+	.flexBox div {
+		margin: 0 auto;
+	}
+
+	.dlp {
+		font-size: 3.75vw;
+		text-align: left;
+	}
+
+	.detailsSet .btn a {
+		font-size: 5vw;
+		margin: 10px;
+		padding-left: 10px;
+	}
+
+	.tell_txt {
+		font-size: 5vw;
+		font-weight: 900;
+	}
+
+	.tel_time {
+		font-size: 3.75vw;
+		width: 97%;
+	}
+
+	a:hover {
+		opacity: 0.5;
+	}
+
+	@media (max-width: 750px) and (min-width: 580px) {
+		.detailsSet {
+			display: block;
+		}
+
+		.detailsSet li {
+			width: auto;
+		}
+
+		.detailsSet .btn a {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media (min-width: 751px) {
+		.pcn {
+			display: none;
+		}
+
+		.p1,
+		.p3 {
+			font-size: 12px;
+		}
+
+		.p2 {
+			font-size: 0.9rem;
+		}
+
+		.exp {
+			margin: 10px 10px 20px;
+			font-size: 16px;
+		}
+
+		.exp p {
+			text-align: center;
+		}
+
+		.fwb {
+			font-size: 16px;
+		}
+
+		.tableSt02 th,
+		.tableSt02 td {
+			font-size: 1rem;
+		}
+
+		.flexBox {
+			display: flex;
+			flex-direction: column;
+			overflow-wrap: break-word;
+			height: 100%;
+			justify-content: space-between;
+		}
+
+		.pmb {
+			margin: 1rem 0;
+		}
+
+		.tell {
+			font-size: 1.9rem;
+		}
+
+		.detailsSet .btn a {
+			font-size: 1rem;
+		}
+
+		.detailsSet .btn1 a {
+			font-size: 0.8rem;
+			padding: 10px;
+		}
+
+		.bgWh dt {
+			font-size: 1rem;
+			text-align: left;
+		}
+
+		.tell_txt {
+			font-size: 1rem;
+		}
+
+		.tel_time {
+			font-size: 1rem;
+		}
+
+		.dlp {
+			font-size: 13px;
+			text-align: left;
+			margin: 1%;
+		}
+
+		a[href^="tel:"] {
+			pointer-events: none;
+		}
+	}
+</style>
+<div class="main_content"><img alt="エディオンカード・100満ボルトカードご利用でポイント最大10,000円分プレゼント！"
+		src="/sites/default/files/inline-images/ttl.png" />
+	<div class="content">
+		<div class="ttl">応募期間</div>
+
+		<div class="exp">
+			<p>2022年2月1日（火）～2022年3月31日（木）</p>
+		</div>
+
+		<div class="ttl">応募条件</div>
+
+		<div class="exp txtL">
+			<p><span class="fwb">5,000円（税込）ご利用ごとに1口の抽選</span><br />
+				期間中にエディオンカード・100満ボルトカードでお支払いただいた方が対象です。<br />
+				毎月の携帯電話・各種公共料金（電気代等）のエディオンカード支払いも対象！<br />
+				Web、もしくはお電話にてキャンペーンの応募が必要です。</p>
+		</div>
+
+		<div class="bgLB txtL">●家族カードのご利用分は、本人会員カードのご利用分に合算されます。 ●当選者の発表は、5月下旬以降のポイント加算をもってかえさせていただきます。
+			●抽選時に会員資格をお持ちでない方は本キャンペーンの対象外とさせていただきますので、あらかじめご了承ください。
+			●㈱オリエントコーポレーション、SMBCファイナンスサービス㈱、㈱ジャックスが同時期に実施する他のキャンペーンとの重複当選はありません。</div>
+
+		<div class="ttl">賞品当選数内訳</div>
+
+		<div class="exp txtL">&nbsp;</div>
+
+		<div class="mr5 ml5 mb20">
+			<table class="tableSt02">
+				<tbody>
+					<tr>
+						<th class="w70p" colspan="2">
+							㈱オリエントコーポレーション発行エディオンカード<sup>※1</sup>、SMBCファイナンスサービス㈱発行エディオンカード<sup>※2</sup>　それぞれ</th>
+					</tr>
+					<tr>
+						<td>エディオンポイント（10,000ポイント）<br />
+							各10名様</td>
+						<td>エディオンポイント（1,000ポイント）<br />
+							各700名様</td>
+					</tr>
+					<tr>
+						<th class="w70p" colspan="2">㈱ジャックス発行の100満ボルトカード</th>
+					</tr>
+					<tr>
+						<td>100満ボルトポイント（10,000ポイント）<br />
+							5名様</td>
+						<td>100満ボルトポイント（1,000ポイント）<br />
+							350名様</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div>
+				<p class="p1 txtL">※1：オリエントコーポレーション発行エディオンカードの賞品当選数内訳には、オリエントコーポレーション発行100満ボルトカードも含まれます。<br />
+					※2：㈱セディナはSMBCファイナンスサービス㈱に社名変更いたしました。</p>
+			</div>
+
+			<p>&nbsp;</p>
+		</div>
+
+		<div class="ttl">キャンペーンご応募</div>
+
+		<div class="entryWeb mb30">
+			<ul class="detailsSet mr10 ml10">
+				<li class="bgWh">
+					<div class="flexBox">
+						<div>
+							<p class="p2">オリコ発行<br />
+								カードをご利用の会員様</p>
+
+							<p class="pmb">24時間自動音声</p>
+						</div>
+
+						<div>
+							<dl>
+								<dt>●オリコテレホンサービス</dt>
+								<dd><a class="tell" href="tel:0120911004">0120-911-004</a></dd>
+								<dt>●携帯電話から</dt>
+								<dd><a class="tell" href="tel:0358775555">03-5877-5555</a></dd>
+							</dl>
+						</div>
+
+						<div>
+							<p class="dlp">▶サービス番号【79】▶カード番号[16桁]▶キャンペーン番号【793】▶応募完了</p>
+						</div>
+
+						<div class="btn"><a class="btnRd"
+								href="https://www.orico.co.jp/creditcard/for/member/orico/ltd/eorico-2202010331-edion/"
+								target="_blank">オリコのサイトへ</a></div>
+					</div>
+				</li>
+				<li class="bgWh">
+					<div class="flexBox">
+						<div>
+							<p class="p2">SMBCファイナンスサービス発行<br />
+								カードをご利用の会員様</p>
+
+							<p>SMBCファイナンスサービス<br />
+								自動登録受付係</p>
+						</div>
+
+						<div>
+							<dl>
+								<dt>●東京</dt>
+								<dd><a class="tell" href="tel:0356383666">03-5638-3666</a></dd>
+								<dt>●大阪</dt>
+								<dd><a class="tell" href="tel:0663397775">06-6339-7775</a></dd>
+							</dl>
+						</div>
+
+						<div>
+							<p class="dlp">▶キャンペーンコード【972】入力 ▶カード番号[16桁] ▶♯▶確認</p>
+						</div>
+
+						<div class="btn btn1"><a class="btnRd" href="https://www.cedyna.co.jp/camp/2289/index.html"
+								target="_blank">SMBCファイナンス<br />
+								サービスのサイトへ</a></div>
+					</div>
+				</li>
+				<li class="bgWh">
+					<div class="flexBox">
+						<div>
+							<p class="p2">ジャックス発行<br />
+								カードをご利用の会員様</p>
+						</div>
+
+						<div>
+							<dl>
+								<dt>●キャンペーンダイヤル</dt>
+								<dd><a class="tell" href="tel:0570007744">0570-007744</a></dd>
+							</dl>
+						</div>
+
+						<div>
+							<p class="dlp">▶キャンペーン【3】 ▶カード番号16桁▶キャンペーン番号【1273】▶広告番号【10】▶応募完了</p>
+						</div>
+
+						<div class="btn"><a class="btnRd"
+								href="https://www.jaccs.co.jp/service/campaign/cp_id1848/100mv.html"
+								target="_blank">ジャックスのサイトへ</a></div>
+					</div>
+				</li>
+			</ul>
+
+			<p class="p1 txtL">※オリコテレホンサービス（0120-911-004）以外の電話のエントリーには、通話料がかかります。プッシュ信号の出る電話からおかけください。</p>
+		</div>
+
+		<div class="ttl">カード・キャンペーンについて<br />
+			お問い合わせ先</div>
+
+		<div class="entryWeb mb30">
+			<ul class="detailsSet mr10 ml10">
+				<li class="bgWh">
+					<div class="flexBox">
+						<div>
+							<p class="tell_txt">オリコ　エディオンカードデスク</p>
+						</div>
+
+						<div class="tell tel-link"><a class="tell" href="tel:0120332702">0120-33-2702</a></div>
+
+						<div class="tel_time">受付時間　09:30～17:30(年中無休)</div>
+					</div>
+				</li>
+				<li>
+					<div class="flexBox">
+						<div>
+							<p class="tell_txt">SMBCファイナンスサービス<br />
+								アンサーセンター<br />
+								エディオンカードデスク</p>
+						</div>
+
+						<div class="tell tel-link"><a class="tell" href="tel:0120084665">0120-084-665</a></div>
+
+						<div class="tel_time">受付時間　09:30～18:00(1月1日休)</div>
+					</div>
+				</li>
+				<li>
+					<div class="flexBox">
+						<div>
+							<p class="tell_txt">ジャックス・カスタマーセンター</p>
+						</div>
+
+						<div class="tell tel-link"><a class="tell" href="tel:0570005599">0570-005599</a></div>
+
+						<p class="p3">※通話料がかかります。プッシュ信号の出る電話からおかけください。</p>
+
+						<div class="tel_time">受付時間　9:30～17:30/平日</div>
+					</div>
+				</li>
+			</ul>
+
+			<p class="p10 fnt14 mb20 txtL">電話番号はお間違えのないようおかけください。</p>
+		</div>
+	</div>
+</div>

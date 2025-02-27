@@ -1,0 +1,1498 @@
+<style type="text/css">
+	/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+	.pc {
+		display: block !important;
+	}
+
+	.sp {
+		display: none !important;
+	}
+
+	.flex-container {
+		display: flex;
+	}
+
+	.photo {
+		margin: 0 0 10px 10px;
+	}
+
+	.point {
+		border: 3px solid #F3981C;
+		padding: 3px;
+		color: #F3981C;
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.serviceWrap {
+		border: 3px solid #CCC;
+		padding: 22px;
+		margin-bottom: 25px;
+		margin: 30px 0;
+	}
+
+	.serviceWrap dt {
+		color: #455976;
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+	.serviceWrap .service {
+		display: table;
+		width: 100%;
+		margin: 15px 0;
+	}
+
+	.serviceWrap .service p {
+		color: #0B449B;
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.serviceWrap .service .image,
+	.serviceWrap .service p {
+		vertical-align: middle;
+	}
+
+	.serviceWrap .service .image li:first-child {
+		margin-left: 0;
+	}
+
+	.service ul {
+		text-align: center;
+	}
+
+	.serviceWrap .service .image li {
+		display: inline-flex;
+		width: 30%;
+		padding: 15px 10px;
+		margin-left: 2%;
+		box-sizing: border-box;
+	}
+
+	.toimg img:hover {
+		opacity: 0.5;
+	}
+
+	ul li {
+		list-style-type: none;
+	}
+
+	.C {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.btn.wht {
+		max-width: 760px;
+	}
+
+	.bg_title {
+		padding: 10px;
+		color: #FFF;
+		text-align: left;
+		font-weight: bold;
+		background: #1B50A2;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+	/* タブ切り替え */
+	.tab-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		cursor: pointer;
+		flex: 1;
+		font-weight: bold;
+		order: -1;
+		padding: 12px 24px;
+		position: relative;
+		text-align: center;
+		user-select: none;
+		white-space: nowrap;
+	}
+
+	/*.tab-label:hover {
+        opacity: 0.5;
+        color: #fff;
+    }*/
+
+	.tab-switch:checked+.tab-label {
+		color: #1B50A2;
+		background: #fff;
+	}
+
+	.tab-label::after {
+		background: #fff;
+		bottom: -3px;
+		content: '';
+		display: block;
+		height: 3px;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		transform: translateX(100%);
+		width: 100%;
+		z-index: 1;
+	}
+
+	.tab-switch:checked~.tab-label::after {
+		transform: translateX(-100%);
+	}
+
+	.tab-switch:checked+.tab-label::after {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.tab-content {
+		height: 0;
+		opacity: 0;
+		padding: 0;
+		pointer-events: none;
+		width: 100%;
+		background: #fff;
+
+	}
+
+	.tab-switch:checked~.tab-content {
+		transform: translateX(30%);
+	}
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		opacity: 1;
+		order: 1;
+		pointer-events: auto;
+		transform: translateX(0);
+	}
+
+	.tab-wrap::after {
+		content: '';
+		/*height: 20px;*/
+		order: -1;
+		width: 100%;
+
+	}
+
+	.tab-switch {
+		display: none;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		margin-bottom: -1px;
+		padding: 10px .5em;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		font-weight: 600;
+		font-size: 15px;
+		padding: 13px 5px;
+		margin: 0 0 0 8px;
+		border: 3px solid #1B50A2;
+		border-bottom: 0 #fff solid;
+		border-radius: 6px 6px 0 0;
+	}
+
+	.tab-label img {
+		height: 30px;
+		width: auto;
+	}
+
+	.tab-switch:checked+.tab-label:before {
+		transform: rotate(0);
+	}
+
+	.tab-content {
+		height: 0;
+		padding: 0 15px;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateX(8px);
+	}
+
+	/* アクティブなタブ */
+	.tab-switch:checked+ {
+		background-size: 40%;
+	}
+
+	/*.tab-switch:checked+.au img:first-child,.tab-switch:checked+.sfb img:first-child,.tab-switch:checked+.yah img:first-child{
+     opacity: 0;
+    }*/
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		overflow: auto;
+		margin-bottom: -1px;
+		padding: 15px;
+		opacity: 1;
+		border: 0;
+		border-top: 3px solid #1B50A2;
+		position: relative;
+		left: 8px;
+	}
+
+	/* ラジオボタン非表示 */
+	.tab-switch {
+		display: none;
+	}
+
+	/* ============================== */
+
+	/* ここからタブ内のテーブル */
+	table {
+		border-top: none;
+	}
+
+	.table_parts_03 th {
+		background: #fff;
+		text-align: center;
+		clear: both;
+	}
+
+	.tabTable th {
+		padding: 10px;
+		text-align: center;
+		border-right: 1px solid #CCC;
+		width: 160px;
+		background: #FFF;
+	}
+
+	.tabTable th,
+	.tabTable td {
+		vertical-align: top;
+		border-bottom: 1px solid #CCC;
+	}
+
+	.table_parts_03 th:first-of-type,
+	.table_parts_03 th {
+		background: #fff;
+		text-align: center;
+	}
+
+	.table_parts_03 th:first-of-type,
+	.table_parts_03 th p {
+		text-align: center;
+	}
+
+	.btn.wht#s {
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+
+	.btn.wht#s a {
+		padding: 8px 20px;
+		font-size: 70%;
+	}
+
+	.btn.wht#li {
+		max-width: 760px;
+		font-size: 100%;
+	}
+
+	.btn.wht#li img {
+		width: 100px;
+		height: auto;
+		max-width: initial;
+		text-align: center;
+	}
+
+	.tabTable td .inner {
+		padding: 10px;
+		border-bottom: 1px dotted #CCC;
+	}
+
+	.tabTable td .inner:last-child {
+		border-bottom: 0;
+	}
+
+	.layout-content table td {
+		padding: 0 0 0 20px;
+	}
+
+	.cursor a:before {
+		font-family: "fontello";
+		content: '\e835';
+		font-style: normal;
+		font-weight: normal;
+		speak: none;
+		text-decoration: inherit;
+		width: 1em;
+		text-align: center;
+		font-variant: normal;
+		text-transform: none;
+		color: #FB9D00;
+		text-decoration: none !important;
+		display: inline-block;
+	}
+
+	.tabTable td h4:before {
+		content: "●";
+		margin-right: 2px;
+		display: inline-block;
+	}
+
+	.tabTable td .inner p {
+		margin-bottom: 1.5em;
+	}
+
+	.tabTable td .inner p:last-child {
+		margin-bottom: 0;
+	}
+
+	.underline {
+		text-decoration: underline;
+	}
+
+	/* ボタン横並び */
+	.area2list {
+		margin: 15px 0 5px;
+		overflow: hidden;
+	}
+
+	.area2list li:nth-child(2n+1) {
+		clear: both;
+		margin-left: 0;
+	}
+
+	.area2list li {
+		width: 48.9%;
+		margin-left: 2.2%;
+		float: left;
+	}
+
+	.tabTable td .inner dl.telList,
+	.tabTable td .inner ul.telList dl {
+		margin-top: 10px;
+	}
+
+	.tabTable td .inner ul.telList,
+	.tabTable td .inner dl.telList ul {
+		margin: 0 !important;
+	}
+
+	.telList dt {
+		font-weight: bold;
+	}
+
+	/* ============================== */
+	@media screen and (max-width: 800px) {
+
+		/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+		.pc {
+			display: none !important;
+		}
+
+		.sp {
+			display: block !important;
+		}
+
+		.flex-container {
+			display: block;
+			width: 100%;
+		}
+
+		.photo {
+			margin: 0 auto;
+		}
+
+		.point {
+			font-size: unset;
+		}
+
+		.table_parts_03 {
+			border-top: 0;
+			border-left: 0;
+		}
+
+		.table_parts_03 th:first-of-type,
+		.table_parts_03 th {
+			border-bottom: 0;
+		}
+
+		.serviceWrap .service p {
+			font-size: 1.2rem;
+
+		}
+
+		.serviceWrap .service .image li {
+			display: block;
+			padding: 0;
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.tabTable th {
+			width: 100%;
+		}
+
+		.btn a {
+			font-size: 100%;
+		}
+
+		.area2list li {
+			width: 100%;
+			margin: 10px 0;
+			float: none;
+		}
+
+		.layout-content table td {
+			padding: 0;
+		}
+
+		table td a:not(.map_link) {
+			color: #000;
+		}
+
+		.tab-wrap {
+			display: inline-flex;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 5px 0px;
+			font-size: 13px;
+			border-bottom: 0 solid #1B50A2 !important;
+			margin-bottom: 20px;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			border-top: 0;
+			width: 200%;
+		}
+
+		.tab-label {
+			border-radius: 6px;
+			border-bottom: 3px solid #1B50A2 !important;
+			font-size: 13px;
+
+		}
+
+		.tab-switch:checked+.tab-label {
+			color: #1B50A2;
+			background: antiquewhite;
+		}
+
+		.tab-label:hover {
+			opacity: 0.7;
+		}
+
+		.tab-label::after {
+			display: none;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			padding: 0 15px;
+		}
+
+		.tabTable td .inner:last-child {
+			border-bottom: 1px solid #ccc;
+		}
+	}
+</style>
+<div class="txt">
+	<p>エディオンカードの引き落としでおトクに賢くポイントをGET！</p>
+</div>
+
+<ul class="flex-container">
+	<li>
+		<div class="txt">
+			<h3>毎月必ず出費される公共料金。<br />
+				電気料金や携帯電話料金などの公共料金のお支払いでもどんどんポイントを貯めましょう！</h3>
+		</div>
+
+		<div class="point">ご利用額 100円<span>(税込)</span>＝1ポイント</div>
+	</li>
+</ul>
+
+<div class="serviceWrap">
+	<dl>
+		<dt>エディオンカードでご契約されている各クレジット会社から提供されている便利なサービスをご利用いただけます。<br />
+			ご登録していただくとお支払いの手続きがスムーズに行えます。</dt>
+		<dd>
+			<div class="service">
+				<p>カードの裏面に契約されている各クレジット会社をご確認ください。</p>
+
+				<div class="image">
+					<ul class="toimg">
+						<li><a href="https://my.orico.co.jp/eorico/login.do" target="_blank"><img alt="オリコカード"
+									src="/sites/default/files/inline-images/orico_0.png" /></a></li>
+						<li><a href="https://ca.cedyna.co.jp/member/login.asp" target="_blank"><img alt="セディナカード"
+									src="/sites/default/files/inline-images/cedyna_0.png" /></a></li>
+					</ul>
+
+					<ul class="toimg">
+						<li><a href="https://teikibarai.smbc-card.com/" target="_blank"><img alt="SMCCカードロゴ"
+									src="/sites/default/files/inline-images/smcc_card_logo.png" /></a></li>
+						<li><a href="https://www.jaccs.co.jp/icmclub/icm_login.html" target="_blank"><img
+									alt="JACCSカードロゴ" src="/sites/default/files/inline-images/jaccs_0.png" /></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<p>※公共料金の中には上記サービスをご利用いただけない場合もございます。<br />
+				※クレジット会社のポイントは貯まりません。あらかじめご了承ください。</p>
+		</dd>
+	</dl>
+</div>
+<!-- 携帯電話 -->
+
+<div class="tab-wrap"><input checked="checked" class="tab-switch" id="TAB-01" name="TAB" type="radio" /><label
+		class="tab-label dcm" for="TAB-01">携帯電話料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">携帯電話料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>
+						<p>ドコモをご利用のお客様へ</p>
+					</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://www.docomo.ne.jp/mydocomo/"
+										target="_blank">NTT ドコモのサイトヘ</a></span><br />
+								※My docomoの登録が必要になります（登録無料）。</p>
+
+							<p>ドコモ公式ホームページから【My docomoログイン】を選択→【ログイン（docomo
+								IDとパスワードを入力）】→【各種お申込・お手続き】→【お支払方法の変更】→画面に沿ってお手続きをしてください。</p>
+						</div>
+
+						<div class="inner">
+							<h4>スマートフォンからもお申込みいただけます。</h4>
+
+							<p>dmenuから【お客様サポート】を選択→【オンライン手続き】を選択→【各種お申込・お手続き】を選択→利用規約の同意にチェック後ネットワーク暗証番号を入力してログイン→【お支払方法変更】を選択→画面に沿ってお手続きください。
+							</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>NTT ドコモの携帯電話から（局番なし） 151<br />
+								一般電話から 0120-800-000</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>
+						<p>auをご利用のお客様へ</p>
+					</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.au.kddi.com/"
+										target="_blank">auのサイトヘ</a></span><br />
+								※ au のサービスをご利用になるための au ID が必要です。</p>
+
+							<p>au公式ホームページから【auお客さまサポート】を選択→契約の確認・変更を選択後、【支払方法を変更する「手続きする」】を選択→インターネットで申し込む
+								(口座振替・クレジットカードでのお支払い)の【お申し込みはこちら】を選択→au
+								IDとパスワードを入力してログイン→クレジットカード支払いに関する同意事項の【同意して登録する】を選択→画面に沿ってお手続きください。</p>
+						</div>
+
+						<div class="inner">
+							<h4>スマートフォンからもお申込みいただけます。</h4>
+
+							<p>au公式ホームページから【auお客さまサポート】を選択→au・IDとパスワードを入力してログイン→【契約確認・変更】から【支払方法を変更する】を選択→【クレジットカード】を選択して画面に沿ってお手続きください。
+							</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>au の携帯電話から（局番なし）157<br />
+								一般電話から 0077-7-111</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>
+						<p>ソフトバンクを<span>ご利用のお客様へ</span></p>
+					</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://my.softbank.jp/msb/d/top"
+										target="_blank">ソフトバンクのサイトヘ</a></span><br />
+								※事前にMy SoftBankの登録が必要です。</p>
+
+							<p>携帯電話番号・パスワードを入力し、ログインします。<br />
+								【変更手続き】→【支払方法変更】をクリックし表示される画面に沿ってお手続きください。</p>
+						</div>
+
+						<div class="inner">
+							<h4>スマートフォンからお申込みいただけます。</h4>
+
+							<p>※事前にMy SoftBankの登録が必要です。<br />
+								ブラウザを起動→【ブックマーク】または【お気に入り】から【My SoftBank】または【My SoftBank For X Series】を選択→【My
+								SoftBank】ログイン→トップ画面【変更手続き】を選択→変更手続きメインメニューより【支払方法変更】を選択→【クレジット】を選択して画面に沿ってお手続きください。</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>ソフトバンクの携帯電話から157<br />
+								一般電話から 0800-919-0157</p>
+
+							<p class="cursor underline"><a href="http://mb.softbank.jp/mb/"
+									target="_blank">ソフトバンクのサイトヘ</a></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>
+						<p>Y!mobileを<span>ご利用のお客様へ</span></p>
+					</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.ymobile.jp/support/online/myymobile/"
+										target="_blank">ワイモバイルのサイトヘ</a></span><br />
+								※My Y!mobileの登録が必要になります（登録無料）。</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>オペレーター対応 9:00～20:00（年中無休）<br />
+								ワイモバイルの電話から（局番なし）151（有料）<br />
+								一般電話から0570-039-151（有料）</p>
+
+							<p>自動音声対応 24時間（年中無休）<br />
+								ワイモバイルの電話から（局番なし）116（無料）<br />
+								一般電話から0120-921-156（無料）</p>
+
+							<p>電話が繋がりましたら、ガイダンスに沿ってお進みください。支払方法変更申込書を請求いただけます。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>
+						<p>UQをご利用のお客様へ</p>
+					</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://www.uqwimax.jp/mobile/support/member/"
+										target="_blank">UQ mobileのサイトヘ</a></span><br />
+								※My UQ mobileの登録が必要になります（登録無料）。</p>
+
+							<p>UQ mobileホームページから【My UQ mobileログイン】を選択→【ログイン（MY UQ
+								IDとパスワードを入力）】→【各種お手続き】→【支払方法の変更】→画面に沿ってお手続きをしてください。</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話でお問合せいただけます。</h4>
+
+							<p>UQ moibileお客さまセンター　10:00~19:00（年中無休）<br />
+								携帯電話・一般電話　共通（無料） 0120-929-818</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>
+						<p>楽天モバイルをご利用のお客様へ</p>
+					</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://network.mobile.rakuten.co.jp/"
+										target="_blank">楽天モバイルのサイトヘ</a></span><br />
+								※my 楽天モバイルの登録が必要になります（登録無料）。</p>
+
+							<p>楽天モバイルホームページから【my 楽天モバイルにログイン】を選択→【ログイン（my
+								楽天モバイルIDとパスワードを入力）】→【支払い情報】→【お支払い方法】→【新しいカードを利用】→画面に沿ってお手続きをしてください。</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 電気料金 --> <input class="tab-switch" id="TAB-02" name="TAB" type="radio" /><label class="tab-label dcm"
+		for="TAB-02">電気料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">電気料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>北海道電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://www.hepco.co.jp/home/contract_change/credit_card.html"
+										target="_blank">北海道電力のサイトヘ</a></span></p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<dl class="mb15">
+								<dt>ほくでん契約センター</dt>
+								<dd>0120-12-6565<br />
+									平日 9:00～17:00<br />
+									土曜日 9:00～15:00<br />
+									（休業日/日曜日・祝日・12月29日～1月3日・5月1日）</dd>
+							</dl>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>東北電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://www.tohoku-epco.co.jp/dprivate/rate/pay/credit.html"
+										target="_blank">東北電力のサイトヘ</a></span></p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<dl class="list-02">
+								<dt>東北電力コールセンター</dt>
+								<dd>0570-550-220</dd>
+							</dl>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>東京電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://www.tepco.co.jp/e-rates/custom/kihon/shiharai/credit-j.html"
+										target="_blank">東京電力のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>北陸電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.rikuden.co.jp/tetsuzuki/credit.html"
+										target="_blank">北陸電力のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>中部電力ミライズ</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://miraiz.chuden.co.jp/home/procedures/change/payment/credit/"
+										target="_blank">中部電力ミライズのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>関西電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://kepco.jp/service/payment/credit/"
+										target="_blank">関西電力のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>中国電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://www.energia.co.jp/elec/proc/pay/credit.html"
+										target="_blank">中国電力のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>四国電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.yonden.co.jp/"
+										target="_blank">四国電力のサイトヘ</a></span></p>
+
+							<p>「電気料金のご案内」→「電気料金の計算・お支払い」→「電気料金のお支払い方法」よりご確認いただけます。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>九州電力</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://www.kyuden.co.jp/rate_reception_credit.html"
+										target="_blank">九州電力のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>沖縄電力</th>
+					<td>
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<dl class="list-01">
+								<dt>コールセンター</dt>
+								<dd>0120-585-391<br />
+									営業時間 8:30～17:00（土日・祝休日除く）</dd>
+							</dl>
+						</div>
+
+						<div class="inner"><span class="cursor underline"><a
+									href="http://www.okiden.co.jp/service/defrayal/defrayal_about.html#2"
+									target="_blank">沖縄電力のサイトへ</a></span>
+
+							<div class="mb10">&nbsp;</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- ガス料金 --> <input class="tab-switch" id="TAB-03" name="TAB" type="radio" /><label class="tab-label dcm"
+		for="TAB-03">ガス料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">ガス料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>KITAGAS</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://www.hokkaido-gas.co.jp/home/ryo-kin/oshiharai03.html"
+										target="_blank">KITAGASのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>仙台市ガス局</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.gas.city.sendai.jp/family/charge/10/"
+										target="_blank">仙台市ガス局のサイトヘ</a></span></p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<dl class="mb15">
+								<dt>仙台市ガス局お客さまセンター</dt>
+								<dd>0800-800-8977<br />
+									平日 8：30-19：00<br />
+									土曜日 8：30-17：00</dd>
+							</dl>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>TOKYO GAS</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。（※切手不要で郵送できます。）</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://home.tokyo-gas.co.jp/gas_power/procedure/payment_plan/card_moushikomi.html"
+										target="_blank">TOKYO GASのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>京葉ガス</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://www.keiyogas.co.jp/home/ryoukin/payment/mousikomi/credit.html"
+										target="_blank">京葉ガスのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>東邦ガス</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://www.tohogas.co.jp/home/gas/payment/credit/"
+										target="_blank">東邦ガスのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>大阪ガス</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://home.osakagas.co.jp/support/payment/method/creditcard.html"
+										target="_blank">大阪ガスのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>広島ガス</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://www.hiroshima-gas.co.jp/gas/ryokin/credit.htm"
+										target="_blank">広島ガスのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>四国ガス</th>
+					<td>
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<ul class="telList area2list">
+								<li>今治支店 0898-32-5056</li>
+								<li>松山本社 089-945-1211</li>
+								<li>宇和島支店 0895-22-4650</li>
+								<li>高知支店 088-832-8100</li>
+								<li>徳島支店 088-654-2171</li>
+								<li>高松支店 087-821-8146</li>
+								<li>丸亀支店 0877-22-2301</li>
+								<li>本店 0898-32-4500</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>西部ガス</th>
+					<td>
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<ul class="telList mb5">
+								<li>福岡地区 お客さまセンター 092-633-2345</li>
+								<li>北九州地区 お客さまセンター 093-622-0266</li>
+							</ul>
+
+							<ul class="telList area2list">
+								<li>熊本地区 熊本支社 096-370-8600</li>
+								<li>長崎地区 長崎支社 095-826-9101</li>
+								<li>佐世保地区 佐世保支店 0956-23-3111</li>
+								<li>島原地区 島原営業所 0957-63-1313</li>
+							</ul>
+						</div>
+
+						<div class="inner">
+							<p><span class="cursor underline"><a
+										href="http://www.saibugas.co.jp/home/rates/payment/index.htm#credit"
+										target="_blank">西部ガスのサイトヘ</a></span><br />
+								※ホームページからは申込みのお手続きはできません。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>山口合同ガス</th>
+					<td>
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<dl class="telList">
+								<dt>下関市</dt>
+								<dd>
+									<ul class="area2list">
+										<li>下関支店 083-223-2111（代表）</li>
+										<li>中央センター 083-233-3900</li>
+										<li>彦島センター 083-266-6321</li>
+										<li>長府センター 083-249-0055</li>
+										<li>新下関センター 083-256-2300</li>
+									</ul>
+								</dd>
+							</dl>
+
+							<ul class="telList area2list">
+								<li>
+									<dl>
+										<dt>山陽小野田市</dt>
+										<dd>小野田支店 0836-83-4495</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>山口市</dt>
+										<dd>山口支店 083-922-7500</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>防府市</dt>
+										<dd>防府支店 0835-22-0026</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>旧新南陽市</dt>
+										<dd>新南陽センター 0834-63-1041</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>旧徳山市</dt>
+										<dd>徳山支店 0834-28-6000</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>下松市</dt>
+										<dd>下松センター 0833-41-3327</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>光市</dt>
+										<dd>光センター 0833-74-1717</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+
+						<div class="inner">
+							<p><span class="cursor underline"><a href="https://www.yamago-gas.co.jp/guest/office/"
+										target="_blank">山口合同ガスのサイトヘ</a></span><br />
+								※ホームページからは申込みのお手続きはできません。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>九州ガス</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://www.kyugas.co.jp/gas/payment/#credit"
+										target="_blank">九州ガスのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- NTT料金 --> <input class="tab-switch" id="TAB-04" name="TAB" type="radio" /><label class="tab-label dcm"
+		for="TAB-04">NTT料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">NTT料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>NTT 東日本</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。<br />
+								またPDF で申込書をダウンロードできます。<br />
+								（※郵送料はお客様負担となります。）</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://web116.jp/ryoukin/payment/credit_index.html" target="_blank">NTT
+										東日本のサイトヘ</a></span></p>
+						</div>
+
+						<div class="inner">固定電話、フレッツのご請求書が別々になっている場合それぞれ変更のお手続きが必要です。</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>NTT 西日本</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="http://www.ntt-west.co.jp/denwa/charge/payment/payment.html"
+										target="_blank">NTT 西日本のサイトヘ</a></span></p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>（局番なし） 116<br />
+								携帯電話・PHSからは 0800-2000116<br />
+								9：00 ～ 17：00<br />
+								（土・日・祝日・年末年始（12 月29 日～ 1 月3 日）を除く）</p>
+						</div>
+
+						<div class="inner">固定電話、フレッツのご請求書が別々になっている場合それぞれ変更のお手続きが必要です。</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 視聴料金 --> <input class="tab-switch" id="TAB-05" name="TAB" type="radio" /><label class="tab-label dcm"
+		for="TAB-05">視聴料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">視聴料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>NHK</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://www.nhk-cs.jp/jushinryo/PayCreditMenu.do"
+										target="_blank">NHKのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>WOWOW</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://www.wowow.co.jp/"
+										target="_blank">WOWOWのサイトヘ</a></span><br />
+								「ログイン」ボタンをクリックしていただき、お支払い方法の変更になります。</p>
+
+							<p>※wowoｗオンラインの登録が必要になります（登録無料）。</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>WOWOW カスタマーセンター<br />
+								0120-580-807<br />
+								9:00 ～ 20:00 （年中無休）</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>スカパー！</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a href="https://www.skyperfectv.co.jp/"
+										target="_blank">スカパー！のサイトヘ</a></span><br />
+								※My スカパー！の登録が必要になります（登録無料）。</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>スカパー！カスタマーセンター<br />
+								0570-039-888<br />
+								10:00 ～ 20:00（年中無休）</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>J：COM</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットからお申込みいただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://cs.myjcom.jp/knowledgeDetail?an=002256926"
+										target="_blank">J：COMのサイトヘ</a></span><br />
+								各種お手続き→支払い方法を変更</p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>J：COMカスタマーセンター<br />
+								0120-999-000<br />
+								9:00 ～ 21:00（年中無休）</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- プロバイダー料金 --> <input class="tab-switch" id="TAB-06" name="TAB" type="radio" /><label class="tab-label dcm"
+		for="TAB-06">プロバイダー料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">プロバイダー料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>クオルネット</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットで支払い手続き変更が出来ます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.enjoy.jp/cs/index.html"
+										target="_blank">クオルネットのサイトへ</a></span></p>
+
+							<p>リンク先から「お支払い方法変更画面へ」→お客様IDとお客様パスワードを入力して「ログイン」→必要情報を入力して支払い変更手続きができます。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>エンジョイネット</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットで支払い手続き変更が出来ます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.enjoy.ne.jp/info/change/card.html"
+										target="_blank">エンジョイネットのサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>Yahoo! BB</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットで支払い手続き変更が出来ます。</h4>
+
+							<p>ヤフーBBトップページ→「接続、設定、手続きなど会員情報」→「お支払い方法の登録、確認、変更」→「Yahoo!ウォレット登録」をクリックして必要情報入力。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>So-net</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットで支払い手続き変更が出来ます。</h4>
+
+							<p>so-netトップページ→「会員サポート」→「サービス利用状況確認・変更」→「料金・支払い」→項目の「支払方法変更（口座振替⇒クレジットカード）」の右の「クリック」をクリック→ユーザーIDとパスワード入力して「実行ボタン」→必要事項を入力してお支払い方法の変更ができます。
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>OCN</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットで支払い手続き変更が出来ます。</h4>
+
+							<p>OCNトップページ→「会員サポート」→やりたいことから選ぶの中の「確認・申込・変更・解約」をクリック→「お支払方法の確認・変更」→「クレジットカードへの変更/クレジットカード番号の変更/お支払い方法の確認の確認・変更」→認証ＩＤと認証パスワードを入力して「ログイン」→必要事項を入力してお支払方法の変更ができます。
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>nifty</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットで支払い手続き変更が出来ます。</h4>
+
+							<p>niftyトップページ→「会員サポート」→「支払方法の変更」→「クレジットカード払いへの変更 /
+								クレジットカード情報の変更」→ユーザー名とパスワード入力後「ログイン」→必要情報を入力して支払い変更手続きができます。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>BIGLOBE</th>
+					<td>
+						<div class="inner">
+							<h4>郵送かFAXで変更手続きができます。</h4>
+
+							<p>ビックローブトップページ→「会員サポート」→各種手続きの「手続き一覧」をクリック→「支払方法の登録/確認/変更」→支払方法の変更の中から「口座振替/自動払込からクレジットカードへ」をクリック→「登録内容変更用紙」を印刷して03-3798-4198へFAX。<br />
+								もしくは必要情報を入力して「登録内容変更用紙」を郵送で受取り記入して郵送。</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>ODN</th>
+					<td>
+						<div class="inner">
+							<h4>郵送で変更手続きができます。</h4>
+
+							<p>ODNトップページ→「会員サポート」→会員情報の確認・変更の中の「上記以外のお手続きはこちら」をクリック→ご利用料金の確認の中の「支払方法の変更」をクリック→「口座振替/クレジットカード払い依頼書」にチェックを入れて必要事項を入力し、変更申請書を取寄せ→変更申請書が届いたら必要事項を記入して郵送。
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 新聞購読料金 --> <input class="tab-switch" id="TAB-07" name="TAB" type="radio" /><label class="tab-label dcm"
+		for="TAB-07">新聞購読料金</label>
+
+	<div class="tab-content">
+		<p class="mt20" style="margin-left: 10px;">新聞購読料金の引き落としもエディオンカードで！各社お手続きは以下よりご確認ください。<br />
+			※お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+		<h4 class="bg_title">お手続き方法</h4>
+
+		<table class="tabTable">
+			<tbody>
+				<tr class="table_parts_03">
+					<th>朝日新聞</th>
+					<td>
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>0120-33-0843<br />
+								（7：00 ～ 21：00 年中無休）</p>
+						</div>
+
+						<div class="inner">
+							<p><span class="cursor underline"><a href="https://33.asahi.com/apply/w/reader/"
+										target="_blank">朝日新聞のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>読売新聞</th>
+					<td>
+						<div class="inner">
+							<p><span class="cursor underline"><a href="https://434381.yomiuri.co.jp/mypage"
+										target="_blank">読売新聞のサイトヘ</a></span><br />
+								※ホームページのお客様ページからお申込みください</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>産経新聞</th>
+					<td>
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>東日本販売局 0120-34-4646<br />
+								西日本販売局 0120-34-3733</p>
+						</div>
+
+						<div class="inner">
+							<p><span class="cursor underline"><a
+										href="https://reader.sankei.co.jp/cgi-bin/sp/paychange/"
+										target="_blank">産経新聞のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>毎日新聞</th>
+					<td>
+						<div class="inner">
+							<h4>販売店から申込書を請求いただけます。</h4>
+
+							<p>配達を担当する毎日新聞販売店へご連絡ください。<br />
+								販売店のわからない方は下記にお問い合わせください。<br />
+								0120-468-012</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>中日新聞</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a href="http://www.chunichi.co.jp/koudoku/"
+										target="_blank">中日新聞のサイトヘ</a></span></p>
+						</div>
+
+						<div class="inner">
+							<h4>電話から申込書を請求いただけます。</h4>
+
+							<p>中日新聞社 0120-454-010<br />
+								中日新聞東海本社 0120-139-739<br />
+								中日新聞北陸本社 0120-461-051</p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>中国新聞</th>
+					<td>
+						<div class="inner">
+							<h4>インターネットから申込書を請求いただけます。</h4>
+
+							<p><span class="cursor underline"><a
+										href="https://www.chuuhan.jp/newspaperCreditApply/checklist.do"
+										target="_blank">中国新聞のサイトヘ</a></span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="table_parts_03">
+					<th>日本海新聞</th>
+					<td>
+						<div class="inner">
+							<h4>販売店または電話から申込書を請求いただけます。</h4>
+
+							<p>本社 0120-23-4141<br />
+								中部本社 0120-26-8330<br />
+								西部本社 0120-33-1405<br />
+								但馬支社 0120-82-4541<br />
+								9:00 ～ 17:00（土・日・祝休）</p>
+						</div>
+
+						<div class="inner">
+							<p><span class="cursor underline"><a href="http://www.nnn.co.jp/"
+										target="_blank">日本海新聞のサイトヘ</a></span><br />
+								※ホームページからは申込みのお手続きはできません。</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="btn_wrap mt50 mt50">
+	<p class="btn wht link"><a href="/card/">エディオンカードトップへ戻る</a></p>
+</div>

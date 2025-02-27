@@ -1,0 +1,443 @@
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+<style type="text/css">
+	@charset "utf-8";
+
+	.ttl {
+		margin-bottom: 12px;
+		padding: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		font-weight: 600;
+		color: #fff;
+		background-color: #294DB4;
+		display: block;
+	}
+
+	.txt01 {
+		font-size: 72px;
+		text-align: center;
+	}
+
+	.ttl .txtList {
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+	}
+
+	.ttl .txtList li {
+		font-size: 18px;
+		line-height: 1;
+		float: left;
+		margin: 0 15px 10px 0;
+	}
+
+	.section_break {
+		padding-bottom: 22px;
+		font-size: 14px;
+		color: #3B4043;
+	}
+
+	.borderList {
+		margin: 8px 0 34px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.borderList>li {
+		width: calc(50% - 10px);
+		padding: 23px 29px 30px;
+		box-sizing: border-box;
+		border: 1px solid #294DB4;
+	}
+
+	.borderList>li:nth-child(2) {
+		border: 1px solid #FF9900;
+	}
+
+	.borderList h2 {
+		margin-bottom: 9px;
+		padding: 3px 10px 4px;
+		text-align: center;
+		font-size: 41.5px;
+		line-height: 1;
+		color: #fff;
+		border-radius: 11px;
+		background-color: #294DB4;
+	}
+
+	.borderList .ttl02 {
+		font-weight: 600;
+		margin: 0 auto 25px;
+		text-align: center;
+		font-size: 30px;
+		line-height: 1.2;
+		background-color: #fff !important;
+		color: #294DB4;
+	}
+
+	.borderList .ttl02 .size {
+		margin: 0 auto 5px;
+		display: block;
+		text-align: center;
+		font-size: 26px;
+		color: #294DB4;
+	}
+
+	.borderList .ttl01 {
+		margin-bottom: 11px;
+		font-size: 25px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.borderList .img {
+		min-height: 231px;
+		margin-bottom: 9px;
+	}
+
+	.borderList .txtList01 {
+		margin-bottom: 21px;
+	}
+
+	.borderList .txtList01 li {
+		margin-bottom: 17px;
+		padding: 0 0 2px 48px;
+		font-size: 13px;
+		color: #3B4043;
+		background: url("../images/icon01.png") no-repeat left top 1px / 40px auto;
+	}
+
+	.borderList .liStyle h2 {
+		background-color: #FF9900;
+	}
+
+	.news_wrap {
+		margin-bottom: 36px;
+	}
+
+	.borderList .img img {
+		width: 100%;
+	}
+
+	.fc_btn {
+		border-radius: 5px;
+		margin: 30px 0;
+		max-width: 100%;
+		font-size: 30px;
+		font-weight: 500;
+		text-align: center;
+		padding: 26px 20px 28px;
+		box-shadow: 3px 3px 3px #8F3100;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FF9900), to(#FF5200));
+		background: -webkit-linear-gradient(top, #FF9900 0%, #FF5200 100%);
+		background: linear-gradient(to bottom, #FF9900 0%, #FF5200 100%);
+	}
+
+	.fc_btn1 {
+		border-radius: 5px;
+		margin: 30px 0;
+		max-width: 100%;
+		font-size: 30px;
+		font-weight: 500;
+		text-align: center;
+		padding: 26px 20px 28px;
+		box-shadow: 3px 3px 3px #8F3100;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FF1A00), to(#FF1A00));
+		background: -webkit-linear-gradient(top, #FF1A00 0%, #FF1A00 100%);
+		background: linear-gradient(to bottom, #FF1A00 0%, #FF1A00 100%);
+	}
+
+
+
+
+
+
+
+
+	.btn2 a:link,
+	a:visited {
+		text-decoration: none;
+	}
+
+	.btn2 a:hover {
+		opacity: 0.5;
+	}
+
+	.btn2 a {
+		color: #fff !important;
+	}
+
+	@media screen and (min-width:768px) {
+		.sp {
+			display: none;
+		}
+
+		.pc {
+			display: block;
+		}
+	}
+
+	@media screen and (max-width:767px) {
+		.sp {
+			display: block;
+		}
+
+		.pc {
+			display: none;
+		}
+
+		.pc01 {
+			display: none !important;
+		}
+
+		.ttl {
+			margin: -10px 0 20px;
+			padding: 5px;
+			display: block;
+		}
+
+		.txt01 {
+			margin-right: 0;
+			text-align: center;
+			font-size: 28px;
+		}
+
+		.ttl .txtList {
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+		}
+
+		.ttl .txtList li {
+			font-size: 7px;
+			line-height: 1;
+			float: left;
+			margin: 0 5px 10px 0;
+			text-align: left;
+		}
+
+		.section_break {
+			padding-bottom: 25px;
+			font-size: 13px;
+			line-height: 1.68;
+		}
+
+		.borderList {
+			margin: 3px 0 34px;
+			display: block;
+		}
+
+		.borderList h2 {
+			margin-bottom: 7px;
+			padding: 2px 10px 4px;
+			font-size: 33.35px;
+			border-radius: 7px;
+		}
+
+		.borderList .ttl02 {
+			margin-bottom: 13px;
+			font-size: 28px;
+			line-height: 1.3;
+			background: #fff !important;
+			text-align: center !important;
+			color: #294DB4;
+		}
+
+		.borderList .ttl02 .size {
+			font-size: 22px;
+			text-align: center;
+			margin: 0 auto;
+			background: #fff !important;
+			color: #294DB4;
+		}
+
+		.borderList>li {
+			margin-bottom: 22px;
+			width: auto;
+			padding: 20px 20px 25px;
+		}
+
+		.borderList .img {
+			min-height: auto;
+			margin: 0 4px 3px;
+		}
+
+		.borderList .ttl01 {
+			font-size: 20px;
+		}
+
+		.borderList .txtList01 li {
+			margin-bottom: 14px;
+			padding: 0 0 5px 45px;
+			font-size: 14px;
+			background-size: 33px auto;
+			background-position: left 5px top 1px;
+		}
+
+		.borderList .txtList01 {
+			margin-bottom: 17px;
+		}
+
+		.fc_btn {
+			font-size: 14px;
+			margin: 20px 0;
+		}
+
+		.btn2 a {
+			padding: 24px 6px;
+		}
+
+
+
+	}
+
+	@media screen and (min-width:768px) and (max-width:1000px) {
+		.ttl {
+			font-size: 38px;
+		}
+
+		.txt01 {
+			font-size: 32px;
+		}
+
+		.ttl .txtList li {
+			font-size: 10px;
+		}
+
+		.borderList .ttl01 {
+			font-size: 28px;
+		}
+	}
+
+	@media screen and (max-width: 374px) {
+		.ttl {
+			font-size: 34px;
+		}
+
+		.borderList>li {
+			padding: 20px 12px 25px;
+		}
+
+		.borderList .ttl01 {
+			font-size: 19px;
+		}
+
+		.fc_btn {
+			font-size: 16px;
+			margin: 20px 0;
+		}
+	}
+</style>
+<div class="ttl">
+	<p class="txt01">全国加盟店数：1163店舗</p>
+
+	<ul class="txtList">
+		<li>（ファミリーショップ：741店舗</li>
+		<li>サポートチェーン：422店舗</li>
+		<li>※2025年2月1日現在）</li>
+	</ul>
+</div>
+
+<h2 class="bt_line">事業ニーズに合わせた<br class="sp" />
+	2つの営業スタイルを展開しています。</h2>
+
+<p class="section_break">
+	エディオンのフランチャイズ加盟契約には、エディオンファミリーショップ（EFS）とエディオンサポートチェーン（ESC）の2タイプがあり、あらゆる形態でお客様に寄り添ったサービスを提供し、地域貢献を目指しています。エディオンではフランチャイズオーナーを随時募集しています。
+</p>
+
+<ul class="borderList">
+	<li>
+		<h2>EFS</h2>
+
+		<p class="ttl02"><span class="size">エディオン</span>ファミリーショップ</p>
+
+		<div class="img"><img alt="efs" data-align="center" data-entity-type="file"
+				data-entity-uuid="12516dfb-0975-4ad8-b2f2-a73bc57eae10"
+				src="/sites/default/files/inline-images/photo01.jpg" /></div>
+
+		<p class="ttl01">家電販売を事業の柱に</p>
+
+		<ul class="txtList01">
+			<li><img alt="アイコン" data-entity-type="file" data-entity-uuid="8c96d9b7-3b17-4d20-a1bd-acf66faf5e8c"
+					src="/sites/default/files/inline-images/icon01.png" width="30" />地域の家電販売店様の問題解決の為に</li>
+			<li><img alt="アイコン" data-entity-type="file" data-entity-uuid="8c96d9b7-3b17-4d20-a1bd-acf66faf5e8c"
+					src="/sites/default/files/inline-images/icon01.png" width="30" />事業としての家電販売を新たにお考えの企業様に</li>
+			<li><img alt="アイコン" data-entity-type="file" data-entity-uuid="8c96d9b7-3b17-4d20-a1bd-acf66faf5e8c"
+					src="/sites/default/files/inline-images/icon01.png" width="30" />家電量販店だからできるきめ細かなサポート体制</li>
+		</ul>
+
+		<div class="btn_wrap">
+			<p class="btn"><a href="https://www.edion.co.jp/business/home-appliance-sales/fc/efs">詳しくはこちら</a></p>
+		</div>
+	</li>
+	<li class="liStyle">
+		<h2>ESC</h2>
+
+		<p class="ttl02" style="color:#FF9900!important;"><span class="size" style="color:#FF9900;">エディオン</span>サポートチェーン
+		</p>
+
+		<div class="img"><img alt="esc" data-align="center" data-entity-type="file"
+				data-entity-uuid="1607012f-d158-49bb-8479-672a6e95a26b"
+				src="/sites/default/files/inline-images/photo02.jpg" /></div>
+
+		<p class="ttl01">本業に家電販売をプラス</p>
+
+		<ul class="txtList01">
+			<li><img alt="アイコン" data-entity-type="file" data-entity-uuid="1e8cef30-714a-4ef8-a002-9e50f8943ba9"
+					src="/sites/default/files/inline-images/icon01.png" width="30" />何も変えずに家電販売</li>
+			<li><img alt="アイコン" data-entity-type="file" data-entity-uuid="1e8cef30-714a-4ef8-a002-9e50f8943ba9"
+					src="/sites/default/files/inline-images/icon01.png" width="30" />本業に影響の出ないサポート体制</li>
+			<li><img alt="アイコン" data-entity-type="file" data-entity-uuid="1e8cef30-714a-4ef8-a002-9e50f8943ba9"
+					src="/sites/default/files/inline-images/icon01.png" width="30" />家電プラスのメリット</li>
+		</ul>
+
+		<div class="btn_wrap">
+			<p class="btn orn"><a href="https://www.edion.co.jp/business/home-appliance-sales/fc/esc">詳しくはこちら</a></p>
+		</div>
+	</li>
+</ul>
+
+<h2 class="bg_title mb50" id="efs2">「エディオンファミリーショップ」（街の電気店）の　　　　　　　　　　　　　　　　　　活動をご紹介！！</h2>
+
+<p>エディオンフランチャイズは街の電気店の活動をサポートしています。</p>
+<img alt="syoukai" data-align="center" data-entity-type="file" data-entity-uuid="a393a6a1-0532-47f6-977b-580683bc3735"
+	height="857" src="/sites/default/files/inline-images/%EF%BC%A6%EF%BC%A3%E6%B4%BB%E5%8B%95.jpg" width="1212" />
+<p>&nbsp;</p>
+
+<h2 class="bg_title mb50" id="efs2">加盟店様の情報（開店情報・イベント情報）を 　　　　　　　　　　　「Ｘ」・「インスタグラム」で発信</h2>
+<img alt="ｘ" data-align="center" data-entity-type="file" data-entity-uuid="8916b933-b561-4057-a3d3-889ec0e7542e"
+	src="/sites/default/files/inline-images/%EF%BC%A8%EF%BC%B0%E7%94%BB%E5%83%8F20241107.jpg" />
+<p>&nbsp;</p>
+<img alt="ｘ" data-align="center" data-entity-type="file" data-entity-uuid="a13a0a57-c334-4f6d-8b88-e0b62b039e51"
+	src="/sites/default/files/inline-images/2%EF%BC%A8%EF%BC%B0%E7%94%BB%E5%83%8F20241107.png" />
+<p>&nbsp;</p>
+
+<div class="btn_wrap btn2 mb50">
+	<div class="fc_btn1"><a href="https://www.edion.co.jp/business/home-appliance-sales/fc/efs#efs5"
+			target="_blank">エディオンの事業（店舗）承継のご案内はこちら</a></div>
+</div>
+
+<div class="btn_wrap btn2 mb50">
+	<div class="fc_btn"><a href="https://www.edion.co.jp/contact/fc" target="_blank">リモート説明会のお申込はこちら&nbsp;
+			&nbsp;&nbsp;</a></div>
+</div>
+
+<div class="btn_wrap btn2 mb50">
+	<div class="fc_btn"><a href="https://www.edion.co.jp/contact/fc"
+			target="_blank">お問い合わせ・資料請求はこちら&nbsp;&nbsp;&nbsp;</a></div>
+</div>
+
+<p>&nbsp;</p>
+
+<h2 class="bg_title mb50" id="efs2">ファミリーショップオーナー対談</h2>
+
+<p>&nbsp;</p>
+
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		allowfullscreen="" frameborder="0" height="315"
+		src="https://www.youtube.com/embed/Vm7SgoJe65E?si=4TD18uqNLCre1FrU" title="YouTube video player"
+		width="560"></iframe></p>
+
+<p>&nbsp;</p>

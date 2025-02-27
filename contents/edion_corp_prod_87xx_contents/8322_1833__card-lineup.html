@@ -1,0 +1,536 @@
+<style type="text/css">
+    /* エディオンカードの種類 */
+
+    #card_shurui ul li {
+        font-weight: bold;
+        text-align: center;
+        width: 30.0%;
+        font-size: 1.14rem;
+        display: inline-block;
+        margin-left: 1.999%;
+    }
+
+    #card_shurui ul li p {
+        width: auto;
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .image {
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .btn.wht#s {
+        width: 100%;
+        margin-top: 15px;
+        font-size: 1.07rem;
+        height: 40px;
+    }
+
+    #card_shurui table tr th.card_name {
+        width: 30%;
+    }
+
+    #card_shurui table tr td.price,
+    #card_shurui table tr td.credit {
+        text-align: center;
+    }
+
+    #card_shurui table tr th {
+        background: #1D50A3;
+        color: #FFFFFF;
+        font-weight: normal;
+        white-space: nowrap;
+        text-align: center;
+        vertical-align: middle;
+        padding: 3px 10px;
+        border-right: 2px solid #3462AC;
+    }
+
+    #card_shurui table tr td {
+        border-bottom: solid 1px #CCCCCC;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    td.iconSet .Icon {
+        display: block;
+        padding: 8px 3px;
+        min-width: 130px;
+        margin-bottom: 5px;
+        font-size: 0.80rem;
+        text-align: center;
+    }
+
+    .Icon {
+        border-radius: 5px;
+        color: #FFF;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    .icon_shuri {
+        background-color: #419BC7;
+    }
+
+    .icon_division {
+        background-color: #292D9A;
+    }
+
+    .icon_point {
+        background-color: #DE9F0C;
+    }
+
+    .icon_etc {
+        background-color: #AAAA00;
+    }
+
+    .icon_haigusha {
+        background-color: #E26363;
+    }
+
+    .icon_shuri_an {
+        background-color: #4AB645;
+    }
+
+    .pointcard_Ended {
+        border: solid 1px #FF0000;
+        background: #FFF4F4;
+        padding: 10px;
+        margin: 30px 0;
+    }
+
+    #card_shurui .pointcard_Ended .name {
+        font-weight: bold;
+    }
+
+    #card_shurui .pointcard_Ended .card {
+        float: left;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+
+    #card_shurui .pointcard_Ended .txt {
+        color: #FF0000;
+    }
+
+    /* よくあるご質問 */
+    ul {
+        list-style: none;
+    }
+
+    .agreement_list li {
+        border-bottom: solid 1px #CCCCCC;
+        padding: 8px 0;
+    }
+
+    a[class^="icon-"]:before,
+    a[class*=" icon-"]:before,
+    a[class^="icon-"]:hover:before,
+    a[class*=" icon-"]:hover:before {
+        text-decoration: none;
+        color: #FB9D00;
+    }
+
+    a[class^="icon-"]:before,
+    a[class*=" icon-"]:before {
+        text-decoration: none;
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        margin-right: 3px;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+    }
+
+    .icon-right-circle:before {
+        content: '\e813';
+    }
+
+    #faq li {
+        border-bottom: solid 1px #CCCCCC;
+        padding: 8px 0;
+        width: 48%;
+        display: inline-block;
+    }
+
+    /* カードに関するお問合せ */
+
+    .contactArea {
+        background: #F7FAFD;
+        border: 1px solid #CCC;
+        padding: 18px;
+        overflow: hidden;
+    }
+
+    .contactArea .inner {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .cont3 dl {
+        width: 32%;
+    }
+
+    .contactArea dl dt {
+        color: #666666;
+        font-weight: bold;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .txtC {
+        text-align: center !important;
+    }
+
+    .contactArea dl dd .tell_txt,
+    {
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-align: center;
+    }
+
+    .tell_txt {
+        color: #444;
+        font-size: 1.15rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contactArea dl dd .tell {
+        line-height: 1.2;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .tell {
+        font-weight: bold;
+        color: #1a50a1;
+        font-size: 2.5rem;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .tel_time {
+        background: #FFF;
+        border: 1px solid #1b50a2;
+        color: #1b50a2;
+        overflow: hidden;
+        display: inline-block;
+        font-weight: bold;
+        padding: 3px 10px;
+    }
+
+    .contactArea .note {
+        padding: 5px 10px;
+        border: 1px solid #CCC;
+        background-color: #FFF;
+        margin: 15px 0 0 !important;
+    }
+
+    @media screen and (max-width: 800px) {
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        .btn.wht#center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .btn_wrap.btn_right .btn {
+            float: none;
+
+        }
+
+        .floatBox_area .photo {
+            max-width: 100%;
+        }
+
+        #card_shurui ul li {
+            width: 45%;
+            margin-left: 3.3%;
+        }
+
+        .pcOn {
+            display: none;
+        }
+
+        #card_shurui .pointcard_Ended .card {
+            float: left;
+            margin-right: 10px;
+            margin-top: 0;
+            width: 46px;
+        }
+
+        #card_shurui .pointcard_Ended .name {
+            float: left;
+            margin-top: 7px;
+            font-size: 16px;
+        }
+
+        #card_shurui .pointcard_Ended .name {
+            font-weight: bold;
+        }
+
+        #card_shurui .pointcard_Ended .txt {
+            color: #FF0000;
+            clear: both;
+            padding-top: 10px;
+        }
+
+        #faq li {
+            width: 100%;
+            display: block;
+        }
+
+        .contactArea .inner {
+            display: block;
+        }
+
+        .cont3 dl {
+            width: 100%;
+        }
+
+        .tel_box a[href^="tel:"] {
+            pointer-events: auto;
+        }
+
+        .C {
+            margin: 0 15px;
+            display: block;
+        }
+
+        .btn.wht#s a {
+            font-size: 80%;
+        }
+    }
+</style>
+<div class="txt mb30">長期修理保証やおトクなポイントなど、色々なサービス満載のエディオンカードの魅力をご紹介します。</div>
+
+<div id="card_shurui">
+    <ul class="mb30">
+        <li class="edion_curd">
+            <p>長期修理保証と<span>ポイント特典が豊富</span></p>
+
+            <div class="image"><img alt="エディオンカード" data-entity-type="file"
+                    data-entity-uuid="70810530-ddd1-475b-8de0-9dd42a1b71c6" height="188"
+                    src="/sites/default/files/inline-images/SMCC_%E3%82%AA%E3%83%AA%E3%82%B3%EF%BC%B7%E5%88%B8%E9%9D%A2_0.png"
+                    width="310" /></div>
+
+            <p class="card_name">エディオンカード</p>
+
+            <p class="btn wht" id="s"><a class="btn wht"
+                    href="https://my.edion.jp/card/lineup/edioncard.php">くわしくはこちら</a></p>
+        </li>
+        <li>
+            <p class="copy_2line">充実の保証と特典</p>
+
+            <div class="image"><img alt="IDカードトップ" src="/sites/default/files/inline-images/img_card_id_top.jpg" /></div>
+
+            <p class="card_name">IDカード</p>
+
+            <p class="btn wht" id="s"><a class="btn wht" href="https://my.edion.jp/card/lineup/idcard.php">くわしくはこちら</a>
+            </p>
+        </li>
+        <li>
+            <p class="copy_2line">年会費無料</p>
+
+            <div class="image"><img alt="あんしん保証カードトップ"
+                    src="/sites/default/files/inline-images/img_card_anshin_top.jpg" /></div>
+
+            <p class="card_name">あんしん保証カード</p>
+
+            <p class="btn wht" id="s"><a class="btn wht"
+                    href="https://my.edion.jp/card/lineup/anshincard.php">くわしくはこちら</a></p>
+        </li>
+        <!--
+	<li class="point_curd">
+	<p class="copy_2line">新規会員募集終了</p>
+
+	<div class="image"><img alt="ポイントカードトップ" src="/sites/default/files/inline-images/img_card_point_top.jpg" /></div>
+
+	<p class="card_name">ポイントカード</p>
+	</li>
+-->
+    </ul>
+
+    <table class="pcOn">
+        <tbody>
+            <tr>
+                <th class="card_name" colspan="2" scope="col">カード名</th>
+                <th scope="col">会員サービス<br />
+                    利用料</th>
+                <th scope="col">クレジット<br />
+                    カード機能</th>
+                <th scope="col">ポイント特典 / 修理保証</th>
+                <th scope="col">付帯サービス</th>
+            </tr>
+            <tr>
+                <td><img alt="エディオンカード" data-entity-type="file" data-entity-uuid="f05dff94-7585-41bf-a68c-fcc6d15d063a"
+                        height="72"
+                        src="/sites/default/files/inline-images/SMCC_%E3%82%AA%E3%83%AA%E3%82%B3%EF%BC%B7%E5%88%B8%E9%9D%A2_1.png"
+                        width="118" /></td>
+                <td>
+                    <p><a class="icon-right-dir-1" href="https://my.edion.jp/card/lineup/edioncard.php">エディオンカード</a></p>
+
+                    <p>対象商品100種類以上！業界屈指の長期修理保証に加え、もっとおトクにお買い物を楽しみたい方におすすめ。</p>
+                </td>
+                <td class="price">1,078円<br />
+                    （税込）</td>
+                <td class="credit">あり</td>
+                <td>・対象商品は100品種以上！5年間・10年間の長期修理保証<br />
+                    ・エディオン各店舗でのお支払いで100円につき1ポイント、当社指定商品なら、100円（税別）ごとに1～5ポイント<br />
+                    ・支払い回数いろいろ選べる特別低金利分割払い</td>
+                <td class="iconSet">
+                    <div class="Icon icon_shuri">長期修理保証</div>
+
+                    <div class="Icon icon_division">特別低金利分割払い</div>
+
+                    <div class="Icon icon_point">ポイント</div>
+
+                    <div class="Icon icon_etc">ETCカード</div>
+
+                    <div class="Icon icon_haigusha">家族カード</div>
+                </td>
+            </tr>
+            <tr>
+                <td><img alt="IDカード" src="/sites/default/files/inline-images/img_card_id.png" /></td>
+                <td>
+                    <p><a class="icon-right-dir-1" href="https://my.edion.jp/card/lineup/idcard.php">IDカード</a></p>
+
+                    <p>対象商品100種類以上！業界屈指の長期修理保証！クレジット機能がご不要の方におすすめ。</p>
+                </td>
+                <td class="price">2,200円<br />
+                    （税込）</td>
+                <td class="credit">なし</td>
+                <td>・対象商品は100品種以上！5年間・10年間の長期修理保証<br />
+                    ・エディオン各店舗でのお支払いで100円につき1ポイント、当社指定商品なら、100円（税別）ごとに１～５ポイント</td>
+                <td class="iconSet">
+                    <div class="Icon icon_shuri">長期修理保証</div>
+
+                    <div class="Icon icon_point">ポイント</div>
+                </td>
+            </tr>
+            <tr>
+                <td><img alt="あんしん保証カード" src="/sites/default/files/inline-images/img_card_anshin.png" /></td>
+                <td>
+                    <p><a class="icon-right-dir-1" href="https://my.edion.jp/card/lineup/anshincard.php">あんしん保証カード</a>
+                    </p>
+
+                    <p>対象商品22品種の長期修理保証！おトクにポイントをためたい方におすすめ。</p>
+                </td>
+                <td class="price">無料</td>
+                <td class="credit">なし</td>
+                <td>・対象商品22品種、3年間・5年間・10年間の長期修理保証<br />
+                    ・おもちゃ・ゲーム関連など当社指定商品のご購入で、100円（税別）ごとに３～５ポイント<br />
+                    （※ポイント進呈対象外の商品があります）</td>
+                <td class="iconSet">
+                    <div class="Icon icon_shuri_an">あんしん修理保証</div>
+
+                    <div class="Icon icon_point">ポイント</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--
+<div class="pointcard_Ended clearfix">
+<div class="card"><img alt="ポイントカード" src="/sites/default/files/inline-images/img_card_point.png" /></div>
+<p class="name">ポイントカード</p>
+<p class="txt">2012年9月末をもって「ポイントカード」の新規会員登録募集は終了いたしました。<br />
+今後は年会費無料の「あんしん保証カード」またはクレジット機能付きの「エディオンカード」にご入会いただきますようにお願い申し上げます。</p>
+</div>
+-->
+</div>
+
+<h3 class="bt_line mb30">会員規約</h3>
+
+<article class="agreement_list mb30" id="agreement">
+    <ul>
+        <li><a class="icon-right-circle" href="/card/agreement/edion_member">エディオンカード会員規約</a></li>
+        <!--
+	<li><a class="icon-right-circle point" href="/news-release/3886" target="_blank">※ポイントカードのポイント付与終了のご案内</a></li>
+-->
+        <li><a class="icon-right-circle" href="/card/agreement/id_member">ＩＤカードの会員規約</a></li>
+        <li><a class="icon-right-circle" href="/card/agreement/anshin_member">あんしん保証カードの会員規約</a></li>
+    </ul>
+</article>
+
+<h3 class="bt_line mb30">よくあるご質問</h3>
+
+<article class="agreement_list mb30" id="agreement">
+    <ul id="faq">
+        <li><a class="icon-right-circle" href="/card/faq#main-content">エディオンカードについて</a></li>
+        <li><a class="icon-right-circle" href="/card/faq#edioncard">ポイント</a></li>
+        <li><a class="icon-right-circle" href="/card/faq#idcard">ＩＤカードについて</a></li>
+        <li><a class="icon-right-circle" href="/card/faq#anshincard">あんしん保証カードについて</a></li>
+        <li><a class="icon-right-circle" href="/card/faq/#tyoukishuri">長期修理保証</a></li>
+        <li><a class="icon-right-circle" href="/card/faq/#credit">クレジット機能</a></li>
+        <li><a class="icon-right-circle" href="/card/faq/#kozinzyouhou">個人情報・情報変更など</a></li>
+        <li><a class="icon-right-circle" href="/card/faq/#taikai">退会</a></li>
+        <li><a class="icon-right-circle" href="/card/faq/#haitatsu">配達・工事</a></li>
+    </ul>
+</article>
+
+<article class="mb50">
+    <h3 class="bt_line mb30">カードに関するお問い合わせ</h3>
+
+    <div class="contactArea cont3">
+        <div class="inner">
+            <dl>
+                <dt>店舗へのお問い合わせ</dt>
+                <dd>
+                    <div class="btn_wrap">
+                        <p class="btn"><a href="https://search.edion.com/e_store/" target="_blank">お店を探す</a></p>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>メールでのお問い合わせ</dt>
+                <dd>
+                    <div class="btn_wrap">
+                        <p class="btn"><a href="https://my.edion.jp/inquiry/brand/input.php">カードに関する<span>お問い合わせ</span>
+                            </a></p>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl class="tell_area">
+                <dt>お電話でのお問い合わせ</dt>
+                <dd class="txtC">
+                    <div class="tell_txt">エディオンカードセンター</div>
+
+                    <div class="tell tel-link">0120-87-6565</div>
+
+                    <div class="tel_time">受付時間：10:00～18:00(年末年始休)</div>
+                </dd>
+            </dl>
+        </div>
+
+        <p class="note">※メールフォームでお問い合わせをいただいた場合、お問い合わせの件数によりましては、ご回答までに日数がかかる場合がございます。<br />
+            ※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。</p>
+    </div>
+</article>
+
+<div class="btn_wrap">
+    <p class="btn"><a href="/card">エディオンカードトップへ戻る</a></p>
+</div>

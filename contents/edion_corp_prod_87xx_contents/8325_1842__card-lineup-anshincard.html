@@ -1,0 +1,926 @@
+<style type="text/css">
+    #edioncardlineup .innerWrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .p10 {
+        padding: 10px;
+    }
+
+    .ck.ck-content h3 {
+        color: #284DB4;
+    }
+
+    #edioncardlineup.anshinCard .mainBg {
+        background: linear-gradient(rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1)), url(/sites/default/files/inline-images/bg_anshinCard.jpg) top center no-repeat;
+        background-size: cover;
+    }
+
+    #edioncardlineup .mainTitle {
+        text-align: center;
+        color: #FFF;
+        font-size: 33px;
+        font-weight: bold;
+        padding: 35px 10px 20px;
+        text-shadow: 1px 1px 12px #ff8806;
+    }
+
+    #edioncardlineup .privilegeMain .txt {
+        overflow: hidden;
+        padding-left: 10px;
+    }
+
+    #edioncardlineup .privilegeMain dl {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    #edioncardlineup .privilegeMain dd,
+    #edioncardlineup .privilegeMain dt {
+        color: #FFF;
+    }
+
+    #edioncardlineup .privilegeMain dd {
+        font-size: 24px;
+        overflow: hidden;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    #edioncardlineup .privilegeMain .small {
+        font-size: 16px;
+        display: block;
+    }
+
+    #edioncardlineup .yellow {
+        color: #FFFF00;
+    }
+
+    #edioncardlineup .privilegeMain dd,
+    #edioncardlineup .privilegeMain dt {
+        color: #FFF;
+    }
+
+    #edioncardlineup .privilegeMain dt {
+        float: left;
+    }
+
+    #edioncardlineup.anshinCard .privilegeIcon {
+        background: #F53565;
+    }
+
+    #edioncardlineup .privilegeIcon {
+        border-radius: 50%;
+        background: #F3981C;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 8px;
+        font-weight: bold;
+    }
+
+    #edioncardlineup .privilegeIcon .number {
+        font-size: 30px;
+        line-height: 0.7em;
+    }
+
+    #edioncardlineup .privilegeIcon span {
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    #edioncardlineup .privilegeMain {
+        overflow: hidden;
+        margin-bottom: 20px;
+        max-width: 960px;
+        margin: 0 auto 20px;
+    }
+
+    #edioncardlineup .privilegeMain .image {
+        width: 33%;
+        float: left;
+    }
+
+    .tableSt {
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+    }
+
+    .tableSt th {
+        width: 25%;
+        background-color: #F5F5F5;
+    }
+
+    .tableSt th {
+        padding: 10px 10px;
+        border: 1px solid #CCC;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    #edioncardlineup .tableSt td {
+        background: #FFF;
+    }
+
+    .tableSt td {
+        padding: 10px 10px;
+        border: 1px solid #CCC;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    #edioncardlineup .mainBg td .icoList {
+        letter-spacing: -.40em;
+    }
+
+    #edioncardlineup li .Icon {
+        letter-spacing: normal;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        vertical-align: bottom;
+    }
+
+    .icon_shuri {
+        background-color: #419BC7;
+    }
+
+    .icon_division {
+        background-color: #292D9A;
+    }
+
+    .icon_point {
+        background-color: #DE9F0C;
+    }
+
+    .icon_etc {
+        background-color: #AAAA00;
+    }
+
+    .icon_haigusha {
+        background-color: #E26363;
+    }
+
+    .icon_shuri_an {
+        background-color: #4AB645;
+    }
+
+    .Icon {
+        border-radius: 5px;
+        color: #FFF;
+        font-size: 14px;
+        min-width: 60px;
+        display: inline-block;
+        text-align: center;
+        padding: 8px 10px;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    #edioncardlineup li {
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    /* 特典 */
+
+    #edioncardlineup .privilegeBox {
+        border-top: 2px solid #CCC;
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #edioncardlineup .privilegeBox .left {
+        float: left;
+    }
+
+    #edioncardlineup .privilegeIcon {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 8px;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+    #edioncardlineup .privilegeBox .title {
+        overflow: hidden;
+        color: #1F529F;
+        font-size: 35px;
+        padding-left: 10px;
+        font-weight: bold;
+        margin-bottom: 0 !important;
+    }
+
+    #edioncardlineup .privilegeBox .wrap {
+        overflow: hidden;
+    }
+
+    #edioncardlineup .privilegeBox .small {
+        font-size: 18px;
+        display: block;
+    }
+
+    #edioncardlineup .glay {
+        overflow: hidden;
+        color: #444444;
+    }
+
+    #edioncardlineup .red {
+        overflow: hidden;
+        color: #DE0A4D;
+    }
+
+    #edioncardlineup .privilegeBox h3 {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    #edioncardlineup .privilegeBox .txt {
+        width: 70%;
+        float: left;
+        padding-right: 10px;
+    }
+
+    #edioncardlineup .privilegeBox .txt p,
+    #edioncardlineup .privilegeBox .txt ul {
+        margin: 0 0 15px;
+    }
+
+    #edioncardlineup .privilegeBox .image {
+        width: 25%;
+        min-width: 250px;
+        padding: 0 3%;
+        float: right;
+    }
+
+    #edioncardlineup .privilegeBox .txt2 {
+        width: 70%;
+        border: 2px solid #CCC;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    #edioncardlineup .privilegeBox .txt2 .tit_price {
+        font-weight: bold;
+        font-size: 1.08rem;
+    }
+
+    #edioncardlineup .privilegeBox .txt2 .txtC {
+        margin: 10px 0;
+    }
+
+    .txtC {
+        text-align: center !important;
+    }
+
+    /* カードのお申し込み */
+
+    .box_sty {
+        border: 1px solid #CCC;
+        padding: 10px;
+        overflow: hidden;
+        background-color: #F7FAFD;
+    }
+
+    .area_he_list {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    #edioncardlineup li {
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+    .area2list li:nth-child(2n+1) {
+        clear: both;
+        margin-left: 0;
+    }
+
+    .area_he_list li {
+        float: none !important;
+    }
+
+    .area2list li {
+        width: 50%;
+    }
+
+    .area2list li {
+        list-style-type: none;
+    }
+
+    .fnt22 {
+        font-size: 1.571428562rem;
+        text-align: center;
+    }
+
+    .btn {
+        margin: 20px;
+    }
+
+    .btn#c {
+        margin: 20px auto;
+    }
+
+    .p20 {
+        padding: 20px !important;
+    }
+
+    .C {
+        text-align: center;
+        margin: auto;
+    }
+
+    /* edioncard lineup */
+    .adEdioncard {
+        color: #FFF;
+    }
+
+    .adEdioncard .titleBelt {
+        background: #1F52A1;
+        text-align: center;
+        color: #FFF;
+        font-size: 25px;
+        padding: 8px 0;
+        font-weight: bold;
+    }
+
+    .box_sty_dib {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .box_sty_dib {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .adEdioncard .wrap {
+        background: url(/sites/default/files/inline-images/bg_edionCard.jpg) center center no-repeat;
+        background-size: cover;
+        padding: 40px 35px 45px;
+    }
+
+    .adEdioncard .wrap .title {
+        color: #FFF;
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 30px;
+        font-weight: bold;
+        text-shadow: 1px 1px 12px #0075EA;
+    }
+
+    .adEdioncard .wrap .mainImg {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .adEdioncard .wrap .image {
+        padding-top: 20px;
+        width: 33%;
+        float: left;
+    }
+
+    .adEdioncard .wrap .txt {
+        overflow: hidden;
+        padding-left: 20px;
+    }
+
+    .adEdioncard .wrap .titSquare {
+        background: #166AC6;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #FFF;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 2px 0 3px;
+    }
+
+    .adEdioncard .wrap .figure {
+        margin-bottom: 30px;
+        text-align: left;
+        display: table;
+    }
+
+    .adEdioncard .wrap .txt .parts.anshin {
+        width: 38%;
+        position: relative;
+    }
+
+    .adEdioncard .wrap .figure .title {
+        border-bottom: 2px solid #FFF;
+        text-align: left;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    .adEdioncard .wrap .figure .title .small {
+        font-size: 16px;
+        display: block;
+    }
+
+    #edioncardlineup li {
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+    .adEdioncard .wrap .txt .arrow {
+        vertical-align: top;
+        padding: 46px 8px;
+    }
+
+    .adEdioncard .wrap .txt .parts.anshin,
+    .adEdioncard .wrap .txt .parts.edion,
+    .adEdioncard .wrap .txt .arrow {
+        display: table-cell;
+    }
+
+    .adEdioncard .arrowIcon:before {
+        font-family: "fontello";
+        font-weight: normal;
+        font-size: 40px;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        line-height: 1em;
+        right: 0px;
+        top: 50%;
+        margin-right: 0;
+        color: #F5981F;
+        font-style: initial;
+        content: '\e893';
+    }
+
+    .adEdioncard .wrap .parts {
+        font-size: 16px;
+    }
+
+    .adEdioncard .wrap .txt .parts.edion {
+        width: 56%;
+    }
+
+    .adEdioncard .wrap .titSquare {
+        background: #166AC6;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #FFF;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 2px 0 3px;
+    }
+
+    .adEdioncard .wrap ul.figure {
+        letter-spacing: -.40em;
+        display: block;
+    }
+
+    .adEdioncard .wrap .figure {
+        margin-bottom: 30px;
+        text-align: left;
+        /*display: table;*/
+    }
+
+    #edioncardlineup li {
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+    .adEdioncard .wrap ul.figure li {
+        display: inline-block;
+        letter-spacing: normal;
+        margin: 0 5px 5px 0;
+    }
+
+    #edioncardlineup .pcBr {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .box_sty_dib {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        #edioncardlineup .mainBg,
+        #edioncardlineup.anshinCard .mainBg {
+            background: none;
+            margin-top: 0;
+        }
+
+        #edioncardlineup.anshinCard .mainimgArea {
+            background: url(/sites/default/files/inline-images/bg_anshinCard.jpg) top center no-repeat;
+            background-size: cover;
+        }
+
+        #edioncardlineup .mainTitle {
+            font-size: 20px;
+        }
+
+        #edioncardlineup .privilegeMain {
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+            max-width: 960px;
+            margin: 0 auto 20px;
+        }
+
+        #edioncardlineup .privilegeMain .image {
+            width: 65%;
+            float: initial;
+            margin: 0 auto;
+        }
+
+        #edioncardlineup .privilegeMain .txt {
+            display: none;
+        }
+
+        #edioncardlineup .tableWrap {
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .tableSt {
+            border: 0;
+            border-top: 1px solid #CCC;
+        }
+
+        .tableSt,
+        .tableSt tbody,
+        .tableSt tr,
+        .tableSt th,
+        .tableSt td {
+            display: block;
+            width: 100% !important;
+            max-width: inherit;
+        }
+
+        #edioncardlineup .privilegeBox .left {
+            float: inherit;
+        }
+
+        #edioncardlineup .privilegeIcon {
+            font-size: 14px;
+            width: 50px;
+            height: 50px;
+            padding-top: 5px;
+            margin: 0 auto 10px !important;
+            background: #F53565;
+        }
+
+        #edioncardlineup .privilegeIcon .number {
+            font-size: 20px;
+            line-height: 0.7em;
+        }
+
+        #edioncardlineup .privilegeBox .title {
+            padding: 0;
+            font-size: 20px;
+        }
+
+        #edioncardlineup .privilegeBox .txt {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        #edioncardlineup .privilegeBox .btn {
+            margin: 0 auto;
+        }
+
+        #edioncardlineup .privilegeBox .image {
+            display: none;
+        }
+
+        #edioncardlineup .privilegeBox .txt2 {
+            width: 100%;
+        }
+
+        #edioncardlineup .privilegeBox .txt2 .box_sty_db {
+            display: inline;
+        }
+
+        #edioncardlineup .cardInfo .function {
+            margin: 0;
+            display: block;
+        }
+
+        #edioncardlineup .cardInfo .function li {
+            float: inherit;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #edioncardlineup .btn {
+            width: 100%;
+        }
+
+        #edioncardlineup .cardInfo .txt {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        #edioncardlineup .cardInfo .image {
+            display: none;
+        }
+
+        .area2list li {
+            width: 100%;
+        }
+
+        #edioncardlineup .adEdioncard .titleBelt {
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .adEdioncard .titleBelt span {
+            display: inline-block;
+        }
+
+        .adEdioncard .wrap {
+            padding: 15px 15px 30px;
+        }
+
+        .adEdioncard .wrap .title {
+            color: #FFF;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 12px #0075EA;
+        }
+
+        #edioncardlineup .pcBr {
+            display: inline-block;
+        }
+
+        .box_sty_dib {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .adEdioncard .wrap .title .spNone {
+            display: none;
+        }
+
+        .adEdioncard .wrap .mainImg {
+            text-align: center;
+        }
+
+        .adEdioncard .wrap .image {
+            width: 50%;
+            display: block;
+            float: inherit;
+            margin: 0 auto 15px;
+        }
+
+        adEdioncard .wrap .txt {
+            padding-left: 0;
+        }
+
+        .adEdioncard .wrap .txt {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .adEdioncard .wrap .figure {
+            display: block;
+        }
+
+        .adEdioncard .wrap .txt .parts.anshin,
+        .adEdioncard .wrap .txt .parts.edion,
+        .adEdioncard .wrap .txt .arrow {
+            display: block;
+            width: 100%;
+        }
+
+        .adEdioncard .wrap .txt .parts.anshin {
+            position: relative;
+        }
+
+        .adEdioncard .wrap .title {
+            font-size: 18px;
+        }
+
+        .txt .arrow {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .adEdioncard .arrowIcon:before {
+            content: '\e895';
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        #edioncardlineup .privilegeBox .image {
+            width: 30%;
+            min-width: inherit;
+            padding: 0 2% 0 3%;
+        }
+    }
+</style>
+<div class="innerWrap">
+    <div class="anshinCard mb30" id="edioncardlineup">
+        <div class="mainBg">
+            <div class="innerWrap">
+                <div class="mainimgArea">
+                    <div class="C">
+                        <p class="mainTitle">対象商品22品種のあんしん修理保証！</p>
+                    </div>
+                    <div class="privilegeMain">
+                        <div class="image"><img src="/sites/default/files/inline-images/img_anshinCard.png"
+                                alt="あんしん保証カード" width="327" height="247"></div>
+                        <div class="txt">
+                            <dl>
+                                <dt class="privilegeIcon">
+                                    <p><span>特典</span><span class="number">1</span></p>
+                                </dt>
+                                <dd>
+                                    <p><span class="small">対象商品は当社指定の21品種</span> 3年間・5年間・10年間の<span
+                                            class="yellow">あんしん修理保証</span></p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="privilegeIcon">
+                                    <p><span>特典</span><span class="number">2</span></p>
+                                </dt>
+                                <dd>
+                                    <p><span class="small">おもちゃ・ゲーム関連など当社指定商品のご購入で</span><br><span
+                                            class="small">さらに、当社指定商品なら、</span> 100円<span class="tax">(税別)</span>ごとに<span
+                                            class="yellow">3～5ポイント</span>を進呈!</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div><!--  privilegeMain  -->
+                </div><!--  mainimgArea  -->
+                <div class="tableWrap">
+                    <table class="tableSt">
+                        <tbody>
+                            <tr>
+                                <th>年会費</th>
+                                <td>無料</td>
+                                <td>クレジットカード機能</td>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <th>サービス・特典</th>
+                                <td class="pb5" colspan="3">
+                                    <ul class="icoList">
+                                        <li><span class="Icon icon_shuri_an">あんしん修理保証(22品種)</span></li>
+                                        <li><span class="Icon icon_point">ポイント</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!--  tableWrap  -->
+            </div><!--  innerWrap  -->
+        </div><!--  mainBg  -->
+        <div class="innerWrap">
+            <div id="cardDetile">
+                <h2>&nbsp;</h2>
+                <h3 class="bt_line">特典</h3><!-- 特典1 -->
+                <div class="privilegeBox">
+                    <p class="privilegeIcon left"><span>特典</span><span class="number">1</span></p>
+                    <p class="title"><span class="small glay">当社指定の21品種が保証対象となります！</span> 3年間・5年間・10年間のあんしん修理保証</p>
+                    <div class="wrap">
+                        <div class="txt">
+                            <p>あんしん保証カード会員様なら、指定商品をご購入の際に、ご購入金額、商品の種類に応じて、3年間・5年間・10年間のあんしん修理保証サービスをご用意しております。
+                                対象商品は当社指定の22品種！</p>
+                            <ul>
+                                <li>※1年以上のメーカー保証付の当社指定商品が対象となります。</li>
+                                <li>※ハードディスク、リモコン、3Dメガネの故障は保証の対象外となります。</li>
+                                <li>※詳しくは<a href="/card/agreement/anshin_member">あんしん保証カードサービス会員規約</a>をご確認ください。</li>
+                                <li>※あんしん保証カードは一部店舗でお取扱いのない店舗がございます。</li>
+                            </ul>
+                            <div class="btn"><a href="https://my.edion.jp/card/service/edion_guarantee.php">くわしくはこちら</a>
+                            </div>
+                        </div>
+                        <div class="image"><img src="/sites/default/files/inline-images/img_cardIllust05.jpg"
+                                alt="あんしん修理保証" width="436" height="453"></div>
+                    </div>
+                </div><!-- 特典2 -->
+                <div class="privilegeBox">
+                    <p class="privilegeIcon left"><span>特典</span><span class="number">2</span></p>
+                    <p class="title"><span class="small glay">おもちゃ・ゲーム関連など当社指定商品のご購入で</span> <span
+                            class="red">100円</span><span class="red tax">（税別）</span>ごとに<span
+                            class="red">３～５ポイント</span>を進呈!</p>
+                    <div class="wrap">
+                        <div class="txt">
+                            <p>エディオン各店舗にて、おもちゃ・ゲーム関連などを、現金、当社指定電子マネー、当社ギフトカードでのお支払いでポイントがたまります。</p>
+                            <ul>
+                                <li>※ポイントの進呈は当社指定商品です。（詳しくは店頭でご確認下さい。）</li>
+                                <li>※ポイントご利用の際はレジでカードをご提示ください。カードは名義人さまのみご利用いただけます。</li>
+                                <li>※アウトレット店舗でのご購入にはポイント特典は適用されません。</li>
+                            </ul>
+                            <div class="btn"><a href="https://my.edion.jp/card/service/edion_point.php">くわしくはこちら</a>
+                            </div>
+                        </div>
+                        <div class="image"><img src="/sites/default/files/inline-images/img_cardIllust06.jpg"
+                                alt="100円(税別)ごとに３～５ポイントを進呈!" width="412" height="218"></div>
+                    </div>
+                </div>
+                <div class="cardEntryBox">
+                    <h2>&nbsp;</h2>
+                    <h3 class="bt_line">カードのお申し込み</h3>
+                    <div class="box_sty area2list md_area2list sm_arealist area_he_list">
+                        <dl class="p10">
+                            <dt>
+                                <p class="fnt22"><strong>店頭入会</strong></p>
+                                <p class="p10">カードの入会・お申し込みは、エディオン各店頭で受け付けております。</p>
+                            </dt>
+                            <dd>
+                                <p class="btn link" id="c"><a href="https://search.edion.com/e_store/">お近くのお店を探す</a></p>
+                            </dd>
+                        </dl>
+                        <dl class="p10">
+                            <dt>
+                                <p class="fnt22"><strong>新規WEB申し込み</strong></p>
+                                <p class="p10">WEB申し込みには、エディオンネットショップのID・パスワードが必要です。</p>
+                            </dt>
+                            <dd>
+                                <p class="btn orn link" style="height:62px;" id="c"><a
+                                        href="https://www.edion.com/member/EPM01400.html">エディオンネットショップへ</a></p>
+                            </dd>
+                        </dl>
+                    </div><!--  cardEntry  -->
+                </div><!-- ] innerWrap END --><!--  cardEntryBox  -->
+            </div><!-- ] edioncardlineup END -->
+        </div>
+        <div class="mb30">&nbsp;</div>
+        <div class="adEdioncard">
+            <div class="titleBelt"><span class="box_sty_dib">エディオンカード会員なら、さらに充実の保証がうけられます！</span></div>
+            <div class="wrap">
+                <div class="title"><span class="pcBr box_sty_dib">対象商品</span><span
+                        class="pcBr box_sty_dib spNone">は、さらに豊富な</span><span
+                        class="pcBr box_sty_dib">100種類以上！業界屈指の長期修理保証に加え、</span> <span
+                        class="pcBr box_sty_dib">もっとおトクにお買い物を楽しみたい方におすすめ</span><span
+                        class="pcBr box_sty_dib spNone">のエディオンカード</span></div>
+                <div class="mainImg">
+                    <div class="image"><img src="/sites/default/files/inline-images/img_edionCard_n.png" alt="エディオンカード"
+                            width="546" height="332"></div>
+                    <div class="txt">
+                        <div class="titSquare">長期修理保証</div>
+                        <div class="figure">
+                            <div class="parts anshin">
+                                <div class="title"><span class="small">あんしん保証カード</span> 保証対象22品種</div>
+                                <ul class="partsTxt">
+                                    <li>・当社指定商品での購入でポイント進呈</li>
+                                    <li>・ポイント有効期間1年</li>
+                                </ul>
+                            </div>
+                            <div class="arrow"><em><i class="arrowIcon">&nbsp;</i></em></div>
+                            <div class="parts edion">
+                                <div class="title"><span class="small">エディオンカード</span> 保証対象100品種以上！</div>
+                                <ul class="partsTxt">
+                                    <li>・エディオン各店舗でのお支払いで100円につき1ポイント！</li>
+                                    <li>・さらに、当社指定商品なら、100円（税別）ごとに最大5ポイントを進呈!</li>
+                                    <li>・ポイント有効期間も2年に拡大！</li>
+                                </ul>
+                            </div>
+                        </div><!--  figure  -->
+                        <div class="titSquare">おトクな機能、サービス満載</div>
+                        <ul class="figure">
+                            <li><span class="Icon icon_shuri">長期修理保証</span></li>
+                            <li><span class="Icon icon_point">ポイント</span></li>
+                            <li><span class="Icon icon_etc">ETCカード</span></li>
+                            <li><span class="Icon icon_haigusha">家族カード</span></li>
+                        </ul>
+                    </div><!--  txt  -->
+                </div><!--  mainImg  -->
+                <p class="btn orn link" style="height:62px;" id="c"><a
+                        href="https://my.edion.jp/card/lineup/edioncard.php">詳しくはこちら</a></p>
+            </div>
+        </div><!--  wrap  -->
+    </div>
+</div>
+<div class="btn_wrap mt50">
+    <p class="btn wht link"><a href="/card/lineup">カード一覧へ戻る</a></p>
+</div>

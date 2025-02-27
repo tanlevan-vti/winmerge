@@ -1,0 +1,770 @@
+<style type="text/css">
+    .target_card {
+        margin-bottom: 10px;
+    }
+
+    .target_card span {
+        font-size: 0.93rem;
+        margin: 0 5px 5px 0;
+        padding: 5px 10px;
+        vertical-align: middle;
+    }
+
+    .icoRed,
+    .icoGree,
+    .icolightBl,
+    .icoGreen,
+    .icoPink,
+    .icoBl,
+    .icoBl2,
+    .icoYer,
+    .icoOrng,
+    .icoYmbk,
+    .icoGnj,
+    .icolightgr {
+        background-color: #CC2D2D;
+        border-radius: 3px;
+        color: #FFF;
+        font-size: 0.86rem;
+        min-width: 60px;
+        display: inline-block;
+        text-align: center;
+        padding: 2px 10px 2px;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    .icoBl2 {
+        background-color: #1978E2;
+    }
+
+    .icoGreen {
+        background-color: #23921D;
+    }
+
+    .cardset_sty {
+        overflow: hidden;
+        margin-bottom: 45px;
+    }
+
+    .cardset_sty .title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        overflow: hidden;
+    }
+
+    .cardset_sty .title .mess {
+        color: #1F529F;
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .cardset_sty .title .mess strong {
+        color: #DE0A4C;
+    }
+
+    .cardset_sty .imgR_sty01 {
+        margin: 10px 15px 30px 30px;
+        width: 254px;
+        float: right;
+        text-align: center;
+    }
+
+    .pcOn,
+    .pcOn02 {
+        display: block !important;
+    }
+
+    .cardset_sty .txt {
+        overflow: hidden;
+    }
+
+    .cardset_sty .txt p {
+        margin-top: 15px;
+    }
+
+    #pointsaveWrap .point_award {
+        padding: 17px 17px 12px;
+    }
+
+    .point_award {
+        border: 3px solid #F3981C !important;
+        margin-bottom: 30px !important;
+        color: #F3981C;
+    }
+
+    #pointsaveWrap .point_award dl {
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+
+    #pointsaveWrap .point_award dl:first-child dt {
+        padding: 12px 10px;
+    }
+
+    #pointsaveWrap .point_award .get_point,
+    #pointsaveWrap .point_award dd {
+        font-size: 1.45rem;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    #pointsaveWrap .point_award .get_point span,
+    #pointsaveWrap .point_award dd span {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    #pointsaveWrap .point_text dt {
+        font-weight: bold;
+        color: #455976;
+        font-size: 1.3rem;
+    }
+
+    #pointsaveWrap .point_award dt span {
+        display: block;
+        font-size: 1.15rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    #pointsaveWrap .point_text dd {
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    #pointsaveWrap .deals {
+        overflow: hidden;
+        border: 3px solid #CCC;
+        padding: 19px;
+    }
+
+    #pointsaveWrap .point_award dt {
+        background-color: #F3981C;
+        border-radius: 6px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        padding: 4px 10px;
+        margin-bottom: 3px;
+        width: 300px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 1.45rem;
+        line-height: 1.2;
+        margin-right: 10px;
+    }
+
+    #pointsaveWrap .deals .imgL {
+        width: 153px;
+        margin-bottom: 0;
+    }
+
+    .imgL {
+        float: left;
+        margin: 0 15px 15px 0;
+    }
+
+    #pointsaveWrap .deals .imgL img {
+        max-width: 100%;
+        height: auto;
+        width
+        /***/
+        : auto;
+    }
+
+    img {
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        vertical-align: bottom;
+    }
+
+    #pointsaveWrap .deals .txt {
+        overflow: hidden;
+    }
+
+    #pointsaveWrap .deals .txt p {
+        color: #455976;
+        font-size: 1.45rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .use_point .expiry_date {
+        color: #455976;
+        font-size: 1.45rem;
+        text-align: center;
+        border: 3px solid #CCC !important;
+        padding: 37px !important;
+        margin-top: 20px !important;
+    }
+
+    .use_point .usable {
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+    .use_point .usable li:first-child {
+        clear: both;
+        margin-left: 0 !important;
+    }
+
+    .use_point .usable li {
+        position: relative;
+        background: #F3981C;
+        border-radius: 2em;
+        color: #FFF;
+        text-align: center;
+        font-size: 1.45rem;
+        padding: 3px 10px;
+        width: 31.5%;
+        margin: 0 0 10px 2.7%;
+        float: left;
+    }
+
+    .use_point .usable li:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(243, 152, 28, 0);
+        border-top-color: #F3981C;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    .periodTxt {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .periodTxt span {
+        font-size: 60px;
+        color: #F3981C;
+        line-height: 1.2;
+    }
+
+    .use_point .txt {
+        font-weight: bold;
+        margin: 20px 0 25px;
+        text-align: center;
+    }
+
+    .use_point .txt strong span {
+        color: #F3981C;
+    }
+
+    .use_point .txt strong {
+        font-size: 35px;
+    }
+
+    .use_point .txt .icon-icon_r {
+        color: #F3981C;
+        font-size: 32px;
+        margin: 0 2px 5px 8px;
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .icon-icon_r:before {
+        content: '\e893';
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        margin-right: 3px;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+    }
+
+    .cl {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+
+    }
+
+    .pcOn02 {
+        display: block !important;
+        text-align: center;
+    }
+
+    .spOn02 {
+        display: none;
+    }
+
+    .use_point .image img {
+        max-width: 100%;
+        height: auto;
+        width
+        /***/
+        : auto;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .cardset_sty .title .mess,
+        .cardset_sty .title .mess span {
+            font-size: 1.45rem;
+        }
+
+        .cardset_sty .imgR_sty01 {
+            margin-left: 15px;
+        }
+
+        .pcOn02,
+        .spTOn {
+            display: none !important;
+        }
+
+        .cl {
+            text-align: left;
+        }
+
+        #pointsaveWrap .point_award {
+            padding: 10px;
+        }
+
+        #pointsaveWrap .point_award dl {
+            margin-bottom: 15px;
+        }
+
+        #pointsaveWrap .point_award ul li,
+        #pointsaveWrap .point_award dt {
+            font-size: 1rem !important;
+        }
+
+        #pointsaveWrap .point_award dt {
+            width: auto;
+            font-size: 1.15rem;
+            padding: 10px !important;
+            margin-right: 0;
+        }
+
+        #pointsaveWrap .point_award dt,
+        #pointsaveWrap .point_award dd {
+            display: block;
+            text-align: center;
+        }
+
+        #pointsaveWrap .point_award .get_point,
+        #pointsaveWrap .point_award dd {
+            font-size: 1.45rem;
+            text-align: left;
+        }
+
+        #pointsaveWrap .point_award .get_point span,
+        #pointsaveWrap .point_award dd span {
+            font-size: 20px;
+        }
+
+        #pointsaveWrap .deals .imgL {
+            width: auto;
+            margin-bottom: 5px;
+        }
+
+        #pointsaveWrap .deals .txt {
+            overflow: visible;
+        }
+
+        .btn.wht#spc {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .use_point .usable {
+            display: none;
+        }
+
+        .use_point .expiry_date {
+            padding: 15px 10px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .periodTxt,
+        .periodTxt span {
+            font-size: 1.45rem;
+            text-align: left;
+        }
+
+        .use_point .txt {
+            margin: 15px 0 20px;
+            text-align: left;
+        }
+
+        .use_point .txt strong {
+            font-size: 1.15rem;
+        }
+
+        .use_point .txt .icon-icon_r {
+            font-size: 20px;
+        }
+
+        .spOn02 {
+            display: block;
+        }
+
+    }
+
+    .ck.ck-content h3 {
+        color: #284DB4;
+    }
+</style>
+<div id="edionidcardWrap">
+    <div class="innerWrap">
+        <p class="target_card">対象カード：<span class="icoBl2">エディオンカード</span> <span class="icoGreen">IDカード</span></p>
+        <!-- ポイントをためる -->
+        <div class="edionPoint" id="pointsaveWrap">
+            <div class="cardset_sty">
+                <h3 class="bt_line">ポイントをためる</h3>
+                <div class="title">
+                    <p>エディオン各店舗でのお支払いで100円につき１ポイント！さらに、当社指定商品なら、</p>
+                    <div class="mess">
+                        <strong>100円</strong><span><strong>(税別)</strong></span>ごとに<strong>最大5ポイント</strong>を進呈!
+                    </div>
+                </div>
+                <div class="imgR_sty01 pcOn02"><img src="/sites/default/files/inline-images/img_cardIllust02.jpg"
+                        width="424" height="496"></div>
+                <div class="txt">
+                    <p>エディオングループ各店舗はもちろん、エディオングループ以外のご利用でもエディオンカードでのお支払いでポイントがたまります。<br>エディオン各店舗なら現金でもエディオンカードでのお支払いでもポイントがたまります。
+                    </p>
+                    <p>※ポイントの進呈は当社指定商品です。（詳しくは店頭でご確認下さい。）<br>※ポイントご利用の際はレジでカードをご提示ください。カードは名義人さまのみご利用いただけます。<br>※アウトレット店舗及びエディオンネットショップを除くネット通販（楽天、amazon、Yahoo!など）でお買い求めの商品にはポイント特典は適用されません。
+                    </p>
+                </div>
+            </div>
+            <div class="point_award">
+                <dl>
+                    <dt>
+                        <p>家電品・パソコン</p>
+                    </dt>
+                    <dd>
+                        <p>お支払い<span>100</span>円(税別)ごとに<span>1ポイント</span>進呈</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <p><span>おもちゃ・ゲーム関連など「詳しくは店頭でご確認下さい」</span></p>
+                    </dt>
+                    <dd>
+                        <p>お支払い<span>100</span>円(税別)ごとに<span>3ポイント</span>進呈</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <p><span>テレビゲームソフト(新品)映像・音楽ソフト</span></p>
+                    </dt>
+                    <dd>
+                        <p>お支払い<span>100</span>円(税別)ごとに<span>5ポイント</span>進呈</p>
+                    </dd>
+                </dl>
+            </div>
+            <dl class="point_text mb50">
+                <dt>
+                    <p>エディオン各店でのお買物がポイント特典の対象です。</p>
+                </dt>
+                <dd>
+                    <p>全国のエディオン各店でお買い上げの家電品、パソコン、映像・音楽ソフトが特典対象品となります。一部ポイント特典対象外商品・対象外役務があります。<br>詳しくは<a
+                            href="https://my.edion.jp/card/service/agreement/edion_member.php">エディオンカード会員規約</a>をご確認ください。
+                    </p>
+                </dd>
+                <dt>
+                    <p>エディオンカードまたは現金でのお支払いでポイントを進呈。</p>
+                </dt>
+                <dd>
+                    <p>他社のカードで決済された場合はポイント付与対象外となります。<br>ポイントは、付与対象商品の代金を全額支払いいただいた翌日に付与します。</p>
+                </dd>
+                <dt>
+                    <p>ポイントはレシートとwebでご確認いただけます。</p>
+                </dt>
+                <dd>
+                    <p>進呈したポイントは、エディオン各店でのお買い上げ時にお渡しするレシートにてご案内いたします。 webでのポイント照会は「<a href="https://www.edion.com/"
+                            target="_blank">エディオンネットショップ</a>」に会員登録後、カード情報をご登録していただければ貯まっているポイントがご確認いただけます。</p>
+                </dd>
+            </dl>
+            <div class="btn_wrap mb50">
+                <p class="btn"><a href="https://www.edion.com/">エディオンネットショップはこちら</a></p>
+            </div>
+            <div class="deals mb30">
+                <div class="txt">
+                    <p><img src="/sites/default/files/inline-images/SMCC_%E3%82%AA%E3%83%AA%E3%82%B3%EF%BC%B7%E5%88%B8%E9%9D%A2_8.png"
+                            data-entity-uuid="8dcc80e2-729c-44b1-973c-ede0fc661443" data-entity-type="file" alt="券面データ"
+                            width="123" height="75">エディオンカード会員様ならさらにお得なポイントを貯めることができます。</p>
+                </div>
+                <p class="btn wht" id="spc"><a href="https://www.edion.co.jp/card/public"
+                        title="口座引き落としよりおトク">おトクなポイントの貯め方はこちら</a></p>
+            </div><!-- pointsaveWrap ] -->
+        </div><!-- ポイントを使う --><!--
+                                                                                        
+                                                                                
+                                                                        
+                                                                
+                                                        
+                                                
+                                        
+                                
+                        
+                
+        <div id="select_point" class="cardset_sty">
+                                                                                                                                    
+                                                                                                                        
+                                                                                                            
+                                                                                                
+                                                                                    
+                                                                        
+                                                            
+                                                
+                                    
+                        
+            <div class="tit02">
+                                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                
+                                                                                                                                
+                                                                                                                
+                                                                                                
+                                                                                
+                                                                
+                                                
+                                
+                <h2>
+                                                                                                                                                                                                                            <span>エディオンで貯めるポイントが選べます！</span>
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                    
+                                                                                                                                                                                
+                                                                                                                                                            
+                                                                                                                                        
+                                                                                                                    
+                                                                                                
+                                                                            
+                                                        
+                                    
+                </h2>
+                                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                            
+                                                                                                                            
+                                                                                                            
+                                                                                            
+                                                                            
+                                                            
+                                            
+                            
+            </div>
+                                                                                                                                    
+                                                                                                                        
+                                                                                                            
+                                                                                                
+                                                                                    
+                                                                        
+                                                            
+                                                
+                                    
+                        
+            <p class="mb20">
+                                                                                                                                                                                エディオンで貯まるポイントを、エディオンポイントの他、Tポイントもお選びいただけます。
+                                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                            
+                                                                                                                            
+                                                                                                            
+                                                                                            
+                                                                            
+                                                            
+                                            
+                            
+            </p>
+                                                                                                                                    
+                                                                                                                        
+                                                                                                            
+                                                                                                
+                                                                                    
+                                                                        
+                                                            
+                                                
+                                    
+                        
+            <div class="imgL">
+                                                                                                                                                                                <img src="/common/images/card/img_tcurd.jpg" alt="">
+                                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                            
+                                                                                                                            
+                                                                                                            
+                                                                                            
+                                                                            
+                                                            
+                                            
+                            
+            </div>
+                                                                                                                                    
+                                                                                                                        
+                                                                                                            
+                                                                                                
+                                                                                    
+                                                                        
+                                                            
+                                                
+                                    
+                        
+            <div class="title">
+                                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                
+                                                                                                                                
+                                                                                                                
+                                                                                                
+                                                                                
+                                                                
+                                                
+                                
+                <div class="mess">
+                                                                                                                                                                                                                            お支払い<strong>200円<span>(税別)</span></strong>ごとに<strong>1ポイント</strong>進呈
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                    
+                                                                                                                                                                                
+                                                                                                                                                            
+                                                                                                                                        
+                                                                                                                    
+                                                                                                
+                                                                            
+                                                        
+                                    
+                </div>
+                                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                            
+                                                                                                                            
+                                                                                                            
+                                                                                            
+                                                                            
+                                                            
+                                            
+                            
+            </div>
+                                                                                                                                    
+                                                                                                                        
+                                                                                                            
+                                                                                                
+                                                                                    
+                                                                        
+                                                            
+                                                
+                                    
+                        
+            <div class="txt">
+                                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                
+                                                                                                                                
+                                                                                                                
+                                                                                                
+                                                                                
+                                                                
+                                                
+                                
+                <p>
+                                                                                                                                                                                                                            ※一部のTポイント提携先ではご利用いただけません
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                    
+                                                                                                                                                                                
+                                                                                                                                                            
+                                                                                                                                        
+                                                                                                                    
+                                                                                                
+                                                                            
+                                                        
+                                    
+                </p>
+                                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                
+                                                                                                                                
+                                                                                                                
+                                                                                                
+                                                                                
+                                                                
+                                                
+                                
+                <div class="btn">
+                                                                                                                                                                                                                            <a href="https://my.edion.jp/card/service/t_point.php" class="btnWh">詳しくはこちら</a>
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                    
+                                                                                                                                                                                
+                                                                                                                                                            
+                                                                                                                                        
+                                                                                                                    
+                                                                                                
+                                                                            
+                                                        
+                                    
+                </div>
+                                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                            
+                                                                                                                            
+                                                                                                            
+                                                                                            
+                                                                            
+                                                            
+                                            
+                            
+            </div>
+                                                                                                                                
+                                                                                                                    
+                                                                                                        
+                                                                                            
+                                                                                
+                                                                    
+                                                        
+                                            
+                                
+                    
+        </div>
+                                                                                        --><!-- エディオンでためるポイントが選べます！ -->
+        <div class="use_point">
+            <h3 class="bt_line">ポイントを使う</h3>
+            <p>貯めたポイントは、エディオン各店舗で1ポイント1円分としてお買い物いただけます。</p>
+            <div class="expiry_date">
+                <ul class="usable">
+                    <li>1円から使える！</li>
+                    <li>いつでも使える！</li>
+                    <li>現金と併用できる！</li>
+                </ul>
+                <div class="cl">
+                    <div class="periodTxt">ポイントの有効期限は<span>2年</span>です。</div>
+                    <p class="cl">獲得ポイントの有効期限は、「獲得年度の残り月数＋2年」となります。<br>有効期限を過ぎますと、ポイントは自動的に失効します。</p>
+                    <div class="txt">ポイントの獲得期間は、<br><span
+                            style="color:#F3981C;"><strong>4月1日～翌年3月31日</strong></span><strong>までを区切りとします。</strong><br>例えば…4月にポイントを獲得した場合<em><i
+                                class="icon-icon_r">&nbsp;</i></em>獲得年度の残り月数11ヶ月＋2年</div>
+                </div>
+                <div class="image">
+                    <div class="pcOn02"><img src="/sites/default/files/inline-images/img_period.jpg"></div>
+                    <div class="spOn02"><img src="/sites/default/files/inline-images/img_period_sp.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_wrap mt50">
+            <p class="btn wht link"><a href="/card/service">カードの特長へ戻る</a></p>
+        </div><!-- ] innerWrap END -->
+    </div><!-- ] edioncardWrap END -->
+</div>

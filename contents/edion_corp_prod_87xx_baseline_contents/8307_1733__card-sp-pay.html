@@ -1,0 +1,182 @@
+<style type="text/css">
+    /* ## mobile ===============================
+お財布ケータイ 設定 */
+
+    .topMess {
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+
+    .topMess h2 {
+        color: #1F529F;
+        font-size: 2rem;
+        line-height: 1.3;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .topMess .txt {
+        float: left;
+        width: 63%;
+        margin-right: 2%;
+    }
+
+    .topMess .point {
+        border: 3px solid #F3981C;
+        padding: 3px;
+        color: #F3981C;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .topMess .point span {
+        font-size: 20px;
+    }
+
+
+
+    .sifmo {
+        margin-bottom: 46px;
+    }
+
+    .titPoint {
+        font-weight: bold;
+        color: #1D509F;
+        font-size: 1.45rem;
+        margin-bottom: 10px;
+    }
+
+    .sifmo p {
+        margin-bottom: 20px;
+    }
+
+    .sifmo .btnArea .btn .wht {
+        margin: 0;
+    }
+
+    .sifmo .imgR {
+        width: 130px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 800px) {
+        .sifmo .btnArea .btn .wht {
+            margin: 0 auto;
+        }
+
+        .wht {
+            margin: 0 auto;
+        }
+
+
+        .sifmo .imgR {
+            width: auto;
+            margin: 0 0 20px;
+        }
+
+        .topMess h2 {
+            font-size: 1.45rem;
+        }
+
+        .topMess .txt {
+            float: none;
+            width: auto;
+            margin-right: 0;
+        }
+
+        .topMess .point {
+            font-size: 1.45rem;
+            padding: 5px;
+        }
+
+        .topMess .point span {
+            font-size: 1rem;
+        }
+
+    }
+
+    /* --800px END-- */
+</style>
+<!-- === content START === -->
+<div id="content">
+    <div id="edioncardWrap">
+        <div class="innerWrap">
+            <p class="mb20">おトクに賢くポイントGET!<br />
+                ※「おサイフケータイ®」は、株式会社NTTドコモの登録商標です。</p>
+
+            <div class="topMess">
+                <h2>お持ちのスマートフォンや携帯電話(おサイフケータイ)にクレジットカード(エディオンカード)を登録しておけば専用の端末にタッチするだけで簡単にお買い物できて、さらにポイントがついてきます。</h2>
+
+                <div class="point">ご利用額 100円<span>(税込)</span>＝1ポイント</div>
+            </div>
+
+            <p class="mb10">下記のスマートフォン・携帯アプリをご利用いただけます。用途に合わせてお選び下さい。</p>
+
+            <div class="sifmo">
+                <h3 class="bt_line mt50">楽天Edy</h3>
+
+                <div class="titPoint">コンビニなど全国39万ヵ所以上で使えるのが魅力です</div>
+
+                <div class="box_area">
+                    <p class="txt_left">
+                        「おサイフにお金を入れる」そんな感覚で携帯電話にチャージ(入金)してお店にある楽天Edy端末にかざすだけでお支払いが完了するプリペイド式(前払い)の電子マネーです。<br />
+                        ※チャージ（入金）された金額は楽天Edyご利用分として、翌月一括払いとなります。</p>
+                    <img alt="楽天Edy" data-align="center" data-entity-type="file"
+                        data-entity-uuid="46b314a0-422b-437f-9f06-129173e3de2d"
+                        src="/sites/default/files/inline-images/icon_edy_0.png" />
+                </div>
+
+                <p class="btn wht"><a
+                        href="&lt;?php print(FQDN_HTTPS.WEB_DIRECTORY) ?&gt;card/information/sp_edy.php">楽天Edyの登録方法</a>
+                </p>
+            </div>
+
+            <div class="sifmo">
+                <h3 class="bt_line mt50">QUICPayモバイル</h3>
+
+                <div class="titPoint">事前に入金する必要がないので手軽に簡単に使えます</div>
+
+                <div class="box_area">
+                    <p class="txt_left">事前のチャージ(入金)が必要なく携帯電話をお店のQUICPay端末にかざすだけでお支払いが完了するポストペイ(後払い)型です。<br />
+                        ※チャージ(入金)が不要ですので通常のクレジットカードご利用代金とあわせてご請求されます。</p>
+                    <img alt="QUICPayモバイル" data-align="center" data-entity-type="file"
+                        data-entity-uuid="150f77ac-1a22-43f7-873f-b0e604bd479c"
+                        src="/sites/default/files/inline-images/icon_quicpay_0.png" />
+                </div>
+
+                <p class="btn wht"><a
+                        href="&lt;?php print(FQDN_HTTPS.WEB_DIRECTORY) ?&gt;card/information/sp_edy.php">QUICPayモバイルの登録方法</a>
+                </p>
+            </div>
+
+            <div class="sifmo">
+                <h3 class="bt_line mt50">モバイルSuica</h3>
+
+                <div class="titPoint">携帯電話ひとつで電車もお買物もご利用いただけます</div>
+
+                <div class="box_area">
+                    <p class="txt_left">携帯電話にチャージ(入金)し、モバイルSuica端末にかざしてお買物をする以外にも電車やバスも乗れて※定期券や新幹線のチケットの購入も可能です。<br />
+                        ※モバイルSuicaは年会費として1,030円（税込）が必要です。<br />
+                        ※チャージ(入金)された金額はモバイルSuicaご利用分として、翌月一括払いとなります。<br />
+                        ※「モバイルSuica」は、東日本旅客鉄道株式会社の登録商標です。</p>
+                    <img alt="モバイルSuica" data-align="center" data-entity-type="file"
+                        data-entity-uuid="0cd32802-5456-461a-a00b-269cf70e7b40"
+                        src="/sites/default/files/inline-images/icon_suica_0.png" />
+                </div>
+
+                <p class="btn wht"><a
+                        href="&lt;?php print(FQDN_HTTPS.WEB_DIRECTORY) ?&gt;card/information/sp_edy.php">モバイルSuicaの登録方法</a>
+                </p>
+            </div>
+
+            <div class="btn_wrap mt50">
+                <p class="btn"><a href="/card">エディオンカードトップ</a></p>
+            </div>
+            <!-- ] innerWrap END -->
+        </div>
+        <!-- ] edioncardWrap END --><!-- ] content END --><!-- === content END === -->
+    </div>
+</div>

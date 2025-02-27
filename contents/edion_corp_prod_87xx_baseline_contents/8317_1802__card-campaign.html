@@ -1,0 +1,32 @@
+<style type="text/css">
+    /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    .C {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .txt {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+    }
+</style>
+<div class="txt">エディオンカードをおトクに活用しよう！</div>

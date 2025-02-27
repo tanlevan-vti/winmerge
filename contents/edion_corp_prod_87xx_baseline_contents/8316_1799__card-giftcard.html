@@ -1,0 +1,646 @@
+<style type="text/css">
+	/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+	.pc {
+		display: block !important;
+	}
+
+	.sp {
+		display: none !important;
+	}
+
+	iframe {
+		width: 560px;
+		height: 315px;
+	}
+
+	.bg_title {
+		background: #1B50A2;
+		color: #fff;
+	}
+
+	h4 {
+		color: #000;
+	}
+
+	table th,
+	td {
+		border-right: solid 1px #CCC !important;
+	}
+
+	.movie_area {
+		border: 0px none !important;
+		border-right: 0px none;
+	}
+
+	.border_area {
+		border: solid 1px #CCC;
+	}
+
+	.b {
+		font-weight: 900;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.inquiryWrap {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		text-align: left;
+	}
+
+	.tit05 {
+		font-size: 1.15rem;
+		padding: 6px 10px 5px;
+		color: #455C76;
+		font-weight: bold;
+		background-color: #F9F9F9;
+		margin-bottom: 15px;
+		border: 1px solid #CCCCCC;
+		border-left: 2px solid #1F529F;
+	}
+
+	.table_parts_03 td {
+		background: #fff;
+		text-align: left;
+	}
+
+	.table_parts_03 th:first-of-type,
+	.table_parts_03 th {
+		background: #F8F8F8;
+		text-align: left;
+		font-weight: bold;
+	}
+
+	.tableSt th {
+		width: 25%;
+	}
+
+	.tableSt th,
+	.tableSt td {
+		padding: 10px 10px;
+		border: 1px solid #CCC;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	.tableSt td {
+		text-align: center;
+	}
+
+	.point_green {
+		width: 100%;
+		border: solid 2px #6fba2c;
+		color: #6fba2c;
+		background: #fff;
+		padding: 5px;
+		font-weight: 600;
+	}
+
+	.point_green#gray {
+		border: solid 2px #a9a9a9;
+		border-left: solid 2px #000080;
+		color: #fff;
+		background: #a9a9a9;
+	}
+
+	.text_w {
+		font-weight: 600;
+		margin: 10px 0 20px;
+	}
+
+	.m10 {
+		text-align: center;
+	}
+
+	.m10 img {
+		margin: 10px;
+	}
+
+	.or_btn {
+		background-color: #FB9D00;
+	}
+
+	.row3 th {
+		width: 8% !important;
+	}
+
+	.row3 tr td:first-of-type {
+		width: 28%;
+		background-color: #F5F5F5;
+		font-weight: bold;
+	}
+
+	.row3 ol li {
+		list-style-type: none;
+		counter-increment: cnt;
+		margin-left: 10px;
+	}
+
+	.row3 ol li::before {
+		content: "(" counter(cnt) ") ";
+	}
+
+	.fArea {
+		display: flex;
+	}
+
+	.fArea div {
+		flex: 1 1 auto;
+	}
+
+	.accordion_wrap02 dl dt {
+		padding: 5px;
+		font-size: 15px;
+		text-align: left;
+		background: #f5f5f5;
+		border: 1px solid #c1c1c1;
+		color: #444;
+	}
+
+	.accordion_wrap02 dl dt::after {
+		border-bottom: 1px solid #c1c1c1;
+		border-right: 1px solid #c1c1c1;
+	}
+
+	.accordion_wrap02 dl dt.close {
+		background: #fff;
+		border-top: 3px solid #1B50A2;
+		color: #444;
+	}
+
+	.accordion_wrap02 dl dt.close::after {
+		border-top: 1px solid #c1c1c1;
+		border-left: 1px solid #c1c1c1;
+	}
+
+	.accordion_wrap02 dl dt,
+	.accordion_wrap02 dl dd {
+		position: relative;
+		border: 1px solid #c1c1c1;
+		border-top: 0;
+		padding: 10px;
+	}
+
+	.accordion_wrap02 {
+		margin: 0 auto;
+	}
+
+	.accordion_wrap02 dl {
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 800px) {
+
+		/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+		.pc {
+			display: none !important;
+		}
+
+		.sp {
+			display: block !important;
+		}
+
+		iframe {
+			width: 300px;
+			height: 160px;
+		}
+
+		.col-md-4 a {
+			text-align: left;
+		}
+
+		th,
+		td {
+			display: block;
+			width: 100% !important;
+		}
+
+		.innerWrapAll,
+		.innerWrap {
+			padding: 0 10px;
+			max-width: 730px;
+		}
+
+		.txt {
+			margin-top: 20px;
+		}
+
+		.b {
+			text-align: left;
+			margin-bottom: 14px;
+		}
+
+		.btn {
+			text-align: center;
+			margin: 0 auto 20px;
+		}
+
+		.tableSt,
+		.tableSt tbody,
+		.tableSt tr,
+		.tableSt th,
+		.tableSt td {
+			display: block;
+			width: 100% !important;
+			max-width: inherit;
+		}
+
+		.row3 th {
+			width: 100% !important;
+		}
+	}
+</style>
+<div class="mb40">&nbsp;</div>
+
+<div class="page_anchor">
+	<div class="row">
+		<div class="col-md-4">
+			<p><a href="#shop">ギフトカードの使えるお店</a></p>
+		</div>
+
+		<div class="col-md-4">
+			<p><a href="#range_hoodcleaning">ギフトカードの使い方</a></p>
+		</div>
+
+		<div class="col-md-4">
+			<p><a href="#present">プレゼントにも最適</a></p>
+		</div>
+
+		<div class="col-md-4">
+			<p><a href="#question">よくあるご質問</a></p>
+		</div>
+
+		<div class="col-md-4">
+			<p><a href="#inquiry">残高の照会方法</a></p>
+		</div>
+
+		<div class="col-md-4">
+			<p><a href="#contact">お問い合わせ</a></p>
+		</div>
+
+		<div class="col-md-4">
+			<p><a href="#agreement">約款</a></p>
+		</div>
+	</div>
+</div>
+
+<h3 class="bg_title" id="shop">エディオンギフトカードの使えるお店</h3>
+
+<p class="fnt15">エディオンギフトカードは、日本各地のエディオン・100満ボルト各店舗でご利用いただけます。<br />
+	日頃お世話になっている方の好みが分からない時や、毎年同じものを贈っている方などに選べるギフトはいかがでしょうか？感謝の気持ちを込めた、本当に喜ばれる贈りものを。</p>
+
+<p class="fnt15">一部店舗、およびディスクステーション各店（TSUTAYA含む）ではご利用いただけません。<br />
+	詳しくは売り場係員におたずねください。</p>
+
+<div class="mb40">&nbsp;</div>
+
+<h3 class="bg_title" id="range_hoodcleaning">ギフトカードの使い方</h3>
+
+<table class="table_parts_03">
+	<tbody>
+		<tr>
+			<th>カードを選ぶ</th>
+			<td>エディオンギフトカード取扱店舗にご来店のうえ、お好きなデザインをお選びいただき、お近くの係員にお申しつけください。</td>
+		</tr>
+		<tr>
+			<th>お好きな金額をチャージ</th>
+			<td>レジにてカードにお好きな金額をご入金ください。1,000円から100,000円まで500円単位で金額をご指定いただけます。100満ボルト各店ではチャージは出来ません。</td>
+		</tr>
+		<tr>
+			<th>メッセージを添えてプレゼント</th>
+			<td>メッセージカードにお好きなメッセージをお書きいただけ、ギフトカード金額ご確認書も入っています。<br />
+				贈答用カードケースやメッセージカードもご用意しています。店舗からの発送をご希望の場合は係員にお申しつけください。</td>
+		</tr>
+		<tr>
+			<th>もらったカードでお買い物</th>
+			<td>日本各地のエディオン・100満ボルト各店舗でご利用いただけます。</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="m10"><img alt="card1" src="/sites/default/files/inline-images/img_giftcard01.jpg" /><img alt="card2"
+		src="/sites/default/files/inline-images/img_giftcard02.jpg" /><img alt="card3"
+		src="/sites/default/files/inline-images/img_giftcard03.jpg" /><img alt="card4"
+		src="/sites/default/files/inline-images/img_giftcard04.jpg" /><img alt="card5"
+		src="/sites/default/files/inline-images/img_giftcard05.jpg" /><img alt="card6"
+		src="/sites/default/files/inline-images/img_giftcard06.jpg" /><img alt="card7"
+		src="/sites/default/files/inline-images/img_giftcard07.jpg" /></div>
+
+<div class="mb40">&nbsp;</div>
+
+<h3 class="bg_title" id="present">プレゼントにも最適</h3>
+
+<table class="table_parts_03 tableSt">
+	<tbody>
+		<tr>
+			<th>ご結婚のお祝いに</th>
+			<td><img alt="王冠" src="/sites/default/files/inline-images/img_icon01.jpg" /></td>
+			<th>お誕生日プレゼントやお年玉にも</th>
+			<td><img alt="門松" src="/sites/default/files/inline-images/img_icon02.jpg" /></td>
+		</tr>
+		<tr>
+			<th>母の日や父の日のプレゼントに</th>
+			<td><img alt="母" src="/sites/default/files/inline-images/img_icon03.jpg" /></td>
+			<th>新築のお祝いに</th>
+			<td><img alt="家" src="/sites/default/files/inline-images/img_icon04.jpg" /></td>
+		</tr>
+		<tr>
+			<th>引越しする友人へのプレゼントに</th>
+			<td><img alt="トラック" src="/sites/default/files/inline-images/img_icon05.jpg" /></td>
+			<th>新生活の応援に</th>
+			<td><img alt="男性" src="/sites/default/files/inline-images/img_icon06.jpg" /></td>
+		</tr>
+		<tr>
+			<th>パーティやイベントの景品に</th>
+			<td><img alt="プレゼント" src="/sites/default/files/inline-images/img_icon07.jpg" /></td>
+			<th>ご出産のお祝いに</th>
+			<td><img alt="赤ちゃん" src="/sites/default/files/inline-images/img_icon08.jpg" /></td>
+		</tr>
+		<tr>
+			<th>ゴルフコンペの景品に</th>
+			<td><img alt="トロフィー" src="/sites/default/files/inline-images/img_icon09.jpg" /></td>
+			<th>敬老の日のプレゼントに</th>
+			<td><img alt="お年寄り" src="/sites/default/files/inline-images/img_icon10.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="mb40">&nbsp;</div>
+
+<h3 class="bg_title" id="question">よくあるご質問</h3>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open" style="border-top: 1px solid #c1c1c1;"><img alt="Question"
+				src="/sites/default/files/inline-images/ico_q.jpg" />どこでギフトカードを買えるの？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />全国のエディオン各店舗でご購入いただけます。（※ディスクステーション各店(TSUTAYA含む)・100満ボルト各店ではご購入いただけません）
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question" src="/sites/default/files/inline-images/ico_q.jpg" />どの店舗で使えるの？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />全国のエディオンの各店舗でご利用いただけます。（※ディスクステーション各店(TSUTAYA含む)ではご利用いただけません）
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question"
+				src="/sites/default/files/inline-images/ico_q.jpg" />入金（チャージ）金額以下の買い物をした場合はどうなるの？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />ご使用いただいた金額がギフトカードから減額されます。残金は次回のお買い物にご使用いただけます。
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question"
+				src="/sites/default/files/inline-images/ico_q.jpg" />何度もカードに入金（チャージ）できるの？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />カードご購入時にご入金（チャージ）いただいた金額分を使い切っていただくかたちとなります。追加入金（リチャージ）や残金の換金はできません。
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question" src="/sites/default/files/inline-images/ico_q.jpg" />カードの有効期限はいつまで？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />お客様がカードにご入金（チャージ）いただいた日より起算して3年間となります。有効期限が過ぎたカードはご利用できませんのでご注意ください。
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question" src="/sites/default/files/inline-images/ico_q.jpg" />カードを失くしてしまったら？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />お客様がギフトカードを万一紛失された場合、そのカード残高を保障することはできませんのでご了承ください。
+			※エディオンギフトカードには個人情報は含まれておりません。</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question"
+				src="/sites/default/files/inline-images/ico_q.jpg" />ギフトカードは現金やクレジットカードと併用できるの？</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />【ご入金時】現金のみでご入金（チャージ）が可能です。【ご利用時】現金、エディオンカードの保有ポイント、またはクレジットカードと併用してお支払いが可能です。<br />
+			例えば、50,000円のお買い物をされた際、ギフトカードに残金が20,000円あれば、残りの30,000円を現金、エディオンカードの保有ポイントまたはクレジットカードを併用してお支払いいただくことができます。
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question" src="/sites/default/files/inline-images/ico_q.jpg" />エディオンカードにポイントは付くの？
+		</dt>
+		<dd><img alt="Answer"
+				src="/sites/default/files/inline-images/ico_a.jpg" />ギフトカードを使って商品購入された際にはポイントが付与されますが、ご入金（チャージ）時は、ポイントは付与されませんのでご了承ください。
+		</dd>
+	</dl>
+</div>
+
+<div class="accordion_wrap02">
+	<dl>
+		<dt class="qa_open"><img alt="Question" src="/sites/default/files/inline-images/ico_q.jpg" />ギフトカードは2枚同時に使えるの？
+		</dt>
+		<dd><img alt="Answer" src="/sites/default/files/inline-images/ico_a.jpg" />はい。ご利用いただけます。</dd>
+	</dl>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<h3 class="bg_title" id="inquiry">残高の照会方法</h3>
+
+<table class="table_parts_03">
+	<tbody>
+		<tr>
+			<th>エディオン各店舗で</th>
+			<td>エディオン各店舗でギフトカードの残高確認が可能です。※詳しくは売り場係員におたずねください。</td>
+		</tr>
+		<tr>
+			<th>レシートで</th>
+			<td>お買い上げ時にお渡しするレシートに残高が印字されます。※詳しくは売り場係員におたずねください。</td>
+		</tr>
+		<tr>
+			<th>パソコンで</th>
+			<td class="fArea">
+				<div>「残高照会はこちら」のボタンをクリックし、残高照会のページにてカード番号とPIN番号を入力してください。</div>
+
+				<div><img alt="method1" src="/sites/default/files/inline-images/img_syoukai01.gif" /></div>
+			</td>
+		</tr>
+		<tr>
+			<th>携帯電話で</th>
+			<td class="fArea">
+				<div>QRコードを読み取ってサイトにアクセスし、携帯電話からも残高照会が可能です。</div>
+
+				<div><img alt="method2" src="/sites/default/files/inline-images/img_syoukai02.gif" /></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn or_btn"><a
+			href="https://www.giftcard.ne.jp/gift/carduser/CardUserLoginPage/open.do?key=2d3f43d32378fde7">残高照会はこちら</a>
+	</p>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<h3 class="bg_title" id="contact">お問い合わせ</h3>
+
+<p class="fnt15">エディオンギフトカードに関することは、お近くのエディオン各店舗までお問い合わせをお願いいたします。</p>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="mb40">&nbsp;</div>
+
+<h3 class="bg_title" id="agreement">約款</h3>
+
+<table class="table_parts_03 row3">
+	<tbody>
+		<tr>
+			<th>第1条</th>
+			<td>目的</td>
+			<td>本約款は、株式会社エディオン（以下「当社」という。）が発行する次条に定義するエディオンギフトカード（以下「ギフトカード」という。）のご利用について規定することを目的とし、ギフトカードの利用者（以下「お客様」という。）は本約款に従ってお取引いただくものとします。
+			</td>
+		</tr>
+		<tr>
+			<th>第2条</th>
+			<td>定義</td>
+			<td>「ギフトカード」とは、お客様のギフトカード入金額を電子的データに代えた当社が発行する「使い切り型」のプリペイドカードで、当社指定の店舗において商品を購入することができる機能を有するものをいいます。<br />
+				「商品」とは、エディオンの各店舗にて販売する商品をいいます。（工事代金および修理代金や一部のサービス利用料金等は除外します。）<br />
+				エディオンの各店舗にて販売する商品をいいます。（工事代金および修理代金や一部のサービス利用料金等は除外します。）</td>
+		</tr>
+		<tr>
+			<th>第3条</th>
+			<td>利用可能な店舗</td>
+			<td>ギフトカードは、エディオンの取扱店舗（以下「ギフトカード取扱店」という。）でお買い物にご利用いただけます。具体的なギフトカード取扱店につきましては、当社ホームページにてご覧いただくことができます。</td>
+		</tr>
+		<tr>
+			<th>第4条</th>
+			<td>ギフトカードの発行</td>
+			<td>ギフトカードは、ギフトカード取扱店において当社所定の手続きを経て発行いたします。<br />
+				ギフトカードは、現金のみで入金することができます。<br />
+				ギフトカードの入金額は、1,000円以上100,000円以下の範囲内でお客様が500円単位で決定していただけます。<br />
+				ギフトカードの入金額に対しては、当社ポイントは付与されません。<br />
+				ギフトカードの入金手続き完了後は、キャンセル、入金額の変更は一切できません。</td>
+		</tr>
+		<tr>
+			<th>第5条</th>
+			<td>目的</td>
+			<td>ギフトカードを利用して商品をご購入される場合は、ギフトカード取扱店のレジでギフトカードをお渡しいただきます。ギフトカードから商品購入代金を差し引くことにより、金銭にてお支払いただいた場合と同様の効果が生じます。この場合、商品購入代金およびお支払後のギフトカード残高はレシートに表示されます。<br />
+				ギフトカードの残高が商品購入代金に満たない場合は、不足額を現金または当社の指定する支払方法によりお支払いただくものとします。<br />
+				ギフトカードを複数枚お持ちでも、各ギフトカードの残高を１枚のギフトカードに統合することはできません。<br />
+				ギフトカードは、複数枚(10枚まで)をお支払に同時にご利用いただくことができます。</td>
+		</tr>
+		<tr>
+			<th>第6条</th>
+			<td>ギフトカードの残高照会</td>
+			<td>ギフトカードの残高は、レシートに表示される他、ギフトカード取扱店やホームページでも確認していただけます。<br />
+				ギフトカード取扱店にて残高を確認される場合には、残高を確認されたいギフトカードをレジまでお持ちいただくものとします。<br />
+				当社ホームページにおいては、残高の他、ご利用の履歴確認も可能です。ただし、システムの都合上、ホームページ上にて表示することのできる履歴内容・履歴件数は当社が定めるところによります。なお、当社ホームページにて残高を確認される場合は、ギフトカード中央に記載された16桁のギフトカード番号と中央右に記載された４桁のPIN番号が必要です（スクラッチ加工されている場合は、コインなどでスクラッチ加工部分を軽くこすっていただくと4桁の番号が現れます）。<br />
+				有効期限を過ぎたギフトカードの残高および履歴は確認できません。</td>
+		</tr>
+		<tr>
+			<th>第7条</th>
+			<td>ギフトカードの換金・返金・払戻し等</td>
+			<td>ギフトカードの換金・返金・払戻し等はできません。</td>
+		</tr>
+		<tr>
+			<th>第8条</th>
+			<td>ギフトカードの再発行</td>
+			<td>ギフトカードを紛失した場合または盗難・改ざんされた場合であっても、ギフトカード機能の停止、返金または再発行をすることはできません。<br />
+				ギフトカードやギフトカードの機能が破損することがありますので、ギフトカードを汚損したり、折り曲げたり、磁気に近づけたりしないでください。ギフトカードやギフトカードの機能が破損した場合は、破損の原因が故意に基づかないことが明らかで、ギフトカードの磁気情報またはギフトカード裏面に記載されているギフトカード番号が判読可能な場合に限り、当社の判断により、残高を移行させた新しいギフトカードを発行することができるものとします。その際、当社は新しいギフトカードと交換に旧ギフトカードの引渡しを求めるものとします。
+				なお、新しいギフトカードの発行にあたっては、ギフトカードの図柄は当社が指定させていただくものとします。</td>
+		</tr>
+		<tr>
+			<th>第9条</th>
+			<td>不正な取得、利用等</td>
+			<td>次のいずれかに該当すると当社が判断した場合は、当社はお客様にギフトカードのご利用をお断わりし、ギフトカード自体を失効扱いとしたうえで、お客様のギフトカードを当社にお引渡しいただくものとします。
+				<ol>
+					<li>お客様が不正な方法によりギフトカードを取得し、または不正な方法により取得されたギフトカードであることを知って使用した場合</li>
+					<li>ギフトカードが改ざん、偽造または変造されたものである場合</li>
+					<li>本約款に違反した場合</li>
+					<li>その他、ギフトカードが不正に利用された場合</li>
+				</ol>
+				前項各号の疑いがある場合、当社は調査のため一時的にギフトカードをお預かりできるものとします。なお、本条1項によりギフトカード自体が失効した場合、当社は当該ギフトカードの交換・再発行・返金等には一切応じません。
+			</td>
+		</tr>
+		<tr>
+			<th>第10条</th>
+			<td>ギフトカードの有効期限</td>
+			<td>ギフトカードの有効期限はギフトカード発行日から3年間です。有効期限を過ぎたギフトカードは、残高の有無に関わらず無効となります。また、有効期限の有無にかかわらず残高の換金、返金、払戻しはいたしません。</td>
+		</tr>
+		<tr>
+			<th>第11条</th>
+			<td>システム保守・障害等</td>
+			<td>ギフトカードに関するシステムの設計・管理には万全を期しておりますが、停電、システム障害、メンテナンス、ギフトカード偽造等に対する安全管理、その他やむをえない事情によりギフトカード取扱店の一部または全店において、当社は予告なくギフトカードのご利用内容の一部または全てにつき一時的に停止できるものとします。その際、ギフトカードがご利用いただけないことから不利益または損害が生じた場合でも、当社は一切の責任を負いません。
+			</td>
+		</tr>
+		<tr>
+			<th>第12条</th>
+			<td>約款の変更</td>
+			<td>当社は、当社の判断において予告無く本約款を変更する事ができるものとします。<br />
+				なお、本約款を変更する場合、当社ホームページにおいて変更後の約款を掲示するものとし、変更日以降の取引においては、新約款が適応されるものとします。</td>
+		</tr>
+		<tr>
+			<th>第13条</th>
+			<td>催事</td>
+			<td>当社が催事に参加または催事を開催する場合（プロモーション等を含む）は、第4条第1項および第3項の規定にかかわらず、当社が自ら定めた金額のギフトカードを催事場または店頭で販売することができるものとします。
+			</td>
+		</tr>
+		<tr>
+			<th>第14条</th>
+			<td>質権等担保権設定の禁止</td>
+			<td>ギフトカードへの質権等担保権の設定はできないものとします。お客様が本規定に違反した場合、当該違反から生じたトラブル等に対して当社は一切責任を負いません。</td>
+		</tr>
+		<tr>
+			<th>第15条</th>
+			<td>ギフトカード取扱の終了</td>
+			<td>当社は、社会情勢の変化、法令の改廃、その他当社の都合によりギフトカードの取扱を終了することがあります。<br />
+				前項によりギフトカードの取扱を終了する場合、当社はホームページに3か月前までに掲載し告知いたします。<br />
+				前2項により本ギフトカードの取扱を終了する場合、お客様は第７条の規定にかかわらず、当社の定める払戻期間内にギフトカードをご提出いただくことにより、払戻しを受けることができるものとします。この場合、当社は、当該払戻方法および期間を併せて告知し、払戻期間経過後は払戻義務を逃れるものとします。
+			</td>
+		</tr>
+		<tr>
+			<th>第16条</th>
+			<td>裁判管轄</td>
+			<td>本約款に基づく取引に関して当社との間に紛争が生じた場合、大阪簡易裁判所または大阪地方裁判所を専属管轄裁判所とするものとします。</td>
+		</tr>
+		<tr>
+			<th>第17条</th>
+			<td>利用者保護措置について</td>
+			<td><a href="https://www.s-kessai.jp/cms/user-protection/list/">一般社団法人日本資金決済業協会HP</a>にて周知をおこなっております。</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="https://search.edion.com/e_store/">エディオン店舗検索はこちら</a></p>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="https://www.edion.co.jp/">トップへ戻る</a></p>
+</div>

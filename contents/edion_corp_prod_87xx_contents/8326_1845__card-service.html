@@ -1,0 +1,607 @@
+<style type="text/css">
+    /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .bg_title {
+        background: #1B50A2;
+        color: #fff;
+    }
+
+    h4 {
+        color: #000;
+    }
+
+    table th,
+    td {
+        border-right: solid 1px #CCC !important;
+    }
+
+    .movie_area {
+        border: 0px none !important;
+        border-right: 0px none;
+    }
+
+    .border_area {
+        border: solid 1px #CCC;
+    }
+
+    .b {
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .inquiryWrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        text-align: left;
+    }
+
+    .tit05 {
+        font-size: 1.15rem;
+        padding: 6px 10px 5px;
+        color: #455C76;
+        font-weight: bold;
+        background-color: #F9F9F9;
+        margin-bottom: 15px;
+        border: 1px solid #CCCCCC;
+        border-left: 2px solid #1F529F;
+    }
+
+    .text_w {
+        font-weight: 600;
+        margin: 10px 0 20px;
+    }
+
+    .m10 {
+        text-align: center;
+    }
+
+    .m10 img {
+        margin: 10px;
+    }
+
+    .or_btn {
+        background-color: #FB9D00;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px 30px;
+        grid-auto-rows: 1fr 1fr;
+    }
+
+    .content {
+        border-top: 2px solid #1F52A1;
+        padding-top: 15px;
+    }
+
+    .content span {
+        border-radius: 3px;
+        color: #fff;
+        padding: 2px 10px;
+        margin: 0 5px 5px 0;
+    }
+
+    .content p {
+        color: #455976;
+    }
+
+    .content h2 {
+        font-weight: bold;
+        font-size: 1.45rem;
+        color: #455976;
+        margin-bottom: 5px;
+    }
+
+    .icoBl2 {
+        background-color: #1978E2;
+    }
+
+    .icoGreen {
+        background-color: #23921D;
+    }
+
+    .icoYmbk {
+        background-color: #F3971A;
+    }
+
+    .item {
+        display: flex;
+        overflow: hidden;
+        padding-top: 13px;
+    }
+
+    .item p {
+        color: #444;
+    }
+
+    .item div:first-of-type {
+        flex: 1 1 150%;
+    }
+
+    .item div img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .imgR {
+        flex: 1 1 100%;
+    }
+
+    .btn a {
+        padding: 8px 25px;
+    }
+
+    .tit02 {
+        line-height: 1;
+        border-top: 2px solid #1B50A2;
+        padding: 13px 0;
+        color: #455C76;
+        font-size: 1.45rem;
+        position: relative;
+    }
+
+    .agreement_list li {
+        border-bottom: solid 1px #CCCCCC;
+        padding: 8px 0;
+    }
+
+    a[class^="icon-"]:before,
+    a[class*=" icon-"]:before,
+    a[class^="icon-"]:hover:before,
+    a[class*=" icon-"]:hover:before {
+        text-decoration: none;
+        color: #FB9D00;
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        margin-right: 3px;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+    }
+
+    .agreement_list li a.point {
+        color: #F00;
+        display: inline-block;
+    }
+
+    .tit03 {
+        padding: 10px;
+        color: #FFF;
+        text-align: left;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        background: #1B50A2;
+    }
+
+    .mb25 {
+        margin-bottom: 25px;
+    }
+
+    .pointContact {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pointContact li:first-child {
+        clear: both;
+        margin-left: 0 !important;
+    }
+
+    .pointContact.set li {
+        margin-bottom: 10px;
+    }
+
+    .pointContact li {
+        border: 1px solid #CCC;
+        text-align: center;
+        padding: 15px 0 18px;
+        width: 48.8%;
+        margin: 0 0 25px 0;
+    }
+
+    .tell_txt {
+        color: #444;
+        font-size: 1.15rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .tell {
+        font-weight: bold;
+        color: #1a50a1;
+        font-size: 2.5rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .tel_time {
+        background: #FFF;
+        border: 1px solid #1b50a2;
+        color: #1b50a2;
+        display: inline-block;
+        font-weight: bold;
+        padding: 3px 10px;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+    .tell_contact {
+        display: table;
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+
+    .tell_contact dt {
+        background-color: #F5F5F5;
+        border-right: 1px solid #CCC;
+        color: #455B76;
+        font-weight: bold;
+        font-size: 1.15rem;
+        width: 300px;
+        box-sizing: border-box;
+    }
+
+    .tell_contact dt,
+    .tell_contact dd {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 15px;
+        color: #1950A0;
+    }
+
+    .tell_contact dd .tell {
+        margin-right: 10px;
+        line-height: 1.1;
+    }
+
+    .tell_contact dd div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .tell_contact dd p {
+        margin: 8px 0 0 !important;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        iframe {
+            width: 300px;
+            height: 160px;
+        }
+
+        .col-md-4 a {
+            text-align: left;
+        }
+
+        th,
+        td {
+            display: block;
+            width: 100% !important;
+        }
+
+        .innerWrapAll,
+        .innerWrap {
+            padding: 0 10px;
+            max-width: 730px;
+        }
+
+        .txt {
+            margin-top: 20px;
+        }
+
+        .b {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .btn {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        .container1 {
+            display: block;
+        }
+
+        .imgR {
+            display: none;
+        }
+
+        .pointContact {
+            display: block;
+        }
+
+        .pointContact li {
+            width: 100%;
+            margin-left: 0;
+            padding: 15px 10px 18px;
+        }
+
+        .tit03 {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .tell_contact,
+        .tell_contact dt,
+        .tell_contact dd {
+            display: block;
+            width: auto;
+        }
+
+        .tell_contact dt {
+            border-bottom: 1px solid #CCC;
+            border-right: 0;
+        }
+
+        .tell_contact dd {
+            text-align: center;
+        }
+    }
+</style>
+<p>長期修理保証やおトクなポイントなど、色々なサービス満載のエディオンカードの魅力をご紹介します。</p>
+<div class="container1">
+    <div class="content">
+        <p>業界屈指のワイド保証、対象商品は100品種以上！</p>
+        <h2>5年間・10年間の長期修理保証</h2>
+        <p><span class="icoBl2">エディオンカード</span> <span class="icoGreen">ＩＤカード</span></p>
+        <div class="item">
+            <div>
+                <p>エディオンカード会員様なら、5,500円（税込）以上の指定商品をご購入の際に、5年間・10年間の長期修理保証サービスをご用意しております。<br>対象商品は業界屈指の100品種以上！</p>
+                <p class="pc">&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/service/edion_guarantee">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_cardIllust01_2.jpg" alt="cardillust01">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>対象商品21品種</p>
+        <h2>3年間・5年間・10年間あんしん修理保証</h2>
+        <p><span class="icoYmbk">あんしん保証カード</span></p>
+        <div class="item">
+            <div>
+                <p>あんしん保証カード会員様なら、指定商品をご購入の際に、ご購入金額、商品の種類に応じて、3年間・5年間・10年間のあんしん修理保証サービスをご用意しております。<br>対象商品は当社指定の22品種！
+                </p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/service/anshin_guarantee">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_cardIllust02_2.jpg" alt="cardillust02">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>１００円（税別）ごとに１～５ポイントを進呈！</p>
+        <h2>ポイント（エディオンカード・ＩＤカード）</h2>
+        <p><span class="icoBl2">エディオンカード</span> <span class="icoGreen">ＩＤカード</span></p>
+        <div class="item">
+            <div>
+                <p>エディオン各店舗にて、現金、当社指定電子マネーでのお支払いでポイントがたまります。エディオンカードなら、エディオンクループ各店舗はもちろん、エディオングループ以外のご利用でもエディオンカードでのお支払いでポイントがたまります。
+                </p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/service/edion_point">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_cardIllust03_3.jpg" alt="cardillust03">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>１００円（税別）ごとに３～５ポイントを進呈！（※ポイント進呈対象外の商品があります）</p>
+        <h2>ポイント（あんしん保証カード）</h2>
+        <p><span class="icoYmbk">あんしん保証カード</span></p>
+        <div class="item">
+            <div>
+                <p>エディオン各店舗にて、おもちゃ・ゲーム関連などの当社指定商品を、現金、当社指定電子マネーでのお支払でポイントがたまります。</p>
+                <p class="pc">&nbsp;</p>
+                <p class="pc">&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/service/anshin_point">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_cardIllust04_2.jpg" alt="cardillust04">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>対象商品51品目</p>
+        <h2>有料延長保証</h2>
+        <p><span class="icoBl2">エディオンカード</span> <span class="icoGreen">ＩＤカード</span> <span
+                class="icoYmbk">あんしん保証カード</span></p>
+        <div class="item">
+            <div>
+                <p>カード会員様がギフトとしてご利用される場合に別途料金をいただくと延長保証がつけられます。 対象商品はワイドな51品目!</p>
+                <p class="pc">&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/service/extension">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_features05_1.gif" alt="cardillust05">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>お支払い回数いろいろ選べる</p>
+        <h2>特別低金利分割払い</h2>
+        <p><span class="icoBl2">エディオンカード</span></p>
+        <div class="item">
+            <div>
+                <p>パソコン・ハイビジョンテレビ、または合計30万円以上の家電品購入時に、分割払いでお支払いいただくと、特別低金利にてご利用いただけます。</p>
+                <p class="pc">&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/revo">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_cardIllust06_2.jpg" alt="cardillust06">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>おトクな優待サービスをご利用いただけます</p>
+        <h2>クレジット会社優待店情報</h2>
+        <p><span class="icoBl2">エディオンカード</span></p>
+        <div class="item">
+            <div>
+                <p>エディオンカードでご契約されている各クレジット会社のおトクな優待サービスをご利用いただけます。カードの裏面をご確認いただき、優待店情報をご覧ください。</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/credit_member">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img
+                    src="/sites/default/files/inline-images/%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E4%BC%9A%E7%A4%BE%E3%83%AD%E3%82%B4_1.png"
+                    data-entity-uuid="4049af4b-ef8e-49fc-b152-8d6e2dfeb465" data-entity-type="file" alt="クレジット会社ロゴ">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>料金所をノンストップでらくらく通過</p>
+        <h2>ETCカード</h2>
+        <p><span class="icoBl2">エディオンカード</span></p>
+        <div class="item">
+            <div>
+                <p>料金所をノンストップでらくらく通過。さらに、エディオンカードのポイントがどんどんたまります。</p>
+                <p class="pc">&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/service/etccard">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_features08-1_0.gif" alt="cardillust08">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>ご家族で一緒にポイントがためられる！年会費無料！</p>
+        <h2>家族カード</h2>
+        <p><span class="icoBl2">エディオンカード</span></p>
+        <div class="item">
+            <div>
+                <p>本会員様のクレジットカードと同じサービスをご利用いただける、ご家族用のクレジットカードです。年会費はもちろん無料。</p>
+                <p class="pc">&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="/card/familycard">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img
+                    src="/sites/default/files/inline-images/SMCC_%E3%82%AA%E3%83%AA%E3%82%B3%EF%BC%B7%E5%88%B8%E9%9D%A2_6.png"
+                    data-entity-uuid="88515a1a-fa07-4294-b5ea-f4d78bd5cd29" data-entity-type="file" alt="クレジットカード券面">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>モバイルインターネットサービスの利用もさらにお得！</p>
+        <h2>クオルネット月額利用料割引</h2>
+        <p><span class="icoBl2">エディオンカード</span></p>
+        <div class="item">
+            <div>
+                <p>家でも外でも高速インターネットが楽しめる、モバイルインターネットサービス　クオルネット。<br>エディオンカードでお支払いいただくと月額利用料が割引になります。</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="https://www.kualnet.jp/">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_features10_0.gif" alt="cardillust10">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>インターネットの利用もさらにお得！</p>
+        <h2>エディオンネット月額利用料割引</h2>
+        <p><span class="icoBl2">エディオンカード</span></p>
+        <div class="item">
+            <div>
+                <p>インタネットサービスエディオンネットをご利用いただいている場合、エディオンカードでお支払いいただくと、月額最大770円（税込）割引になります。</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="https://www.enjoy.jp/campaign/edion_card.html">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><img src="/sites/default/files/inline-images/img_features11_1.gif" alt="cardillust11">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div><!--チェック用-->
+    <div class="content">
+        <p>選べる保証！買い替えまでサポート！</p>
+        <h2>買い替えサポート</h2>
+        <p><span class="icoBl2">エディオンカード</span><span class="icoGreen">ＩＤカード</span></p>
+        <div class="item">
+            <div>
+                <p>保証商品が万一故障した際に、保証で修理、またはご購入金額に対する一定のポイント進呈が選べます！対象商品は１４品種！</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p class="btn wht"><a href="https://my.edion.jp/news/detail.php?id=6042">詳しく見る</a></p>
+            </div>
+            <div class="imgR"><a href="https://my.edion.jp/news/detail.php?id=6042"><img
+                        src="/sites/default/files/inline-images/%E8%B2%B7%E3%81%84%E6%9B%BF%E3%81%88%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88.gif"
+                        data-entity-uuid="f022fc08-dd94-415c-bd8f-ea443d161d14" data-entity-type="file"
+                        alt="買い替えサポート"></a>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<p>&nbsp;</p>
+<article class="agreement_list" id="agreement">
+    <h2 class="tit02">会員規約</h2>
+    <ul>
+        <li><a class="icon-right-circle" href="/card/agreement/edion_member">エディオンカード会員規約</a></li>
+        <li><a class="icon-right-circle" href="/card/agreement/id_member">ＩＤカードの会員規約</a></li>
+        <li><a class="icon-right-circle" href="/card/agreement/anshin_member">あんしん保証カードの会員規約</a></li>
+    </ul>
+</article>
+<div class="inner mt40 mb15">
+    <h3 class="tit03">クレジットについてのお問い合わせは</h3>
+    <p class="mb20">カード裏面をご確認いただきカード発行会社をご確認ください。</p>
+    <p class="mb20">&nbsp;</p>
+    <p class="mb20">オリコ　エディオンカードデスク　0120-33-2702　受付時間　9：30～17：30（年中無休）</p>
+    <p class="mb20">セディナ　ファイナンスサービスアンサーセンター　エディオンカードデスク　0120-084-665　受付時間　9：30～18：00（1月1日休）</p>
+    <p class="mb20">三井住友カード　FORYOUデスク　0570-004-980　（もしくは、東京03-6627-4137）　受付時間　10：00～17：00（12月30日～1月3日休）</p>
+    <p class="mb20">&nbsp;</p>
+    <p class="mb20">※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。</p>
+</div>
+<div class="inner">
+    <h3 class="tit03">保証・ポイントについてのお問い合わせは</h3>
+    <dl class="tell_contact">
+        <dt>
+            <p>エディオンカードセンター</p>
+        </dt>
+        <dd>
+            <p><span class="tell">0120-87-6565</span> <span class="tel_time">受付時間：10:00～18:00(年末年始休)</span></p>
+            <p class="txt">※エディオンカードのサービス内容は、都合により予告なしで変更になる場合がございます。<br>※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。</p>
+        </dd>
+    </dl>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div class="btn_wrap">
+    <p class="btn"><a href="/card">エディオンカードトップへ戻る</a></p>
+</div>

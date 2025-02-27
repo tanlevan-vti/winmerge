@@ -1,0 +1,508 @@
+<style type="text/css">
+    /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .bg_title {
+        background: #6fba2c;
+        color: #fff;
+    }
+
+    h4 {
+        color: #000;
+    }
+
+    table th,
+    td {
+        border-right: solid 1px #CCC !important;
+    }
+
+    .movie_area {
+        border: 0px none !important;
+        border-right: 0px none;
+    }
+
+    .border_area {
+        border: solid 1px #CCC;
+    }
+
+    .b {
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .inquiryWrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        text-align: left;
+    }
+
+    .tit05 {
+        font-size: 1.15rem;
+        padding: 6px 10px 5px;
+        color: #455C76;
+        font-weight: bold;
+        background-color: #F9F9F9;
+        margin-bottom: 15px;
+        border: 1px solid #CCCCCC;
+        border-left: 2px solid #1F529F;
+    }
+
+    .table_parts_03 td {
+        background: #f08d00;
+        color: #fff;
+        text-align: center;
+    }
+
+    .table_parts_03 th:first-of-type,
+    .table_parts_03 th {
+        background: #F8F8F8;
+        width: 50%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .point_green {
+        width: 100%;
+        border: solid 2px #6fba2c;
+        color: #6fba2c;
+        background: #fff;
+        padding: 5px;
+        font-weight: 600;
+    }
+
+    .point_green#gray {
+        border: solid 2px #a9a9a9;
+        border-left: solid 2px #000080;
+        color: #fff;
+        background: #a9a9a9;
+    }
+
+    .text_w {
+        font-weight: 600;
+        margin: 10px 0 20px;
+    }
+
+    /* タブ切り替え */
+    .tab-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .tab-label {
+        color: #1B50A2;
+        cursor: pointer;
+        flex: 1;
+        font-weight: bold;
+        order: -1;
+        padding: 12px 24px;
+        position: relative;
+        text-align: center;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    /*.tab-label:hover {
+        opacity: 0.5;
+        color: #fff;
+    }*/
+
+    .tab-switch:checked+.tab-label {
+        color: #1B50A2;
+        background: #fff;
+    }
+
+    .tab-label::after {
+        background: #fff;
+        bottom: -3px;
+        content: '';
+        display: block;
+        height: 3px;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transform: translateX(100%);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .tab-switch:checked~.tab-label::after {
+        transform: translateX(-100%);
+    }
+
+    .tab-switch:checked+.tab-label::after {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .tab-content {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        pointer-events: none;
+        width: 100%;
+        background: #fff;
+
+    }
+
+    .tab-switch:checked~.tab-content {
+        transform: translateX(30%);
+    }
+
+    .tab-switch:checked+.tab-label+.tab-content {
+        height: auto;
+        opacity: 1;
+        order: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .tab-wrap::after {
+        content: '';
+        /*height: 20px;*/
+        order: -1;
+        width: 100%;
+
+    }
+
+    .tab-switch {
+        display: none;
+    }
+
+    .tab-label {
+        color: #1B50A2;
+        margin-bottom: -1px;
+        padding: 10px .5em;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 13px 5px;
+        margin: 0 0 0 8px;
+        border: 3px solid #1B50A2;
+        border-bottom: 0 #fff solid;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .tab-label img {
+        height: 30px;
+        width: auto;
+    }
+
+    .tab-switch:checked+.tab-label:before {
+        transform: rotate(0);
+    }
+
+    .tab-content {
+        height: 0;
+        padding: 0 15px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(8px);
+    }
+
+    /* アクティブなタブ */
+    .tab-switch:checked+ {
+        background-size: 40%;
+    }
+
+    /*.tab-switch:checked+.au img:first-child,.tab-switch:checked+.sfb img:first-child,.tab-switch:checked+.yah img:first-child{
+     opacity: 0;
+    }*/
+
+    .tab-switch:checked+.tab-label+.tab-content {
+        height: auto;
+        overflow: auto;
+        margin-bottom: -1px;
+        padding: 15px;
+        opacity: 1;
+        border: 0;
+        border-top: 3px solid #1B50A2;
+        position: relative;
+        left: 8px;
+    }
+
+    /* ラジオボタン非表示 */
+    .tab-switch {
+        display: none;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        iframe {
+            width: 300px;
+            height: 160px;
+        }
+
+        th,
+        td {
+            display: block;
+            width: 100% !important;
+        }
+
+        .innerWrapAll,
+        .innerWrap {
+            padding: 0 10px;
+            max-width: 730px;
+        }
+
+        .txt {
+            margin-top: 20px;
+        }
+
+        .b {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .btn {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        table td a:not(.map_link) {
+            color: #fff;
+        }
+
+        .tab-wrap {
+            /*display: inline-flex;*/
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5px 0px;
+            font-size: 13px;
+            border-bottom: 0 solid #1B50A2 !important;
+            margin-bottom: 20px;
+        }
+
+        .tab-label img {
+            height: 30px;
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+        }
+
+        .tab-switch:checked+.tab-label+.tab-content {
+            border-top: 0;
+            width: 200%;
+        }
+
+        .tab-label {
+            border-radius: 6px;
+            border-bottom: 3px solid #1B50A2 !important;
+            font-size: 13px;
+
+        }
+
+        .tab-switch:checked+.tab-label {
+            color: #1B50A2;
+            background: antiquewhite;
+        }
+
+        .tab-label:hover {
+            opacity: 0.7;
+        }
+
+        .tab-label::after {
+            display: none;
+        }
+
+        .tab-switch:checked+.tab-label+.tab-content {
+            padding: 0 15px;
+        }
+
+        .border_area {
+            border: none;
+        }
+    }
+</style>
+<div class="page_anchor mb30">
+    <div class="row">
+        <div class="col-md-6">
+            <p><a href="#card">エディオンカード（長期修理保証）</a></p>
+        </div>
+        <div class="col-md-6">
+            <p><a href="#repair">訪問修理サービス</a></p>
+        </div>
+        <div class="col-md-6">
+            <p><a href="#support">家電トータルサポート</a></p>
+        </div>
+        <div class="col-md-6">
+            <p><a href="#pickup">小型家電修理品引き取りサービス</a></p>
+        </div>
+    </div>
+</div>
+<section id="card">
+    <h3 class="bg_title mb30">エディオンカード（長期修理保証）</h3>
+    <div class="side_space">
+        <div class="scroll_area mb30">
+            <table class="satisfied_table" style="width:100% !important;">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>5年間・10年間の<br>長期修理保証</th>
+                        <th>ポイントサービス</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>エディオンカード</p>
+                            <p><img src="/sites/default/files/inline-images/satisfied_Wcard01_0_0.png"
+                                    data-entity-uuid="cc5dadee-94bf-4112-9905-2f1eda16cd99" data-entity-type="file"
+                                    alt="エディオンカード" width="462" height="322"></p>
+                        </td>
+                        <td>エディオンカード会員様なら、5,500円（税込）以上の指定商品をご購入の際に、5年間・10年間の長期修理保証サービスをご用意しております。対象商品は業界屈指の100品種以上！</td>
+                        <td>エディオン各店舗にて、現金、当社指定電子マネーでのお支払いでポイントがたまります。エディオンカードなら、エディオンクループ各店舗はもちろん、エディオングループ以外のご利用でもエディオンカードでのお支払いでポイントがたまります。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>あんしん保証カード</p>
+                            <p><img src="/sites/default/files/inline-images/satisfied_card02_0.png"
+                                    data-entity-uuid="02c76be0-8117-48a1-acad-8fe938db6829" data-entity-type="file"
+                                    alt="あんしん保証カード" width="462" height="322"></p>
+                        </td>
+                        <td>あんしん保証カード会員様なら、指定商品をご購入の際に、ご購入金額、商品の種類に応じて、3年間・5年間・10年間のあんしん修理保証サービスをご用意しております。対象商品は当社指定の21品種！
+                        </td>
+                        <td>エディオン各店舗にて、おもちゃ・ゲーム関連などの当社指定商品を、現金、当社指定電子マネーでのお支払でポイントがたまります。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="btn_notes mb10">詳細については、こちらをご確認ください。</p>
+        <div class="btn_wrap">
+            <p class="btn"><a class="icon_link" href="https://my.edion.jp/card/" target="_blank">エディオンカード</a><br><a
+                    class="icon_link" href="https://my.edion.jp/card/" target="_blank">(長期修理保証)</a></p>
+        </div>
+    </div>
+</section>
+<section id="repair">
+    <h3 class="bg_title mb30">訪問修理サービス</h3>
+    <div class="side_space">
+        <div class="box_area mb30">
+            <div class="txt_left">
+                大型家電品の訪問修理を受け付けております。お客様のご自宅にある洗濯機や冷蔵庫などの大型家電品の訪問修理にお伺いいたします。エディオン以外のお店でご購入された家電品の訪問修理も承ります。緊急を要する修理は、最寄の店舗まで直接お問い合わせ・お申し込みをお願いします。
+            </div>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+    <h4 class="text-align-center imprtant;">エディオンの修理についてご紹介いたします。</h4>
+    <p>&nbsp;</p>
+    <div class="text-align-center imprtant;"><iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/3GN8nBaLbtw" target="_blank"></iframe>
+    </div>
+    <table class="movie_area">
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p class="btn_notes mb10">詳細については、こちらをご確認ください。</p>
+    <div class="btn_wrap">
+        <p class="btn"><a href="/service/satisfied/repair" target="_blank">訪問修理サービス</a></p>
+    </div>
+</section>
+<section id="support">
+    <h3 class="bg_title mb30">家電トータルサポート</h3>
+    <div class="side_space">
+        <div class="box_area mb30">
+            <div class="txt_left">
+                <p>「家電のプロ」の知識と技術を、ご家庭へ</p>
+                <p>&nbsp;</p>
+                <p>エアコン・レンジフード・洗濯槽・水まわりのクリーニングサービスや、ご自宅に訪問や店頭へのお持ち込みいただき、おそうじ・点検サービスを承っております。お問い合わせ・お申し込みは、エディオン各店にて承っております。
+                </p>
+            </div>
+            <p class="photo"><img src="/sites/default/files/inline-images/satisfied_photo02_1.png"
+                    data-entity-uuid="76ef61d8-95db-43e7-a0ec-e085bbd537ed" data-entity-type="file" alt="家電のトータルサポート"
+                    width="860" height="350"></p>
+        </div>
+        <ul class="support_list row">
+            <li class="col-md-4">
+                <p class="btn wht"><a href="/service/satisfied/cleaning" target="_blank">家電のプロの</a><br><a
+                        href="/service/satisfied/cleaning" target="_blank">クリーニングサービス</a></p>
+                <ul class="disc_list">
+                    <li><a href="/service/satisfied/cleaning" target="_blank">エアコンクリーニング</a></li>
+                    <li><a href="/service/satisfied/cleaning_range_hoodcleaning" target="_blank">レンジフードクリーニング</a></li>
+                    <li><a href="/service/satisfied/cleaning_Washingtub_cleaning" target="_blank">洗濯槽クリーニング</a></li>
+                    <li><a href="/service/satisfied/cleaning_plumbing_cleaning" target="_blank">水まわり・コーティング</a></li>
+                    <li><a href="/service/satisfied/cleaning_drainpipe_cleaning" target="_blank">排水管クリーニング</a></li>
+                </ul>
+            </li>
+            <li class="col-md-4">
+                <p class="btn wht"><a href="/service/satisfied/trip" target="_blank">おそうじ・点検サービス</a><br><a
+                        href="/service/satisfied/trip" target="_blank">（ご自宅まで訪問）</a></p>
+                <ul class="disc_list">
+                    <li><a href="/service/satisfied/trip" target="_blank">冷蔵庫</a></li>
+                    <li><a href="/service/satisfied/trip_laundrymachine_trip" target="_blank">洗濯機</a></li>
+                    <li><a href="/service/satisfied/trip_tv_trip" target="_blank">テレビ</a></li>
+                    <li><a href="/service/satisfied/trip_airconditioner_trip" target="_blank">エアコン</a></li>
+                    <li><a href="/service/satisfied/trip_microwave_trip" target="_blank">電子レンジ</a></li>
+                    <li><a href="/service/satisfied/trip_ceilinglight_trip" target="_blank">シーリングライト</a></li>
+                    <li><a href="/service/satisfied/trip_audiovisualsystems_trip" target="_blank">AV機器配線まとめ</a></li>
+                </ul>
+            </li>
+            <li class="col-md-4">
+                <p class="btn wht"><a href="/service/satisfied/bring" target="_blank">おそうじ・点検サービス</a><br><a
+                        href="/service/satisfied/bring" target="_blank">（店頭へお持ち込み）</a></p>
+                <ul class="disc_list">
+                    <li><a href="/service/satisfied/bring" target="_blank">パソコン</a></li>
+                    <li><a href="/service/satisfied/bring_electricfan_bring" target="_blank">扇風機</a></li>
+                    <li><a href="/service/satisfied/bring_kotatsu_bring" target="_blank">こたつ（ヒーターユニット）</a></li>
+                    <li><a href="/service/satisfied/bring_aircleaner_bring" target="_blank">空気清浄器</a></li>
+                    <li><a href="/service/satisfied/bring_cleaner_bring" target="_blank">掃除機</a></li>
+                    <li><a href="/service/satisfied/bring_fanheater_bring" target="_blank">ファンヒーター</a></li>
+                    <li><a href="/service/satisfied/bring_kerosinestove_bring" target="_blank">石油ストーブ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="pickup">
+    <h3 class="bg_title mb30">小型家電修理品引き取りサービス</h3>
+    <div class="side_space">
+        <div class="box_area mb30">
+            <div class="txt_left">
+                小型家電修理品のお引き取りを受け付けております。通常店舗お持ち込み修理が対象となる掃除機などの小型家電修理品のお引き取りについてお伺いいたします。ご希望のお客様には、修理完了後にお届けいたします。エディオン以外のお店でご購入された小型家電修理品のお引き取りも承ります。
+            </div>
+            <p class="photo"><img src="/sites/default/files/inline-images/satisfied_photo03_1.png"
+                    data-entity-uuid="8725c6d3-a342-4b42-a01c-10b76029a441" data-entity-type="file"
+                    alt="小型家電修理品引き取りサービス" width="860" height="484"></p>
+        </div>
+        <p class="btn_notes mb10">金額等の詳細については、こちらをご確認ください。</p>
+        <div class="btn_wrap">
+            <p class="btn"><a href="/service/satisfied/pickup" target="_blank">小型家電修理品</a><br><a
+                    href="/service/satisfied/pickup" target="_blank">引き取りサービス</a></p>
+        </div>
+    </div>
+</section>

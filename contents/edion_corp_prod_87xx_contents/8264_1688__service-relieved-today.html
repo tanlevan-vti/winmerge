@@ -1,0 +1,159 @@
+<style type="text/css">
+  table th,
+  td {
+    border-right: solid 1px #CCC !important;
+  }
+
+  .btn {
+    display: table;
+    background: #284DB4;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .movie_area {
+    border: 0px none !important;
+    border-right: 0px none;
+  }
+
+  .border_area {
+    border: solid 1px #284DB4;
+    /* background-color: #F5F5F5;*/
+  }
+
+  .border_area td {
+    color: #284DB4;
+  }
+
+  .listSt ul {
+    display: block;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
+
+  .listSt li {
+    padding: 8px 0;
+    border-bottom: 1px solid #CCC;
+  }
+
+  .text-break {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    a span {
+      display: inline;
+      margin-left: 5px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    a span {
+      display: block;
+      text-align: center;
+    }
+
+    .text-break {
+      flex-wrap: wrap;
+    }
+
+    .text-break span {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+
+    /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+    .pc {
+      display: none !important;
+    }
+
+    .sp {
+      display: block !important;
+    }
+
+    .listSt li {
+      float: none !important;
+      width: auto !important;
+      list-style: none;
+    }
+
+    .listSt ul {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    th,
+    td {
+      display: block;
+      width: 100% !important;
+    }
+
+    .floatBox_area .photo.right {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .txt {
+      margin-top: 20px;
+    }
+  }
+</style>
+<div class="floatBox_area">
+  <p class="photo right"><img src="/sites/default/files/inline-images/img_service03.jpg" alt="即日配達・即日工事の画像"></p>
+  <p class="txt">エディオンでは、13時から21時の時間帯での即日配達・即日工事を承っております。</p>
+</div>
+<article class="mb80">
+  <table>
+    <tbody>
+      <tr>
+        <th style="background-color:#F08D00;color:#fff;font-size:20px;text-align:center;vertical-align:middle;"
+          rowspan="2">即日配達・即日工事時間帯</th>
+        <td style="text-align:center;"><img><img src="/sites/default/files/inline-images/img_today01.jpg"
+            data-align="center" data-entity-uuid="d24821b2-288c-46fe-bf7d-5d9f9d911d67" data-entity-type="file"
+            alt="即日配達・即日工事の画像"></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+<div class="mb50">
+  <ul class="listSt list_disc">
+    <li>即日配達・即日工事時の受け付けは16時までとなります。</li>
+    <li>一部の商品を除く、当社指定エリア内に限ります。</li>
+    <li>在庫状況・条件などにより翌日以降になる場合もございます。</li>
+    <li>予約状況により、ご希望の便・時間帯が満杯の際はご容赦ください。</li>
+    <li>一部、午後3時までの受付となる商品がございます。</li>
+    <li>一部商品・搬入条件などにより有料となる場合があります。</li>
+    <li>時間帯は、<strong>ご訪問の時間帯</strong>となります。</li>
+    <li>詳しくは、店頭にてお確かめくださいませ。</li>
+  </ul>
+</div>
+<div class="border_area">
+  <table class="movie_area">
+    <tbody>
+      <tr style="border-color:none!important;border-width:0px;">
+        <td style="border-width:0px!important;text-align:center;vertical-align:middle;width:50%;">
+          <p class="txtC text-break"><span><strong>お問い合わせ・お申し込みは</strong></span><strong>
+            </strong><span><strong>エディオン各店にて承っております。</strong></span></p>
+        </td>
+        <td style="border-width:0px!important;">
+          <p class="btn" id="search"><a style="color:#fff;" href="https://search.edion.com/e_store/"
+              target="_blank">お店を探す <span>(店舗検索ページが開きます）</span></a></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

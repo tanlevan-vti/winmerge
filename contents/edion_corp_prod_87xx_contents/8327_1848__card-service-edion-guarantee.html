@@ -1,0 +1,775 @@
+<style type="text/css">
+    .target_card {
+        margin-bottom: 10px;
+    }
+
+    .target_card span {
+        font-size: 0.93rem;
+        margin: 0 5px 5px 0;
+        padding: 5px 10px;
+        vertical-align: middle;
+    }
+
+    .icoRed,
+    .icoGree,
+    .icolightBl,
+    .icoGreen,
+    .icoPink,
+    .icoBl,
+    .icoBl2,
+    .icoYer,
+    .icoOrng,
+    .icoYmbk,
+    .icoGnj,
+    .icolightgr {
+        background-color: #CC2D2D;
+        border-radius: 3px;
+        color: #FFF;
+        font-size: 0.86rem;
+        min-width: 60px;
+        display: inline-block;
+        text-align: center;
+        padding: 2px 10px 2px;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    .icoBl2 {
+        background-color: #1978E2;
+    }
+
+    .icoGreen {
+        background-color: #23921D;
+    }
+
+    .cardset_sty .title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        overflow: hidden;
+    }
+
+    .cardset_sty .title .mess {
+        color: #1F529F;
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .cardset_sty .title .mess strong {
+        color: #DE0A4C;
+    }
+
+    .cardset_sty .imgR_sty01 {
+        margin: 10px 15px 30px 30px;
+        width: 254px;
+        float: right;
+        text-align: center;
+    }
+
+    .pcOn,
+    .pcOn02 {
+        display: block !important;
+    }
+
+    .cardset_sty .txt {
+        overflow: hidden;
+    }
+
+    .cardset_sty .txt p {
+        margin-top: 15px;
+    }
+
+    .securitySet {
+        overflow: hidden;
+        margin-top: 30px;
+    }
+
+    .securitySet p {
+        border: 1px solid #1F529F !important;
+        color: #1F529F !important;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 3px 0;
+        margin-bottom: 15px;
+    }
+
+    .securitySet ul {
+        display: table;
+        width: 100%;
+    }
+
+    .securitySet li {
+        display: table-cell;
+        text-align: center;
+        color: #FFF;
+        font-size: 1.8rem;
+        line-height: 1.0;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 3px 5px;
+    }
+
+    .securitySet li:nth-child(odd),
+    table th:first-of-type {
+        width: 30%;
+    }
+
+    .securitySet .pay {
+        background: #407D54;
+    }
+
+    .securitySet li:nth-child(even) {
+        width: 5%;
+    }
+
+    .securitySet .plus {
+        color: #1F529F;
+        font-size: 2.5rem;
+    }
+
+    .securitySet .parts {
+        background: #1A82A4;
+    }
+
+    .securitySet .plus {
+        color: #1F529F;
+        font-size: 2.5rem;
+    }
+
+    .securitySet .trip {
+        background: #9E881F;
+        padding-bottom: 10px;
+    }
+
+    .securitySet span {
+        font-size: 1rem;
+    }
+
+    .guar_btnLink {
+        margin-top: 50px;
+    }
+
+    #repair_eiWrap .wideGoods .tit03 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 30px 0 20px;
+    }
+
+    .tit03 {
+        padding: 10px;
+        color: #FFF;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 15px;
+        background: #1B50A2;
+    }
+
+    #repair_eiWrap .wideGoods .area2list {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .area2list li:nth-child(2n+1) {
+        clear: both;
+        margin-left: 0;
+    }
+
+    .area2list li {
+        width: 48.9%;
+        margin-left: 2.2%;
+    }
+
+    .area8list li,
+    .area7list li,
+    .area6list li,
+    .area5list li,
+    .area4list li,
+    .area3list li,
+    .area2list li {
+        list-style-type: none;
+        float: left;
+    }
+
+    .area8list,
+    .area7list,
+    .area6list,
+    .area5list,
+    .area4list,
+    .area3list,
+    .area2list {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #repair_eiWrap .wideGoods .otherList {
+        display: table;
+        margin: 0 auto;
+    }
+
+    #repair_eiWrap .wideGoods .otherList li {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    #repair_eiWrap .wideGoods li {
+        margin: 0;
+        text-align: center;
+    }
+
+    #repair_eiWrap .itemArea dl {
+        border: 5px solid #CCC;
+        padding: 25px;
+    }
+
+    repair_eiWrap .itemArea dt {
+        font-weight: bold;
+        font-size: 1.15rem;
+        color: #455976;
+        margin-bottom: 3px;
+    }
+
+    #repair_eiWrap .itemArea dd:not(:last-of-type) {
+        padding-bottom: 20px;
+        border-bottom: 1px dotted #CCC;
+        margin-bottom: 15px;
+    }
+
+    .pointList {
+        margin: 20px 0 30px;
+    }
+
+    .pointList dt {
+        background-color: #F3981C;
+        border-radius: 3px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        padding: 4px 10px;
+        width: 125px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 1.15rem;
+        line-height: 1.2;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pointList dd {
+        font-size: 1.15rem;
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .pointList dl {
+        border-top: 1px dotted #CCC;
+        padding: 10px 10px 0 0;
+    }
+
+    .lead_txt {
+        font-weight: bold;
+        font-size: 1.59rem;
+        color: #1D509F;
+    }
+
+    #repair_eiWrap .family .wrap {
+        overflow: hidden;
+    }
+
+    #repair_eiWrap .family .txt {
+        width: 70%;
+        float: left;
+        padding-right: 10px;
+    }
+
+    .lead_txt {
+        font-weight: bold;
+        font-size: 1.59rem;
+        color: #1D509F;
+    }
+
+    #repair_eiWrap .family .image {
+        width: 30%;
+        float: right;
+    }
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+        width
+        /***/
+        : auto;
+    }
+
+    .tit03 {
+        padding: 10px;
+        color: #FFF;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 15px;
+        background: #1B50A2;
+    }
+
+    .tell_contact {
+        display: table;
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+
+    .tell_contact dt {
+        background-color: #F5F5F5;
+        border-right: 1px solid #CCC;
+        color: #455B76;
+        font-weight: bold;
+        font-size: 1.15rem;
+        width: 300px;
+        box-sizing: border-box;
+    }
+
+    .tell_contact dt,
+    .tell_contact dd {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 15px;
+        color: #1950A0;
+    }
+
+    .tell_contact dd .tell {
+        margin-right: 10px;
+        line-height: 1.1;
+    }
+
+    .tell_contact dd div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .tell {
+        font-weight: bold;
+        color: #1a50a1;
+        font-size: 2.5rem;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .tel_time {
+        background: #FFF;
+        border: 1px solid #1b50a2;
+        color: #1b50a2;
+        overflow: hidden;
+        display: inline-block;
+        font-weight: bold;
+        padding: 3px 10px;
+    }
+
+    .tell_contact dd p {
+        margin: 8px 0 0 !important;
+    }
+
+    /* 持込修理対象商品、保証対象外の商品・部品の例 */
+    .tableSt {
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+
+    .tableSt th {
+        width: 25%;
+        background-color: #F5F5F5;
+    }
+
+    .tableSt th,
+    .tableSt td {
+        padding: 10px 10px;
+        border: 1px solid #CCC;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .accordion_wrap02 .inner_wrap {
+        border-bottom: 1px solid #ccc;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .cardset_sty .title .mess,
+        .cardset_sty .title .mess span {
+            font-size: 1.45rem;
+        }
+
+        .cardset_sty .imgR_sty01 {
+            margin-left: 15px;
+        }
+
+        .pcOn02,
+        .spTOn {
+            display: none !important;
+        }
+
+        .securitySet li {
+            font-size: 1.15rem;
+        }
+
+        .securitySet span {
+            font-size: 1rem;
+        }
+
+        #repair_eiWrap .wideGoods .tit03,
+        #repair_eiWrap .family .lead {
+            font-size: 1.45rem;
+        }
+
+        #repair_eiWrap .family .image {
+            display: none;
+        }
+
+        #repair_eiWrap .family .txt {
+            width: 100%;
+            float: none;
+        }
+
+        .tell_contact,
+        .tell_contact dt,
+        .tell_contact dd {
+            display: block;
+            width: auto;
+        }
+
+        .tell_contact dt {
+            border-bottom: 1px solid #CCC;
+            border-right: 0;
+        }
+
+        .tell_contact dd {
+            text-align: center;
+        }
+
+        .tell_contact,
+        .tell_contact dt,
+        .tell_contact dd {
+            display: block;
+            width: auto;
+        }
+
+        .tell_contact dd .tell {
+            display: block;
+            margin: 0 0 5px;
+            text-align: center;
+        }
+
+        .tell_contact dd p {
+            text-align: left;
+        }
+    }
+</style>
+<div id="edioncardWrap">
+    <div id="repair_eiWrap">
+        <div class="innerWrap">
+            <p class="target_card">対象カード：<span class="icoBl2">エディオンカード</span> <span class="icoGreen">ＩＤカード</span></p>
+            <div class="cardset_sty">
+                <h3 class="bt_line">5年間・10年間の長期修理保証</h3>
+                <div class="title">
+                    <p>家電・パソコン(当社指定機種)</p>
+                    <div class="mess">エディオンカード会員様なら、<br>5年間・10年間<strong>長期修理保証(メーカー保証を含む)</strong>いたします！</div>
+                </div>
+                <div class="imgR_sty01 pcOn02"><img src="/sites/default/files/inline-images/img_cardIllust01.jpg"
+                        width="435" height="454"></div>
+                <div class="txt">
+                    <p>エディオンカード会員様なら、5,500円（税込）以上の指定商品をご購入の際に、5年間・10年間の長期修理保証で、ご購入いただきました商品を、長く、安心してご使用いただけます。さらに、対象商品は100品種以上と幅広く保証いたします。<br><br>※家電品の保証対象商品は、5,500円（税込）以上で一年以上のメーカー保証付きの指定商品となります。<br>※5年間保証の対象商品は当社指定商品となります。<br>※当社指定機種のエアコン・冷蔵庫は10年間長期修理保証。（工事費、取付部材除く）<br>※一部保証対象外となる商品がございます。<br>※アウトレット店舗及びエディオンネットショップを除くネット通販（楽天、amazon、Yahoo!など）でお買い求めの商品には長期修理保証は適用されません。
+                    </p>
+                </div>
+                <div class="securitySet">
+                    <p>すべて長期修理保証の対象です</p>
+                    <ul>
+                        <li class="pay">修理工賃</li>
+                        <li class="plus">+</li>
+                        <li class="parts">修理部品代</li>
+                        <li class="plus">+</li>
+                        <li class="trip"><span>出張修理対象商品の</span><br>出張費</li>
+                    </ul>
+                </div><!-- 持込修理対象商品、保証対象外の商品・部品の例 -->
+                <div class="accordion_wrap02 mt30 mb30">
+                    <dl>
+                        <dt class="qa_open">
+                            <p>持込修理対象商品、保証対象外の商品・部品の例</p>
+                        </dt>
+                    </dl>
+                    <div class="inner_wrap" style="display:none;">
+                        <h2 class="tit03"><span>持込修理対象商品の例</span></h2>
+                        <table class="tableSt">
+                            <tbody>
+                                <tr>
+                                    <th>映像</th>
+                                    <td>15インチ以下の液晶テレビ、デジタルカメラ、カーナビゲーション、ビデオムービー、単体カメラ、レンズ類（ただし、ガラスなどのレンズ自体を除く）、BS／CSアンテナ類、テーブルプロジェクター、デジタルチューナー類
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>音響</th>
+                                    <td>マイクロフォン、ヘッドホン、ポータブルテレコ、テープレコーダー、ICレコーダー、ラジオ、ポータブルCD、ポータブルDVD、ポータブルBD、デジタルオーディオ、ラジカセ類、ネットワークプレーヤー（HDD内蔵を含む）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>情報</th>
+                                    <td>パソコン、HDD、ドライブ類、プリンター類、パソコン小物類、ターミナルアダプター類、スキャナー、電子辞書、ディスプレー、パソコンアクセサリー類</td>
+                                </tr>
+                                <tr>
+                                    <th>通信</th>
+                                    <td>通信機、測定器、拡声機、トランシーバー</td>
+                                </tr>
+                                <tr>
+                                    <th>照明</th>
+                                    <td>スタンド</td>
+                                </tr>
+                                <tr>
+                                    <th>美容</th>
+                                    <td>シェーバー類、ドライヤー類、ホットカーラー、理美容器具類、美容エステ類、ヘルスメーター</td>
+                                </tr>
+                                <tr>
+                                    <th>家事</th>
+                                    <td>クリーナー（ハンディ含む）、スチームクリーナー類、ズボンプレッサー、ポータブル冷温庫、布団乾燥機、アイロン</td>
+                                </tr>
+                                <tr>
+                                    <th>季節</th>
+                                    <td>加湿器、扇風機・サーキュレーター、コタツヒーター、電気毛布、ヤグラコタツ、電気ストーブ、アンカ・足温器類、暖房小物類、空気清浄機（除湿付きを除く）</td>
+                                </tr>
+                                <tr>
+                                    <th>調理</th>
+                                    <td>カセットコンロ、食器乾燥機、電磁調理器、ジューサー、ミキサー、回転調理器類、炊飯ジャー、電子ジャー、精米機、オーブントースター、トースター、コーヒーメーカー、ホットプレート、電熱調理器、ポット類、保温器類、浄水器、ホームベーカリー、調理関連小物
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>その他</th>
+                                    <td>補聴器、医療器具類、健康用品類、マッサージ小物、事務機器類、シュレッダー、火災警報器、電卓、ウォッチ、時計類、電子キーボード、園芸用品類<br>※上記と同様の軽量品は、持込対象修理品とします。
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2 class="tit03"><span>保証対象外となる部品の例</span></h2>
+                        <table class="tableSt">
+                            <tbody>
+                                <tr>
+                                    <th>洗濯機</th>
+                                    <td>糸くずフィルター、ゴミ取りネット、外部給水・排水ホ－ス（外付け）、洗剤入れ、お湯取りホース、ヘルツ交換</td>
+                                </tr>
+                                <tr>
+                                    <th>クリーナー</th>
+                                    <td>床ブラシ、ターボブラシ、紙パック、充電池、前輪、後輪、延長管（破損・変形）、ジャバラホース（破損・破れ・変形）</td>
+                                </tr>
+                                <tr>
+                                    <th>エアコン</th>
+                                    <td>フィルター類、ドレンホース、冷媒ガス、工事部材</td>
+                                </tr>
+                                <tr>
+                                    <th>電子レンジ</th>
+                                    <td>付属の皿類、トビラ（破損）、取手、つまみ、ターンテーブル、窓ウンモ板</td>
+                                </tr>
+                                <tr>
+                                    <th>炊飯ジャー</th>
+                                    <td>内釜、動作用電池、しゃもじ、外フタ、ハンドル</td>
+                                </tr>
+                                <tr>
+                                    <th>冷蔵庫</th>
+                                    <td>製氷皿、仕切り板、BOX類、浄水フィルター</td>
+                                </tr>
+                                <tr>
+                                    <th>パソコン</th>
+                                    <td>バッテリー、液晶パネルドット抜け、マウス、増設HDD、増設メモリー</td>
+                                </tr>
+                                <tr>
+                                    <th>シェーバー</th>
+                                    <td>内刃、網刃、充電池</td>
+                                </tr>
+                                <tr>
+                                    <th>デジカメ</th>
+                                    <td>レンズキャップ、ストロボランプ、レンズフィルター</td>
+                                </tr>
+                                <tr>
+                                    <th>プリンター</th>
+                                    <td>インクカートリッジ、給紙トレー、排紙トレー、トナー、トナーカートリッジ</td>
+                                </tr>
+                                <tr>
+                                    <th>商品全般</th>
+                                    <td>付属品パッキン類、各種電池、充電池、バッテリー（内蔵含む）、インク類（トナー含む）、ストラップ、タンク、各種フィルター類、記録媒体、アンテナ工事部材、各種刃類、保温器の中ビン、ベルト類、ネジ類、セード、管球類、羽根類、ガード類、レコード針、コード・ケーブル類、プロジェクターランプ、替芯、コタツなどの木部及び類するもの(天板・脚・やぐらなど)
+                                        、メーカー説明書にある消耗付属品類、<br>その他、上記に類する部品は保証対象外となります。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2 class="tit03"><span>保証対象外となる作業の例</span></h2>
+                        <table class="tableSt">
+                            <tbody>
+                                <tr>
+                                    <th>デジタル機器</th>
+                                    <td>ソフトウェアの追加・削除、ハードウェアの増設・取り外し・接続、バックアップ内蔵電池の交換</td>
+                                </tr>
+                                <tr>
+                                    <th>パソコン</th>
+                                    <td>OSソフトの設定・調整・修復、ウィルス除去、データバックアップ、テクニカルサポート作業、再インストール</td>
+                                </tr>
+                                <tr>
+                                    <th>プリンター</th>
+                                    <td>ホコリ除去、インク付着除去、目詰まり除去、異物混入除去、ヘッドクリーニング、オーバーホール</td>
+                                </tr>
+                                <tr>
+                                    <th>テレビ・DVD・BD</th>
+                                    <td>チャンネルプリセット、機器接続、異物除去、クリーニング、オーバーホール</td>
+                                </tr>
+                                <tr>
+                                    <th>エアコン</th>
+                                    <td>ガスチャージ、クリーニング、ドレン詰まり、工事作業、フィルター清掃</td>
+                                </tr>
+                                <tr>
+                                    <th>洗濯機</th>
+                                    <td>異物混入除去、フィルター詰まり、排水口詰まり、給水弁詰まり、排水コック詰まり、乾燥フィルター清掃</td>
+                                </tr>
+                                <tr>
+                                    <th>石油ファンヒーター・石油ストーブ</th>
+                                    <td>フィルター詰まり、不良灯油による分解清掃及び芯交換（石油ストーブ）</td>
+                                </tr>
+                                <tr>
+                                    <th>デジカメ</th>
+                                    <td>レンズホコリ除去</td>
+                                </tr>
+                                <tr>
+                                    <th>商品全般</th>
+                                    <td>昆虫・小動物混入の除去作業、小動物が与えた外損、凍結が原因の除去作業、ホコリ・異物除去作業、取扱ミスによる修復作業、加電圧による修復作業、誘導雷サージ、バージョンアップ作業、取扱説明のみの訪問および作業<br>その他、上記と同様な作業は、保証対象外になります。<br>保証対象商品の故障が原因によるソフト、メディアなどの修復・復元作業も保証対象外になります。<br>本規約第16条（長期修理保証の対象外となる事項）に該当するもの
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <dl>
+                        <dd style="display:none;"><!-- /.inner_wrap -->&nbsp;</dd>
+                    </dl>
+                </div><!-- ここまで -->
+            </div>
+            <div class="wideGoods">
+                <h3 class="bt_line">業界屈指のワイド保証</h3>
+                <div class="cardset_sty mb25">
+                    <div class="title">
+                        <div class="mess">業界屈指の<strong>ワイド保証</strong>。豊富な<strong>100品種以上</strong>が対象です！</div>
+                    </div>
+                    <p>エディオンの長期修理保証は、5,500円（税込）以上の指定商品から、幅広い商品100品種以上に保証が適応できます。</p>
+                </div>
+                <h3>&nbsp;</h3>
+                <div class="tit03"><span>一般的な保証対象商品</span></div>
+                <ul class="area2list">
+                    <li><img src="/sites/default/files/inline-images/img_repair_ei01.jpg" alt="一般的な保証対象商品"></li>
+                    <li><img src="/sites/default/files/inline-images/img_repair_ei02.jpg" alt="一般的な保証対象商品"></li>
+                </ul>
+                <h3>&nbsp;</h3>
+                <div class="tit03"><span>エディオンなら、さらに多彩な商品を保証！</span></div>
+                <ul class="otherList">
+                    <li><img src="/sites/default/files/inline-images/img_repair_ei03.jpg" alt="エディオンなら、さらに多彩な商品を保証！">
+                    </li>
+                    <li><img src="/sites/default/files/inline-images/img_repair_ei04.jpg" alt="エディオンなら、さらに多彩な商品を保証！">
+                    </li>
+                    <li><img src="/sites/default/files/inline-images/img_repair_ei05.jpg" alt="エディオンなら、さらに多彩な商品を保証！">
+                    </li>
+                </ul>
+                <div class="itemArea mt30">
+                    <dl>
+                        <dt>
+                            <p>パソコン、電子機器関連</p>
+                        </dt>
+                        <dd>
+                            <p>パソコン、ディスプレー、イメージスキャナ、ハードディスクドライブ、PDA(携帯情報端末)、パーソナルコピー、電子辞書、電卓　など</p>
+                        </dd>
+                        <dt>
+                            <p>オーディオ関連</p>
+                        </dt>
+                        <dd>
+                            <p>ヘッドフォン、MDデッキ、テープレコーダー、ラジカセ、ラジオ、カラオケ、マイクロフォン、スピーカー、アンプ、拡声器、電子ピアノ、電子キーボード、トランシーバー　など</p>
+                        </dd>
+                        <dt>
+                            <p>生活家電</p>
+                        </dt>
+                        <dd>
+                            <p>IHクッキングヒーター、食器洗い機、食器乾燥機、ガステーブル、シャワートイレ、ジューサーミキサー、トースター、ホットプレート、フードプロセッサー、換気扇、生ごみ処理機、アルカリイオン整水器、電磁調理器　など
+                            </p>
+                        </dd>
+                        <dt>
+                            <p>季節家電</p>
+                        </dt>
+                        <dd>
+                            <p>アンカ、足温器、ファンヒーター、石油ストーブ、石油温風器、扇風機、家具調コタツ、冷風扇、電気ストーブ、電子カーペット、電子毛布、除湿機、空気清浄機、加湿器、餅つき器　など</p>
+                        </dd>
+                        <dt>
+                            <p>美容・健康関連</p>
+                        </dt>
+                        <dd>
+                            <p>マッサージチェア、脱毛器、補聴器、美顔器、ドライヤー、アイロン、ミシン、温水器、トレーニング器具　など</p>
+                        </dd>
+                        <dt>
+                            <p>家具・インテリア関連</p>
+                        </dt>
+                        <dd>
+                            <p>電動工具、テレビドアフォン、シーリングライト、デスクスタンド、時計　など</p>
+                        </dd>
+                    </dl>
+                    <p class="mt5">※iPad、iPodシリーズなどのアップル社製の商品は5年間長期修理保証対象外となります。※パソコンは当社指定商品が対象となります。</p>
+                </div>
+                <div class="pointList">
+                    <dl>
+                        <dt>
+                            <p>ポイント1</p>
+                        </dt>
+                        <dd>
+                            <p>デジカメやプリンターなどのデジタル家電も保証対象商品です。※注1</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <p>ポイント2</p>
+                        </dt>
+                        <dd>
+                            <p>年間、何品ご購入いただいても保証します。※注2</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <p>ポイント3</p>
+                        </dt>
+                        <dd>
+                            <p>ご購入商品は、ご購入金額に達するまで保証します。※注2</p>
+                        </dd>
+                    </dl>
+                    <p class="mt15">※注1　当社指定商品に限ります。<br>※注2　詳しくは<a
+                            href="https://my.edion.jp/card/service/agreement/edion_member.php">エディオンカードサービス会員規約</a>をご確認ください。
+                    </p>
+                </div>
+            </div>
+            <div class="family mb30">
+                <h3 class="bt_line">ご家族会員も保証</h3>
+                <div class="wrap">
+                    <div class="txt">
+                        <p class="lead_txt">一緒にお住まいの間は、ご家族会員のご登録で<br>まるごと長期修理保証ができます！</p>
+                        <p class="mt15">
+                            お買い物の際、ご登録の電話番号をお申し出いただくだけで保証をお付けいたします。<br>※家族全員のご登録は同一世帯、同一住所にお住まいの方で本人会員様とご家族様、両方の同意が必要です。<br>※ご登録は本会員さまとご一緒に店舗係員までお申し付けください。<br>※ご家族会員さまが購入された分のポイントは本会員さまに加算されます。
+                        </p>
+                    </div>
+                    <div class="image"><img src="/sites/default/files/inline-images/img_repair_ei06.png" alt="ご家族会員も保証">
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>&nbsp;</h2>
+                <div class="tit03"><span>保証・ポイントについてのお問い合わせは</span></div>
+                <dl class="tell_contact">
+                    <dt>
+                        <p>エディオンカードセンター</p>
+                    </dt>
+                    <div class="tell tel-link">&nbsp;</div>
+                    <div class="tel_time">&nbsp;</div>
+                    <dd>
+                        <p class="txt">※エディオンカードのサービス内容は、都合により予告なしで変更になる場合がございます。<br>※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="btn_wrap mt50">
+                <p class="btn wht link"><a href="/card/service">カードの特長へ戻る</a></p>
+            </div><!-- ] innerWrap END -->
+        </div><!-- ] repair_eiWrap END -->
+    </div><!-- ] edioncardWrap END -->
+</div>

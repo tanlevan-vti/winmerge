@@ -1,0 +1,533 @@
+<style type="text/css">
+	/* ## rate ===============================
+分割払い・リボ払い 設定 */
+	.payment_options,
+	.payment_other {
+		margin-bottom: 45px;
+	}
+
+	.paymentTable {
+		border: 1px solid #CCC;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.paymentTable th,
+	.paymentTable td {
+		border: 1px solid #CCC;
+		vertical-align: middle;
+		text-align: center;
+		padding: 9px;
+	}
+
+	.paymentTable th {
+		background-color: #1F52A1;
+		border: 1px solid #426AAA;
+		text-align: left;
+		color: #FFF;
+	}
+
+	.paymentTable tr:first-child th {
+		background-color: #133466;
+		width: 200px;
+	}
+
+	.paymentTable tr:first-child td {
+		background-color: #F5F5F5;
+	}
+
+	.paymentTable.fsty01 th {
+		text-align: center;
+		background: none !important;
+		border: 1px solid #CCC !important;
+		color: #444 !important;
+		width: auto !important;
+	}
+
+	.paymentTable.fsty01 dl {
+		text-align: left;
+	}
+
+	.paymentTable.fsty01 tr:first-child th:nth-of-type(1),
+	.paymentTable.fsty01 tr:first-child th:nth-of-type(2) {
+		background-color: #1F52A1 !important;
+		color: #FFF !important;
+		border: 1px solid #426AAA !important;
+	}
+
+	.paymentTable.fsty01 tr:nth-child(even) td {
+		background-color: #F5F5F5;
+	}
+
+	.paymentTable.fsty01 tr th:first-child {
+		width: 220px !important;
+	}
+
+	.paymentTable.fsty01 img {
+		max-width: 100%;
+		height: auto;
+		width
+		/***/
+		: auto;
+	}
+
+	@media screen and (max-width: 800px) {
+		.paymentTable tr:first-child th {
+			width: 145px;
+		}
+
+		.paymentTable.fsty01 tr th:first-child {
+			width: 150px !important;
+		}
+	}
+
+	/* --800px END-- */
+
+	@media screen and (max-width: 640px) {}
+
+	/* --640px END-- */
+
+	.payment_other .inner {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	.payment_other .inner dl {
+		border: 3px solid #CCC;
+		width: 49%;
+		padding: 15px;
+		margin-bottom: 15px;
+	}
+
+	.payment_other dt {
+		color: #455976;
+		font-weight: bold;
+		font-size: 1.45rem;
+		margin-bottom: 5px;
+	}
+
+	.payment_other dd span {
+		color: #F3981C;
+		font-weight: bold;
+		font-size: 1.15rem;
+	}
+
+	.payment_other .btn {
+		max-width: 550px;
+		margin: 15px auto 0;
+	}
+
+	.payment_other .btn .btnWh {
+		padding: 18px 25px;
+		font-size: 1.45rem;
+	}
+
+	@media screen and (max-width: 640px) {
+		.payment_other .inner {
+			display: block;
+		}
+
+		.payment_other .inner dl {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	/* --640px END-- */
+</style>
+<!-- === content START === -->
+<div id="content">
+	<div id="edionidcardWrap">
+		<div class="innerWrap">
+			<p>エディオンカード会員様限定 低金利分割払い</p>
+			<!-- ポイントをためる --><!-- エディオン店舗および加盟店でのお支払い方法 -->
+
+			<div class="payment_options">
+				<h3 class="bt_line">無理のない金額でお客様のライフスタイルや目的に合わせたお支払いが可能です。</h3>
+
+				<h3>エディオン店舗および加盟店でのお支払い方法</h3>
+
+				<p class="mb20">それぞれのご利用場面で、お取り扱いできるお支払い回数をご確認ください。</p>
+
+				<div class="scroll_area mb30">
+					<table class="paymentTable fsty01">
+						<tbody>
+							<tr>
+								<th>お支払い方法</th>
+								<th>会員手数料のご負担</th>
+								<th><img alt="営業店舗" data-align="center" data-entity-type="file"
+										data-entity-uuid="6ac03177-8df5-4210-896e-fd430996a3ce"
+										src="/sites/default/files/inline-images/img_rate01_0.gif" /><br />
+									営業店舗</th>
+								<th><img alt="オリコ加盟店" data-align="center" data-entity-type="file"
+										data-entity-uuid="9b007d39-45d0-4f81-9f5f-e826749e308e"
+										src="/sites/default/files/inline-images/img_rate02_0.gif" /><br />
+									オリコ加盟店</th>
+								<th><img alt="マスターカード・JCB加盟店" data-align="center" data-entity-type="file"
+										data-entity-uuid="3b2542a4-fb9a-4a9c-bc02-c145c2dfbbde"
+										src="/sites/default/files/inline-images/img_rate03_0.gif" /><br />
+									マスターカード<br />
+									JCB加盟店※1</th>
+								<th><img alt="セディナ・オーエムシー加盟店" data-align="center" data-entity-type="file"
+										data-entity-uuid="349f6a71-3046-41c7-9011-898b834fdcd5"
+										src="/sites/default/files/inline-images/img_rate04_0.gif" /><br />
+									セディナ<br />
+									オーエムシー加盟店</th>
+								<th><img alt="VISA・JCB加盟店" data-align="center" data-entity-type="file"
+										data-entity-uuid="2ad10da1-e792-47b0-aaea-2ea6897351a9"
+										src="/sites/default/files/inline-images/img_rate05_0.gif" /><br />
+									VISA・JCB<br />
+									加盟店※1</th>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>1回払い</dt>
+										<dd>翌月に一括でお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>なし</p>
+								</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>ボーナス一括払い</dt>
+										<dd>ボーナス月に一括でお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>なし</p>
+								</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>ボーナス2回払い</dt>
+										<dd>夏と冬、ボーナス月に半額ずつお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>あり</p>
+								</td>
+								<td>●</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>2回払い</dt>
+										<dd>翌月と翌々月でお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>なし</p>
+								</td>
+								<td>●</td>
+								<td>●※2</td>
+								<td>●※2</td>
+								<td>●※2</td>
+								<td>●※2</td>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>分割払い</dt>
+										<dd>分割でお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>あり<br />
+										下表<br />
+										参照</p>
+								</td>
+								<td>●</td>
+								<td>●※3</td>
+								<td>-</td>
+								<td>●※3</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>特別低金利クレジット</dt>
+										<dd>合計30万円以上の家電品購入時のお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>あり<br />
+										下表<br />
+										参照</p>
+								</td>
+								<td>●</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>
+									<dl>
+										<dt>リボルビング払い</dt>
+										<dd>毎月一定額のお支払い</dd>
+									</dl>
+								</td>
+								<td>
+									<p>あり</p>
+								</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<ul>
+					<li>※1:海外でのご利用は翌月1回払いのみとなります。</li>
+					<li>※2:2回払いの手数料はお客様負担になる場合やご利用いただけないお店もございます。ご了承ください。</li>
+					<li>※3:加盟店でご利用される場合支払い回数、手数料など異なります。</li>
+					<li>※エディオンネットショップでのお支払いは回数及び金利が異なります。</li>
+				</ul>
+			</div>
+			<!-- 「通常分割払い」3回～36回払い -->
+
+			<div class="payment_options">
+				<h3 class="bt_line">エディオン店舗および加盟店でのお支払い方法</h3>
+			</div>
+
+			<h3>支払いラクラク！月々2,000円からご利用いただけます。</h3>
+
+			<div class="scroll_area mb30">
+				<table class="paymentTable">
+					<tbody>
+						<tr class="title">
+							<th>通常分割払い</th>
+							<td>3回</td>
+							<td>6回</td>
+							<td>10回</td>
+							<td>12回</td>
+							<td>15回</td>
+							<td>20回</td>
+							<td>24回</td>
+							<td>30回</td>
+							<td>36回</td>
+						</tr>
+						<tr>
+							<th>支払い期間（ヶ月）</th>
+							<td>3</td>
+							<td>6</td>
+							<td>10</td>
+							<td>12</td>
+							<td>15</td>
+							<td>20</td>
+							<td>24</td>
+							<td>30</td>
+							<td>36</td>
+						</tr>
+						<tr>
+							<th>販売価格100円<br />
+								あたりの手数料額</th>
+							<td>1.5円</td>
+							<td>3.0円</td>
+							<td>5.5円</td>
+							<td>6.5円</td>
+							<td>8.0円</td>
+							<td>11.0円</td>
+							<td>13.0円</td>
+							<td>16.5円</td>
+							<td>19.5円</td>
+						</tr>
+						<tr>
+							<th>会員手数料率<br />
+								（実質年率）</th>
+							<td>9.0%</td>
+							<td>10.3%</td>
+							<td>11.9%</td>
+							<td>11.8%</td>
+							<td>11.8%</td>
+							<td>12.2%</td>
+							<td>12.1%</td>
+							<td>12.2%</td>
+							<td>12.0%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p class="mb20">それぞれのご利用場面で、お取り扱いできるお支払い回数をご確認ください。</p>
+		</div>
+		<!-- 「特別低金利クレジット(特別分割払い)」 -->
+
+		<div class="payment_options mt30">
+			<h3 class="bt_line">「特別低金利クレジット(特別分割払い)」</h3>
+		</div>
+
+		<h3>パソコン・ハイビジョンテレビ、または合計30万円以上の家電品購入時にご利用ください。</h3>
+
+		<div class="scroll_area mb30">
+			<table class="paymentTable">
+				<tbody>
+					<tr>
+						<th>特別低金利<br />
+							クレジット</th>
+						<td>12回</td>
+						<td>24回</td>
+						<td>36回</td>
+						<td>48回</td>
+						<td>60回</td>
+						<td>72回</td>
+						<td>84回</td>
+						<td>96回<br />
+							※2</td>
+						<td>100回<br />
+							※1</td>
+					</tr>
+					<tr>
+						<th>支払い期間（ヶ月）</th>
+						<td>12</td>
+						<td>24</td>
+						<td>36</td>
+						<td>48</td>
+						<td>60</td>
+						<td>72</td>
+						<td>84</td>
+						<td>96</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<th>販売価格100円<br />
+							あたりの手数料額</th>
+						<td>5.0円</td>
+						<td>10.0円</td>
+						<td>15.0円</td>
+						<td>19.0円</td>
+						<td>24.0円</td>
+						<td>36.0円</td>
+						<td>42.0円</td>
+						<td>48.0円</td>
+						<td>50.0円</td>
+					</tr>
+					<tr>
+						<th>会員手数料率<br />
+							（実質年率）</th>
+						<td>9.1%</td>
+						<td>9.4%</td>
+						<td>9.4%</td>
+						<td>8.9%</td>
+						<td>8.9%</td>
+						<td>10.8%</td>
+						<td>10.6%</td>
+						<td>10.46%</td>
+						<td>10.5%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<ul>
+			<li>※1 カード裏面にオリコマークがありましたらご利用いただけます。96回払いはご利用いただけません。</li>
+			<li>※2 カード裏面にセディナ表記・オーエムシー表記がありましたらご利用いただけます。100回払いはご利用いただけません。</li>
+		</ul>
+	</div>
+	<!-- その他にも各種お支払い方法をご用意しております。 -->
+
+	<div class="payment_other mt30">
+		<h3 class="bt_line">その他にも各種お支払い方法をご用意しております。</h3>
+
+		<div class="inner">
+			<dl>
+				<dt>翌月1回・2回払い</dt>
+				<dd><span>金利手数料0円</span>
+					<p>・金利手数料がかからないので賢くご利用ください。</p>
+				</dd>
+			</dl>
+
+			<dl>
+				<dt>ボーナス一括払い</dt>
+				<dd><span>金利手数料0円</span>
+					<p>・今すぐ欲しい話題の商品などのお支払いにぴったりです。<br />
+						・まとめて1万円(税込)以上のお買物でご利用できます。</p>
+				</dd>
+			</dl>
+
+			<dl>
+				<dt>ボーナス2回払い</dt>
+				<dd><span>手数料100円あたり3円</span>
+					<p>・1回払いではちょっと高額なご利用のお支払いに。<br />
+						・まとめて5万円(税込)以上のお買物でご利用できます。<br />
+						※会員手数料率(実質年率)は2.7%～10.5%となります。</p>
+				</dd>
+			</dl>
+
+			<dl>
+				<dt>リボルビング払い</dt>
+				<dd>
+					<p>・毎月の支払い額が一定しているのでちょっと使いすぎても安心です。<br />
+						※会員手数料は、ご利用残高に対して実質年率15.0%となります。<br />
+						詳しくは会員規約をご確認ください。</p>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="btn_wrap mt30">
+			<p class="btn wht"><a href="https://stg-admin.edion.co.jp/card/credit_member">カードご利用明細をチェックする</a></p>
+		</div>
+	</div>
+
+	<div class="inner">
+		<h3 class="bg_title mt30">クレジットについてのお問い合わせは</h3>
+
+		<p class="mb20">カード裏面をご確認いただきカード発行会社をご確認ください。</p>
+
+		<div class="contact_inner mb30">
+			<h2 class="title_02 mt20">オリコ　エディオンカードデスク</h2>
+			<img alt="オリコ" data-align="center" data-entity-type="file"
+				data-entity-uuid="db032202-45e6-43a7-9714-82dd637024a7"
+				src="/sites/default/files/inline-images/orico.jpg" />
+			<div class="free_dial text-align-center mt20"><span class="tel-moji">0120-33-2702</span><span
+					class="box">受付時間　09:30～17:30(年中無休)</span></div>
+			<!-- /.free_dial -->
+		</div>
+
+		<div class="contact_inner mb30">
+			<h2 class="title_02 mt20">SMBCファイナンスサービスアンサーセンターエディオンカードデスク</h2>
+			<img alt="セディナ" data-align="center" data-entity-type="file"
+				data-entity-uuid="65fcfc5e-2875-4adb-b573-d7dcb3ffcade"
+				src="/sites/default/files/inline-images/cedyna.jpg" />
+			<div class="free_dial text-align-center mt20"><span class="tel-moji">0120-084-665</span><span
+					class="box">受付時間　09:30～18:00（1月1日休）</span></div>
+			<!-- /.free_dial -->
+		</div>
+
+		<div class="bg_box mt20 mb30">※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。</div>
+	</div>
+
+	<div class="btn_wrap mt50">
+		<p class="btn"><a href="/card">エディオンカードトップ</a></p>
+	</div>
+	<!-- ] innerWrap END -->
+</div>
+<!-- ] edioncardWrap END --><!-- ] content END --><!-- === content END === -->

@@ -1,0 +1,639 @@
+<style type="text/css">
+    /* ## explanation_point ===============================
+ポイント(エディオンカード・ＩＤカード)  設定 */
+    .cardset_sty {
+        overflow: hidden;
+        margin-bottom: 45px;
+    }
+
+    .cardset_sty .title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        overflow: hidden;
+    }
+
+    .cardset_sty .title .mess {
+        color: #1F529F;
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .cardset_sty .title .mess strong {
+        color: #DE0A4C;
+    }
+
+    .cardset_sty .title .mess span {
+        font-size: 1.8rem;
+    }
+
+    .cardset_sty .txt {
+        overflow: hidden;
+    }
+
+    .cardset_sty .txt p {
+        margin-top: 15px;
+    }
+
+    a span {
+        display: block;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 800px) {
+        .cardset_sty .title {
+            font-size: 1rem;
+        }
+
+        .cardset_sty .title .mess {
+            font-size: 30px;
+        }
+    }
+
+    /* --800px END-- */
+    @media screen and (max-width: 640px) {
+
+        .cardset_sty .title .mess,
+        .cardset_sty .title .mess span {
+            font-size: 1.45rem;
+        }
+    }
+
+    /* --640px END-- */
+    #pointsaveWrap {
+        margin-bottom: 40px;
+    }
+
+    .cardset_sty .imgR_sty01 {
+        margin: 10px 15px 30px 30px;
+        width: 254px;
+        float: right;
+        text-align: center;
+    }
+
+    .edionPoint .cardset_sty .imgR_sty01,
+    .tcard .cardset_sty .imgR_sty01 {
+        margin-top: -35px;
+    }
+
+    .cardset_sty .imgR_sty01 img {
+        max-width: 100%;
+        height: auto;
+        width
+        /***/
+        : auto;
+    }
+
+    @media screen and (max-width: 960px) {
+        .cardset_sty .imgR_sty01 {
+            width: 214px;
+        }
+
+        .edionPoint .cardset_sty .imgR_sty01,
+        .tcard .cardset_sty .imgR_sty01 {
+            margin-top: 10px;
+        }
+    }
+
+    /* --960px END-- */
+    @media screen and (max-width: 640px) {
+        .cardset_sty .imgR_sty01 {
+            margin-left: 15px;
+        }
+
+        .tcard_btn li {
+            float: none !important;
+            width: auto;
+            text-align: center !important;
+        }
+    }
+
+    /* --640px END-- */
+    .point_award {
+        border: 3px solid #F3981C;
+        margin-bottom: 30px;
+        color: #F3981C;
+    }
+
+    #pointsaveWrap .point_award {
+        padding: 17px 17px 12px;
+    }
+
+    #pointsaveWrap .point_award dl {
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+
+    #pointsaveWrap .point_award dt {
+        background-color: #F3981C;
+        border-radius: 6px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        padding: 4px 10px;
+        margin-bottom: 3px;
+        width: 300px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 1.45rem;
+        line-height: 1.2;
+        margin-right: 10px;
+    }
+
+    #pointsaveWrap .point_award dl:first-child dt {
+        padding: 12px 10px;
+    }
+
+    #pointsaveWrap.ease .point_award dt {
+        padding: 4px 10px !important;
+    }
+
+    #pointsaveWrap .point_award dt span {
+        display: block;
+        font-size: 1.15rem;
+        line-height: 1.2;
+    }
+
+    #pointsaveWrap .point_award .get_point,
+    #pointsaveWrap .point_award dd {
+        font-size: 1.45rem;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    #pointsaveWrap .point_award .get_point span,
+    #pointsaveWrap .point_award dd span {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    #pointsaveWrap.tcard .point_award {
+        overflow: hidden;
+        display: table;
+        width: 100%;
+        padding: 17px 17px 7px;
+    }
+
+    #pointsaveWrap .point_award ul {
+        overflow: hidden;
+        width: 420px;
+        display: table-cell;
+    }
+
+    #pointsaveWrap .point_award ul li {
+        background-color: #F3981C;
+        border-radius: 6px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        padding: 4px 5px;
+        margin: 0 0 10px 10px;
+        width: 200px;
+        float: left;
+        box-sizing: border-box;
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
+
+    #pointsaveWrap .point_award ul li:first-child {
+        padding: 14px 10px 15px;
+        font-size: 1.3rem;
+    }
+
+    #pointsaveWrap .point_award ul li:nth-child(2n+1) {
+        clear: both;
+        margin-left: 0 !important;
+    }
+
+    #pointsaveWrap .point_award ul li:nth-child(2) {
+        padding: 5px;
+    }
+
+    #pointsaveWrap .point_award ul li:nth-child(3) {
+        padding: 10px 7px;
+        font-size: 1.1rem;
+    }
+
+    #pointsaveWrap .point_award ul li:nth-child(4) {
+        font-size: 1.02rem;
+    }
+
+    #pointsaveWrap .point_award .get_point {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width: 890px) {
+        #pointsaveWrap .point_award {
+            padding-bottom: 0;
+        }
+
+        #pointsaveWrap .point_award dl {
+            margin-bottom: 25px;
+        }
+
+        #pointsaveWrap .point_award dt,
+        #pointsaveWrap .point_award dd {
+            display: block;
+            text-align: center;
+        }
+
+        #pointsaveWrap .point_award dt {
+            width: auto;
+            font-size: 1.15rem;
+            padding: 10px !important;
+            margin-right: 0;
+        }
+
+        #pointsaveWrap .point_award dt span {
+            display: inline-block;
+        }
+    }
+
+    /* --890px END-- */
+    @media screen and (max-width: 700px) {
+        #pointsaveWrap.tcard .point_award {
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #pointsaveWrap .point_award .get_point,
+        #pointsaveWrap .point_award ul {
+            overflow: hidden;
+            width: auto;
+            display: block;
+        }
+
+        #pointsaveWrap .point_award ul li {
+            padding: 4px 10px;
+            margin: 0 0 10px 2%;
+            width: 49%;
+        }
+
+        #pointsaveWrap .point_award .get_point {
+            text-align: center;
+        }
+    }
+
+    /* --700px END-- */
+    @media screen and (max-width: 640px) {
+        #pointsaveWrap .point_award {
+            padding: 10px;
+        }
+
+        #pointsaveWrap .point_award dl {
+            margin-bottom: 15px;
+        }
+
+        #pointsaveWrap .point_award dl:last-child {
+            margin-bottom: 0px;
+        }
+
+        #pointsaveWrap .point_award ul li,
+        #pointsaveWrap .point_award dt {
+            font-size: 1rem !important;
+        }
+
+        #pointsaveWrap .point_award .get_point,
+        #pointsaveWrap .point_award dd {
+            font-size: 1.45rem;
+            text-align: left;
+        }
+
+        #pointsaveWrap .point_award .get_point span,
+        #pointsaveWrap .point_award dd span {
+            font-size: 20px;
+        }
+    }
+
+    /* --640px END-- */
+    @media screen and (max-width: 450px) {
+        #pointsaveWrap .point_award ul li {
+            margin: 0 0 10px;
+            padding: 5px 10px !important;
+            float: none;
+            width: auto;
+        }
+    }
+
+    /* --450px END-- */
+    #pointsaveWrap .point_text dt {
+        font-weight: bold;
+        color: #455976;
+        font-size: 1.3rem;
+    }
+
+    #pointsaveWrap .point_text dd {
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    #pointsaveWrap .btn {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    #pointsaveWrap .btn .btn01 {
+        padding: 23px 25px;
+        font-size: 1.3rem;
+        max-width: 550px;
+        margin: 0 auto 5px;
+    }
+
+    #pointsaveWrap .deals {
+        overflow: hidden;
+        border: 3px solid #CCC;
+        padding: 19px;
+    }
+
+    #pointsaveWrap .deals .imgL {
+        width: 153px;
+        margin-bottom: 0;
+    }
+
+    #pointsaveWrap .deals .imgL img {
+        max-width: 100%;
+        height: auto;
+        width
+        /***/
+        : auto;
+    }
+
+    #pointsaveWrap .deals .txt {
+        overflow: hidden;
+    }
+
+    #pointsaveWrap .deals .txt p {
+        color: #455976;
+        font-size: 1.45rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #pointsaveWrap .deals .txt .btn {
+        margin-bottom: 0;
+    }
+
+    #pointsaveWrap .deals .txt .btn .wht {
+        margin: 0;
+        max-width: 360px;
+        padding: 18px 25px;
+    }
+
+    /* ポイントを使う */
+    .use_point .expiry_date {
+        color: #455976;
+        font-size: 1.45rem;
+        text-align: center;
+        border: 3px solid #CCC;
+        padding: 37px;
+        margin-top: 20px;
+    }
+
+    .use_point .usable {
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+    .use_point .usable li {
+        position: relative;
+        background: #F3981C;
+        border-radius: 2em;
+        color: #FFF;
+        text-align: center;
+        font-size: 1.45rem;
+        padding: 3px 10px;
+        width: 31.5%;
+        margin: 0 0 10px 2.7%;
+        float: left;
+    }
+
+    .use_point .usable li:first-child {
+        clear: both;
+        margin-left: 0 !important;
+    }
+
+    .use_point .usable li:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(243, 152, 28, 0);
+        border-top-color: #F3981C;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    .periodTxt {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .periodTxt span {
+        font-size: 60px;
+        color: #F3981C;
+        line-height: 1.2;
+    }
+
+    .use_point .txt {
+        font-weight: bold;
+        margin: 20px 0 25px;
+    }
+
+    .use_point .txt strong {
+        font-size: 35px;
+    }
+
+    .use_point .txt strong span {
+        color: #F3981C;
+    }
+
+    .use_point .txt .icon-icon_r {
+        color: #F3981C;
+        font-size: 32px;
+        margin: 0 2px 5px 8px;
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .use_point .image img {
+        max-width: 100%;
+        height: auto;
+        width
+        /***/
+        : auto;
+    }
+
+    @media screen and (max-width: 800px) {
+        .use_point .expiry_date {
+            padding: 20px 15px;
+            font-size: 1.15rem;
+        }
+
+        .use_point .usable li {
+            font-size: 1.15rem;
+        }
+
+        .periodTxt,
+        .periodTxt span {
+            font-size: 40px;
+        }
+
+        .use_point .txt strong {
+            font-size: 1.7rem;
+        }
+
+        .use_point .txt .icon-icon_r {
+            font-size: 25px;
+        }
+    }
+
+    /* --800px END-- */
+    @media screen and (max-width: 640px) {
+        .use_point .expiry_date {
+            padding: 15px 10px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .periodTxt,
+        .periodTxt span {
+            font-size: 1.45rem;
+        }
+
+        .use_point .usable {
+            display: none;
+        }
+
+        .use_point .txt {
+            margin: 15px 0 20px;
+        }
+
+        .use_point .txt strong {
+            font-size: 1.15rem;
+        }
+
+        .use_point .txt .icon-icon_r {
+            font-size: 20px;
+        }
+    }
+
+    /* --640px END-- */
+    .tcard_btn {
+        overflow: hidden;
+        margin-top: 25px;
+    }
+
+    .tcard_btn li {
+        float: left;
+        width: 48%;
+    }
+
+    .tcard_btn li:last-child {
+        float: right;
+        text-align: right;
+    }
+
+    .tcard_btn li .btn .wht {
+        max-width: 300px;
+        padding: 16px 25px;
+        line-height: 1.3;
+        font-size: 1.15rem;
+    }
+
+    .tcard_btn li .bnr {
+        max-width: 300px;
+        display: inline-block;
+        border: 2px solid #CCC;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 640px) {
+        .tcard_btn li {
+            float: none !important;
+            width: auto;
+            text-align: center !important;
+        }
+
+        .tcard_btn li:first-child {
+            margin-bottom: 15px;
+        }
+
+        .imgR_sty01,
+        .tcard_btn li .wht,
+        .tcard_btn li .btn,
+        .tcard_btn li .bnr {
+            max-width: inherit;
+            margin: 0 auto;
+        }
+    }
+
+    /* --640px END-- */
+</style><!-- === content START === -->
+<div id="content">
+    <div id="edionidcardWrap">
+        <div class="innerWrap"><!-- ポイントをためる -->
+            <div class="tcard mt10" id="pointsaveWrap">
+                <div class="cardset_sty">
+                    <h3 class="bt_line">ポイントを貯める</h3>
+                    <div class="box_area">
+                        <div class="txt_left">
+                            <div class="title">
+                                <p>エディオン各店舗でのお支払いで</p>
+                                <div class="mess">
+                                    お支払い<strong>200円</strong><span><strong>(税別)</strong></span>ごとに<strong>1ポイント</strong>進呈
+                                </div>
+                            </div>
+                            <div class="mt10">商品単位で加算ポイントを計算いたします</div>
+                            <p class="mt10">エディオンで貯まるポイントを、エディオンポイントの他、Ｔポイントもお選びいただけます。</p>
+                            <p class="mt10">
+                                ※ポイント加算は当社指定商品となります。<br>※ポイントご利用の際はレジでカードをご提示ください。カードは名義人さまのみご利用いただけます。<br>※アウト
+                                レット店舗でのご購入にはポイント特典は適用されません。<br>※一部店舗でTポイント・Tカードのお取り扱いのない店舗がございます。</p>
+                        </div>
+                        <p class="photo"><img src="/sites/default/files/inline-images/img_tcurd.jpg"
+                                data-entity-uuid="44bd60ce-bf7c-4503-ba16-c48c961d7e22" data-entity-type="file"
+                                alt="Tカード"></p>
+                    </div>
+                </div>
+                <div class="point_award">
+                    <ul>
+                        <li>家電品・パソコン</li>
+                        <li><span>テレビゲームソフト(新品)映像・音楽ソフト</span></li>
+                        <li><span>消耗品・パソコンサプライ各種アクセサリー</span></li>
+                        <li><span>他社様クレジットカード決済・お申し込みクレジット</span></li>
+                    </ul>
+                    <div class="get_point">お支払い<span>200</span>円(税別)ごとに<span>1ポイント</span>進呈</div>
+                </div><!-- pointsaveWrap ] -->
+            </div><!-- ポイントを使う -->
+            <div class="use_point">
+                <h3 class="bt_line">ポイントを使う</h3>
+                <p>貯めたポイントは、エディオン各店舗で1ポイント1円分としてお買い物いただけます。</p>
+                <div class="expiry_date text-align-center">
+                    <div class="periodTxt text-align-center">ポイントの有効期限はポイントの<br>最終変動日より<span>1年</span>です。</div>
+                    <p class="text-align-center">獲得ポイントの有効期限は、ポイントの最終変動日より<br>1年間ご利用がない場合、ポイントは失効します。</p>
+                </div>
+            </div>
+            <ul class="tcard_btn">
+                <li>
+                    <div class="btn wht"><a class="icon_link" href="https://ssl.help.tsite.jp/"
+                            target="_blank"><span>Ｔポイント・Ｔカードに関する</span>よくある質問はこちら</a></div>
+                </li>
+                <li><a class="bnr" href="http://www.ccc.co.jp/customer/" target="_blank"><img
+                            src="/sites/default/files/inline-images/bnr_tpoint.gif"
+                            data-entity-uuid="f5c19409-9ff5-4bf4-87a1-82f7d5472e1c" data-entity-type="file"
+                            alt="T会員の皆さまへ"></a></li>
+            </ul>
+            <div class="btn_wrap mt50">
+                <p class="btn"><a href="/card">エディオンカードトップ</a></p>
+            </div><!-- ] innerWrap END -->
+        </div><!-- ] edioncardWrap END -->
+    </div><!-- ] content END -->
+</div><!-- === content END === -->

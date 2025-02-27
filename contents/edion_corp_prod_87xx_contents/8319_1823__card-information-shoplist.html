@@ -1,0 +1,680 @@
+<style type="text/css">
+    .bgBl p {
+        color: #FFFFFF !important;
+    }
+
+    .bgBl dt p {
+        text-align: center !important;
+    }
+
+    .ck.ck-content .preferentialList li {
+        padding: 10px;
+        flex: 0 0 28%;
+        max-width: 28%;
+        margin-bottom: 20px;
+        list-style-type: none;
+        float: left;
+        margin-left: 2.3%;
+    }
+
+    span:has(input.tab-switch:checked)~.tab-label::after {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .ck.ck-content .tab-label {
+        color: #1B50A2;
+        margin-bottom: -1px;
+        padding: 10px .5em;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 13px 5px;
+        margin: 0 0 0 8px;
+        border: 3px solid #1B50A2;
+        border-bottom: 0 #fff solid;
+        border-radius: 6px 6px 0 0;
+    }
+
+    div.tab-item {
+        flex: 1;
+        order: -1;
+    }
+
+    .ck-widget.html-object-embed {
+        display: inline !important;
+        font-size: 0 !important;
+        outline: 0 !important;
+        min-width: 0;
+    }
+
+    h3 a {
+        color: #284DB4;
+    }
+
+    h3 a::before {
+        display: inline-block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        vertical-align: middle;
+        border-width: 6px 0 6px 10px;
+        border-color: transparent transparent transparent #284DB4;
+        margin-right: 10px;
+    }
+
+    .inquiryWrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        text-align: left;
+    }
+
+    /*ご優待特典が終了する施設は画像を透過しない*/
+    .image toimg img:hover {
+        opacity: 0.5;
+    }
+
+    /*ご優待特典が終了する施設は下記のクラスをつけてお知らせする*/
+    /*ここから*/
+    .bgBl {
+        background-color: #1b50a2 !important;
+        color: #FFFFFF;
+        font-size: 0.785714281rem;
+        margin-top: 10px;
+    }
+
+    /*ここまで*/
+    .p5 {
+        padding: 5px !important;
+    }
+
+    .txtC {
+        text-align: center !important;
+    }
+
+    .column_list a>h3 {
+        text-indent: 0 !important;
+    }
+
+    .column_list a>h3::before {
+        content: none !important;
+    }
+
+    iconset {
+        text-align: center;
+        margin: 10px 20px;
+    }
+
+    .icon_orico {
+        background-color: #FFF;
+        border: solid 2px #EB5C02;
+        border-radius: 5px;
+        color: #EB5C02;
+        font-size: 0.75rem;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+        word-break: break-all;
+        vertical-align: top;
+        margin-right: 20px;
+        text-indent: 0 !important;
+    }
+
+    .icon_cedyna {
+        background-color: #FFF;
+        border: solid 2px #152687;
+        border-radius: 5px;
+        color: #152687;
+        font-size: 0.75rem;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+        word-break: break-all;
+        vertical-align: top;
+        text-indent: 0 !important;
+    }
+
+    /*ご優待特典が終了した施設*/
+    .pointer-events {
+        pointer-events: none;
+    }
+
+    /*ここまで*/
+    .preferentialList ul {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-left: -1.6%;
+    }
+
+    .preferentialList ul.android_brw {
+        display: block;
+        letter-spacing: -.40em;
+    }
+
+    .preferentialList ul.android_brw li {
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: normal;
+    }
+
+    .preferentialList li {
+        padding: 10px;
+        flex: 0 0 28%;
+        max-width: 28%;
+        margin-bottom: 20px;
+        list-style-type: none;
+        float: left;
+        margin-left: 2.3%;
+    }
+
+    .preferentialList li .image {
+        display: table;
+        width: 100%;
+        height: 150px;
+        table-layout: fixed;
+    }
+
+    .preferentialList li .image a {
+        border-bottom: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+        display: table-cell;
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .preferentialList li .point {
+        text-align: center;
+        background-color: #F5981F;
+        font-weight: bold;
+        padding: 3px 10px;
+        color: #FFF;
+        margin-bottom: 8px;
+        margin-top: 20px;
+    }
+
+    .preferentialList li .title {
+        font-size: 1.15rem;
+        margin: 5px 0;
+        font-weight: bold;
+        color: #284DB4;
+    }
+
+    .preferentialList li p {
+        color: #000;
+    }
+
+    .preferentialList li .image {
+        display: table;
+        width: 100%;
+        height: 150px;
+        table-layout: fixed;
+    }
+
+    .preferentialList li .image a:hover {
+        opacity: 0.5;
+    }
+
+    /* タブ切り替え */
+    .tab-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .tab-label {
+        color: #1B50A2;
+        cursor: pointer;
+        flex: 1;
+        font-weight: bold;
+        order: -1;
+        padding: 12px 24px;
+        position: relative;
+        text-align: center;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    /*.tab-label:hover {
+        opacity: 0.5;
+        color: #fff;
+    }*/
+    .tab-switch:checked+.tab-label {
+        color: #1B50A2;
+        background: #fff;
+    }
+
+    .tab-label::after {
+        background: #fff;
+        bottom: -3px;
+        content: '';
+        display: block;
+        height: 3px;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transform: translateX(100%);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .tab-switch:checked~.tab-label::after {
+        transform: translateX(-100%);
+    }
+
+    .tab-switch:checked+.tab-label::after {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .tab-content {
+        height: 0;
+        display: none;
+        padding: 0;
+        pointer-events: none;
+        width: 100%;
+        background: #fff;
+    }
+
+    .tab-switch:checked~.tab-content {
+        transform: translateX(30%);
+    }
+
+    .tab-switch:checked+.tab-label+.tab-content {
+        height: auto;
+        opacity: 1;
+        order: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .tab-wrap::after {
+        content: '';
+        /*height: 20px;*/
+        order: -1;
+        width: 100%;
+    }
+
+    .tab-switch {
+        display: none;
+    }
+
+    .tab-label {
+        color: #1B50A2;
+        margin-bottom: -1px;
+        padding: 10px .5em;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 13px 5px;
+        margin: 0 0 0 8px;
+        border: 3px solid #1B50A2;
+        border-bottom: 0 #fff solid;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .tab-switch:checked+.tab-label:before {
+        transform: rotate(0);
+    }
+
+    .tab-content {
+        height: 0;
+        padding: 0 15px;
+        overflow: hidden;
+        display: none;
+        transform: translateX(8px);
+    }
+
+    /* アクティブなタブ */
+    .tab-switch:checked+ {
+        background-size: 40%;
+    }
+
+    /*.tab-switch:checked+.au img:first-child,.tab-switch:checked+.sfb img:first-child,.tab-switch:checked+.yah img:first-child{
+     opacity: 0;
+    }*/
+    .tab-switch:checked+.tab-label+.tab-content {
+        height: auto;
+        overflow: auto;
+        margin-bottom: -1px;
+        padding: 15px;
+        opacity: 1;
+        border: 0;
+        border-top: 3px solid #1B50A2;
+        position: relative;
+        left: 8px;
+    }
+
+    /* ラジオボタン非表示 */
+    .tab-switch {
+        display: none;
+    }
+
+    @media screen and (max-width: 800px) {
+        div.tab-item:has(input.tab-switch:checked)+.tab-content {
+            border-top: none !important;
+        }
+
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        .preferentialList li {
+            max-width: 100%;
+            flex: auto;
+        }
+
+        .innerWrapAll,
+        .innerWrap {
+            padding: 0 10px;
+            max-width: 730px;
+        }
+
+        .tab-wrap {
+            display: inline-flex;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5px 0px;
+            font-size: 13px;
+            border-bottom: 0 solid #1B50A2 !important;
+            margin-bottom: 20px;
+        }
+
+        .tab-switch:checked+.tab-label+.tab-content {
+            border-top: 0;
+            width: 200%;
+        }
+
+        .tab-label {
+            border-radius: 6px;
+            border-bottom: 3px solid #1B50A2 !important;
+            font-size: 13px;
+
+        }
+
+        .tab-switch:checked+.tab-label {
+            color: #1B50A2;
+            background: antiquewhite;
+        }
+
+        .tab-label:hover {
+            opacity: 0.7;
+        }
+
+        .tab-label::after {
+            display: none;
+        }
+
+        .tab-switch:checked+.tab-label+.tab-content {
+            padding: 0 15px;
+        }
+    }
+
+    div.tab-item:has(input.tab-switch:checked)~.tab-content {
+        transform: translateX(30%);
+    }
+
+    div.tab-item:has(input.tab-switch:checked)+.tab-content {
+        height: auto;
+        display: block;
+        order: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+        padding: 15px !important;
+        border-top: 3px solid #1B50A2;
+        position: relative;
+        left: 8px;
+    }
+</style>
+<h2 class="bg_title mb30">ポイントを貯める</h2>
+<h3 class="bt_line mb30">エディオンカードを利用しておトクにポイントを貯めませんか。</h3>
+<p class="mb30">エディオンカードを発行しているクレジット会社によりご利用いただける優待加盟店は異なります。</p>
+<p class="mb30">エディオンカードの発行クレジット会社を選択してください。</p>
+<div class="tab-wrap">
+    <div class="tab-item"><input class="tab-switch" checked="checked" id="TAB-01" name="TAB" type="radio"> <label
+            class="tab-label dcm" for="TAB-01">すべての施設</label></div>
+    <div class="tab-content">
+        <div class="preferentialList">
+            <ul>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a style="pointer-events:none;"
+                            href="https://my.edion.jp/card/information/shoplist/cecile.php"><img
+                                src="/sites/default/files/inline-images/u_ce.jpg" alt="セシール様"></a></div>
+                    <div class="point">ポイント：2倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span> <span
+                                class="icon_cedyna">SMBCファイナンスサービスエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a style="pointer-events:none;"
+                                    href="https://my.edion.jp/card/information/shoplist/cecile.php">セシール様</a></h3>
+                        </div>
+                        <p>カタログの通販のセシール。エディオンカードでお支払いすればポイントが2倍に。</p>
+                        <dl class="bgBl tWhite fnt11 p5">
+                            <dt class="txtC p5">
+                                <p>～ご優待特典終了のお知らせ～</p>
+                            </dt>
+                            <dd class="p5">
+                                <p>2021年3月31日（水）をもってご優待特典を終了させていただくこととなりました。 何卒ご了承いただきますようお願い申し上げます。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/the0123.php"><img
+                                src="/sites/default/files/inline-images/u_01.jpg" alt="アート引越センター様"></a></div>
+                    <div class="point">ポイント：3倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span> <span
+                                class="icon_cedyna">SMBCファイナンスサービスエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/the0123.php">アート引越センター様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>専用電話番号へご連絡いただきエディオンカードでお支払いすればポイントが3倍貯まります。さらに割引特典も付いてオトク！</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-item"><input class="tab-switch" id="TAB-02" name="TAB" type="radio"> <label class="tab-label"
+            for="TAB-02">オリコエディオンカード</label></div>
+    <div class="tab-content">
+        <div class="preferentialList">
+            <ul>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/taiyakan.php"><img
+                                src="/sites/default/files/inline-images/u_om.jpg" alt="オリコモール様"></a></div>
+                    <div class="point">ポイント：最大10.5倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/oricomall.php">オリコモール様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>参加ショップはAmazon.co.jp、Yahoo!ショッピング、楽天市場、ベルメゾンネット、DHCなど人気のショップサイト約600店舗！とってもおトクなポイントモール！</p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/taiyakan.php"><img
+                                src="/sites/default/files/inline-images/u_ta.jpg" alt="タイヤ館様"></a></div>
+                    <div class="point">ポイント：2倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/taiyakan.php">タイヤ館様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>タイヤ・ホイールはもちろん、カーナビのご相談から愛車のメンテナンスまで。中国地区・九州地区の直営57店舗・FC4店舗にてエディオンカードでお支払いただくとポイントが2倍に！</p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a style="pointer-events:none;"
+                            href="https://my.edion.jp/card/information/shoplist/sakai.php"><img
+                                src="/sites/default/files/inline-images/u_sakai.jpg" alt="アート引越センター様"></a></div>
+                    <div class="point">ポイント：3倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a style="pointer-events:none;"
+                                    href="https://my.edion.jp/card/information/shoplist/sakai.php">サカイ引越センター様</a></h3>
+                        </div>
+                        <p>全国のサカイ引越センターの各店舗にて、エディオンカードでお支払いすればポイント3倍。さらに、引越し基本料金を20％OFF</p>
+                        <dl class="bgBl tWhite fnt11 p5">
+                            <dt class="txtC p5">
+                                <p>～ご優待特典終了のお知らせ～</p>
+                            </dt>
+                            <dd class="p5">
+                                <p>2020年6月30日（火）をもってご優待特典を終了させていただくこととなりました。 何卒ご了承いただきますようお願い申し上げます。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/estelle.php"><img
+                                src="/sites/default/files/inline-images/u_estelle.jpg" alt="あずみエステールー様"></a></div>
+                    <div class="point">ポイント：2倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/estelle.php">あずみエステール様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>11のジュエリーブランドとメガネショップからなる国内最大級のジュエリー/メガネ専門店です。各店舗でエディオンカードでお支払いすればポイントが2倍に。</p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/joyful.php"><img
+                                src="/sites/default/files/inline-images/joyful.jpg" alt="ジョイフル恵利様"></a></div>
+                    <div class="point">ポイント：2倍</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/joyful.php">ジョイフル恵利様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>全国の〔ジョイフル恵利〕の各店舗にて、振袖販売・レンタルのお支払いにエディオンカードでご利用いただくとポイント2倍</p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/takaq.php"><img
+                                src="/sites/default/files/inline-images/takaq.jpg" alt="タカキュー様"></a></div>
+                    <div class="point">ご請求時にいつでも5%OFF</div>
+                    <div class="txt">
+                        <p><span class="icon_orico">オリコエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/takaq.php">タカキュー様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>全国のTAKA－Qグループ各店にて、商品代金のお支払いにエディオンカードをご利用いただくとご請求時※にいつでも5％OFF！</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-item"><input class="tab-switch" id="TAB-03" name="TAB" type="radio"> <label class="tab-label sfb"
+            for="TAB-03">SMBCファイナンスサービスエディオンカード</label></div>
+    <div class="tab-content">
+        <div class="preferentialList">
+            <ul>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/taiyakan.php"><img
+                                src="/sites/default/files/inline-images/u_cedynavi.jpg"
+                                alt="SMBCファイナンスサービス ポイントＵＰモール様"></a></div>
+                    <div class="point">ポイント：最大20倍</div>
+                    <div class="txt">
+                        <p><span class="icon_cedyna">SMBCファイナンスサービスエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/oricomall.php">SMBCファイナンスサービス
+                                    ポイントＵＰモール様<span class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>対象ショップは300以上！ポイントモールを経由してAmazon.co.jpや楽天市場、Yahoo!ショッピングなどお気に入りのショップでネットショッピングするだけで、ポイントがおトクにたまる！
+                        </p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/usami.php"><img
+                                src="/sites/default/files/inline-images/usami.jpg" alt="宇佐美GS直営店様"></a></div>
+                    <div class="point">ポイント：1.5倍</div>
+                    <div class="txt">
+                        <p><span class="icon_cedyna">SMBCファイナンスサービスエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/usami.php">宇佐美GS直営店<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>全国の宇佐美GS直営店にてエディオンカードで お支払いすればポイントが1.5倍貯まります。</p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://my.edion.jp/card/information/shoplist/yamagataya.php"><img
+                                src="/sites/default/files/inline-images/u_ya.jpg" alt="銀座山形屋様"></a></div>
+                    <div class="point">ポイント：2倍</div>
+                    <div class="txt">
+                        <p><span class="icon_cedyna">SMBCファイナンスサービスエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://my.edion.jp/card/information/shoplist/yamagataya.php">銀座山形屋様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>お手頃価格でオーダーメイドスーツを。<br>銀座山形屋の専任フイッターがご自宅やオフイスに伺います。</p>
+                    </div>
+                </li>
+                <li style="display:list-item;">
+                    <div class="image toimg"><a href="https://www.cedyna.co.jp/card/service/fujita/index3.html"><img
+                                src="/sites/default/files/inline-images/fujitakankou.jpg" alt="藤田観光グループ様"></a></div>
+                    <div class="point">ポイント：3倍</div>
+                    <div class="txt">
+                        <p><span class="icon_cedyna">SMBCファイナンスサービスエディオンカード</span></p>
+                        <div class="title">
+                            <h3><a href="https://www.cedyna.co.jp/card/service/fujita/index3.html">藤田観光グループ様<span
+                                        class="icon_link"><img
+                                            src="/sites/default/themes/custom/edion_cojp_front/common/img/icon_link_blu.svg"
+                                            alt="外部リンク" width="14" height="14"></span></a></h3>
+                        </div>
+                        <p>対象の施設にてエディオンカードでお支払すればポイントが3倍に。（※SMBCファイナンスサービス 様ホームページに遷移します。）</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="btn_wrap mt50">
+    <p class="btn"><a href="/card/information/">ポイントを貯める一覧へ戻る</a></p>
+</div>

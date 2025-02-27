@@ -1,0 +1,1084 @@
+<style type="text/css">
+    /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .bg_title {
+        background: #1B50A2;
+        color: #fff;
+    }
+
+    h4 {
+        color: #000;
+    }
+
+    table th,
+    td {
+        border-right: solid 1px #CCC !important;
+    }
+
+    .movie_area {
+        border: 0px none !important;
+        border-right: 0px none;
+    }
+
+    .border_area {
+        border: solid 1px #CCC;
+    }
+
+    .b {
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+
+
+    .page_anchor .dcm p {
+        border-color: #D00E30;
+    }
+
+    .page_anchor .dcm p a:after {
+        border-bottom: 1px solid #D00E30;
+        border-right: 1px solid #D00E30;
+    }
+
+    .page_anchor .au p {
+        background: #F15A23;
+        border-color: #F15A23;
+    }
+
+    .page_anchor .au p a:after {
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+    }
+
+    .page_anchor .sfb p {
+        background: #BBBBBB;
+        border-color: #BBBBBB;
+    }
+
+    .page_anchor .sfb p a:after {
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+    }
+
+    .page_anchor .ymb p {
+        background: #FF0033;
+        border-color: #FF0033;
+    }
+
+    .page_anchor .ymb p a:after {
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+    }
+
+    .tit05 {
+        font-size: 1.15rem;
+        padding: 6px 10px 5px;
+        color: #455C76;
+        font-weight: bold;
+        background-color: #F9F9F9;
+        margin-bottom: 15px;
+        border: 1px solid #CCCCCC;
+        border-left: 2px solid #1F529F;
+    }
+
+    h3 {
+        color: #455976;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .bt_line {
+        font-size: 100%;
+        font-weight: 100;
+        padding: 10px 0 15px;
+        margin: 0;
+    }
+
+    .inner {
+        margin-bottom: 30px;
+    }
+
+    .tit02 {
+        line-height: 1;
+        border-top: 2px solid #1B50A2;
+        padding: 13px 0;
+        color: #455C76;
+        font-size: 1.45rem;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .flow {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .flow li {
+        width: 16%;
+        min-height: 110px;
+        border: 2px solid #D00E31;
+        border-radius: 6px;
+        padding: 10px;
+        margin-left: 5%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .flow li:before {
+        position: absolute;
+        content: "\e893";
+        font-family: "fontello";
+        width: 1em;
+        height: 1em;
+        font-size: 2.15rem;
+        text-align: center;
+        left: -30%;
+        top: 50%;
+        color: #D00E31;
+        margin-top: -0.7em;
+    }
+
+    .flow li:first-child {
+        margin-left: 0 !important;
+    }
+
+    .flow li:first-child:before {
+        display: none;
+    }
+
+    .flow li strong {
+        color: #D80000;
+    }
+
+    .flow li.point {
+        background-color: #FFFBC6;
+    }
+
+    .li_au li {
+        border-color: #F15A23;
+    }
+
+    .li_au li strong,
+    .li_au li:before {
+        color: #F15A23;
+    }
+
+    .li_softbank li {
+        border-color: #0068B7;
+    }
+
+    .li_softbank li strong,
+    .li_softbank li:before {
+        color: #0068B7;
+    }
+
+    .li_ymobile li {
+        border-color: #FF0033;
+    }
+
+    .li_ymobile li strong,
+    .li_ymobile li:before {
+        color: #FF0033;
+    }
+
+    .apply {
+        display: flex;
+        align-items: center;
+        border-top: 1px dotted #CCC;
+        padding: 15px;
+        margin: 25px 0 0;
+    }
+
+    .apply span {
+        margin-right: 5px;
+        border: 1px solid #CCC;
+        border-radius: 2em;
+        background-color: #F5F5F5;
+        padding: 2px 15px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .qrcode {
+        border: 1px solid #CCC;
+        background-color: #F5F5F5;
+        padding: 10px;
+        overflow: hidden;
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    .qrcode .image {
+        width: 100px;
+    }
+
+    .qrcode .image,
+    .qrcode .txt {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .qrcode .txt {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .bsl {
+        align-items: baseline;
+    }
+
+    .dsc {
+        list-style: disc;
+        margin-left: 20px;
+    }
+
+    .dcm {
+        background: #FFF;
+        border-color: #D00E30 !important;
+    }
+
+    .au {
+        background: #F15A23;
+        border-color: #F15A23 !important;
+    }
+
+    .sfb {
+        background: #BBBBBB;
+        border-color: #BBBBBB !important;
+    }
+
+    .yah {
+        background: #FF0033;
+        border-color: #FF0033 !important;
+    }
+
+    .innerWrap {
+        max-width: 960px;
+        padding: 0 15px;
+        margin: 0 auto;
+        zoom: 1;
+    }
+
+    /* タブ切り替え */
+    .tab-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .tab-label {
+        color: #fff;
+        cursor: pointer;
+        flex: 1;
+        font-weight: bold;
+        order: -1;
+        padding: 12px 24px;
+        position: relative;
+        text-align: center;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    /*.tab-label:hover {
+	opacity: 0.5;
+    color: #fff;
+}*/
+
+    .tab-switch:checked+.tab-label {
+        color: #1B50A2;
+        background: #fff;
+    }
+
+    .tab-label::after {
+        background: #fff;
+        bottom: -3px;
+        content: '';
+        display: block;
+        height: 3px;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transform: translateX(100%);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .tab-switch:checked~.tab-label::after {
+        transform: translateX(-100%);
+    }
+
+    .tab-switch:checked+.tab-label::after {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .tab-content {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        pointer-events: none;
+        width: 100%;
+        background: #fff;
+
+    }
+
+    .tab-switch:checked~.tab-content {
+        transform: translateX(30%);
+    }
+
+    .tab-switch:checked+.tab-label+.tab-content {
+        height: auto;
+        opacity: 1;
+        order: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .tab-wrap::after {
+        content: '';
+        /*height: 20px;*/
+        order: -1;
+        width: 100%;
+
+    }
+
+    .tab-switch {
+        display: none;
+    }
+
+    .tab-label {
+        color: White;
+        margin-bottom: -1px;
+        padding: 10px .5em;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 13px 5px;
+        margin: 0 0 0 8px;
+        border: 3px solid #c1c1c1;
+        border-bottom: 0 #fff solid;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .tab-label img {
+        height: 30px;
+        width: auto;
+    }
+
+    .tab-switch:checked+.tab-label:before {
+        transform: rotate(0);
+    }
+
+    .tab-content {
+        height: 0;
+        padding: 0 15px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(8px);
+    }
+
+    /* アクティブなタブ */
+    .tab-switch:checked+.au {
+        background: url(/sites/default/files/inline-images/logo_au_0.png) center center no-repeat;
+        background-size: 40%;
+    }
+
+    .tab-switch:checked+.au img:first-child,
+    .tab-switch:checked+.sfb img:first-child,
+    .tab-switch:checked+.yah img:first-child {
+        opacity: 0;
+    }
+
+    .tab-switch:checked+.sfb {
+        background: url(/sites/default/files/inline-images/logo_softbank_0.png) center center no-repeat;
+        background-size: 60%;
+    }
+
+    .tab-switch:checked+.yah {
+        background: url(/sites/default/files/inline-images/logo_yahoo_0.png) center center no-repeat;
+        background-size: 60%;
+    }
+
+    .tab-switch:checked+.tab-label+.tab-content {
+        height: auto;
+        overflow: auto;
+        margin-bottom: -1px;
+        padding: 15px;
+        opacity: 1;
+        border: 0;
+        border-top: 3px solid #1B50A2;
+        position: relative;
+        left: 8px;
+    }
+
+    /* ラジオボタン非表示 */
+    .tab-switch {
+        display: none;
+    }
+
+
+    @media screen and (max-width: 800px) {
+
+        /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        iframe {
+            width: 300px;
+            height: 160px;
+        }
+
+        .col-md-4 a {
+            text-align: left;
+        }
+
+        th,
+        td {
+            display: block;
+            width: 100% !important;
+        }
+
+        .innerWrapAll,
+        .innerWrap {
+            padding: 0 10px;
+            max-width: 730px;
+        }
+
+        .txt {
+            margin-top: 20px;
+        }
+
+        .b {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .btn {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        .flow {
+            display: block;
+        }
+
+        .flow li {
+            width: auto;
+            margin-left: 0;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            min-height: inherit;
+        }
+
+        .flow li:before {
+            display: none;
+        }
+
+        .row3 th {
+            width: 100% !important;
+        }
+
+        .tab-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5px 0px;
+        }
+
+        .tab-switch:checked+.tab-label+.tab-content {
+            border-top: 0;
+            width: 200%;
+        }
+
+        .tab-label {
+            border-bottom: 3px #c1c1c1 solid !important;
+            border-radius: 6px;
+        }
+
+        .tab-label::after {
+            display: none;
+        }
+
+        .tab-wrap .dcm {
+            border-bottom: 3px solid #D00E30 !important;
+        }
+
+        .tab-wrap .au {
+            border-bottom: 3px solid #F15A23 !important;
+        }
+
+        .tab-wrap .sfb {
+            border-bottom: 3px solid #BBBBBB !important;
+        }
+
+        .tab-wrap .yah {
+            border-bottom: 3px solid #FF0033 !important;
+        }
+
+        .tab-switch:checked+.tab-label+.tab-content {
+            padding: 0 15px;
+        }
+    }
+</style>
+<div class="innerWrap">
+    <p>今お使いのスマートフォン・携帯電話のお支払いをエディオンカードに変更して賢くポイントを貯めましょう。毎月の支払いが、仮に1万円なら100ポイント貯まります。1年で1,200円分も自動的に貯まってお得！</p>
+
+    <p>&nbsp;</p>
+
+    <p>お使いの携帯電話会社をクリックしますと、エディオンカードで支払いをする変更方法が、ご確認いただけます。</p>
+
+    <div class="mb40">&nbsp;</div>
+    <!-- docomo -->
+
+    <div class="tab-wrap"><input checked="checked" class="tab-switch" id="TAB-01" name="TAB" type="radio" /> <label
+            class="tab-label dcm" for="TAB-01"><img alt="docomo"
+                src="/sites/default/files/inline-images/logo_docomo_0.png" /></label>
+
+        <div class="tab-content">
+            <h3 id="docomo"><img alt="docomo" src="/sites/default/files/inline-images/logo_docomo_0.png" />の場合</h3>
+
+            <p class="fnt15 bt_line">お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+            <div class="inner">
+                <div class="tit02" style="border-top: none;">
+                    <h3>インターネットからお手続き(My docomo)</h3>
+                </div>
+
+                <p><a href="https://www.docomo.ne.jp/mydocomo/">http://www.docomo.ne.jp/mydocomo/</a></p>
+
+                <p>※My docomoの登録が必要になります（登録無料）。</p>
+
+                <ul class="flow">
+                    <li>①ドコモ公式ホームページから【My docomoログイン】を選択</li>
+                    <li>②ログイン<br />
+                        (My docomo IDとパスワードを入力)</li>
+                    <li>③各種お申込・お手続き</li>
+                    <li>④お支払い方法の変更</li>
+                    <li>⑤画面に沿ってお手続きをしてください。</li>
+                </ul>
+
+                <p>ドコモ公式ホームページから【My docomoログイン】を選択→【ログイン（docomo
+                    IDとパスワードを入力）】→【各種お申込・お手続き】→【お支払方法の変更】→お手持ちのエディオンカード情報を正確にご入力ください。→画面に沿ってお手続きをしてください。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>携帯電話(iモード)からお手続き</h3>
+                </div>
+
+                <p>お持ちの携帯電話（i モード）からお手続きいただけます。</p>
+
+                <ul class="flow">
+                    <li>①i Menuから<strong>「お客様サポート」</strong>を選択</li>
+                    <li>②<strong>「お申込・お手続き」</strong>を選択</li>
+                    <li>③<strong>「各種お申込・お手続き」</strong>を選択</li>
+                    <li class="point">④利用規約の同意にチェック後ネットワーク暗証番号を入力しログイン</li>
+                    <li>⑤<strong>「ご契約内容確認・変更」</strong>を選択</li>
+                    <li>⑥「お支払い方法変更」を選択</li>
+                    <li class="point">⑦<strong>「クレジット」</strong>を選択後画面に沿ってお手続き。</li>
+                </ul>
+
+                <p>※「ネットワーク暗証番号」が必要となります。</p>
+
+                <p>※お使いの携帯電話の画面と違う場合があります。あらかじめご了承ください。</p>
+
+                <div class="qrcode pcOn">
+                    <div class="image"><img alt="qrcode" src="/sites/default/files/inline-images/pay_qa_docomo_0.gif" />
+                    </div>
+
+                    <div class="txt">
+                        <p>QRコードを読み取ると<br />
+                            「各種お申込・お手続き」へジャンプします。</p>
+                    </div>
+                </div>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>iPhoneからお手続き</h3>
+                </div>
+
+                <p>お持ちのiPhoneからお手続きいただけます。</p>
+
+                <ul class="flow">
+                    <li>①dmenuから<strong>「お客様サポート」</strong>を選択</li>
+                    <li>②<strong>「オンライン手続き」</strong>を選択</li>
+                    <li>③<strong>「各種お申込・お手続き」</strong>を選択</li>
+                    <li class="point">④利用規約の同意にチェック後ネットワーク暗証番号を入力しログイン</li>
+                    <li>⑤<strong>「お支払い方法変更」</strong>を選択</li>
+                    <li class="point">⑥画面に沿ってお手続きください。</li>
+                </ul>
+
+                <p>※「ネットワーク暗証番号」が必要となります。</p>
+
+                <p>※お使いのスマートフォンの画面と違う場合があります。あらかじめご了承ください。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>店頭(ドコモショップ)からお手続き</h3>
+                </div>
+
+                <p><strong>【ご用意いただくもの】</strong></p>
+
+                <ul class="dsc">
+                    <li>docomoの携帯電話</li>
+                    <li>本人確認書類(運転免許証、健康保険証など)</li>
+                    <li>エディオンカード（クレジットカード）</li>
+                </ul>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>郵送からお手続き(電話)</h3>
+                </div>
+
+                <ul class="dsc">
+                    <li>NTT ドコモの携帯電話から 151（無料）</li>
+                    <li>一般電話から 0120-800-000（無料）</li>
+                    <li>受付時間：9:00 ～ 20:00</li>
+                </ul>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>クレジットカード会社との手続きが完了次第翌月から変更が適用されます。</p>
+                </div>
+            </div>
+        </div>
+        <!-- /docomo --> <!-- au --> <input class="tab-switch" id="TAB-02" name="TAB" type="radio" /> <label
+            class="tab-label au" for="TAB-02"><img alt="au" class="dnon"
+                src="/sites/default/files/inline-images/logo_au_wh.png" /></label>
+
+        <div class="tab-content">
+            <h3 id="au"><img alt="au" src="/sites/default/files/inline-images/logo_au_0.png" />の場合</h3>
+
+            <p class="fnt15 bt_line">お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+            <div class="inner">
+                <div class="tit02" style="border-top: none;">
+                    <h3>インターネットからお手続き（au お客様サポート）</h3>
+                </div>
+
+                <p><a href="http://www.au.kddi.com/">http://www.au.kddi.com/</a></p>
+
+                <p>※ au のサービスをご利用になるための au ID が必要です。</p>
+
+                <ul class="flow li_au">
+                    <li>①au公式ホームページから【auお客様サポート】を選択</li>
+                    <li>②契約の確認・変更を選択後、【支払方法を変更する「手続きをする」】を選択</li>
+                    <li>③インターネットで申し込む(口座振替・クレジットカードでのお支払い)の【お申し込みはこちら】を選択</li>
+                    <li>④au IDとパスワードを入力してログイン</li>
+                    <li>⑤クレジットカード支払いに関する同意事項の【同意して登録する】を選択</li>
+                    <li>⑥画面に沿って手続きください。</li>
+                </ul>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>携帯電話（EZweb）からお手続き</h3>
+                </div>
+
+                <p>お持ちの携帯電話（EZweb）からお手続きいただけます。</p>
+
+                <ul class="flow li_au">
+                    <li>①i 「au oneトップ」または「トップメニュー」から<strong>「auお客さまサポート」</strong>を選択</li>
+                    <li>②<strong>「申し込む／変更する」</strong>を選択</li>
+                    <li>③<strong>「支払方法変更」</strong>を選択</li>
+                    <li class="point">④「次へ」を選択して４桁の暗証番号を入力して送信を選択</li>
+                    <li class="point">⑤<strong>「クレジットカード」</strong>を選択して画面に沿ってお手続きしてください。</li>
+                </ul>
+
+                <p>クレジットカードに記載された「セキュリティコード」の入力が必要です。<br />
+                    カード裏面の署名欄に記載された3桁の数字がセキュリティコード です。数字が4桁以上ある場合は右から3桁を使用します。</p>
+
+                <p>※お使いの携帯電話の画面と違う場合があります。あらかじめご了承ください。</p>
+
+                <div class="qrcode pcOn">
+                    <div class="image"><img alt="qrcode" src="/sites/default/files/inline-images/pay_qa_au_0.gif" />
+                    </div>
+
+                    <div class="txt">
+                        <p>QRコードを読み取ると<br />
+                            「各種お申込・お手続き」へジャンプします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>スマートフォンからお手続き</h3>
+                </div>
+
+                <p>お持ちのスマートフォンからお手続きいただけます。</p>
+
+                <ul class="flow li_au">
+                    <li>①au公式ホームページから<strong>「auお客さまサポート」</strong>を選択</li>
+                    <li>②au IDとパスワードを入力して<strong>ログイン</strong></li>
+                    <li>③<strong>「契約確認・変更」</strong>から<strong>「支払い方法を変更する」</strong>を選択</li>
+                    <li class="point">④<strong>「クレジットカード」</strong>を選択して画面に沿ってお手続きしてください。</li>
+                </ul>
+
+                <p>※auのサービスをご利用になるためのau IDが必要です。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>iPhoneからお手続き</h3>
+                </div>
+
+                <p>お持ちのiPhoneからお手続きいただけます。</p>
+
+                <ul class="flow li_au">
+                    <li>①Safariを起動</li>
+                    <li>②<strong>「ブックマーク」(本の形のマーク)</strong>を選択</li>
+                    <li>③<strong>「auお客さまサポート」</strong>を選択</li>
+                    <li class="point">④au IDとパスワードを入力して<strong>ログイン</strong></li>
+                    <li class="point">⑤<strong>「契約確認・変更」</strong>から<strong>「支払い方法を変更する」</strong>を選択</li>
+                    <li>⑥<strong>「クレジットカード」</strong>を選択して画面に沿ってお手続きしてください。</li>
+                </ul>
+
+                <p>※auのサービスをご利用になるためのau IDが必要です。</p>
+
+                <p>※お使いのiPhoneの画面と違う場合があります。あらかじめご了承ください。</p>
+
+                <div class="apply bsl">
+                    <p><span>適用について</span></p>
+
+                    <div>
+                        <p>翌月から変更が適用されます。</p>
+
+                        <p>お手続きが月末2日間お手続きの場合、翌々月からの適用となる場合がございます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>店頭(au ショップ)からお手続き</h3>
+                </div>
+
+                <p><strong>【ご用意いただくもの】</strong></p>
+
+                <ul>
+                    <li>〇 au の携帯電話</li>
+                    <li>〇 本人確認書類(運転免許証、健康保険証など)</li>
+                    <li>〇 エディオンカード（クレジットカード）</li>
+                </ul>
+
+                <div class="apply bsl">
+                    <p><span>適用について</span></p>
+
+                    <div>
+                        <p>翌月から変更が適用されます。</p>
+
+                        <p>お手続きが月末の場合、翌々月からの適用となる場合がございます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>郵送からお手続き(電話)</h3>
+                </div>
+
+                <ul>
+                    <li>〇 au 携帯電話から：157( 無料)</li>
+                    <li>〇 一般電話から：0077-7-111( 無料)</li>
+                    <li>〇 受付時間：9:00 ～ 20:00</li>
+                </ul>
+
+                <p>ガイダンスにてメニュー番号「0」でオペレータと通話になります。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>クレジットカード会社との手続きが完了次第翌月から変更が適用されます。</p>
+                </div>
+            </div>
+        </div>
+        <!-- /au --> <!-- softbank --> <input class="tab-switch" id="TAB-03" name="TAB" type="radio" /> <label
+            class="tab-label sfb" for="TAB-03"><img alt="softbank"
+                src="/sites/default/files/inline-images/logo_softbank_0.png" /></label>
+
+        <div class="tab-content">
+            <h3 id="softbank"><img alt="softbank" src="/sites/default/files/inline-images/logo_softbank_0.png" />の場合
+            </h3>
+
+            <p class="fnt15 bt_line">お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+            <div class="inner">
+                <div class="tit02" style="border-top: none;">
+                    <h3>インターネットからお手続き（My SoftBank）</h3>
+                </div>
+
+                <p><a href="https://my.softbank.jp/msb/d/top">https://my.softbank.jp/msb/d/top</a></p>
+
+                <p>※事前にMy SoftBankの登録が必要です。</p>
+
+                <ul class="flow li_softbank">
+                    <li>①My SoftBankページで携帯電話番号・パスワードを入力してログイン</li>
+                    <li>②【変更手続き】を選択</li>
+                    <li>③【支払方法変更】を選択</li>
+                    <li>④画面に沿って手続きください。</li>
+                </ul>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>携帯電話からお手続き（SoftBank3Gをご利用の場合）</h3>
+                </div>
+
+                <p>※事前にMy SoftBankの登録が必要です。</p>
+
+                <ul class="flow li_softbank">
+                    <li>①Yahoo!ケータイにアクセス</li>
+                    <li>②<strong>「設定・申込」</strong>を選択</li>
+                    <li>③<strong>「設定・申込」</strong>を選択</li>
+                    <li>④<strong>「契約者情報の変更」</strong>を選択</li>
+                    <li>⑤<strong>「支払方法変更」</strong>を選択</li>
+                    <li class="point">⑥<strong>「クレジットカード」</strong>を選択して画面に沿ってお手続きしてください。</li>
+                </ul>
+
+                <p>Yahoo!ケータイにアクセス→「設定・申込」→「設定・変更」→「契約者情報の変更」→「支払方法変更」→画面に沿ってお手続きください。</p>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>スマートフォンからお手続き</h3>
+                </div>
+
+                <p>お持ちのスマートフォンからお手続きいただけます。</p>
+
+                <ul class="flow li_softbank">
+                    <li>①ブラウザを起動</li>
+                    <li>②<strong>「ブックマーク」</strong>または<strong>「お気に入り」</strong>から<strong>「My
+                            SoftBank」</strong>または<strong>「My SoftBank For Series」</strong>を選択</li>
+                    <li>③<strong>「My SoftBank」</strong>にログイン</li>
+                    <li>④トップ画面<strong>「変更手続き」</strong>を選択</li>
+                    <li>⑤変更手続きメインメニューより<strong>「支払方法変更」</strong>を選択</li>
+                    <li class="point">⑥<strong>「クレジットカード」</strong>を選択して画面に沿ってお手続きしてください。</li>
+                </ul>
+
+                <p>※事前にMy SoftBankの登録が必要です。</p>
+
+                <p>※お使いのスマートフォンの画面と違う場合があります。あらかじめご了承ください。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>iPhoneからお手続き</h3>
+                </div>
+
+                <p>お持ちのiPhoneからお手続きいただけます。</p>
+
+                <ul class="flow li_softbank">
+                    <li>①Safariを起動</li>
+                    <li>②<strong>「ブックマーク」(本の形のマーク)</strong>を選択</li>
+                    <li>③<strong>「My SoftBank」</strong>を選択</li>
+                    <li>④携帯番号とパスワードを入力して<strong>ログイン</strong></li>
+                    <li class="point">⑤<strong>「支払方法変更」</strong>を選択</li>
+                    <li>⑥<strong>「クレジットカード」</strong>を選択して画面に沿ってお手続きしてください。</li>
+                </ul>
+
+                <p>※事前にMy SoftBankの登録が必要です。</p>
+
+                <p>※お使いのiPhoneの画面と違う場合があります。あらかじめご了承ください。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>当月分から変更されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>店頭(ソフトバンクショップ)からお手続き</h3>
+                </div>
+
+                <p><strong>【ご用意いただくもの】</strong></p>
+
+                <ul>
+                    <li>〇 本人確認書類(運転免許証、健康保険証など)</li>
+                    <li>〇 エディオンカード（クレジットカード）</li>
+                    <li>上記お持ちの上、お近くのソフトバンクショップへお越し下さい。</li>
+                </ul>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>翌月から変更が適用されます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>郵送からお手続き(電話)</h3>
+                </div>
+
+                <ul>
+                    <li>〇 ソフトバンクの携帯電話から　157（無料）</li>
+                    <li>〇 一般電話から　0800-919-0157（無料）</li>
+                    <li>〇 受付時間：9:00 ～ 20:00（年中無休）</li>
+                </ul>
+
+                <p>&nbsp;</p>
+
+                <p>・電話が繋がりましたら、ガイダンスに沿ってお進みください。<br />
+                    （暗証番号の入力ガイダンスが流れますが、ご不明な場合はそのままお待ちいただければ、オペレーターに繋がります。）</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>クレジットカード会社との手続きが完了次第翌月から変更が適用されます。</p>
+                </div>
+            </div>
+        </div>
+        <!-- /softbank --> <!-- ymobile --> <input class="tab-switch" id="TAB-04" name="TAB" type="radio" /> <label
+            class="tab-label yah" for="TAB-04"><img alt="ymobile"
+                src="/sites/default/files/inline-images/logo_yahoo_wh.png" /></label>
+
+        <div class="tab-content">
+            <h3 id="ymobile"><img alt="ymobile" src="/sites/default/files/inline-images/logo_yahoo_0.png" />の場合</h3>
+
+            <p class="fnt15 bt_line">お支払変更方法手順が変更されている場合があります。ご了承ください。</p>
+
+            <div class="inner">
+                <div class="tit02" style="border-top: none;">
+                    <h3>インターネット（My Y!mobile）からお手続き</h3>
+                </div>
+
+                <p><a
+                        href="http://www.ymobile.jp/support/online/myymobile/">http://www.ymobile.jp/support/online/myymobile/</a>
+                </p>
+
+                <p>※事前に My Y!mobile の登録が必要になります（登録無料）。</p>
+
+                <ul class="flow li_ymobile">
+                    <li>①My Y!mobileページで携帯電話番号・パスワードを入力してログイン</li>
+                    <li>②【支払方法の確認・変更】を選択</li>
+                    <li>③画面に沿って手続きください。</li>
+                </ul>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>当請求月からの適用となりますが、変更手続き日によっては、翌請求月からの適用となる場合がございます。</p>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="tit02">
+                    <h3>郵送からお手続き(電話)</h3>
+                </div>
+
+                <p>お問合わせにはお客様のご契約携帯電話番号と暗証番号（4ケタ）をご用意のうえご連絡ください。</p>
+
+                <p>&nbsp;</p>
+
+                <ul>
+                    <li>〇 オペレーター対応　9:00～20:00（年中無休）<br />
+                        ワイモバイルの電話から（局番なし）151（有料）<br />
+                        一般電話から0570-039-151（有料）</li>
+                    <li>〇 自動音声対応　24時間（年中無休）<br />
+                        ワイモバイルの電話から（局番なし）116（無料）<br />
+                        一般電話から0120-921-156（無料）</li>
+                </ul>
+
+                <p>&nbsp;</p>
+
+                <p>電話が繋がりましたら、ガイダンスに沿ってお進みください。支払方法変更申込書を請求いただけます。</p>
+
+                <div class="apply">
+                    <p><span>適用について</span></p>
+
+                    <p>クレジットカード会社との手続きが完了次第翌月から変更が適用されます。</p>
+                </div>
+            </div>
+        </div>
+        <!-- /ymobile -->
+    </div>
+
+    <div class="mb40">&nbsp;</div>
+
+    <div class="btn_wrap">
+        <p class="btn"><a href="/card/point">ポイントを貯めるへ戻る</a></p>
+    </div>
+</div>

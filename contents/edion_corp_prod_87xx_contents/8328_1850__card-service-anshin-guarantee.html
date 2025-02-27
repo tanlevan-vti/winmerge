@@ -1,0 +1,1151 @@
+<style type="text/css">
+    /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .bg_title {
+        background: #1B50A2;
+        color: #fff;
+    }
+
+    h4 {
+        color: #000;
+    }
+
+    a {
+        color: #316AC5;
+        text-decoration: underline;
+    }
+
+    table th,
+    td {
+        border-right: solid 1px #CCC !important;
+    }
+
+    .movie_area {
+        border: 0px none !important;
+        border-right: 0px none;
+    }
+
+    .border_area {
+        border: solid 1px #CCC;
+    }
+
+    .b {
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .target_card {
+        margin-bottom: 10px;
+    }
+
+    .target_card span {
+        font-size: 0.93rem;
+        margin: 0 5px 5px 0;
+        padding: 5px 10px;
+        vertical-align: middle;
+    }
+
+    .icoYmbk {
+        background-color: #F3971A;
+        border-radius: 3px;
+        color: #FFF;
+        min-width: 60px;
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    .cardset_sty {
+        overflow: hidden;
+        margin-bottom: 45px;
+    }
+
+    .tit02 h2 {
+        line-height: 1;
+        border-top: 2px solid #1B50A2;
+        padding: 13px 0;
+        color: #455C76;
+        font-size: 1.45rem;
+        position: relative;
+    }
+
+    .cardset_sty .title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        overflow: hidden;
+    }
+
+    .cardset_sty .title .mess {
+        color: #1F529F;
+        font-size: 35px;
+        line-height: 1.4;
+    }
+
+    .cardset_sty .title .mess strong {
+        color: #DE0A4C;
+    }
+
+    .content {
+        display: flex;
+        overflow: hidden;
+        margin: 20px 0 50px;
+    }
+
+    .image1 {
+        flex: 1 1 30%;
+        padding-left: 20px;
+    }
+
+    .cardset_sty ul {
+        margin-top: 15px;
+    }
+
+    .securitySet {
+        overflow: hidden;
+        margin-top: 30px;
+    }
+
+    .securitySet p {
+        border: 1px solid #1F529F !important;
+        color: #1F529F;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 3px 0;
+        margin-bottom: 15px;
+    }
+
+    .securitySet ul {
+        display: table;
+        width: 100%;
+    }
+
+    .securitySet li {
+        display: table-cell;
+        text-align: center;
+        color: #FFF;
+        font-size: 1.8rem;
+        line-height: 1.0;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 3px 5px;
+    }
+
+    .securitySet li:nth-child(odd) {
+        width: 30%;
+    }
+
+    .securitySet .pay {
+        background: #407D54;
+    }
+
+    .securitySet .plus {
+        color: #1F529F;
+        font-size: 2.5rem;
+    }
+
+    .securitySet li:nth-child(even) {
+        width: 5%;
+    }
+
+    .securitySet .parts {
+        background: #1A82A4;
+    }
+
+    .securitySet .trip {
+        background: #9E881F;
+        padding-bottom: 10px;
+    }
+
+    .securitySet span {
+        font-size: 1rem;
+    }
+
+    /*アコーディオン*/
+    .accordion_wrap02 dd {
+        margin-top: 20px;
+    }
+
+    .accordion_wrap02 table {
+        margin-bottom: 30px;
+    }
+
+    .accordion_wrap02 th {
+        vertical-align: middle;
+    }
+
+    .tit03 {
+        padding: 10px;
+        color: #FFF;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 15px;
+        background: #1B50A2;
+        font-size: 1em;
+    }
+
+    /*アコーディオンここまで*/
+    .mb25 {
+        margin-bottom: 25px !important;
+    }
+
+    .mt10 {
+        margin-top: 10px !important;
+    }
+
+    .pointList {
+        margin: 20px 0 30px;
+    }
+
+    .pointList dl {
+        border-top: 1px dotted #CCC;
+        padding: 10px 10px 0 0;
+    }
+
+    .pointList dt {
+        background-color: #F3981C;
+        border-radius: 3px;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        padding: 4px 10px;
+        width: 125px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 1.0rem;
+        line-height: 1.2;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pointList dd {
+        font-size: 1.15rem;
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .pointList dl:last-of-type {
+        border-bottom: 1px dotted #CCC;
+    }
+
+    .productList ul {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .productList li {
+        margin: 0;
+        width: 14.28%;
+        border-right: 1px dashed #87BCA0;
+        border-bottom: 1px dashed #87BCA0;
+        height: 170px;
+        display: table;
+    }
+
+    .area7list {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .area8list li:nth-child(8n+1),
+    .area7list li:nth-child(7n+1),
+    .area6list li:nth-child(6n+1),
+    .area5list li:nth-child(5n+1),
+    .area4list li:nth-child(4n+1),
+    .area3list li:nth-child(3n+1),
+    .area2list li:nth-child(2n+1) {
+        clear: both;
+        margin-left: 0;
+    }
+
+    .area8list li,
+    .area7list li,
+    .area6list li,
+    .area5list li,
+    .area4list li,
+    .area3list li,
+    .area2list li {
+        list-style-type: none;
+        float: left;
+    }
+
+    .productList li div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .productList li:nth-child(7n) {
+        border-right: none;
+    }
+
+    .area7list p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .adEdioncard {
+        color: #FFF;
+    }
+
+    .adEdioncard .titleBelt {
+        background: #1F52A1;
+        text-align: center;
+        color: #FFF;
+        font-size: 25px;
+        padding: 8px 0;
+        font-weight: bold;
+    }
+
+    .box_sty_dib {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .adEdioncard .wrap {
+        background: url(/sites/default/files/inline-images/bg_edionCard_0.jpg) center center no-repeat;
+        background-size: cover;
+        padding: 40px 35px 45px;
+    }
+
+    .adEdioncard .wrap .title {
+        color: #FFF;
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 30px;
+        font-weight: bold;
+        text-shadow: 1px 1px 12px #0075ea;
+    }
+
+    .adEdioncard .wrap .mainImg {
+        overflow: hidden;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    .adEdioncard .wrap .titSquare {
+        background: #166AC6;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #FFF;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 2px 0 3px;
+    }
+
+    .adEdioncard .wrap .figure {
+        margin-bottom: 30px;
+        text-align: left;
+        display: table;
+    }
+
+    .adEdioncard .wrap .txt .parts.anshin {
+        width: 38%;
+        position: relative;
+    }
+
+    .adEdioncard .wrap .txt .parts.anshin,
+    .adEdioncard .wrap .txt .parts.edion,
+    .adEdioncard .wrap .txt .arrow {
+        display: table-cell;
+    }
+
+    .adEdioncard .wrap .parts {
+        font-size: 16px;
+    }
+
+    .adEdioncard .wrap .figure .title {
+        border-bottom: 2px solid #FFF;
+        text-align: left;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    .adEdioncard .wrap .txt .arrow {
+        vertical-align: top;
+        padding: 46px 8px;
+    }
+
+    .adEdioncard .arrowIcon:before {
+        font-family: "fontello";
+        font-weight: normal;
+        font-size: 40px;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        text-align: center;
+        line-height: 1em;
+        right: 0px;
+        top: 50%;
+        margin-right: 0;
+        color: #F5981F;
+        font-style: initial;
+        content: '\e893';
+    }
+
+    .mainImg .image {
+        flex: 1 1 50%;
+        padding: 0 20px;
+    }
+
+    .adEdioncard .wrap ul.figure {
+        letter-spacing: -.40em;
+        display: block;
+    }
+
+    .adEdioncard .wrap ul.figure li {
+        display: inline-block;
+        letter-spacing: normal;
+        margin: 0 5px 5px 0;
+    }
+
+    .icon1 {
+        border-radius: 5px;
+        color: #FFF;
+        font-size: 14px;
+        min-width: 60px;
+        display: inline-block;
+        text-align: center;
+        padding: 8px 10px;
+        line-height: 1;
+        overflow: hidden;
+    }
+
+    .icon_shuri {
+        background-color: #419BC7;
+    }
+
+    .icon_division {
+        background-color: #292D9A;
+    }
+
+    .icon_point {
+        background-color: #DE9F0C;
+    }
+
+    .icon_etc {
+        background-color: #AAAA00;
+    }
+
+    .icon_haigusha {
+        background-color: #E26363;
+    }
+
+    .adEdioncard .adbtnArea {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .adEdioncard .adbtnArea .btn02 {
+        max-width: 400px;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        padding: 20px 25px !important;
+    }
+
+    .btn02,
+    .btn02:hover {
+        color: #FFFFFF;
+        border: 1px solid #F29800;
+        background: #FFA815;
+        background: linear-gradient(#FFB333, #FB9D00);
+    }
+
+    .btn02 {
+        text-align: center;
+        display: block;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+        padding: 8px 25px;
+        zoom: 1;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .btn02::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: rotate(45deg)translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: 20px;
+    }
+
+    .tell_contact {
+        display: table;
+        width: 100%;
+        border: 1px solid #CCC;
+    }
+
+    .tell_contact dt {
+        background-color: #F5F5F5;
+        border-right: 1px solid #CCC;
+        color: #455B76;
+        font-weight: bold;
+        font-size: 1.15rem;
+        width: 300px;
+        box-sizing: border-box;
+    }
+
+    .tell_contact dt,
+    .tell_contact dd {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 15px;
+        color: #1950A0;
+    }
+
+    .tell_contact dd .tell {
+        margin-right: 10px;
+        line-height: 1.1;
+    }
+
+    .tell_contact dd div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .tell {
+        font-weight: bold;
+        color: #1a50a1;
+        font-size: 2.5rem;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .tel_time {
+        background: #FFF;
+        border: 1px solid #1b50a2;
+        color: #1b50a2;
+        overflow: hidden;
+        display: inline-block;
+        font-weight: bold;
+        padding: 3px 10px;
+    }
+
+    .tell_contact dd p {
+        margin: 8px 0 0 !important;
+    }
+
+    .adEdioncard .wrap .title {
+        color: #FFF;
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 30px;
+        font-weight: bold;
+        text-shadow: 1px 1px 12px #0075ea;
+    }
+
+    .box_sty_dib {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+        .pc {
+            display: none !important;
+        }
+
+        .sp {
+            display: block !important;
+        }
+
+        iframe {
+            width: 300px;
+            height: 160px;
+        }
+
+        .col-md-4 a {
+            text-align: left;
+        }
+
+        th,
+        td {
+            display: block;
+            width: 100% !important;
+        }
+
+        .innerWrapAll,
+        .innerWrap {
+            padding: 0 10px;
+            max-width: 730px;
+        }
+
+        .txt {
+            margin-top: 20px;
+        }
+
+        .b {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .btn {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        .content {
+            display: block;
+            margin: 0 0 50px;
+        }
+
+        .image1 {
+            display: none !important;
+        }
+
+        .securitySet li {
+            font-size: 1rem;
+        }
+
+        .securitySet .pay {
+            width: 25%;
+        }
+
+        .securitySet .parts {
+            width: 30%;
+        }
+
+        .btn_wrap .btn {
+            max-width: 100%;
+        }
+
+        .tit02 h2 {
+            font-size: 1rem !important;
+        }
+
+        .cardset_sty .title .mess,
+        .cardset_sty .title .mess span {
+            font-size: 1.3rem;
+        }
+
+        .adEdioncard .titleBelt {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .adEdioncard .titleBelt span {
+            display: inline-block;
+        }
+
+        .adEdioncard .wrap {
+            padding: 15px 15px 30px;
+        }
+
+        .adEdioncard .wrap .title {
+            font-size: 18px;
+            margin-bottom: 0;
+            padding-bottom: 20px;
+        }
+
+        #edioncardWrap .pcBr {
+            display: inline-block;
+        }
+
+        .adEdioncard .wrap .title .spNone {
+            display: none;
+        }
+
+        .adEdioncard .wrap .title .sp {
+            display: inline !important;
+        }
+
+        .adEdioncard .wrap .mainImg {
+            display: block;
+        }
+
+        .adEdioncard .wrap .txt .parts.anshin,
+        .adEdioncard .wrap .txt .parts.edion,
+        .adEdioncard .wrap .txt .arrow {
+            display: block;
+            width: 100%;
+        }
+
+        .adEdioncard .wrap .figure {
+            display: block;
+        }
+
+        .adEdioncard .wrap .figure .title .small {
+            font-size: 16px;
+            display: block;
+        }
+
+        .adEdioncard .wrap .title {
+            font-size: 18px;
+        }
+
+        .adEdioncard .arrowIcon:before {
+            content: '\e895';
+        }
+
+        .adEdioncard .wrap .txt .arrow {
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .tell_contact,
+        .tell_contact dt,
+        .tell_contact dd {
+            display: block;
+            width: auto;
+        }
+
+        .tell_contact dt {
+            border-bottom: 1px solid #CCC;
+            border-right: 0;
+        }
+
+        .tell_contact,
+        .tell_contact dt,
+        .tell_contact dd {
+            display: block;
+            width: auto;
+        }
+
+        .tell_contact dd {
+            text-align: center;
+        }
+
+        .tell_contact dd .tell {
+            display: block;
+            margin: 0 0 5px;
+            text-align: center;
+        }
+    }
+
+    /*21品種エリアのレイアウト*/
+    @media screen and (max-width: 960px) {
+        .productList li:nth-child(3n+1) {
+            clear: both;
+        }
+
+        .productList li:nth-child(7n+1) {
+            clear: none;
+        }
+
+        .productList li {
+            width: 33.3%;
+        }
+
+        .productList li:nth-child(3n) {
+            border-right: none;
+        }
+
+        .productList li:nth-child(7n) {
+            border-right: 1px dashed #87BCA0;
+        }
+
+        .productList li:nth-child(3n) {
+            border-right: none;
+        }
+
+        .productList li:nth-last-child(-n+3) {
+            border-bottom: none;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .productList li:nth-child(3n+1) {
+            clear: none;
+        }
+
+        .productList li:nth-child(2n+1) {
+            clear: both;
+        }
+
+        .productList li {
+            width: 50%;
+        }
+
+        .productList li:nth-child(2n) {
+            border-right: none;
+        }
+
+        .productList li:nth-child(3n) {
+            border-right: 1px dashed #87BCA0;
+        }
+
+        .productList li:nth-child(2n) {
+            border-right: none;
+        }
+
+        .productList li:nth-last-child(-n+3) {
+            border-bottom: 1px dashed #87BCA0;
+        }
+
+        .productList li:nth-last-child(-n+1) {
+            border-bottom: none;
+        }
+    }
+</style>
+<p class="target_card">対象カード：<span class="icoYmbk">あんしん保証カード</span></p>
+<article class="cardset_sty">
+    <div class="tit02">
+        <h2><span>3年間・5年間・10年間のあんしん修理保証</span></h2>
+    </div>
+    <div class="title">
+        <p class="mess">あんしん保証カード会員様なら、<br>3年間・5年間・10年間の<strong>あんしん修理保証</strong>!</p>
+    </div>
+    <div class="content">
+        <div class="txt">
+            <p>あんしん保証カード会員様なら、指定商品をご購入の際に、ご購入金額、商品の種類に応じて、3年間・5年間・10年間のあんしん修理保証サービスをご用意しております。</p>
+            <ul>
+                <li>※1年以上のメーカー保証付の当社指定商品が対象となります。</li>
+                <li>※ハードディスク、リモコン、3Dメガネの故障は保証の対象外となります。</li>
+                <li>※詳しくは<a
+                        href="https://stg-admin.edion.co.jp/card/agreement/anshin_member">あんしん保証カードサービス会員規約</a>をご確認ください。
+                </li>
+                <li>※あんしん保証カードは一部店舗でお取扱いのない店舗がございます。</li>
+            </ul>
+            <div class="securitySet">
+                <p>すべて長期修理保証の対象です</p>
+                <ul>
+                    <li class="pay">修理工賃</li>
+                    <li class="plus">+</li>
+                    <li class="parts">修理部品代</li>
+                    <li class="plus">+</li>
+                    <li class="trip"><span>出張修理対象商品の</span><br>出張費</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image1"><img src="/sites/default/files/inline-images/img_cardIllust05_0.jpg" alt="cardillust05">
+        </div>
+    </div><!--アコーディオン-->
+    <div class="accordion_wrap02">
+        <dl>
+            <dt class="qa_open">
+                <p>持込修理対象商品、保証対象外の商品・部品の例</p>
+            </dt>
+            <dd style="display:none;">
+                <h3 class="tit03">持込修理対象商品の例</h3>
+                <table class="tableSt">
+                    <tbody>
+                        <tr>
+                            <td>15インチ以下の液晶テレビ、デジタルカメラ、ビデオカメラ、ポータブルDVD、ポータブルＢＤ、プリンター、ハンディークリーナー、クリーナー、空気清浄機（除湿付きを除く）、炊飯ジャー
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="tit03">保証対象外となる部品の例</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>洗濯機</th>
+                            <td>糸くずフィルター、ゴミ取りネット、外部給水・排水ホ－ス（外付け）、洗剤入れ、お湯取りホース、ヘルツ交換</td>
+                        </tr>
+                        <tr>
+                            <th>クリーナー</th>
+                            <td>床ブラシ、ターボブラシ、紙パック、充電池、前輪、後輪、延長管（破損・変形）、ジャバラホース（破損・破れ・変形）</td>
+                        </tr>
+                        <tr>
+                            <th>エアコン</th>
+                            <td>フィルター類、ドレンホース、冷媒ガス、工事部材</td>
+                        </tr>
+                        <tr>
+                            <th>電子レンジ</th>
+                            <td>付属の皿類、トビラ（破損）、取手、つまみ、ターンテーブル、窓ウンモ板</td>
+                        </tr>
+                        <tr>
+                            <th>炊飯ジャー</th>
+                            <td>内釜、動作用電池、しゃもじ、外フタ、ハンドル</td>
+                        </tr>
+                        <tr>
+                            <th>冷蔵庫</th>
+                            <td>製氷皿、仕切り板、BOX類、浄水フィルター</td>
+                        </tr>
+                        <tr>
+                            <th>デジカメ</th>
+                            <td>レンズキャップ、ストロボランプ、レンズフィルター</td>
+                        </tr>
+                        <tr>
+                            <th>テレビ・DVD・BD</th>
+                            <td>ハードディスク</td>
+                        </tr>
+                        <tr>
+                            <th>プリンター</th>
+                            <td>インクカートリッジ、給紙トレー、排紙トレー、トナー、トナーカートリッジ</td>
+                        </tr>
+                        <tr>
+                            <th>商品全般</th>
+                            <td>付属品パッキン類、各種電池、充電池、バッテリー（内蔵含む）、インク類（トナー含む）、ストラップ、タンク、各種フィルター類、記録媒体、アンテナ工事部材、各種刃類、ベルト類、ネジ類、セード、管球類、コード・ケーブル類、リモコン、3Dメガネメーカー説明書にある消耗付属品類、上記に類する部品は保証対象外となります。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="tit03">保証対象外となる作業の例</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>デジタル機器</th>
+                            <td>ソフトウェアの追加・削除、ハードウェアの増設・取り外し・接続、バックアップ内蔵電池の交換</td>
+                        </tr>
+                        <tr>
+                            <th>プリンター</th>
+                            <td>ホコリ除去、インク付着除去、目詰まり除去、異物混入除去、ヘッドクリーニング、オーバーホール</td>
+                        </tr>
+                        <tr>
+                            <th>テレビ・DVD・BD</th>
+                            <td>チャンネルプリセット、機器接続、異物除去、クリーニング、オーバーホール</td>
+                        </tr>
+                        <tr>
+                            <th>エアコン</th>
+                            <td>ガスチャージ、クリーニング、ドレン詰まり、工事作業、フィルター清掃</td>
+                        </tr>
+                        <tr>
+                            <th>洗濯機</th>
+                            <td>異物混入除去、フィルター詰まり、排水口詰まり、給水弁詰まり、排水コック詰まり、乾燥フィルター清掃</td>
+                        </tr>
+                        <tr>
+                            <th>デジカメ</th>
+                            <td>レンズホコリ除去</td>
+                        </tr>
+                        <tr>
+                            <th>商品全般</th>
+                            <td>昆虫・小動物混入の除去作業、小動物が与えた外損、凍結が原因の除去作業、ホコリ・異物除去作業、取扱ミスによる修復作業、加電圧による修復作業、誘導雷サージ、バージョンアップ作業、取扱説明のみの訪問および作業<br>その他、上記と同様な作業は、保証対象外になります。<br>保証対象商品の故障が原因によるソフト、メディア等の修復・復元作業も保証対象外になります。<br>本規約第12条（あんしん修理保証の対象外となる事項）に該当するもの
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+        </dl>
+    </div><!--/アコーディオン-->
+</article>
+<article class="products21">
+    <div class="tit02">
+        <h2><span>保証対象は当社指定の21品種</span></h2>
+    </div>
+    <div class="cardset_sty mb25">
+        <div class="title">
+            <p class="mess">あんしんの修理保証でサポート！<br>当社指定の<strong>22品種</strong>が<strong>保証対象</strong>になります。</p>
+        </div>
+        <p class="mt10">あんしん保証カード会員様の長期修理保証は、30,000円（税込）以上の指定商品から、21品種に保証が適応できます。</p>
+    </div><!--/cardset_sty-->
+    <div class="pointList">
+        <dl>
+            <dt>
+                <p>10年保証対象</p>
+            </dt>
+            <dd>
+                <p>当社指定機種のエアコン・冷蔵庫が対象</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>5年保証対象</p>
+            </dt>
+            <dd>
+                <p>ご購入商品単価5万円以上（税込）の下記家電品が対象</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <p>3年保証対象</p>
+            </dt>
+            <dd>
+                <p>ご購入商品3万円以上（税込）の下記家電品が対象</p>
+            </dd>
+        </dl>
+        <p>※注1　当社指定商品に限ります。</p>
+        <p>※注2　詳しくは<a href="https://stg-admin.edion.co.jp/card/agreement/anshin_member">あんしん修理保証会員規約</a>をご確認ください。</p>
+    </div><!--/pointList-->
+    <div class="productList mb50">
+        <ul class="area7list">
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro01.png" alt="エアコン">
+                    <p>エアコン</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro02.png" alt="冷蔵庫">
+                    <p>冷蔵庫</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro03.png" alt="洗濯機">
+                    <p>洗濯機</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro04.png" alt="掃除機">
+                    <p>掃除機</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro05.png" alt="食洗器">
+                    <p>食器洗い機</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro06.png" alt="生ゴミ処理機">
+                    <p>生ゴミ処理機</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro07.png" alt="オーブンレンジ">
+                    <p>オーブンレンジ</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro08.png" alt="炊飯器">
+                    <p>炊飯ジャー</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro09.png" alt="シャワートイレ">
+                    <p>シャワートイレ</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro10.png" alt="テレビ">
+                    <p>テレビ</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro11.png" alt="マッサージチェア">
+                    <p>マッサージチェア</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro12.png" alt="ブルーレイ・DVD レコーダー／プレイヤー">
+                    <p>ブルーレイ・DVD<br>レコーダー／プレイヤー</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro13.png" alt="ミニコンボ">
+                    <p>ミニコンボ</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro14.png" alt="ビデオカメラ">
+                    <p>ビデオカメラ</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro15.png" alt="空気清浄機">
+                    <p>空気清浄機</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro16.png" alt="衣類乾燥機">
+                    <p>衣類乾燥機</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro17.png" alt="冷凍庫">
+                    <p>冷凍庫</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro18.png" alt="シーリングライト">
+                    <p>シーリングライト</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro19.png" alt="FAX">
+                    <p>FAX</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro20.png" alt="プリンター">
+                    <p>プリンター</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="/sites/default/files/inline-images/a_pro21.png" alt="デジタルカメラ">
+                    <p>デジタルカメラ</p>
+                </div>
+            </li>
+        </ul>
+    </div><!--/productList-->
+</article>
+<div class="adEdioncard">
+    <div class="titleBelt"><span class="box_sty_dib">エディオンカード会員なら、さらに充実の保証がうけられます！</span></div>
+    <div class="wrap">
+        <div class="title"><span class="pcBr box_sty_dib">対象商品</span><span
+                class="pcBr box_sty_dib spNone">は、さらに豊富な</span><span
+                class="pcBr box_sty_dib">100種類以上！業界屈指の長期修理保証に加え、</span> <span
+                class="pcBr box_sty_dib">もっとおトクにお買い物を楽しみたい方におすすめ</span><span
+                class="pcBr box_sty_dib spNone">のエディオンカード</span><span class="pcBr box_sty_dib sp">。</span></div>
+        <!--/title-->
+        <div class="mainImg">
+            <div class="image"><img
+                    src="/sites/default/files/inline-images/SMCC_%E3%82%AA%E3%83%AA%E3%82%B3%EF%BC%B7%E5%88%B8%E9%9D%A2_4.png"
+                    data-entity-uuid="29b37f8b-dbc0-4c48-905f-52a52632d42c" data-entity-type="file" alt="エディオンカード">
+            </div><!--/image-->
+            <div class="txt">
+                <div class="titSquare">長期修理保証</div>
+                <div class="figure">
+                    <div class="parts anshin">
+                        <div class="title"><span class="small">あんしん保証カード</span>保証対象21品種</div>
+                        <ul class="partsTxt">
+                            <li>・当社指定商品での購入でポイント進呈</li>
+                            <li>・ポイント有効期間1年</li>
+                        </ul>
+                    </div><!--/parts anshin-->
+                    <div class="arrow">&nbsp;</div>
+                    <div class="parts edion">
+                        <div class="title"><span class="small">エディオンカード</span>保証対象100品種以上！</div>
+                        <ul class="partsTxt">
+                            <li>・エディオン各店舗でのお支払いで100円につき1ポイント！</li>
+                            <li>・さらに、当社指定商品なら、100円（税別）ごとに最大5ポイントを進呈!</li>
+                            <li>・ポイント有効期間も2年に拡大！</li>
+                        </ul>
+                    </div><!--/parts edion-->
+                </div><!--/figure-->
+                <div class="titSquare">おトクな機能、サービス満載</div><!--/titSquare-->
+                <ul class="figure">
+                    <li><span class="icon1 icon_shuri">長期修理保証</span></li>
+                    <li><span class="icon1 icon_division">特別低金利分割払い</span></li>
+                    <li><span class="icon1 icon_point">ポイント</span></li>
+                    <li><span class="icon1 icon_etc">ETCカード</span></li>
+                    <li><span class="icon1 icon_haigusha">家族カード</span></li>
+                </ul>
+            </div><!--/txt-->
+        </div><!--/mainImg-->
+        <div class="adbtnArea"><a class="btn02 btn"
+                href="https://stg-admin.edion.co.jp/card/lineup/edioncard">詳しくはこちら</a></div>
+    </div><!--/wrap-->
+</div><!--/adEdioncard-->
+<div class="contact mt50">
+    <h3 class="tit03">保証・ポイントについてのお問い合わせは</h3>
+    <dl class="tell_contact">
+        <dt>
+            <p>エディオンカードセンター</p>
+        </dt>
+        <div class="tell tel-link">&nbsp;</div>
+        <div class="tel_time">&nbsp;</div>
+        <dd>
+            <p class="txt">※エディオンカードのサービス内容は、都合により予告なしで変更になる場合がございます。<br>※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。</p>
+        </dd>
+    </dl>
+</div><!--/contact mt50-->
+<div class="btn_wrap mt50">
+    <p class="btn"><a href="/card/service">カードの特長へ戻る</a></p>
+</div>

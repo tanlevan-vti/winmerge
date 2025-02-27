@@ -1,0 +1,892 @@
+<style type="text/css">
+	/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+	.pc {
+		display: block !important;
+	}
+
+	.sp {
+		display: none !important;
+	}
+
+	.bg_title {
+		background: #6fba2c;
+		color: #fff;
+	}
+
+	.green {
+		background: #6fba2c;
+		padding: 1.2em 0.5em;
+		border-radius: 5px;
+		text-align: center;
+		color: #fff;
+	}
+
+	h4 {
+		color: #000;
+	}
+
+	table th,
+	td {
+		border-right: solid 1px #CCC !important;
+	}
+
+	.movie_area {
+		border: 0px none !important;
+		border-right: 0px none;
+	}
+
+	.border_area {
+		border: solid 1px #CCC;
+	}
+
+	.b {
+		font-weight: 900;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.inquiryWrap {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		text-align: left;
+	}
+
+	.tit05 {
+		font-size: 1.15rem;
+		padding: 6px 10px 5px;
+		color: #455C76;
+		font-weight: bold;
+		background-color: #F9F9F9;
+		margin-bottom: 15px;
+		border: 1px solid #CCCCCC;
+		border-left: 2px solid #1F529F;
+	}
+
+	.table_parts_03 td {
+		background: #f08d00;
+		color: #fff;
+		text-align: center;
+	}
+
+	.table_parts_03 th:first-of-type,
+	.table_parts_03 th {
+		background: #F8F8F8;
+		width: 50%;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.point_green {
+		width: 100%;
+		border: solid 2px #6fba2c;
+		color: #6fba2c;
+		background: #fff;
+		padding: 5px;
+		font-weight: 600;
+	}
+
+	.point_green#gray {
+		border: solid 2px #a9a9a9;
+		border-left: solid 2px #000080;
+		color: #fff;
+		background: #a9a9a9;
+	}
+
+	.text_w {
+		font-weight: 600;
+		margin: 10px 0 20px;
+		padding-left: 20px;
+	}
+
+	/* タブ切り替え */
+	.tab-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		cursor: pointer;
+		flex: 1;
+		font-weight: bold;
+		order: -1;
+		padding: 12px 24px;
+		position: relative;
+		text-align: center;
+		user-select: none;
+		white-space: nowrap;
+	}
+
+	/*.tab-label:hover {
+        opacity: 0.5;
+        color: #fff;
+    }*/
+
+	.tab-switch:checked+.tab-label {
+		color: #1B50A2;
+		background: #fff;
+	}
+
+	.tab-label::after {
+		background: #fff;
+		bottom: -3px;
+		content: '';
+		display: block;
+		height: 3px;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		transform: translateX(100%);
+		width: 100%;
+		z-index: 1;
+	}
+
+	.tab-switch:checked~.tab-label::after {
+		transform: translateX(-100%);
+	}
+
+	.tab-switch:checked+.tab-label::after {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.tab-content {
+		height: 0;
+		opacity: 0;
+		padding: 0;
+		pointer-events: none;
+		width: 100%;
+		background: #fff;
+
+	}
+
+	.tab-switch:checked~.tab-content {
+		transform: translateX(30%);
+	}
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		opacity: 1;
+		order: 1;
+		pointer-events: auto;
+		transform: translateX(0);
+	}
+
+	.tab-wrap::after {
+		content: '';
+		/*height: 20px;*/
+		order: -1;
+		width: 100%;
+
+	}
+
+	.tab-switch {
+		display: none;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		margin-bottom: -1px;
+		padding: 10px .5em;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		font-weight: 600;
+		font-size: 15px;
+		padding: 13px 5px;
+		margin: 0 0 0 8px;
+		border: 3px solid #1B50A2;
+		border-bottom: 0 #fff solid;
+		border-radius: 6px 6px 0 0;
+	}
+
+	.tab-label img {
+		height: 30px;
+		width: auto;
+	}
+
+	.tab-switch:checked+.tab-label:before {
+		transform: rotate(0);
+	}
+
+	.tab-content {
+		height: 0;
+		padding: 0 15px;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateX(8px);
+	}
+
+	/* アクティブなタブ */
+	.tab-switch:checked+ {
+		background-size: 40%;
+	}
+
+	/*.tab-switch:checked+.au img:first-child,.tab-switch:checked+.sfb img:first-child,.tab-switch:checked+.yah img:first-child{
+     opacity: 0;
+    }*/
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		overflow: auto;
+		margin-bottom: -1px;
+		padding: 15px;
+		opacity: 1;
+		border: 0;
+		border-top: 3px solid #1B50A2;
+		position: relative;
+		left: 8px;
+	}
+
+	/* ラジオボタン非表示 */
+	.tab-switch {
+		display: none;
+	}
+
+	@media screen and (max-width: 800px) {
+
+		/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+		.pc {
+			display: none !important;
+		}
+
+		.sp {
+			display: block !important;
+		}
+
+		iframe {
+			width: 300px;
+			height: 160px;
+		}
+
+		th,
+		td {
+			display: block;
+			width: 100% !important;
+		}
+
+		.innerWrapAll,
+		.innerWrap {
+			padding: 0 10px;
+			max-width: 730px;
+		}
+
+		.txt {
+			margin-top: 20px;
+		}
+
+		.b {
+			text-align: center;
+			margin-bottom: 14px;
+		}
+
+		.btn {
+			text-align: center;
+			margin: 20px auto;
+		}
+
+		.tab-wrap {
+			display: inline-flex;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 5px 0px;
+			font-size: 13px;
+			border-bottom: 0 solid #1B50A2 !important;
+			margin-bottom: 20px;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			border-top: 0;
+			width: 200%;
+		}
+
+		.tab-label {
+			border-radius: 6px;
+			border-bottom: 3px solid #1B50A2 !important;
+			font-size: 13px;
+
+		}
+
+		.tab-switch:checked+.tab-label {
+			color: #1B50A2;
+			background: antiquewhite;
+		}
+
+		.tab-label:hover {
+			opacity: 0.7;
+		}
+
+		.tab-label::after {
+			display: none;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			padding: 0 15px;
+		}
+	}
+</style>
+<div class="tab-wrap"><!-- パソコン --><input checked="checked" class="tab-switch" id="TAB-01" name="TAB" type="radio" />
+	<label class="tab-label dcm" for="TAB-01"><img alt="パソコン" src="/sites/default/files/inline-images/icon_3-1.png"
+			style="vertical-align: middle;" /><br />
+		パソコン</label>
+	<div class="tab-content">
+		<h3 class="bg_title" id="pc_bring">パソコン</h3>
+
+		<dl>
+			<dd>
+				<h4>内部まで清掃し、ファン回りのホコリを除去。パソコンの動作不良を予防します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>パソコン</th>
+							<td>通常価格　5,720円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="パソコン" src="/sites/default/files/inline-images/img_bring-1-1.jpg" />
+				<p>&nbsp;</p>
+
+				<p class="point_green">① ディスプレイの清掃</p>
+
+				<p class="text_w">ディスプレイ表面に付着した指紋や油膜汚れをキレイに除去。液晶ディスプレイの場合は、専用のクリーニングキットで汚れを優しく落とします。</p>
+
+				<p class="point_green">② 光学ドライブ・HDD の点検</p>
+
+				<p class="text_w">専用ソフトを使って光学ドライブがディスクを正常に読み込むか、ハードディスクの不良がないか、それぞれテストします。</p>
+
+				<p class="point_green">③ キーボードの清掃</p>
+
+				<p class="text_w">クリーナーでキーボードのすき間に詰まった、取りにくいホコリなどを吸引します。</p>
+
+				<p class="point_green">④ 本体の清掃</p>
+
+				<p class="text_w">本体を分解後、動作不良の原因になるメインボードや CPU ファン回りのホコリをハケで取り除きます。外装部のホコリや油汚れも拭き取り、すみずみまでキレイにします。</p>
+
+				<p class="point_green">⑤ マウスの清掃</p>
+
+				<p class="text_w">マウス操作の要であるレーザー部のセンサーの汚れをクリーニング液を付けた綿棒で優しく除去。外装・コードの汚れは、タオルでキレイに拭き取ります。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">電源ユニット冷却ファンのホコリを一掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="パソコンパーツ"
+								src="/sites/default/files/inline-images/img_bring-1-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">ホコリまみれの CPU ファン回りがキレイに！</div>
+
+						<p style="margin-top: 10px;"><img alt="パソコンパーツ"
+								src="/sites/default/files/inline-images/img_bring-1-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">液晶モニターはクリーニングキットでキレイに！</div>
+
+						<p style="margin-top: 10px;"><img alt="パソコンパーツ"
+								src="/sites/default/files/inline-images/img_bring-1-4.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">キートップを 1つひとつ取り外して清掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="パソコンパーツ"
+								src="/sites/default/files/inline-images/img_bring-1-5.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-02" name="TAB" type="radio" /> <label class="tab-label dcm" for="TAB-02"><img
+			alt="扇風機" src="/sites/default/files/inline-images/icon_3-2.png" style="vertical-align: middle;" /><br />
+		扇風機</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="electricfan_bring">扇風機</h3>
+
+		<dl>
+			<dd>
+				<h4>モーターやファンの状態を点検し、溜まったホコリを除去。扇風機の故障を予防します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>扇風機</th>
+							<td>通常価格　2,640円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="扇風機" src="/sites/default/files/inline-images/img_bring-2-1.jpg" />
+				<p class="point_green">① コードの点検</p>
+
+				<p class="text_w">コードに断線や損傷がないか確認した上で、タオルで丁寧に汚れを取り除きます。</p>
+
+				<p class="point_green">② 本体の清掃</p>
+
+				<p class="text_w">溝にこびりついた汚れをヘラで剥がしてから、専用の洗浄剤で洗浄します。</p>
+
+				<p class="point_green">③ 異常音の点検</p>
+
+				<p class="text_w">モーターから異常音がしないか、異常振動がないかを試運転の上、確認します。</p>
+
+				<p class="point_green">④ 回転状態の点検</p>
+
+				<p class="text_w">ファンが正常に回転しているか試運転の上、確認します。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">こびりついたホコリを落として新品同様に！</div>
+
+						<p style="margin-top: 10px;"><img alt="扇風機パーツ"
+								src="/sites/default/files/inline-images/img_bring-2-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">モーターのすき間に溜まったホコリまでキレイに！</div>
+
+						<p style="margin-top: 10px;"><img alt="扇風機パーツ"
+								src="/sites/default/files/inline-images/img_bring-2-3.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-03" name="TAB" type="radio" /> <label class="tab-label dcm" for="TAB-03"><img
+			alt="こたつ（ヒーターユニット）" src="/sites/default/files/inline-images/icon_3-3.png"
+			style="vertical-align: middle;" /><br />
+		こたつ（ヒーターユニット）</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="kotatsu_bring">こたつ（ヒーターユニット）</h3>
+
+		<dl>
+			<dd>
+				<h4>コントローラーの動作を確認し、ファンに溜まったホコリを除去。こたつの故障をを予防します！</h4>
+
+				<div class="mb30">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>こたつ（ヒーターユニット）</th>
+							<td>通常価格　2,640円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+
+				<p><img alt="こたつ" src="/sites/default/files/inline-images/img_bring-3-1.jpg" /></p>
+
+				<div class="mb30">&nbsp;</div>
+
+				<p class="point_green">① 外装の清掃</p>
+
+				<p class="text_w">専用ワックスを付けたタオルで汚れをキレイに拭き取ります。</p>
+
+				<p class="point_green">② 内部の清掃</p>
+
+				<p class="text_w">ヒーター内に溜まったホコリをハケとクリーナーを使ってキレイに除去。ヒーター部の破損に注意しながら、丁寧に清掃します。</p>
+
+				<p class="point_green">③ コントローラーの点検</p>
+
+				<p class="text_w">電源の ON/OFF やタイマー機能が正常に働くか、などコントローラーの動作確認を行います。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">外装の裏側やファンに溜まったホコリを残さず除去！</div>
+
+						<p style="margin-top: 10px;"><img alt="こたつパーツ"
+								src="/sites/default/files/inline-images/img_bring-3-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">ファン式の場合、布団内のホコリを吸引して大変なことに…</div>
+
+						<p style="margin-top: 10px;"><img alt="こたつパーツ"
+								src="/sites/default/files/inline-images/img_bring-3-3.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-04" name="TAB" type="radio" /> <label class="tab-label dcm" for="TAB-04"><img
+			alt="空気清浄機" src="/sites/default/files/inline-images/icon_3-4.png" style="vertical-align: middle;" /><br />
+		空気清浄機</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="aircleaner_bring">空気清浄機</h3>
+
+		<dl>
+			<dd>
+				<h4>内部の部品やフィルターを点検し、溜まったホコリを除去。空気清浄機の清浄能力を回復します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>空気清浄器</th>
+							<td>通常価格　11,000円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="空気清浄機" src="/sites/default/files/inline-images/img_bring-4-1.jpg" />
+				<p class="point_green">① ファンの清掃</p>
+
+				<p class="text_w">ファンを取り外し、ハケとクリーナーで丁寧にホコリを取り除きます。</p>
+
+				<p class="point_green">② 清浄機能の点検</p>
+
+				<p class="text_w">正常に空気を吸引・浄化できるか試運転の上、確認します。</p>
+
+				<p class="point_green">③ 外装の清掃</p>
+
+				<p class="text_w">外装の汚れは専用ワックスを付けた布巾で徹底的に磨き落とします。</p>
+
+				<p class="point_green">④ フィルター・内部の清掃</p>
+
+				<p class="text_w">フィルターや内部の部品に付着したホコリはハケで丁寧に落としながら、残さずクリーナーで吸引。加湿機能付きの製品の場合は、加湿用タンク・フィルターもあわせて清掃します。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">ファンのすき間に付いたホコリまで一掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="空気清浄機パーツ"
+								src="/sites/default/files/inline-images/img_bring-4-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">分解して内部に溜まったホコリを一掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="空気清浄機パーツ"
+								src="/sites/default/files/inline-images/img_bring-4-3.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-05" name="TAB" type="radio" /> <label class="tab-label dcm" for="TAB-05"><img
+			alt="掃除機" src="/sites/default/files/inline-images/icon_2-7.png" style="vertical-align: middle;" /><br />
+		掃除機</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="cleaner_bring">掃除機</h3>
+
+		<dl>
+			<dd>
+				<h4>ホースやモーターを点検し、フィルターの目詰まりを解消。掃除機の吸い込み能力を回復します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>掃除機</th>
+							<td>通常価格　4,400円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="掃除機" src="/sites/default/files/inline-images/img_trip-7-1.jpg" />
+				<p class="point_green">① モーター・ホースの点検</p>
+
+				<p class="text_w">ホースの先を手で塞いで吸込み能力を確認。モーターの稼働音もチェックして、異常がないか、ホース内部に異物が詰まっていないかを確認します。</p>
+
+				<p class="point_green">② 回転ブラシの清掃</p>
+
+				<p class="text_w">ノズルから回転ブラシを取り外し、回転力低下の原因である髪の毛やホコリを手作業で丁寧に取り除きます。</p>
+
+				<p class="point_green">③ フィルターの清掃</p>
+
+				<p class="text_w">フィルターの目に詰まったホコリを手作業で丁寧に除去。下がった吸引力を回復させます。フィルターが 2枚以上ある場合は、すべて清掃します。</p>
+
+				<p class="point_green">④ コードの清掃・点検</p>
+
+				<p class="text_w">AC プラグの先端に異常がないか確認した上で、コードの汚れをタオルで拭き取ります。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">目に詰まったホコリを残さず除去！</div>
+
+						<p style="margin-top: 10px;"><img alt="掃除機パーツ"
+								src="/sites/default/files/inline-images/img_trip-7-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">回転ブラシに詰まった髪の毛やホコリを一掃！</div>
+
+						<p style="margin-top: 10px;"><img alt="掃除機パーツ"
+								src="/sites/default/files/inline-images/img_trip-7-3.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-06" name="TAB" type="radio" /> <label class="tab-label dcm" for="TAB-06"><img
+			alt="ファンヒーター" src="/sites/default/files/inline-images/icon_3-5.png" style="vertical-align: middle;" /><br />
+		ファンヒーター</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="fanheater_bring">石油ファンヒーター</h3>
+
+		<dl>
+			<dd>
+				<h4>燃焼部の状態を確認し、黒ずみ・すす汚れを除去。ファンヒーターの途中消化を改善します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>石油ファンヒーター</th>
+							<td>通常価格　4,620円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="ファンヒーター" src="/sites/default/files/inline-images/img_bring-5-1.jpg" />
+				<p class="point_green">① 本体の清掃</p>
+
+				<p class="text_w">外装の汚れはタオルに専用ワックスを付けて拭き取り。内部に溜まったホコリは分解後、ハケとクリーナーで取り除きます。</p>
+
+				<p class="point_green">② 内部の点検</p>
+
+				<p class="text_w">燃焼部にススや黒ずみが付いているか確認の上、汚れていた場合はキレイに取り除きます。</p>
+
+				<p class="point_green">③ 燃焼状態の点検</p>
+
+				<p class="text_w">試運転の上、正常に燃焼するか確認します。試運転後は、灯油を抜き取り点検完了です。</p>
+
+				<p class="point_green">④ 異常音の点検</p>
+
+				<p class="text_w">モーターから異常音がしないか試運転の上、確認します。</p>
+
+				<p class="point_green">⑤ ファン・フィルター部の清掃</p>
+
+				<p class="text_w">内部を分解し、送風ファン・給気フィルターを取り外し。付着したホコリは、ハケとクリーナーで取り除きます。ファンの油汚れがひどい時は水洗いで落とします。</p>
+			</dd>
+		</dl>
+
+		<div class="mb30">&nbsp;</div>
+
+		<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">おそうじ前後でその差歴然！プロの技術でこんなにキレイに！
+		</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03" style="border:0px none!important;background: #fff;">
+			<tbody>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">温風吹き出しグリル部がピカピカに！</div>
+
+						<p style="margin-top: 10px;"><img alt="ファンヒーターパーツ"
+								src="/sites/default/files/inline-images/img_bring-5-2.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">途中消化の原因となるホコリを残さず落とします！</div>
+
+						<p style="margin-top: 10px;"><img alt="ファンヒーターパーツ"
+								src="/sites/default/files/inline-images/img_bring-5-3.jpg" /></p>
+					</th>
+				</tr>
+				<tr style="border:0px none!important;background: #fff;">
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">分解して内部に溜まったホコリを徹底除去！</div>
+
+						<p style="margin-top: 10px;"><img alt="ファンヒーターパーツ"
+								src="/sites/default/files/inline-images/img_bring-5-4_0.jpg" /></p>
+					</th>
+					<th style="border:0px none!important;background: #fff;">
+						<div class="green">送風ファン・ガード・シェルター内部もキレイに！</div>
+
+						<p style="margin-top: 10px;"><img alt="ファンヒーターパーツ"
+								src="/sites/default/files/inline-images/img_bring-5-5_0.jpg" /></p>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input class="tab-switch" id="TAB-07" name="TAB" type="radio" /> <label class="tab-label dcm" for="TAB-07"><img
+			alt="石油ストーブ" src="/sites/default/files/inline-images/icon_3-6.png" style="vertical-align: middle;" /><br />
+		石油ストーブ</label>
+
+	<div class="tab-content">
+		<h3 class="bg_title" id="kerosinestove_bring">石油ストーブ</h3>
+
+		<dl>
+			<dd>
+				<h4>自動点火装置の状態を確認後、反射板を清掃し芯をカラ焼き。石油ストーブの暖房能力を回復します！</h4>
+
+				<div class="mb20">&nbsp;</div>
+
+				<table class="table_parts_03">
+					<tbody>
+						<tr>
+							<th>店頭へお持ち込み</th>
+							<td>お預かり期間の目安：約 7日間</td>
+						</tr>
+						<tr>
+							<th>石油ストーブ</th>
+							<td>通常価格　3,300円（1台 / 税込）</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mb20">&nbsp;</div>
+				<img alt="石油ストーブ" src="/sites/default/files/inline-images/img_bring-6-1.jpg" />
+				<p class="point_green">① 芯カラ焼きクリーニング</p>
+
+				<p class="text_w">灯油を抜き取ってからカラ焼き。悪臭や火力不足の原因になる芯部分に付着したタールを焼き切ります。</p>
+
+				<p class="point_green">② 反射板の清掃</p>
+
+				<p class="text_w">クリーナーや専用ワックスで反射板に付着したホコリや汚れを除去。熱効率低下を防ぎます。</p>
+
+				<p class="point_green">③ 自動点火等の点検・内部の清掃</p>
+
+				<p class="text_w">内部に溜まったホコリをクリーナーとハケを使って除去。点火ヒーターがきちんと自動点火できるかあわせて確認します。</p>
+
+				<p class="point_green">④ 外装の清掃</p>
+
+				<p class="text_w">外装部に付いたホコリや油汚れを専用ワックスを付けたタオルで拭き掃除。ピカピカになるまで丁寧に磨きます。</p>
+			</dd>
+		</dl>
+	</div>
+</div>
+
+<h3 class="bg_title" style="text-align: center;background: #1B50A2;color: #fff;">引取・宅配もOK！ 引取料金 1,100円（税込）／ 宅配料金
+	550円（税込）<br />
+	当社でお買い上げでない家電もOK！ ※当社指定エリアに限ります。詳しくは店頭にてご確認ください。</h3>
+
+<div class="mb30">&nbsp;</div>
+
+<div class="border_area">
+	<table class="movie_area">
+		<tbody>
+			<tr style="border:0px none!important;">
+				<td style="border:0px none!important;">
+					<p class="b">店舗でお申し込み</p>
+
+					<p class="btn"><a href="https://search.edion.com/e_store/" style="color: #fff;"
+							target="_blank">店舗検索ページが開きます</a></p>
+				</td>
+				<td style="border:0px none!important;">
+					<p class="b">必ずご確認ください</p>
+					・表記の金額は 1台に対する料金です。2台目以降の料金は店員にお尋ねください。<br />
+					・各サービスメニュー完了後の機器保証はありませんので、あらかじめご了承ください。<br />
+					・メニューのご提供は、当社指定エリア内に限ります。<br />
+					・業務用器具は対象外となります。<br />
+					・故障を発見した場合は修理を承ります。（修理料金は別途必要）
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="/service/satisfied#support">家電トータルサポートへ戻る</a></p>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="https://www.edion.co.jp/">トップへ戻る</a></p>
+</div>

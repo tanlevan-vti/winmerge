@@ -1,0 +1,847 @@
+<style type="text/css">
+	.red {
+		border: red solid 1px;
+		text-align: center;
+		color: red;
+		padding: 10px;
+		margin: 20px 0;
+	}
+
+	.movie_area {
+		border: 0px none !important;
+		border-right: 0px none;
+	}
+
+	.border_area {
+		border: solid 1px #CCC;
+	}
+
+	.table_parts_03 td {
+		background: #f08d00;
+		color: #fff;
+		text-align: center;
+	}
+
+	.table_parts_03 th:first-of-type,
+	.table_parts_03 th {
+		background: #F8F8F8;
+		width: 50%;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.btn#search {
+		display: table;
+		background: #284DB4;
+		max-width: 100%;
+		width: 100%;
+		margin-bottom: 0px;
+		font-size: 18px;
+		font-weight: 500;
+		position: relative;
+	}
+
+	.btn img {
+		vertical-align: middle;
+		box-shadow: #000 0 0 0;
+		margin: 40px auto 40px 15px;
+		max-width: initial;
+		/* 初期状態にリセット */
+	}
+
+	.table_parts_05 th {
+		vertical-align: middle;
+	}
+
+	.table_parts_05 {
+
+		border-bottom: 1px solid #ccc;
+	}
+
+	.listSt li {
+		padding: 8px 0;
+		border-bottom: 1px solid #CCC;
+		list-style: none;
+		margin-left: 10px;
+		margin-top: 5px;
+
+	}
+
+	/* タブ切り替え */
+	.tab-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		cursor: pointer;
+		flex: 1;
+		font-weight: bold;
+		order: -1;
+		padding: 12px 24px;
+		position: relative;
+		text-align: center;
+		user-select: none;
+		white-space: nowrap;
+	}
+
+	/*.tab-label:hover {
+        opacity: 0.5;
+        color: #fff;
+    }*/
+
+	.tab-switch:checked+.tab-label {
+		color: #1B50A2;
+		background: #fff;
+	}
+
+	.tab-label::after {
+		background: #fff;
+		bottom: -3px;
+		content: '';
+		display: block;
+		height: 3px;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		transform: translateX(100%);
+		width: 100%;
+		z-index: 1;
+	}
+
+	.tab-switch:checked~.tab-label::after {
+		transform: translateX(-100%);
+	}
+
+	.tab-switch:checked+.tab-label::after {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.tab-content {
+		height: 0;
+		opacity: 0;
+		padding: 0;
+		pointer-events: none;
+		width: 100%;
+		background: #fff;
+
+	}
+
+	.tab-switch:checked~.tab-content {
+		transform: translateX(30%);
+	}
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		opacity: 1;
+		order: 1;
+		pointer-events: auto;
+		transform: translateX(0);
+	}
+
+	.tab-wrap::after {
+		content: '';
+		/*height: 20px;*/
+		order: -1;
+		width: 100%;
+
+	}
+
+	.tab-switch {
+		display: none;
+	}
+
+	.tab-label {
+		color: #1B50A2;
+		margin-bottom: -1px;
+		padding: 10px .5em;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		font-weight: 600;
+		font-size: 15px;
+		padding: 13px 5px;
+		margin: 0 0 0 8px;
+		border: 3px solid #1B50A2;
+		border-bottom: 0 #fff solid;
+		border-radius: 6px 6px 0 0;
+	}
+
+	.tab-label img {
+		height: 30px;
+		width: auto;
+	}
+
+	.tab-switch:checked+.tab-label:before {
+		transform: rotate(0);
+	}
+
+	.tab-content {
+		height: 0;
+		padding: 0 15px;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateX(8px);
+	}
+
+	/* アクティブなタブ */
+	.tab-switch:checked+ {
+		background-size: 40%;
+	}
+
+	/*.tab-switch:checked+.au img:first-child,.tab-switch:checked+.sfb img:first-child,.tab-switch:checked+.yah img:first-child{
+     opacity: 0;
+    }*/
+
+	.tab-switch:checked+.tab-label+.tab-content {
+		height: auto;
+		overflow: auto;
+		margin-bottom: -1px;
+		padding: 15px;
+		opacity: 1;
+		border: 0;
+		border-top: 3px solid #1B50A2;
+		position: relative;
+		left: 8px;
+	}
+
+	/* ラジオボタン非表示 */
+	.tab-switch {
+		display: none;
+	}
+
+	@media screen and (max-width: 800px) {
+		.floatBox_area .photo {
+			max-width: 100%;
+			text-align: center;
+		}
+
+		th,
+		td {
+			display: block;
+			width: 100% !important;
+		}
+
+		.btn img {
+			vertical-align: middle;
+			box-shadow: #000 0 0 0;
+			margin: 40px auto 40px 15px;
+			max-width: auto;
+		}
+
+		.btn#search {
+			max-width: 100%;
+		}
+
+		.listSt li {
+			float: none !important;
+			width: auto !important;
+			margin-left: 0 !important;
+			list-style: none;
+		}
+
+		table td a:not(.map_link) {
+			color: #fff;
+		}
+
+		.tab-wrap {
+			display: inline-flex;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 5px 0px;
+			font-size: 13px;
+			border-bottom: 0 solid #1B50A2 !important;
+			margin-bottom: 20px;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			border-top: 0;
+			width: 200%;
+		}
+
+		.tab-label {
+			border-radius: 6px;
+			border-bottom: 3px solid #1B50A2 !important;
+			font-size: 13px;
+
+		}
+
+		.tab-switch:checked+.tab-label {
+			color: #1B50A2;
+			background: antiquewhite;
+		}
+
+		.tab-label:hover {
+			opacity: 0.7;
+		}
+
+		.tab-label::after {
+			display: none;
+		}
+
+		.tab-switch:checked+.tab-label+.tab-content {
+			padding: 0 15px;
+		}
+	}
+</style>
+<div class="floatBox_area">
+	<p class="photo right"><img alt="小型家電リサイクル" src="/sites/default/files/inline-images/img_service08.jpg" /></p>
+
+	<p class="txt">
+		小型家電リサイクル法とは、家電リサイクル法対象の4品目（テレビ、エアコン、冷蔵庫・冷凍庫、洗濯機・乾燥機）を除くほぼ全ての電気機械器具を対象とし、国の認定を受けた業者（認定事業者）等が使用済小型家電を広域的に回収・処理することで、小型家電の再資源化を促進する制度です。
+	</p>
+
+	<div class="m10">&nbsp;</div>
+
+	<p class="txt">
+		再資源化事業者とは、使用済み小型家電の再資源化を適正に行うことができる者（再資源化事業を行うため、国に再資源化事業計画を提出し、経済産業大臣および環境大臣の認定を受けた者）として国から認定された事業者です。</p>
+	イー・アール・ジャパンは、平成26年8月29日付で再資源化事業者として認定されました。
+
+	<p>&nbsp;</p>
+	エディオンはイー・アール・ジャパンの委託を受け、エディオン・100満ボルト店舗で使用済み小型家電の回収をおこなっています。
+
+	<p>&nbsp;</p>
+</div>
+
+<div class="red">小型家電のお引き取りについては、フランチャイズ店舗では行っておりません。</div>
+
+<div class="border_area">
+	<table class="movie_area">
+		<tbody>
+			<tr style="border:0px none!important;">
+				<td
+					style="width: 50%;vertical-align: middle; text-align: center; border:0px none!important;font-weight: 900;">
+					お問い合わせ・お申し込みはエディオン各店にて承っております。<br />
+					<span style="font-size: 70%;margin-top: 10px;">※小型家電のお引き取りについては、フランチャイズ店舗では行っておりません。</span>
+				</td>
+				<td
+					style="width: 50%;vertical-align: middle; text-align: center; border:0px none!important;font-weight: 900;">
+					<p class="btn" id="search"><img alt="小型家電"
+							src="/sites/default/files/inline-images/ico_service28.jpg" /><a
+							href="https://search.edion.com/e_store/" style="color: #fff;"
+							target="_blank">お店を探す（店舗検索ページが開きます）<br />
+							<span style="font-size: 70%;margin-top: 10px;">⇐この表記店舗が対象店舗です。</span></a></p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p class="txt" style="text-align: right;margin: 30px 0;">※掲載の料金は2025年2月1日現在となります。</p>
+
+<hr style="margin: 15px 0;" />
+<div class="mb30">&nbsp;</div>
+
+<h4 class="bg_title" style="text-align: center;">電気、電池で動作する28商品分類、100品目以上の機器を対象とし、特定対象品目については、無料回収します。</h4>
+
+<div class="mb30">&nbsp;</div>
+
+<div class="tab-wrap"><!-- 特定品目 --><input checked="checked" class="tab-switch" id="TAB-01" name="TAB" type="radio" />
+	<label class="tab-label dcm" for="TAB-01">特定品目</label>
+
+	<div class="tab-content">
+		<h3 class="bt_line" id="Specific_item">特定品目</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03">
+			<tbody>
+				<tr>
+					<th>リサイクル料金</th>
+					<td>無料</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="mb30">&nbsp;</div>
+
+		<ul class="listSt list_disc">
+			<li>電子部品が多用されているもの</li>
+		</ul>
+
+		<div class="mb10">&nbsp;</div>
+
+		<table class="table_parts_05">
+			<tbody>
+				<tr>
+					<th class="w15p" rowspan="10">情報通信機器</th>
+					<td>BDドライブ（BD、CD、DVD、FD）</td>
+					<td>タブレット端末</td>
+					<td>メモリーカード（SD、MS、CF等）</td>
+				</tr>
+				<tr>
+					<td>CPU</td>
+					<td>テレビドアホン</td>
+					<td>メモリーカードリーダー/ライター</td>
+				</tr>
+				<tr>
+					<td>HDD</td>
+					<td>ドアホン</td>
+					<td>モデム</td>
+				</tr>
+				<tr>
+					<td>PC用小型スピーカー</td>
+					<td>ドアモニター</td>
+					<td>ルーター（無線、有線）</td>
+				</tr>
+				<tr>
+					<td>PC用小型マイク</td>
+					<td>トランシーバー</td>
+					<td>ワープロ</td>
+				</tr>
+				<tr>
+					<td>PHS端末</td>
+					<td>ハードディスク</td>
+					<td>自作パソコン（CPU・マザーボード・HDD含む）※</td>
+				</tr>
+				<tr>
+					<td>USBメモリー</td>
+					<td>パソコン（本体のみ）</td>
+					<td>携帯電話</td>
+				</tr>
+				<tr>
+					<td>グラフィックボード</td>
+					<td>ファックス、電話機</td>
+					<td>電子辞書</td>
+				</tr>
+				<tr>
+					<td>キーボード（パソコン）</td>
+					<td>ブルートゥース機器</td>
+					<td>電子書籍端末</td>
+				</tr>
+				<tr>
+					<td>テレビゲーム機（ファミコン、PS等）</td>
+					<td>ポータブルゲーム機（DS、PSP等）</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>映像用機器</th>
+					<td>ビデオカメラ</td>
+					<td>デジタルカメラ</td>
+					<td>ドライブレコーダー</td>
+				</tr>
+				<tr>
+					<th>音響機器</th>
+					<td>MDプレーヤー（携帯用）</td>
+					<td>ICレコーダー</td>
+					<td>携帯音楽プレーヤー</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul class="listSt list_disc">
+			<li>※パソコンは本体のみが特定対象品目となります。</li>
+			<li>※自作パソコンはCPU・HDD・マザーボード・グラフィックボードの中の3つ以上を含むものに限ります。</li>
+		</ul>
+	</div>
+	<!-- 小型家電 --> <input class="tab-switch" id="TAB-02" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-02">小型家電</label>
+
+	<div class="tab-content">
+		<h3 class="bt_line" id="small_home_appliance">小型家電</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03">
+			<tbody>
+				<tr>
+					<th>リサイクル料金</th>
+					<td>550円（税込）</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="mb30">&nbsp;</div>
+
+		<div class="floatBox_area">
+			<p class="photo right"><img alt="サイズ" src="/sites/default/files/inline-images/img_size.jpg" /></p>
+
+			<ul class="listSt list_disc">
+				<li>縦＋横＋高さの合計が120cm以下で重さが10kg以下</li>
+				<li>取り外し工事不要で使用できるもの</li>
+				<li>人が一人で運べるもの</li>
+			</ul>
+		</div>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_05">
+			<tbody>
+				<tr>
+					<th class="w15p" rowspan="2">情報通信機器</th>
+					<td>複合機（家庭用）</td>
+					<td>液晶・プラズマディスプレイモニター※<br />
+						（23型以下）</td>
+					<td>Ａ４インクジェットプリンタ</td>
+					<td>スキャナ</td>
+				</tr>
+				<tr>
+					<td>自作パソコン（ケースのみ）</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th rowspan="3">映像用機器</th>
+					<td>AVアンプ</td>
+					<td>AVレシーバー</td>
+					<td>前面投射型プロジェクター</td>
+					<td>AVセレクター</td>
+				</tr>
+				<tr>
+					<td>BDレコーダー</td>
+					<td>DVD・BD・ビデオ・HDDレコーダー</td>
+					<td>STB（セットトップボックス）</td>
+					<td>チューナー</td>
+				</tr>
+				<tr>
+					<td>フィルムカメラ</td>
+					<td>眼鏡型モニター</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th rowspan="3">音響機器</th>
+					<td>アンプ</td>
+					<td>ステレオ、ミニコンポ</td>
+					<td>ホームシアターシステム</td>
+					<td>カセットデッキ</td>
+				</tr>
+				<tr>
+					<td>スピーカー</td>
+					<td>ラジカセ</td>
+					<td>CDプレーヤー</td>
+					<td>ヘッドホン</td>
+				</tr>
+				<tr>
+					<td>テープレコーダー</td>
+					<td>ポータブルスピーカー</td>
+					<td>ポータブルラジオ</td>
+					<td>マイク</td>
+				</tr>
+				<tr>
+					<th rowspan="6">理美容･健康機器</th>
+					<td>赤外線治療器</td>
+					<td>フットマッサージャー</td>
+					<td>体脂肪計</td>
+					<td>ホットカーラー</td>
+				</tr>
+				<tr>
+					<td>フットバス</td>
+					<td>デジタルヘルスメーター</td>
+					<td>アルコールチェッカー</td>
+					<td>ヘアーアイロン</td>
+				</tr>
+				<tr>
+					<td>ヘアドライヤー</td>
+					<td>フェイスケア用スチーマー</td>
+					<td>低周波治療器</td>
+					<td>電気脱毛機</td>
+				</tr>
+				<tr>
+					<td>電気鼻毛カッター</td>
+					<td>電気フェイスシェーバー</td>
+					<td>電気シェーバー</td>
+					<td>電気バリカン</td>
+				</tr>
+				<tr>
+					<td>電子血圧計</td>
+					<td>電子体温計</td>
+					<td>電動式ハンドマッサージャー</td>
+					<td>電動歯ブラシ</td>
+				</tr>
+				<tr>
+					<td>歩数計</td>
+					<td>補聴器</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th rowspan="2">調理家電</th>
+					<td>卓上ＩＨ調理器</td>
+					<td>オーブントースター</td>
+					<td>ガステーブル</td>
+					<td>ジューサー</td>
+				</tr>
+				<tr>
+					<td>食器洗い乾燥機</td>
+					<td>炊飯ジャー</td>
+					<td>電気ポット</td>
+					<td>電子レンジ</td>
+				</tr>
+				<tr>
+					<th rowspan="2">家事家電</th>
+					<td>アイロン</td>
+					<td>シャワートイレ</td>
+					<td>ハンドクリーナー</td>
+					<td>ミシン</td>
+				</tr>
+				<tr>
+					<td>高圧洗浄機</td>
+					<td>電気掃除機</td>
+					<td>布団乾燥機</td>
+					<td>布団クリーナー</td>
+				</tr>
+				<tr>
+					<th rowspan="2">季節・空調機器</th>
+					<td>イオン発生器</td>
+					<td>ガスストーブ</td>
+					<td>こたつヒーター</td>
+					<td>空気清浄機</td>
+				</tr>
+				<tr>
+					<td>扇風機</td>
+					<td>除湿機（フロン未使用）</td>
+					<td>電気カーペット（2畳未満）</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th rowspan="2">照明機器</th>
+					<td>シーリング照明</td>
+					<td>ペンダント照明</td>
+					<td>シャンデリア（5kg以上）</td>
+					<td>屋外照明器具</td>
+				</tr>
+				<tr>
+					<td>電気スタンド</td>
+					<td>防犯ライト</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th rowspan="2">カー用品</th>
+					<td>ETCユニット</td>
+					<td>カーDVD</td>
+					<td>カーオーディオ</td>
+					<td>カーナビ</td>
+				</tr>
+				<tr>
+					<td>レーダー探知機</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th rowspan="3">その他</th>
+					<td>タイマー（小型）</td>
+					<td>電動工具（縦･横･高さの合計が150㎝未満）</td>
+					<td>掛時計（30cm以上）</td>
+					<td>電動式玩具</td>
+				</tr>
+				<tr>
+					<td>腕時計</td>
+					<td>掛時計（縦・横・高さの合計が30㎝未満）</td>
+					<td>電子玩具（たまごっち等）</td>
+					<td>置時計</td>
+				</tr>
+				<tr>
+					<td>懐中電灯</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul class="listSt list_disc">
+			<li>※パソコン本体と同時引取りの場合でも液晶ディスプレイモニターは「小型対象品目」となります。</li>
+		</ul>
+	</div>
+	<!-- 中型家電 --> <input class="tab-switch" id="TAB-03" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-03">中型家電</label>
+
+	<div class="tab-content">
+		<h3 class="bt_line" id="Medium-sized_home_appliances">中型家電</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03">
+			<tbody>
+				<tr>
+					<th>リサイクル料金</th>
+					<td>1,100円（税込）</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="mb30">&nbsp;</div>
+
+		<div class="floatBox_area">
+			<p class="photo right"><img alt="サイズ" src="/sites/default/files/inline-images/img_size.jpg" /></p>
+
+			<ul class="listSt list_disc">
+				<li>縦＋横＋高さの合計が150cm以下で重さが20kg以下</li>
+				<li>取り外し工事不要で使用できるもの</li>
+				<li>作業員1名での搬出が可能なもの</li>
+			</ul>
+		</div>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_05">
+			<tbody>
+				<tr>
+					<th class="w15p">情報通信機器</th>
+					<td>ディスプレイモニター（ブラウン管 23型以下）</td>
+					<td>Ａ３インクジェット複合機</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<!--
+    <tr>
+      <th>調理家電</th>
+      <td>IHクッキングヒーター（60タイプ）</td>
+      <td>ビルトインガスコンロ</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+-->
+				<tr>
+					<th>季節・空調機器</th>
+					<td>ガス給湯器</td>
+					<td>石油ファンヒーター※</td>
+					<td>電気カーペット（2畳以上）</td>
+					<td>家具調コタツ</td>
+				</tr>
+				<tr>
+					<th>照明機器</th>
+					<td>シャンデリア（5kg以上）</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul class="listSt list_disc">
+			<li>※給油タンク及び固定タンク（油受皿内）の残油はお客様にて事前に抜いてください。</li>
+		</ul>
+	</div>
+	<!-- 大型家電 --> <input class="tab-switch" id="TAB-04" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-04">大型家電</label>
+
+	<div class="tab-content">
+		<h3 class="bt_line" id="illumination_construction">大型家電</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03">
+			<tbody>
+				<tr>
+					<th>リサイクル料金</th>
+					<td>4,400円（税込）</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="mb30">&nbsp;</div>
+
+		<div class="floatBox_area">
+			<p class="photo right"><img alt="サイズ" src="/sites/default/files/inline-images/img_size.jpg" /></p>
+
+			<ul class="listSt list_disc">
+				<li>縦＋横＋高さの合計が370cm以下で重さが90kg以下</li>
+				<li>取り外し工事不要で使用できるもの</li>
+				<li>搬出に2名の作業員が必要なもの</li>
+			</ul>
+		</div>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_05">
+			<tbody>
+				<tr>
+					<th class="w15p">情報通信機器</th>
+					<td>ディスプレイモニター（24型以上）</td>
+					<td>コピー機</td>
+					<td>複合機</td>
+				</tr>
+				<tr>
+					<th>映像用機器</th>
+					<td>リア投射型プロジェクションテレビ</td>
+					<td>チューナーレステレビ(40V型以上）</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>音響機器</th>
+					<td>電子ピアノ（88鍵以上）</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>理美容･健康機器</th>
+					<td>電動フィットネスマシーン（乗馬型含む）</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>季節・空調機器</th>
+					<td>マッサージチェア</td>
+					<td>床暖房機器</td>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ul class="listSt list_disc">
+			<li>※作業員の搬出は玄関からのみとなります。（室内からの搬出は別途費用が発生します）</li>
+			<li>※大型対象品目基準を超える場合には要相談になります。</li>
+		</ul>
+	</div>
+	<!-- 特殊家電 --> <input class="tab-switch" id="TAB-05" name="TAB" type="radio" /> <label class="tab-label dcm"
+		for="TAB-05">特殊家電</label>
+
+	<div class="tab-content">
+		<h3 class="bt_line" id="Special_home_appliances">特殊家電</h3>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_03">
+			<tbody>
+				<tr>
+					<th>リサイクル料金</th>
+					<td>2,200円（税込）</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="mb30">&nbsp;</div>
+
+		<div class="floatBox_area">
+			<p class="photo right"><img alt="サイズ" src="/sites/default/files/inline-images/img_size.jpg" /></p>
+
+			<ul class="listSt list_disc">
+				<li>縦＋横＋高さの合計が150cm以下で重さが20kg以下</li>
+				<li>取り外し工事不要で使用できるもの</li>
+				<li>フロンやオイル等の処理困難物を含んだもの</li>
+			</ul>
+		</div>
+
+		<div class="mb30">&nbsp;</div>
+
+		<table class="table_parts_05">
+			<tbody>
+				<tr>
+					<th>季節・空調機器</th>
+					<td>オイルヒーター</td>
+					<td>除湿機（フロン使用機器）</td>
+					<td>冷風機（フロン使用機器）</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="btn_wrap mt50">
+	<p class="btn"><a href="/service">エディオンのサービスへ戻る</a></p>
+</div>
+
+<div class="mb40">&nbsp;</div>
+
+<div class="btn_wrap">
+	<p class="btn"><a href="https://www.edion.co.jp/">トップへ戻る</a></p>
+</div>

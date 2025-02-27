@@ -1,0 +1,788 @@
+<style type="text/css">
+	.pc {
+		display: block !important;
+	}
+
+	.sp {
+		display: none !important;
+	}
+
+	.C {
+		text-align: center;
+		margin: auto;
+	}
+
+	.security {
+		margin-bottom: 20px;
+	}
+
+	.security ul li {
+		text-align: center;
+		display: block;
+		float: left;
+
+	}
+
+	.security li {
+		border-radius: 5px;
+		text-align: center;
+		list-style-type: none;
+		padding: 15px;
+		display: inline-block;
+		width: 48.9%;
+		margin-left: 2.2%;
+	}
+
+	.security li:first-child {
+		border: 3px solid #00A3D9;
+	}
+
+	.security li:last-child {
+		border: 3px solid #20AE38;
+	}
+
+	.security li:nth-child(2n+1) {
+		clear: both;
+		margin-left: 0;
+	}
+
+	.ttl {
+		text-align: center;
+		padding: 20px;
+		font-size: 50px;
+		color: #fff;
+		background: #1B50A2;
+		font-weight: bold;
+	}
+
+	.ttl p {
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.txt {
+		margin-bottom: 10px;
+	}
+
+	.area4list {
+		padding: 0;
+		margin: 0 0 10px 0;
+		overflow: hidden;
+	}
+
+	.area4list li {
+		width: 25%;
+		margin-left: 2.66%;
+		list-style-type: none;
+		float: left;
+
+	}
+
+	.productsList {
+		border-top: 1px solid #CCC;
+		border-left: 1px solid #CCC;
+	}
+
+	.productsList .name {
+		display: table-cell;
+		vertical-align: middle;
+		font-weight: bold;
+		padding: 0 10px;
+	}
+
+	.productsList .box {
+		display: table;
+	}
+
+	.productsList li {
+		margin: 0;
+		border-bottom: 1px solid #CCC;
+		border-right: 1px solid #CCC;
+		height: 80px;
+	}
+
+	.productsList .image {
+		background: #F5F5F5;
+		width: 110px;
+		height: 79px;
+		text-align: center;
+		border-right: 1px solid #CCC;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+	.box {
+		display: table;
+	}
+
+	.name {
+		font-weight: bold;
+		padding: 0 10px;
+	}
+
+	.box_sty_dib {
+		display: inline-block;
+	}
+
+	.peace h2 {
+		text-align: center;
+		font-size: 50px;
+		font-weight: bold;
+		color: #1F529F;
+		margin-bottom: 20px;
+	}
+
+	.peace ul {
+		text-align: center;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		flex-wrap: -ms-wrap;
+		flex-wrap: wrap;
+	}
+
+	.peace li {
+		width: 49%;
+		margin-bottom: 20px;
+	}
+
+	.peace h3 {
+		font-size: 1.89rem;
+		margin-bottom: 20px;
+		background-color: #0B449B;
+		border-radius: 6px 6px 0 0;
+		color: #FFF;
+		font-weight: bold;
+		margin: 0;
+		text-align: center;
+	}
+
+	.peace li:last-child h3 {
+		background-color: #E95193;
+	}
+
+	.peace div {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+		border-top: none;
+		padding: 10px;
+		border: 2px solid #CCC;
+		border-top: 0;
+		border-radius: 0 0 6px 6px;
+		height: 120px;
+	}
+
+	.peace div p {
+		width: auto;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.peace div span {
+		font-size: 0.79rem;
+		display: block;
+		margin-top: 10px;
+		text-align: left;
+	}
+
+	.security li img,
+	.peace li img {
+		max-width: 100%;
+		height: auto;
+		width
+		/***/
+		: auto;
+	}
+
+	.security#area2list li {
+		border: 3px solid #284DB4;
+		color: #284DB4;
+	}
+
+	.security#area2list li a {
+		color: red;
+	}
+
+	.security#area2list li:nth-child(2n+1) {
+		clear: both;
+		margin-left: 0;
+	}
+
+	.tel_box {
+		border: 1px #ccc solid;
+		padding: 20px 0;
+		text-align: center;
+		background: #F7FAFD;
+	}
+
+	.tel_box p {}
+
+	.call_time {
+		border: #1a50a1 1px solid;
+		color: #1a50a1;
+		text-align: center;
+		padding: 3px 10px;
+		width: 350px;
+		margin: 10px auto;
+		background: #fff;
+	}
+
+	.editor .title_02 {
+		margin: 0 auto;
+	}
+
+	.tel_box a[href^="tel:"] {
+		pointer-events: none;
+		font-weight: bold;
+		color: #1a50a1;
+		font-size: 2.5rem;
+		overflow: hidden;
+		vertical-align: middle;
+	}
+
+	.l {
+		text-align: left;
+		display: block;
+	}
+
+	.C {
+		text-align: center;
+		margin: 5px auto;
+		display: inline-block;
+	}
+
+	@media screen and (max-width: 800px) {
+		.pc {
+			display: none !important;
+		}
+
+		.sp {
+			display: block !important;
+		}
+
+		.security li {
+			width: 100%;
+			margin-bottom: 20px;
+			display: block;
+		}
+
+		.security li {
+			margin-left: 0;
+		}
+
+		.security {
+			width: 100%;
+			list-style-type: none;
+			margin-bottom: 20px;
+			padding: 10px;
+		}
+
+		.ttl {
+			font-size: 1.45rem;
+		}
+
+		.ttl p {
+			font-size: 1rem;
+		}
+
+		.image {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.productsList li {
+			width: 100%;
+			height: 80px;
+			border-bottom: 1px solid #CCC;
+			border-right: 1px solid #CCC;
+		}
+
+		.peace li {
+			width: 100%;
+		}
+
+		.peace h2 {
+			font-size: 1.8rem;
+		}
+
+		.tel_box a[href^="tel:"] {
+			pointer-events: auto;
+		}
+
+		.C {
+			margin: 0 15px;
+			display: block;
+		}
+	}
+</style>
+<h3 class="mb30">カード会員様がギフトとしてご利用される場合に別途料金をいただくと延長保証が付けられます。</h3>
+
+<div class="mb30">※カード会員様以外もご利用いただけます。</div>
+
+<div class="security">
+	<ul>
+		<li><img alt="5年間保証" src="/sites/default/files/inline-images/img_extension01.jpg" /></li>
+		<li><img alt="3年間保証" src="/sites/default/files/inline-images/img_extension02.jpg" /></li>
+	</ul>
+</div>
+
+<div class="mb10" style="clear: both;">&nbsp;</div>
+
+<div>
+	<div class="ttl">ワイドな保証対象51品目
+		<p>ご購入金額11,000円（税込）以上の商品が対象です。</p>
+	</div>
+
+	<ul class="productsList area4list">
+		<li>
+			<div class="box">
+				<div class="image"><img alt="パソコン" src="/sites/default/files/inline-images/e_pro01.png" /></div>
+
+				<div class="name">パソコン（※1）</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="プリンタ" src="/sites/default/files/inline-images/e_pro02.png" /></div>
+
+				<div class="name">プリンタ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="タブレット" src="/sites/default/files/inline-images/e_pro03.png" /></div>
+
+				<div class="name">タブレット（※1）</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="デジタルオーディオ" src="/sites/default/files/inline-images/e_pro04.png" /></div>
+
+				<div class="name">デジタルオーディオ（※2）</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="15インチ以上薄型テレビ" src="/sites/default/files/inline-images/e_pro09.png" /></div>
+
+				<div class="name">15インチ以上薄型テレビ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ブルーレイ/DVDレコーダー" src="/sites/default/files/inline-images/e_pro10.png" />
+				</div>
+
+				<div class="name">ブルーレイ/DVDレコーダー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="エアコン" src="/sites/default/files/inline-images/e_pro17.png" /></div>
+
+				<div class="name">エアコン</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="扇風機" src="/sites/default/files/inline-images/e_pro18.png" /></div>
+
+				<div class="name">扇風機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="除湿乾燥機" src="/sites/default/files/inline-images/e_pro19.png" /></div>
+
+				<div class="name">除湿乾燥機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="加湿器" src="/sites/default/files/inline-images/e_pro20.png" /></div>
+
+				<div class="name">加湿器</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="洗濯機" src="/sites/default/files/inline-images/e_pro07.png" /></div>
+
+				<div class="name">洗濯機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="衣類乾燥機" src="/sites/default/files/inline-images/e_pro08.png" /></div>
+
+				<div class="name">衣類乾燥機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="クリーナー" src="/sites/default/files/inline-images/e_pro21.png" /></div>
+
+				<div class="name">クリーナー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="アイロン" src="/sites/default/files/inline-images/e_pro22.png" /></div>
+
+				<div class="name">アイロン</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="冷蔵庫" src="/sites/default/files/inline-images/e_pro05.png" /></div>
+
+				<div class="name">冷蔵庫</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="冷凍庫" src="/sites/default/files/inline-images/e_pro06.png" /></div>
+
+				<div class="name">冷凍庫</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="炊飯ジャー" src="/sites/default/files/inline-images/e_pro13.png" /></div>
+
+				<div class="name">炊飯ジャー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ビデオカメラ" src="/sites/default/files/inline-images/e_pro11.png" /></div>
+
+				<div class="name">ビデオカメラ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="デジタルカメラ" src="/sites/default/files/inline-images/e_pro12.png" /></div>
+
+				<div class="name">デジタルカメラ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ポータブルスピーカー" src="/sites/default/files/inline-images/e_pro43.png" /></div>
+
+				<div class="name">ポータブルスピーカー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ファクシミリ" src="/sites/default/files/inline-images/e_pro46.png" /></div>
+
+				<div class="name">ファクシミリ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="電話機" src="/sites/default/files/inline-images/e_pro47.png" /></div>
+
+				<div class="name">電話機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="電子辞書" src="/sites/default/files/inline-images/e_pro48.png" /></div>
+
+				<div class="name">電子辞書</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="拡大読書器" src="/sites/default/files/inline-images/e_pro50.png" /></div>
+
+				<div class="name">拡大読書器</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="高級ウォッチ" src="/sites/default/files/inline-images/e_pro51.png" /></div>
+
+				<div class="name">高級ウォッチ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="オーブンレンジ" src="/sites/default/files/inline-images/e_pro14.png" /></div>
+
+				<div class="name">オーブンレンジ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="電気オーブン" src="/sites/default/files/inline-images/e_pro15.png" /></div>
+
+				<div class="name">電気オーブン</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ホットプレート" src="/sites/default/files/inline-images/e_pro16.png" /></div>
+
+				<div class="name">ホットプレート</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ジャーポット・電気ケトル" src="/sites/default/files/inline-images/e_pro23.png" /></div>
+
+				<div class="name">ジャーポット・電気ケトル</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="コーヒーメーカー" src="/sites/default/files/inline-images/e_pro24.png" /></div>
+
+				<div class="name">コーヒーメーカー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ジューサー・ミキサー" src="/sites/default/files/inline-images/e_pro29.png" /></div>
+
+				<div class="name">ジューサー・ミキサー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="食器洗い機" src="/sites/default/files/inline-images/e_pro30.png" /></div>
+
+				<div class="name">食器洗い機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="食器乾燥機" src="/sites/default/files/inline-images/e_pro31.png" /></div>
+
+				<div class="name">食器乾燥機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="生ごみ処理機" src="/sites/default/files/inline-images/e_pro32.png" /></div>
+
+				<div class="name">生ごみ処理機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ミニコンポ" src="/sites/default/files/inline-images/e_pro33.png" /></div>
+
+				<div class="name">ミニコンポ</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="アンプ・チューナー" src="/sites/default/files/inline-images/e_pro34.png" /></div>
+
+				<div class="name">アンプ・チューナー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="スピーカーシステム" src="/sites/default/files/inline-images/e_pro35.png" /></div>
+
+				<div class="name">スピーカーシステム</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ラジカセ・CDシステム" src="/sites/default/files/inline-images/e_pro36.png" /></div>
+
+				<div class="name">ラジカセ・CDシステム</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ヘッドホン" src="/sites/default/files/inline-images/e_pro44.png" /></div>
+
+				<div class="name">ヘッドホン</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ボイスレコーダー" src="/sites/default/files/inline-images/e_pro41.png" /></div>
+
+				<div class="name">ボイスレコーダー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="シュレッダー" src="/sites/default/files/inline-images/e_pro49.png" /></div>
+
+				<div class="name">シュレッダー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="カーナビゲーション" src="/sites/default/files/inline-images/e_pro42.png" /></div>
+
+				<div class="name">カーナビゲーション</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="シーリングライト" src="/sites/default/files/inline-images/e_pro37.png" /></div>
+
+				<div class="name">シーリングライト</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="空気清浄機" src="/sites/default/files/inline-images/e_pro38.png" /></div>
+
+				<div class="name">空気清浄機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="冷風機" src="/sites/default/files/inline-images/e_pro39.png" /></div>
+
+				<div class="name">冷風機</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="冷風扇" src="/sites/default/files/inline-images/e_pro40.png" /></div>
+
+				<div class="name">冷風扇</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="シェーバー" src="/sites/default/files/inline-images/e_pro25.png" /></div>
+
+				<div class="name">シェーバー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="ヘアドライヤー" src="/sites/default/files/inline-images/e_pro26.png" /></div>
+
+				<div class="name">ヘアドライヤー</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="理美容器具" src="/sites/default/files/inline-images/e_pro27.png" /></div>
+
+				<div class="name">理美容器具（※3）</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="マッサージチェア" src="/sites/default/files/inline-images/e_pro28.png" /></div>
+
+				<div class="name">マッサージチェア</div>
+			</div>
+		</li>
+		<li>
+			<div class="box">
+				<div class="image"><img alt="シャワートイレ" src="/sites/default/files/inline-images/e_pro45.png" /></div>
+
+				<div class="name">シャワートイレ</div>
+			</div>
+		</li>
+	</ul>
+
+	<p>※1　保証対象外のメーカー（アップル社・DELL社・AMAZON社・レノボ社など）や商品がございます。</p>
+
+	<p>※2　国内メーカー製品（アップル社製・レノボ社製は対象外）</p>
+
+	<p>※3　非家電製品は対象外</p>
+</div>
+
+<p class="mb10">&nbsp;</p>
+
+<div class="peace">
+	<h2>3つの安心で、<span class="box_sty_dib">しっかり保証します！</span></h2>
+
+	<ul>
+		<li>
+			<h3>安心1</h3>
+
+			<div>
+				<p><img alt="安心１" src="/sites/default/files/inline-images/img_extension03.png" /><br />
+					<span>※本保証内容は、メーカー保証規約に準じます。詳しくは延長修理保証規定をご確認ください。</span>
+				</p>
+			</div>
+		</li>
+		<li>
+			<h3>安心2</h3>
+
+			<div>
+				<p><img alt="安心2" src="/sites/default/files/inline-images/img_extension04.png" /></p>
+			</div>
+		</li>
+		<li>
+			<h3>安心3</h3>
+
+			<div>
+				<p><img alt="安心3" src="/sites/default/files/inline-images/img_extension05.png" /></p>
+			</div>
+		</li>
+		<li>
+			<h3>保証料</h3>
+
+			<div>
+				<p><img alt="保証料" src="/sites/default/files/inline-images/img_extension06.png" /></p>
+			</div>
+		</li>
+	</ul>
+
+	<p>※ご購入金額11,000円（税込）以上が有料延長保証対象商品となります。<br />
+		※ご購入金額110,000円（税込）以下のパソコンの保証料は一律5,500円（税込）となります。<br />
+		※タブレットは、販売価格220,000円（税込）までが保証対象となります。　 ※アップル社・DELL社・AMAZON社・レノボ社など一部、有料延長保証対象外のメーカーがございます。<br />
+		※有料延長保証対象商品につきましては店頭係員までお尋ねください。</p>
+</div>
+
+<div class="mb30">&nbsp;</div>
+
+<div class="security" id="area2list">
+	<ul>
+		<li><a class="file file--mime-application-pdf file--application-pdf" data-entity-type="file"
+				data-entity-uuid="4b529b5c-db94-4319-9259-49dad7eabc00"
+				href="/sites/default/files/inline-files/twg-warranty_02_201910.pdf" title="">保証が受けられない事例など</a></li>
+		<li><a class="file file--mime-application-pdf file--application-pdf" data-entity-type="file"
+				data-entity-uuid="7c49497c-521e-4d91-bc44-2aa51c0144e7"
+				href="/sites/default/files/inline-files/twg-warranty_01_201910.pdf" title="">有料延長保証規定</a></li>
+	</ul>
+</div>
+
+<div class="mb30" style="clear: both;">&nbsp;</div>
+
+<h3 class="bt_line">保証・ポイントについてのお問い合わせは</h3>
+
+<div class="mb30">&nbsp;</div>
+
+<div class="tel_box">
+	<h2 class="title_02 mb15">エディオンカードセンター</h2>
+	<a href="tel:0120-87-6565">0120-87-6565</a>
+
+	<p class="call_time">受付時間：10:00～18:00（年末年始休）</p>
+
+	<div class="C">
+		<div class="l">※エディオンカードのサービス内容は、都合により予告なしで変更になる場合がございます。</div>
+
+		<div class="l">※電話番号をお確かめのうえ、お掛け間違いのないようお願いいたします。</div>
+	</div>
+</div>
+
+<div class="mb30">&nbsp;</div>
+
+<div class="btn_wrap mt50">
+	<p class="btn"><a href="/card">エディオンカードトップ</a></p>
+</div>
